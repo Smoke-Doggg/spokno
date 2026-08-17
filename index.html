@@ -31,7 +31,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 <link rel="preload" href="/fonts.css?v=eb1fbac3" as="style"
       onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/fonts.css?v=eb1fbac3"></noscript>
-<link rel="stylesheet" href="/style.css?v=ad768182">
+<link rel="stylesheet" href="/style.css?v=cde288e6">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -94,6 +94,9 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
         <a class="btn btn--ghost" href="#kak-rabotaet">Как это работает</a>
       </p>
       <p class="cta-note">Бот в Telegram выдаст ключ сразу. Первые 3 дня бесплатны, карта не нужна. Дальше — 349 ₽ в месяц, без доплат.</p>
+      <p class="cta-alt">Ссылка не открылась?
+        <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть в приложении</a>
+        или найдите в Telegram <b class="mono">@vpn_prosto_bot</b></p>
       <p class="live-status">
         <span class="dot dot--live" aria-hidden="true"></span>
         Работает в России. Проверено сегодня, <span data-today>17 августа</span>
@@ -618,7 +621,12 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
      stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Первые 3 дня бесплатно, карта не нужна</span></li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Все страны и протоколы входят в тариф — доплат нет</span></li>
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>6 стран и оба протокола
+          в любом тарифе — за локации не доплачиваете</span></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Российский сервер и автоматический выбор
+          самого быстрого — тоже включены</span></li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
      stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>2 устройства в подписке, можно добавить до 6 по 60 ₽ в месяц</span></li>
@@ -632,9 +640,49 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
       <p class="pay-line mono">оплата: СБП · карты Мир / Visa / Mastercard</p>
     </div>
 
-    <p class="cta-note price-note">
-      Дешевле есть — но обычно у тех, кто работает первый месяц.
-      Мы держим одну цену 5-й год.</p>
+    <div class="why-price reveal">
+      <h3>Почему не 100 ₽</h3>
+      <p class="why-price__lead">Дешевле действительно есть. Разница обычно
+      не в жадности, а в том, что именно вы покупаете.</p>
+      <div class="why-price__cols">
+        <div>
+          <p class="why-price__head">Что чаще всего значит «дешевле»</p>
+          <ul class="minus">
+            <li>Один сервер и кнопка «включить». Перестало работать — выключить
+              и включить, вдруг подключится к живому.</li>
+            <li>Страну не выбрать, второго протокола нет: когда фильтры научатся
+              распознавать первый, ждёте.</li>
+            <li>Ради банка и Госуслуг VPN приходится выключать вручную —
+              по несколько раз в день.</li>
+            <li>Сервис работает первый месяц, и никто не знает, переживёт ли он
+              следующую волну блокировок.</li>
+          </ul>
+        </div>
+        <div>
+          <p class="why-price__head">Что входит в 349 ₽ у нас</p>
+          <ul class="checks">
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>6 стран на выбор
+              и российский сервер — без доплат за локации</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Два протокола: заблокируют один —
+              переключаемся, не теряя вас</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Банки, Госуслуги и российские сайты
+              идут мимо туннеля — выключать ничего не нужно</span></li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>5-й год работы
+              и одна цена без «премиум-пакетов»</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="why-price__foot">Если по итогу не подойдёт — вернём деньги
+        за неиспользованные дни. Вы ничем не рискуете.</p>
+    </div>
   </div>
 </section>
 
@@ -938,6 +986,8 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
      stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Канал «Цифровая свобода»</a></li>
+          <li class="foot-alt">Не открывается? <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть
+            в приложении</a> или найдите <b class="mono">@vpn_prosto_bot</b></li>
         </ul>
       </div>
       <div>
