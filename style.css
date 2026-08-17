@@ -702,7 +702,8 @@ td strong { color: var(--ink); }
 .foot { background: var(--surface-alt); border-top: 1px solid var(--line); padding-block: 56px 32px; }
 .foot .wrap { display: grid; gap: 36px; }
 .foot-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
-.foot-cols h4 { margin-bottom: 14px; }
+.foot-cols .foot-head { margin-bottom: 14px; font-size: 16px; font-weight: 700;
+  color: var(--ink); }   /* подпись колонки, не заголовок документа */
 .foot-cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .foot-cols a { font-size: 15px; color: var(--graphite); text-decoration: none; }
 .foot-cols a:hover { color: var(--accent-text); }
