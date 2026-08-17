@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){try{var t=localStorage.getItem("theme");
+if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<title>VPN Просто — VPN, который работает и не ломает банки</title>
+<meta name="description" content="Стабильное соединение пятый год подряд. Сбербанк, СБП и Госуслуги работают, не выключая VPN. Три дня бесплатно, карта не нужна — ключ выдаёт бот в Telegram.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="VPN Просто — стабильное соединение пятый год">
+<meta property="og:description" content="Стабильное соединение пятый год подряд. Сбербанк, СБП и Госуслуги работают, не выключая VPN. Три дня бесплатно, карта не нужна — ключ выдаёт бот в Telegram.">
+<meta property="og:url" content="https://prostokey.com/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="VPN Просто — стабильный VPN, банки работают">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts.css?v=eb1fbac3" as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/fonts.css?v=eb1fbac3"></noscript>
+<link rel="stylesheet" href="/style.css?v=ad768182">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<div class="aurora" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <div class="theme-sw" role="group" aria-label="Тема оформления" data-theme-switch hidden>
+        <button type="button" data-set="light" aria-pressed="false" title="Светлая тема"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg></button>
+        <button type="button" data-set="system" aria-pressed="true" title="Как в системе"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></button>
+        <button type="button" data-set="dark" aria-pressed="false" title="Тёмная тема"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
+      </div>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="section hero">
+  <canvas class="net" data-net aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="badge"><span class="dot dot--live" aria-hidden="true"></span>
+        Работаем 5-й год</p>
+      <h1>Интернет <span class="hl">работает<svg class="hl__stroke" viewBox="0 0 100 10"
+        preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 Q 30 3 50 6 T 98 5"/></svg></span>. Банки тоже.</h1>
+      <p class="lead">Соединение, которое держится, когда остальные отваливаются.
+      И единственный, с которым не приходится ничего выключать, чтобы зайти
+      в Сбербанк или на Госуслуги.</p>
+      <p class="btn-row">
+        <a class="btn btn--primary btn--shine" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Попробовать 3 дня бесплатно</a>
+        <a class="btn btn--ghost" href="#kak-rabotaet">Как это работает</a>
+      </p>
+      <p class="cta-note">Бот в Telegram выдаст ключ сразу. Первые 3 дня бесплатны, карта не нужна. Дальше — 349 ₽ в месяц, без доплат.</p>
+      <p class="live-status">
+        <span class="dot dot--live" aria-hidden="true"></span>
+        Работает в России. Проверено сегодня, <span data-today>17 августа</span>
+      </p>
+    </div>
+
+    <div class="panel-wrap" data-parallax>
+      <aside class="panel" aria-label="Что как работает с нашим VPN">
+        <div class="panel__head">
+          <p class="eyebrow">С включённым VPN</p>
+          <span class="dot dot--live" aria-hidden="true"></span>
+        </div>
+        <ul class="panel__list">
+          <li><span class="dot" aria-hidden="true"></span><b>Telegram</b><span data-st="открывается">открывается</span></li>
+          <li><span class="dot" aria-hidden="true"></span><b>YouTube</b><span data-st="без рекламы">без рекламы</span></li>
+          <li><span class="dot" aria-hidden="true"></span><b>Сбербанк и СБП</b><span data-st="напрямую, мимо VPN">напрямую, мимо VPN</span></li>
+          <li><span class="dot" aria-hidden="true"></span><b>Госуслуги</b><span data-st="напрямую, мимо VPN">напрямую, мимо VPN</span></li>
+          <li><span class="dot" aria-hidden="true"></span><b>Сайты .ru и .рф</b><span data-st="напрямую, мимо VPN">напрямую, мимо VPN</span></li>
+        </ul>
+        <p class="panel__foot">Ничего не нужно включать и выключать вручную.</p>
+        <p class="panel__stamp mono">проверено <span data-today-short>17.08</span> · обновляется ежедневно</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="trust" aria-label="Почему нам доверяют">
+  <div class="trust__track">
+    <ul>
+<li>5-й год на рынке</li><li>230 000+ активных подписок</li><li>400 000 ключей выдано за 5 лет</li><li>3 дня бесплатно</li><li>Оплата по СБП и картой</li><li>Сбербанк работает напрямую</li><li>Госуслуги не отваливаются</li><li>Без логов и рекламы</li><li>2 устройства в подписке</li><li>Одна цена — 349 ₽</li><li>Поддержка — живой человек</li><li>Мониторинг 24/7</li>    </ul>
+    <ul aria-hidden="true">
+<li>5-й год на рынке</li><li>230 000+ активных подписок</li><li>400 000 ключей выдано за 5 лет</li><li>3 дня бесплатно</li><li>Оплата по СБП и картой</li><li>Сбербанк работает напрямую</li><li>Госуслуги не отваливаются</li><li>Без логов и рекламы</li><li>2 устройства в подписке</li><li>Одна цена — 349 ₽</li><li>Поддержка — живой человек</li><li>Мониторинг 24/7</li>    </ul>
+    <ul aria-hidden="true">
+<li>5-й год на рынке</li><li>230 000+ активных подписок</li><li>400 000 ключей выдано за 5 лет</li><li>3 дня бесплатно</li><li>Оплата по СБП и картой</li><li>Сбербанк работает напрямую</li><li>Госуслуги не отваливаются</li><li>Без логов и рекламы</li><li>2 устройства в подписке</li><li>Одна цена — 349 ₽</li><li>Поддержка — живой человек</li><li>Мониторинг 24/7</li>    </ul>
+    <ul aria-hidden="true">
+<li>5-й год на рынке</li><li>230 000+ активных подписок</li><li>400 000 ключей выдано за 5 лет</li><li>3 дня бесплатно</li><li>Оплата по СБП и картой</li><li>Сбербанк работает напрямую</li><li>Госуслуги не отваливаются</li><li>Без логов и рекламы</li><li>2 устройства в подписке</li><li>Одна цена — 349 ₽</li><li>Поддержка — живой человек</li><li>Мониторинг 24/7</li>    </ul>
+  </div>
+</section>
+
+<section class="section--stats" aria-label="Коротко о сервисе">
+  <div class="wrap stats">
+    <div class="stat">
+      <b><span data-count="5">5</span>-й год</b>
+      <span>на рынке</span>
+    </div>
+    <div class="stat">
+      <b><span data-count="230000">230&#8239;000</span>+</b>
+      <span>активных подписок</span>
+    </div>
+    <div class="stat">
+      <b><span data-count="6">6</span> стран</b>
+      <span>серверы на выбор</span>
+    </div>
+    <div class="stat">
+      <b><span data-count="0">0</span> ₽</b>
+      <span>первые 3 дня</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Три причины, по которым люди меняют VPN</h2>
+    </div>
+    <div class="grid grid--3">
+      <div class="card card--hover reveal" data-delay="0">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m19 5 3-3"/><path d="m2 22 3-3"/>
+<path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/>
+<path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/>
+<path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z"/></svg></div>
+        <h3>«Отваливается каждую неделю»</h3>
+        <p>Протоколы прошлого поколения — <span class="code-chip">WireGuard</span>
+        и <span class="code-chip">OpenVPN</span> — фильтры научились распознавать.
+        Мы работаем на <span class="code-chip">VLESS + Reality</span> и
+        <span class="code-chip">Hysteria2</span>: трафик неотличим от обычного
+        HTTPS, а при блокировке одного сервера подключение само переходит
+        на лучший из оставшихся.</p>
+      </div>
+      <div class="card card--hover reveal" data-delay="70">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></svg></div>
+        <h3>«С VPN не работает банк»</h3>
+        <p>Обычно приходится выключать VPN ради Сбербанка, СБП или Госуслуг —
+        и включать обратно. У нас банки и СБП, Госуслуги, сайты в зоне .ru и .рф, VK и Яндекс, Apple и iCloud идут напрямую,
+        мимо туннеля. Ничего переключать не нужно.</p>
+      </div>
+      <div class="card card--hover reveal" data-delay="140">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+<path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg></div>
+        <h3>«Сервис исчез вместе с деньгами»</h3>
+        <p>VPN-однодневки появляются и пропадают каждый месяц, особенно после
+        крупных блокировок. Мы работаем 5-й год и пережили
+        все волны — включая те, что унесли сотни сервисов.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="kak-rabotaet">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Как подключиться</h2>
+      <p class="lead">Никаких приложений из App Store, которые удаляют по требованию.
+      Бот выдаёт ключ, вы вставляете его в бесплатную программу — и всё.</p>
+    </div>
+
+    <div class="connect">
+      <div class="connect__col">
+        <ol class="steps">
+        <li class="step reveal" data-delay="0">
+          <span class="step__num">1</span>
+          <div>
+            <b>Открыть бота</b>
+            <span>Он выдаст ключ и 3 дня бесплатного доступа. Карта не нужна.</span>
+          </div>
+        </li>
+        <li class="step reveal" data-delay="80">
+          <span class="step__num">2</span>
+          <div>
+            <b>Поставить программу</b>
+            <span>Бесплатный клиент для вашей системы — бот подскажет, какой именно и где взять.</span>
+          </div>
+        </li>
+        <li class="step reveal" data-delay="160">
+          <span class="step__num">3</span>
+          <div>
+            <b>Вставить ключ</b>
+            <span>Одна кнопка. Дальше соединение поднимается само и выбирает быстрый сервер.</span>
+          </div>
+        </li>
+        </ol>
+        <p class="btn-row connect-cta">
+          <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251">Попробовать 3 дня бесплатно</a>
+        </p>
+      </div>
+
+      <div class="device-wrap reveal" data-delay="120" aria-hidden="true">
+        <div class="device" data-chat>
+          <span class="device__btn device__btn--silent"></span>
+          <span class="device__btn device__btn--up"></span>
+          <span class="device__btn device__btn--down"></span>
+          <span class="device__btn device__btn--power"></span>
+          <div class="device__screen">
+            <div class="tg">
+              <div class="tg__status">
+                <span class="tg__time">12:30</span>
+                <span class="tg__icons">
+                  <svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor">
+                    <rect y="7.5" width="3" height="3.5" rx="1"/>
+                    <rect x="4.6" y="5.5" width="3" height="5.5" rx="1"/>
+                    <rect x="9.2" y="3" width="3" height="8" rx="1"/>
+                    <rect x="13.8" width="3" height="11" rx="1"/>
+                  </svg>
+                  <svg width="15" height="11" viewBox="0 0 15 11" fill="currentColor">
+                    <path d="M7.5 9.6 6 8.1a2.1 2.1 0 0 1 3 0zM4.4 6.5 3 5.1a6.4 6.4 0 0 1 9 0l-1.4 1.4a4.4 4.4 0 0 0-6.2 0zM1.4 3.5 0 2.1a10.6 10.6 0 0 1 15 0l-1.4 1.4a8.6 8.6 0 0 0-12.2 0z"/>
+                  </svg>
+                  <svg width="25" height="11" viewBox="0 0 25 11" fill="none">
+                    <rect x=".5" y=".5" width="21" height="10" rx="3" stroke="currentColor" opacity=".4"/>
+                    <rect x="2" y="2" width="15" height="7" rx="1.6" fill="currentColor"/>
+                    <path d="M23 4v3a2 2 0 0 0 0-3z" fill="currentColor" opacity=".5"/>
+                  </svg>
+                </span>
+              </div>
+              <span class="device__island"></span>
+
+              <div class="tg__head">
+                <span class="tg__back">
+                  <svg width="10" height="16" viewBox="0 0 10 16" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1 2 8l6 7"/></svg>
+                </span>
+                <span class="tg__avatar">VP</span>
+                <span class="tg__peer">
+                  <b>VPN Просто</b>
+                  <i data-peer-status>бот</i>
+                </span>
+              </div>
+
+              <div class="tg__feed" data-feed>
+                <div class="msg msg--in" data-step="1">
+                  <p>Привет! Выдам ключ и 3 дня бесплатно — карта не нужна.</p>
+                  <span class="msg__time">12:30</span>
+                  <span class="msg__kb" data-kb>Получить ключ</span>
+                </div>
+
+                <div class="msg msg--out" data-step="2">
+                  <p>Получить ключ</p>
+                  <span class="msg__time">12:30
+                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" stroke="currentColor"
+                         stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M1 5l2.5 2.5L8.5 1.5"/><path d="M6.5 5.6 8 7l4.5-5.5"/></svg>
+                  </span>
+                </div>
+
+                <div class="msg msg--typing" data-step="t">
+                  <span class="typing"><i></i><i></i><i></i></span>
+                </div>
+
+                <div class="msg msg--in" data-step="3">
+                  <p>Ваш ключ:</p>
+                  <code class="msg__key">vless://9f2c…@•••••••:443</code>
+                  <p class="msg__done"><span class="msg__ok">✓</span> 3 дня бесплатно активированы</p>
+                  <span class="msg__time">12:30</span>
+                  <span class="msg__kb">Инструкция для iPhone</span>
+                  <span class="msg__kb">Другие устройства</span>
+                </div>
+              </div>
+
+              <div class="tg__bar">
+                <span>Сообщение</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m22 2-7 20-4-9-9-4z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="platforms">
+      <span class="small">Работает на</span>
+      <ul class="chips chips--icon">
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg>iPhone</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg>Android</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>Windows</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.3 2.6a1 1 0 0 1-.9 1.4H3.6a1 1 0 0 1-.9-1.4L4 16"/></svg>macOS</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></svg>Linux</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="15" x="2" y="7" rx="2"/><path d="m17 2-5 5-5-5"/></svg>Android TV</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6.01 18H6"/><path d="M10.01 18H10"/>
+<path d="M15 10v4"/><path d="M17.84 7.17a4 4 0 0 0-5.66 0"/><path d="M20.66 4.34a8 8 0 0 0-11.31 0"/></svg>Роутер</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="ustroystva">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Работает на всех ваших устройствах</h2>
+      <p>Своего приложения у нас нет — и это к лучшему: клиенты Happ
+      и V2RayTun обновляются быстрее, чем любое фирменное приложение.
+      Один ключ — 2 устройства, можно расширить
+      до 6.</p>
+    </div>
+    <div class="grid grid--5 platforms">
+      <div class="card card--hover platform reveal" data-delay="0">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></div>
+        <h3>iPhone и iPad</h3>
+        <p>Приложение Happ из App Store — ключ вставляется за минуту.</p>
+        <p class="platform__link"><a href="https://apps.apple.com/ru/app/happ-proxy-utility-plus/id6746188973" rel="noopener">Happ в App Store</a></p>
+      </div>
+      <div class="card card--hover platform reveal" data-delay="60">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></div>
+        <h3>Android</h3>
+        <p>Happ из Google Play, для телефонов без сервисов Google — APK-файлом.</p>
+        <p class="platform__link"><a href="https://play.google.com/store/apps/details?id=com.happproxy" rel="noopener">Happ в Google Play</a></p>
+      </div>
+      <div class="card card--hover platform reveal" data-delay="120">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.3 2.6a1 1 0 0 1-.9 1.4H3.6a1 1 0 0 1-.9-1.4L4 16"/></svg></div>
+        <h3>Windows</h3>
+        <p>Установщик Happ — скачали, поставили, вставили ключ.</p>
+        <p class="platform__link"><a href="https://github.com/Happ-proxy/happ-desktop/releases/latest/download/setup-Happ.x64.exe" rel="noopener">Скачать Happ</a></p>
+      </div>
+      <div class="card card--hover platform reveal" data-delay="180">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
+        <h3>macOS</h3>
+        <p>Happ из App Store — работает на Apple Silicon и Intel.</p>
+        <p class="platform__link"><a href="https://apps.apple.com/ru/app/happ-proxy-utility-plus/id6746188973" rel="noopener">Happ в App Store</a></p>
+      </div>
+      <div class="card card--hover platform reveal" data-delay="240">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="15" x="2" y="7" rx="2"/><path d="m17 2-5 5-5-5"/></svg></div>
+        <h3>Телевизоры</h3>
+        <p>Android TV и Apple TV — Happ с интерфейсом под пульт.</p>
+        <p class="platform__link"><a href="https://play.google.com/store/apps/details?id=com.happproxy" rel="noopener">Happ для Android TV</a></p>
+      </div>
+    </div>
+    <p class="section-foot reveal">Пошаговая настройка под каждую систему —
+    на странице <a href="/kak-podklyuchit/">«Как подключить»</a>. Если клиент
+    пропал из магазина, бот всегда подскажет актуальную ссылку.</p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Что внутри</h2>
+    </div>
+    <div class="grid grid--2">
+      <div class="card card--hover reveal" data-delay="0">
+        <h3>Протоколы, которые переживают блокировки</h3>
+        <ul class="code-chips">
+          <li>VLESS + Reality (XTLS-Vision)</li>
+          <li>Hysteria2</li>
+        </ul>
+        <ul class="checks">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Автоматический выбор самого быстрого сервера</span></li>
+        </ul>
+      </div>
+      <div class="card card--hover reveal" data-delay="70">
+        <h3>Города и страны</h3>
+        <ul class="chips">
+          <li><svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"
+     focusable="false" class="flag">
+<defs><clipPath id="fc-pl"><rect width="16" height="12" rx="2"/></clipPath></defs>
+<g clip-path="url(#fc-pl)"><rect width="16" height="6" fill="#fff"/><rect y="6" width="16" height="6" fill="#DC143C"/><rect width="16" height="12" rx="2" fill="none" stroke="rgba(11,13,16,.12)" stroke-width="1"/>
+</g>
+</svg>Польша</li>
+          <li><svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"
+     focusable="false" class="flag">
+<defs><clipPath id="fc-it"><rect width="16" height="12" rx="2"/></clipPath></defs>
+<g clip-path="url(#fc-it)"><rect width="5.33" height="12" fill="#009246"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#CE2B37"/><rect width="16" height="12" rx="2" fill="none" stroke="rgba(11,13,16,.12)" stroke-width="1"/>
+</g>
+</svg>Италия</li>
+          <li><svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"
+     focusable="false" class="flag">
+<defs><clipPath id="fc-in"><rect width="16" height="12" rx="2"/></clipPath></defs>
+<g clip-path="url(#fc-in)"><rect width="16" height="4" fill="#FF9933"/><rect y="4" width="16" height="4" fill="#fff"/>
+<rect y="8" width="16" height="4" fill="#138808"/><circle cx="8" cy="6" r="1.5" fill="none"
+ stroke="#000080" stroke-width=".7"/><rect width="16" height="12" rx="2" fill="none" stroke="rgba(11,13,16,.12)" stroke-width="1"/>
+</g>
+</svg>Индия</li>
+          <li><svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"
+     focusable="false" class="flag">
+<defs><clipPath id="fc-us"><rect width="16" height="12" rx="2"/></clipPath></defs>
+<g clip-path="url(#fc-us)"><rect width="16" height="12" fill="#fff"/><rect y="0" width="16" height="1" fill="#B22234"/><rect y="2" width="16" height="1" fill="#B22234"/><rect y="4" width="16" height="1" fill="#B22234"/><rect y="6" width="16" height="1" fill="#B22234"/><rect y="8" width="16" height="1" fill="#B22234"/><rect y="10" width="16" height="1" fill="#B22234"/><rect width="7" height="7" fill="#3C3B6E"/><rect width="16" height="12" rx="2" fill="none" stroke="rgba(11,13,16,.12)" stroke-width="1"/>
+</g>
+</svg>США</li>
+          <li><svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"
+     focusable="false" class="flag">
+<defs><clipPath id="fc-fi"><rect width="16" height="12" rx="2"/></clipPath></defs>
+<g clip-path="url(#fc-fi)"><rect width="16" height="12" fill="#fff"/><rect x="4" width="2.5" height="12" fill="#003580"/>
+<rect y="4.75" width="16" height="2.5" fill="#003580"/><rect width="16" height="12" rx="2" fill="none" stroke="rgba(11,13,16,.12)" stroke-width="1"/>
+</g>
+</svg>Финляндия</li>
+          <li><svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"
+     focusable="false" class="flag">
+<defs><clipPath id="fc-ru"><rect width="16" height="12" rx="2"/></clipPath></defs>
+<g clip-path="url(#fc-ru)"><rect width="16" height="4" fill="#fff"/><rect y="4" width="16" height="4" fill="#0039A6"/>
+<rect y="8" width="16" height="4" fill="#D52B1E"/><rect width="16" height="12" rx="2" fill="none" stroke="rgba(11,13,16,.12)" stroke-width="1"/>
+</g>
+</svg>Россия</li>
+        </ul>
+        <p class="small">Российский сервер пригодится тем, кто уехал: банки и
+        госсервисы часто требуют местный адрес.</p>
+      </div>
+      <div class="card card--hover reveal" data-delay="140">
+        <h3>Мимо туннеля</h3>
+        <ul class="checks">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>банки и СБП</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Госуслуги</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>сайты в зоне .ru и .рф</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>VK и Яндекс</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Apple и iCloud</span></li>
+        </ul>
+        <p class="small" style="margin-top:16px">Эти сервисы ходят напрямую —
+        быстрее и без ошибок «вход из подозрительного места».</p>
+      </div>
+      <div class="card card--hover reveal" data-delay="210">
+        <h3>Приятные мелочи</h3>
+        <ul class="checks">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Один ключ на 6 устройств</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>YouTube без рекламы</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Оплата: СБП, банковские карты</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Партнёрская программа с выплатами каждый месяц</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="price">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Цена</h2>
+      <p class="lead">Одна услуга без «премиум-пакетов»: все страны, оба
+      протокола и российский сервер входят в любой тариф. Чем длиннее
+      период — тем дешевле месяц.</p>
+    </div>
+
+    <div class="plans">
+      <div class="plan reveal" data-delay="0">
+        <p class="plan__term">1 месяц</p>
+        <p class="plan__price"><b>349</b> ₽</p>
+        <p class="plan__per"><span class="num">349</span> ₽ за месяц</p>
+        <p class="plan__save plan__save--none">базовая цена</p>
+        <a class="btn btn--ghost btn--wide"
+           href="https://t.me/vpn_prosto_bot?start=5817865251">Выбрать</a>
+      </div>
+      <div class="plan reveal" data-delay="70">
+        <p class="plan__term">3 месяца</p>
+        <p class="plan__price"><b>999</b> ₽</p>
+        <p class="plan__per"><span class="num">333</span> ₽ за месяц</p>
+        <p class="plan__save">выгода 48 ₽ · −5%</p>
+        <a class="btn btn--ghost btn--wide"
+           href="https://t.me/vpn_prosto_bot?start=5817865251">Выбрать</a>
+      </div>
+      <div class="plan reveal" data-delay="140">
+        <p class="plan__term">6 месяцев</p>
+        <p class="plan__price"><b>1 899</b> ₽</p>
+        <p class="plan__per"><span class="num">316</span> ₽ за месяц</p>
+        <p class="plan__save">выгода 195 ₽ · −9%</p>
+        <a class="btn btn--ghost btn--wide"
+           href="https://t.me/vpn_prosto_bot?start=5817865251">Выбрать</a>
+      </div>
+      <div class="plan plan--best reveal" data-delay="210">
+<span class="plan__flag">выгоднее всего</span>        <p class="plan__term">12 месяцев</p>
+        <p class="plan__price"><b>3 599</b> ₽</p>
+        <p class="plan__per"><span class="num">300</span> ₽ за месяц</p>
+        <p class="plan__save">выгода 589 ₽ · −14%</p>
+        <a class="btn btn--primary btn--shine btn--wide"
+           href="https://t.me/vpn_prosto_bot?start=5817865251">Выбрать</a>
+      </div>
+    </div>
+
+    <div class="devices">
+      <div class="devices__copy">
+        <h3>Один ключ — вся семья</h3>
+        <p>В подписку входят 2 устройства: например,
+        телефон и ноутбук. Если нужно больше — добавьте их к тому же ключу
+        в личном кабинете бота, до 6 штук: каждое
+        дополнительное стоит 60 ₽ в месяц. Отдельные
+        подписки покупать не нужно.</p>
+        <p class="small">Так один ключ закрывает и ваши устройства, и
+        устройства близких: телефон, планшет, компьютер, телевизор.</p>
+      </div>
+      <div class="devices__table">
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr><th>Устройств</th><th>Доплата</th><th>Всего в месяц</th></tr>
+            </thead>
+            <tbody>
+              <tr class="is-base">
+                <td class="num">2</td>
+                <td>входит</td>
+                <td class="num">349 ₽</td>
+              </tr>
+              <tr>
+                <td class="num">3</td>
+                <td><span class="num">+60</span> ₽</td>
+                <td class="num">409 ₽</td>
+              </tr>
+              <tr>
+                <td class="num">4</td>
+                <td><span class="num">+120</span> ₽</td>
+                <td class="num">469 ₽</td>
+              </tr>
+              <tr>
+                <td class="num">5</td>
+                <td><span class="num">+180</span> ₽</td>
+                <td class="num">529 ₽</td>
+              </tr>
+              <tr>
+                <td class="num">6</td>
+                <td><span class="num">+240</span> ₽</td>
+                <td class="num">589 ₽</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small">60 ₽ в месяц за каждое
+        устройство сверх 2. Количество меняется
+        в любой момент в личном кабинете бота.</p>
+      </div>
+    </div>
+
+    <div class="price-foot">
+      <ul class="checks">
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Первые 3 дня бесплатно, карта не нужна</span></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Все страны и протоколы входят в тариф — доплат нет</span></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>2 устройства в подписке, можно добавить до 6 по 60 ₽ в месяц</span></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Автосписаний нет: продлеваете, когда сами захотите</span></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Разонравилось — вернём деньги за неиспользованные дни</span></li>
+      </ul>
+      <p class="pay-line mono">оплата: СБП · карты Мир / Visa / Mastercard</p>
+    </div>
+
+    <p class="cta-note price-note">
+      Дешевле есть — но обычно у тех, кто работает первый месяц.
+      Мы держим одну цену 5-й год.</p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Чего мы не делаем</h2>
+      <p class="lead">Сервис живёт на подписку — 349 ₽ в месяц, это
+      весь наш заработок. Поэтому зарабатывать на вас как-то ещё нам просто
+      незачем.</p>
+    </div>
+    <div class="grid grid--2">
+      <div class="card card--hover reveal" data-delay="0">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m19 5 3-3"/><path d="m2 22 3-3"/>
+<path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/>
+<path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/>
+<path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z"/></svg></div>
+        <h3>Не показываем рекламу</h3>
+        <p>Ни в боте, ни в трафике: мы не встраиваем баннеры в страницы,
+        которые вы открываете, и не подменяем содержимое сайтов.</p>
+      </div>
+      <div class="card card--hover reveal" data-delay="70">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+<path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg></div>
+        <h3>Не ведём журнал посещений</h3>
+        <p>Мы не храним список сайтов, куда вы заходили, и содержимое
+        трафика. Такого журнала просто нет — значит, его нечего у нас
+        запросить или потерять.</p>
+      </div>
+      <div class="card card--hover reveal" data-delay="140">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.7 8.9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.5 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/>
+<path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Не продаём данные</h3>
+        <p>Никому и ни при каких условиях: ни рекламным сетям, ни
+        аналитическим компаниям, ни «партнёрам». Это не бизнес-модель,
+        а способ потерять доверие один раз и навсегда.</p>
+      </div>
+      <div class="card card--hover reveal" data-delay="210">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></svg></div>
+        <h3>Не просим лишнего</h3>
+        <p>Ни паспорта, ни адреса, ни доступа к контактам. Для работы
+        нужен только ваш аккаунт в Telegram и факт оплаты — всё.</p>
+      </div>
+    </div>
+    <p class="cta-note privacy-note">
+      Что именно нужно сервису для работы и сколько это хранится —
+      <a href="/privacy/">в политике конфиденциальности</a>, обычным языком.
+      На самом сайте нет ни счётчиков, ни рекламных скриптов.</p>
+  </div>
+</section>
+
+<section class="section section--alt" id="otzyvy">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Что говорят пользователи</h2>
+      <p>Отзывы из открытого Telegram-канала сервиса — как написаны, так и публикуем.</p>
+    </div>
+    <div class="grid grid--3" data-reviews-grid>
+      <div class="card card--hover review reveal" data-delay="0">
+        <p class="review__src"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.5 9.5 3 21"/><path d="M20.7 3.3a1 1 0 0 0-1.1-.2L3.4 9.6a1 1 0 0 0 .1 1.9l6.4 1.9a1 1 0 0 1 .7.7l1.9 6.4a1 1 0 0 0 1.9.1l6.5-16.2a1 1 0 0 0-.2-1.1Z"/></svg><span class="mono">из канала отзывов</span></p>
+        <p class="review__text">Мне очень нравится впн, я даже не замечаю
+        того, что он включён. Лёгкий, быстрый, не вылетает при потере
+        интернета, я просто от него в восторге. И по цене доступный&#128522;</p>
+        <p class="review__who"><b>@kuru27a</b></p>
+      </div>
+      <div class="card card--hover review reveal" data-delay="70">
+        <p class="review__src"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.5 9.5 3 21"/><path d="M20.7 3.3a1 1 0 0 0-1.1-.2L3.4 9.6a1 1 0 0 0 .1 1.9l6.4 1.9a1 1 0 0 1 .7.7l1.9 6.4a1 1 0 0 0 1.9.1l6.5-16.2a1 1 0 0 0-.2-1.1Z"/></svg><span class="mono">из канала отзывов</span></p>
+        <p class="review__text">До этого впн у меня вечно всё висло,
+        и переключать надо было. А сейчас даж в сбер онлайн спокойно
+        с ним захожу. Плюс тех поддержка, супер.</p>
+        <p class="review__who"><b>@uspehpro100</b></p>
+      </div>
+      <div class="card card--hover review reveal" data-delay="140">
+        <p class="review__src"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.5 9.5 3 21"/><path d="M20.7 3.3a1 1 0 0 0-1.1-.2L3.4 9.6a1 1 0 0 0 .1 1.9l6.4 1.9a1 1 0 0 1 .7.7l1.9 6.4a1 1 0 0 0 1.9.1l6.5-16.2a1 1 0 0 0-.2-1.1Z"/></svg><span class="mono">из канала отзывов</span></p>
+        <p class="review__text">Спасибо, за быстрый ответ и помощь
+        в настройке vpn, все четко и по делу, сама бы
+        не справилась&#128522;</p>
+        <p class="review__who"><b>Татьяна Б.</b></p>
+      </div>
+    </div>
+    <div class="review-form-wrap reveal">
+      <form class="review-form" data-review-form action="/api/review" method="post">
+        <h3>Оставить отзыв</h3>
+        <p class="small">Отзывы публикуются после проверки живым человеком —
+        поэтому появляются не мгновенно.</p>
+        <label>Ваш ник
+          <input name="nick" maxlength="40" required
+                 placeholder="@nickname или имя" autocomplete="nickname">
+        </label>
+        <label>Отзыв
+          <textarea name="text" minlength="30" maxlength="600" rows="4" required
+            placeholder="Чем пользовались раньше, как работает сейчас — своими словами"></textarea>
+        </label>
+        <input type="text" name="website" tabindex="-1" autocomplete="off"
+               class="hp" aria-hidden="true">
+        <p class="review-form__note" data-review-note hidden></p>
+        <button class="btn btn--primary" type="submit">Отправить на проверку</button>
+      </form>
+    </div>
+    <p class="btn-row reviews-cta">
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251">Попробовать 3 дня бесплатно</a>
+    </p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Кому это подойдёт</h2>
+    </div>
+    <div class="grid grid--3">
+      <div class="card card--hover reveal" data-delay="0">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+        <h3>Тем, кто в России</h3>
+        <p>Нужен рабочий Telegram, привычные сервисы и стабильная связь —
+        без ежедневной возни с настройками.</p>
+      </div>
+      <div class="card card--hover reveal" data-delay="70">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></div>
+        <h3>Тем, кто уехал</h3>
+        <p>Российский сервер возвращает доступ к банкам, госсервисам
+        и сайтам, которые не пускают из-за рубежа.</p>
+      </div>
+      <div class="card card--hover reveal" data-delay="140">
+        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.7 8.9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.5 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/>
+<path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Тем, кто устал от однодневок</h3>
+        <p>Если предыдущий сервис исчез вместе с оплаченным месяцем —
+        3 дня бесплатно, чтобы проверить нас без риска.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Частые вопросы</h2>
+    </div>
+    <div class="faq">
+      <div class="faq__item" data-open="false">
+        <h3 class="faq__h">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Нужно ли платить сразу?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1">
+          <div><p>Нет. Первые 3 дня бесплатны, карту привязывать не нужно — бот выдаёт ключ сразу. Если не подойдёт, просто не продлевайте.</p></div>
+        </div>
+      </div>
+      <div class="faq__item" data-open="false">
+        <h3 class="faq__h">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>А если оплачу и разонравится?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2">
+          <div><p>Вернём деньги за неиспользованные дни — напишите в бота. День считается как 1/30 цены месяца; на длинных тарифах использованное время пересчитывается по обычной цене 349 ₽ за месяц, разница возвращается. Подробно — в условиях использования.</p></div>
+        </div>
+      </div>
+      <div class="faq__item" data-open="false">
+        <h3 class="faq__h">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>Придётся выключать VPN ради Сбербанка или Госуслуг?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3">
+          <div><p>Нет, и это главное отличие. Банки, СБП, Госуслуги, сайты в зоне .ru и другие российские сервисы идут напрямую, мимо туннеля. Переключать ничего не нужно.</p></div>
+        </div>
+      </div>
+      <div class="faq__item" data-open="false">
+        <h3 class="faq__h">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>Нужно ли ставить приложение из App Store?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4">
+          <div><p>Нет. Мы выдаём ключ, а не собственное приложение — поэтому удаление программ из магазинов нас не касается. Ключ вставляется в бесплатный клиент, бот подскажет какой.</p></div>
+        </div>
+      </div>
+      <div class="faq__item" data-open="false">
+        <h3 class="faq__h">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>Сколько устройств можно подключить?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5">
+          <div><p>В подписку входят два устройства — например, телефон и компьютер. К одному ключу можно подключить до шести: каждое сверх двух стоит 60 ₽ в месяц. То есть четыре устройства обойдутся в 469 ₽ в месяц, шесть — в 589 ₽. Количество меняется в личном кабинете бота.</p></div>
+        </div>
+      </div>
+      <div class="faq__item" data-open="false">
+        <h3 class="faq__h">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q6" aria-controls="a6">
+            <span>Можно ли поделиться ключом с семьёй?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6">
+          <div><p>Да, для этого и сделана возможность добавлять устройства: один ключ на шесть устройств закрывает и ваши телефон с ноутбуком, и устройства близких. Это заметно дешевле отдельных подписок: шесть устройств на одном ключе — 589 ₽ в месяц против 2094 ₽ за шесть отдельных.</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="faq-more">
+      <a class="arrow-link" href="/faq/">Все вопросы и ответы <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="cta-plate reveal">
+      <h2>Попробуйте 3 дня — бесплатно</h2>
+      <p>Ключ выдаётся сразу, карта не нужна. Если не подойдёт —
+      просто не продлевайте.</p>
+      <p class="btn-row">
+        <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Попробовать 3 дня бесплатно</a>
+        <a class="btn btn--tg" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Канал «Цифровая свобода»</a>
+      </p>
+      <p class="cta-note">В канале — что происходит с доступом прямо сейчас
+      и что делать, если перестало работать.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <h4>VPN Просто</h4>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Если ничего не открывается</h4>
+        <ul>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/">Что происходит с доступом</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Связь</h4>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Канал «Цифровая свобода»</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Документы</h4>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2026 VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Попробовать 3 дня бесплатно</a>
+</div>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "VPN Просто", "url": "https://prostokey.com/", "inLanguage": "ru"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "serviceType": "VPN", "name": "VPN Просто", "url": "https://prostokey.com/", "areaServed": {"@type": "Country", "name": "Россия"}, "provider": {"@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/"}, "offers": {"@type": "Offer", "price": "349", "priceCurrency": "RUB", "description": "Подписка на месяц. Первые 3 дня бесплатно.", "url": "https://prostokey.com/#price"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Нужно ли платить сразу?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Первые 3 дня бесплатны, карту привязывать не нужно — бот выдаёт ключ сразу. Если не подойдёт, просто не продлевайте."}}, {"@type": "Question", "name": "А если оплачу и разонравится?", "acceptedAnswer": {"@type": "Answer", "text": "Вернём деньги за неиспользованные дни — напишите в бота. День считается как 1/30 цены месяца; на длинных тарифах использованное время пересчитывается по обычной цене 349 ₽ за месяц, разница возвращается. Подробно — в условиях использования."}}, {"@type": "Question", "name": "Придётся выключать VPN ради Сбербанка или Госуслуг?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, и это главное отличие. Банки, СБП, Госуслуги, сайты в зоне .ru и другие российские сервисы идут напрямую, мимо туннеля. Переключать ничего не нужно."}}, {"@type": "Question", "name": "Нужно ли ставить приложение из App Store?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Мы выдаём ключ, а не собственное приложение — поэтому удаление программ из магазинов нас не касается. Ключ вставляется в бесплатный клиент, бот подскажет какой."}}, {"@type": "Question", "name": "Сколько устройств можно подключить?", "acceptedAnswer": {"@type": "Answer", "text": "В подписку входят два устройства — например, телефон и компьютер. К одному ключу можно подключить до шести: каждое сверх двух стоит 60 ₽ в месяц. То есть четыре устройства обойдутся в 469 ₽ в месяц, шесть — в 589 ₽. Количество меняется в личном кабинете бота."}}, {"@type": "Question", "name": "Можно ли поделиться ключом с семьёй?", "acceptedAnswer": {"@type": "Answer", "text": "Да, для этого и сделана возможность добавлять устройства: один ключ на шесть устройств закрывает и ваши телефон с ноутбуком, и устройства близких. Это заметно дешевле отдельных подписок: шесть устройств на одном ключе — 589 ₽ в месяц против 2094 ₽ за шесть отдельных."}}]}</script>
+<script src="/app.js?v=6ad01f03" defer></script>
+</body>
+</html>

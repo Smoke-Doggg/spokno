@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){try{var t=localStorage.getItem("theme");
+if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<title>Сбербанк не работает с VPN: почему и что делать — VPN Просто</title>
+<meta name="description" content="Банк и Госуслуги не открываются при включённом VPN. Почему так происходит и как настроить раздельный доступ, чтобы не выключать VPN каждый раз.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/blog/vpn-i-banki/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="Сбербанк не работает с VPN: почему и что делать">
+<meta property="og:description" content="Банк и Госуслуги не открываются при включённом VPN. Почему так происходит и как настроить раздельный доступ, чтобы не выключать VPN каждый раз.">
+<meta property="og:url" content="https://prostokey.com/blog/vpn-i-banki/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="VPN Просто — стабильный VPN, банки работают">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts.css?v=eb1fbac3" as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/fonts.css?v=eb1fbac3"></noscript>
+<link rel="stylesheet" href="/style.css?v=ad768182">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<div class="aurora aurora--soft" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/" aria-current="page">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <div class="theme-sw" role="group" aria-label="Тема оформления" data-theme-switch hidden>
+        <button type="button" data-set="light" aria-pressed="false" title="Светлая тема"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg></button>
+        <button type="button" data-set="system" aria-pressed="true" title="Как в системе"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></button>
+        <button type="button" data-set="dark" aria-pressed="false" title="Тёмная тема"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
+      </div>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<article class="section article">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → Сбербанк не работает с VPN: почему и что делать</p>
+    <h1>Сбербанк не работает с VPN: почему и что делать</h1>
+    <p class="meta">
+      <span>Обновлено: 14 августа 2026</span>
+      <span>Команда VPN Просто</span>
+    </p>
+
+    <p class="lead">Банковские приложения не работают с VPN потому, что видят вход с
+зарубежного адреса и включают защиту от мошенничества. Правильное
+решение — не выключать VPN каждый раз, а настроить раздельный доступ:
+банки, платёжные системы и Госуслуги идут напрямую, весь остальной
+трафик — через туннель. Тогда ничего переключать не нужно.
+</p>
+
+<nav class="toc" aria-label="Содержание">
+  <p class="toc__head">В этой статье</p>
+  <ol>
+    <li><a href="#pochemu">Почему банк «видит» VPN</a></li>
+    <li><a href="#chto-byvaet">Что происходит на практике</a></li>
+    <li><a href="#reshenie">Правильное решение: раздельный доступ</a></li>
+    <li><a href="#spisok">Что должно идти мимо туннеля</a></li>
+    <li><a href="#obratno">Обратная ситуация: банк не работает без VPN</a></li>
+    <li><a href="#kak-nastroit">Как это настроено у нас</a></li>
+    <li><a href="#proverka">Как проверить, что всё правильно</a></li>
+    <li><a href="#esli">Если сервис так не умеет</a></li>
+  </ol>
+</nav>
+
+
+<h2 id="pochemu">Почему банк «видит» VPN</h2>
+
+<p>Когда вы заходите в банковское приложение, оно сообщает серверу, откуда
+пришёл запрос. Обычно это адрес вашего домашнего или мобильного
+провайдера — привычный, из вашего города. С включённым VPN вместо него
+приходит адрес сервера в другой стране.</p>
+
+<p>Дальше срабатывает защита от мошенничества. Логика простая: если утром
+вы заходили из Москвы, а через час — из Амстердама, значит, либо вы
+внезапно переместились, либо вашими данными пользуется кто-то ещё. Второе
+случается достаточно часто, чтобы банки относились к таким входам
+серьёзно.</p>
+
+<p>Дополнительный фактор — репутация адреса. Серверы популярных
+VPN-сервисов используют тысячи людей одновременно, и часть из них
+занимается не самыми добросовестными вещами. Адрес попадает в списки
+подозрительных, и любой вход с него автоматически получает высокую оценку
+риска — независимо от того, что конкретно вы делаете.</p>
+
+<h2 id="chto-byvaet">Что происходит на практике</h2>
+
+<p>Проявления зависят от банка и от того, что именно вы делаете.</p>
+
+<ul class="facts">
+  <li><strong>Приложение не открывается</strong> или бесконечно грузится
+  на экране входа.</li>
+  <li><strong>Требуют подтверждение</strong> — код из СМС, push, а иногда
+  и звонок в поддержку.</li>
+  <li><strong>Платёж отклоняется.</strong> Оплата картой в интернете
+  проходит через платёжный шлюз, который тоже оценивает риск. Зарубежный
+  адрес повышает оценку — операция не проходит, хотя денег на счёте
+  достаточно.</li>
+  <li><strong>Сессия завершается.</strong> Вы вошли, начали переводить —
+  и вас выкинуло: система заметила смену адреса в середине работы.</li>
+  <li><strong>Госуслуги показывают ошибку</strong> или не пускают
+  в личный кабинет.</li>
+</ul>
+
+<p>Отдельно стоит сказать о частом страхе: «заблокируют ли счёт из-за
+VPN». Постоянной блокировки от этого не бывает — банк может приостановить
+конкретную сессию или операцию и запросить подтверждение, но не закрывает
+счёт за сам факт использования защищённого соединения. Неприятно другое:
+каждое такое срабатывание отнимает время, а иногда происходит в самый
+неподходящий момент.</p>
+
+<h2 id="reshenie">Правильное решение: раздельный доступ</h2>
+
+<p>Очевидный, но плохой выход — выключать VPN каждый раз, когда нужен
+банк, и включать обратно. Плохой он по трём причинам: об этом легко
+забыть, это раздражает по несколько раз в день, и в момент выключения вы
+теряете доступ ко всему остальному.</p>
+
+<p>Правильное решение называется раздельным туннелированием. Суть в том,
+что трафик делится по назначению: соединения с одними сайтами идут через
+VPN, с другими — напрямую, как без него.</p>
+
+<p>Настроенный таким образом сервис отправляет напрямую всё российское:
+банковские приложения, платёжные шлюзы, Госуслуги, сайты в зонах .ru и
+.рф. Для банка вы заходите из своего города со своего обычного адреса —
+защита не срабатывает, подтверждений не требуется. Одновременно все
+остальные сайты открываются через туннель.</p>
+
+<p>С точки зрения пользователя это выглядит как отсутствие проблемы:
+VPN включён всегда, банк работает всегда, переключать нечего.</p>
+
+<div class="inline-cta">
+  <p><strong>У нас это работает из коробки.</strong> Банки, СБП и
+  Госуслуги идут напрямую с первого дня — настраивать ничего не нужно.
+  3 дня бесплатно, карта не нужна.</p>
+  <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251">Попробовать 3 дня бесплатно</a>
+</div>
+
+<h2 id="spisok">Что должно идти мимо туннеля</h2>
+
+<p>Список не ограничивается парой банков — иначе всё равно будут
+осечки. Полезно проверить, входит ли в него следующее.</p>
+
+<div class="tablewrap">
+  <table>
+    <thead>
+      <tr><th>Категория</th><th>Зачем</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Банковские приложения и сайты</td>
+        <td>Вход без лишних подтверждений и обрывов сессии</td>
+      </tr>
+      <tr>
+        <td>Платёжные шлюзы и системы приёма платежей</td>
+        <td>Чтобы проходила оплата картой в интернет-магазинах</td>
+      </tr>
+      <tr>
+        <td>СБП и переводы по номеру телефона</td>
+        <td>Переводы срабатывают с первого раза</td>
+      </tr>
+      <tr>
+        <td>Госуслуги и государственные сервисы</td>
+        <td>Вход в личный кабинет без ошибок</td>
+      </tr>
+      <tr>
+        <td>Домены .ru, .рф и другие российские зоны</td>
+        <td>Российские сайты открываются быстрее — трафик не идёт
+        через другую страну и обратно</td>
+      </tr>
+      <tr>
+        <td>Крупные российские сервисы</td>
+        <td>Почта, облака, музыка и видео работают в обычном режиме</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Побочный плюс: российские сайты при таком раскладе открываются
+быстрее, чем через VPN. Трафику незачем ехать в другую страну и
+возвращаться обратно, если сервер находится в соседнем городе.</p>
+
+<h2 id="obratno">Обратная ситуация: банк не работает без VPN</h2>
+
+<p>Если вы за границей, задача переворачивается. Часть российских
+сервисов ограничивает доступ с зарубежных адресов: приложение банка не
+открывается, Госуслуги не пускают, а некоторые сайты просто не
+загружаются.</p>
+
+<p>Здесь помогает то же самое, но наоборот — VPN с выходом через
+российский адрес. Для банка вы находитесь дома, и всё работает штатно.
+Такой сервер есть и у нас — он входит в подписку и не требует доплаты.</p>
+
+<p>Тем, кто уехал, обычно нужны оба режима: российский адрес для банков и
+госсервисов и зарубежный — для всего остального. Переключение занимает
+пару касаний в клиенте.</p>
+
+<section class="unique">
+  <h2 id="kak-nastroit">Как это настроено у нас</h2>
+
+  <p>Раздельный доступ у нас включён по умолчанию — не отдельной опцией,
+  которую нужно найти в настройках, а частью конфигурации, которая
+  приходит вместе с ключом.</p>
+
+  <p><strong>Что уходит напрямую.</strong> В правилах перечислено:
+  банки и СБП, Госуслуги, сайты в зоне .ru и .рф, VK и Яндекс, Apple и iCloud. Отдельно прописаны домены платёжных
+  систем — тех самых шлюзов, через которые проходит оплата картой в
+  интернет-магазинах. Именно они чаще всего становятся причиной
+  необъяснимого «платёж отклонён», когда сам банк вроде бы открывается.</p>
+
+  <p><strong>Как это устроено технически.</strong> В конфигурации есть
+  список правил маршрутизации: домены и зоны, которые обрабатываются
+  напрямую, минуя туннель. Клиент применяет их автоматически при каждом
+  соединении — решение принимается за доли секунды, до установки связи с
+  сайтом. Отдельно исключены обращения к локальной сети, чтобы не ломались
+  домашние устройства: принтеры, камеры, роутер.</p>
+
+  <p><strong>Что это даёт на практике.</strong> VPN можно держать
+  включённым постоянно. Приложение банка открывается без подтверждений,
+  оплата проходит с первого раза, Госуслуги не показывают ошибку входа.
+  Российские сайты грузятся с обычной скоростью, а не через другую
+  страну.</p>
+
+  <p><strong>Честно о границах решения.</strong> Список правил не может
+  быть исчерпывающим: сервисов много, они меняют домены, появляются
+  новые. Если вам попадётся что-то, что не работает при включённом VPN, —
+  напишите нам, и мы добавим это в правила. Так список и пополняется:
+  по реальным случаям, а не по нашим догадкам о том, чем пользуются
+  люди.</p>
+
+  <p><strong>Чего мы не делаем.</strong> Мы не пропускаем мимо туннеля
+  всё подряд «на всякий случай» — это обесценило бы саму идею
+  защищённого соединения. Напрямую идёт только то, что действительно
+  требует местного адреса: деньги, госсервисы и российские сайты.</p>
+
+  <p><strong>Один нюанс, о котором стоит знать.</strong> Раздельный
+  доступ работает по именам сайтов. Если приложение обращается не по
+  имени, а сразу по числовому адресу — а так делают некоторые банковские
+  программы для части своих запросов, — правило может не сработать.
+  На практике это встречается редко и проявляется странно: приложение
+  открывается, но какой-то один раздел не грузится. Лечится добавлением
+  адресов в правила, поэтому нам и важно, чтобы о таких случаях
+  сообщали.</p>
+
+  <p><strong>Почему мы вообще этим занимаемся.</strong> Раздельный
+  доступ — скучная работа: список правил нужно поддерживать, проверять
+  и дополнять, а заметен он только тогда, когда его нет. Но именно из-за
+  его отсутствия люди чаще всего бросают VPN: не потому, что он не
+  работает, а потому, что надоедает выключать его ради каждого перевода.
+  Дешевле один раз настроить правила, чем терять человека на третьей
+  неделе.</p>
+</section>
+
+<h2 id="proverka">Как проверить, что всё настроено правильно</h2>
+
+<p>Займёт минуту и избавит от неприятных сюрпризов в момент, когда
+платёж действительно нужен.</p>
+
+<ol class="steps">
+  <li><b>Откройте банк с включённым VPN</b><span>Вход должен пройти как
+  обычно: без дополнительных кодов, предупреждений о необычной активности
+  и бесконечной загрузки.</span></li>
+  <li><b>Проведите небольшой платёж</b><span>Именно оплата, а не просто
+  вход: платёжные шлюзы проверяются отдельно от банковского приложения,
+  и осечка чаще случается как раз здесь.</span></li>
+  <li><b>Зайдите на Госуслуги</b><span>Личный кабинет должен открыться
+  без ошибки авторизации.</span></li>
+  <li><b>Проверьте российский сайт</b><span>Любой сайт в зоне .ru должен
+  открываться быстро — если заметно медленнее обычного, значит трафик
+  идёт через другую страну.</span></li>
+</ol>
+
+<p>Если хотя бы один пункт не проходит, дело именно в настройке
+маршрутизации, а не в банке и не в вашем телефоне.</p>
+
+<h2 id="esli">Если сервис так не умеет</h2>
+
+<p>Не все VPN поддерживают раздельный доступ, а часть поддерживает, но
+требует настройки руками. Что можно сделать.</p>
+
+<ol class="steps">
+  <li><b>Проверить настройки клиента</b><span>В некоторых программах есть
+  раздел с правилами маршрутизации — там можно добавить домены, которые
+  должны идти напрямую.</span></li>
+  <li><b>Спросить у сервиса</b><span>Иногда нужный режим включается
+  выдачей другой конфигурации — достаточно попросить поддержку.</span></li>
+  <li><b>Использовать разные профили</b><span>Крайний вариант: один
+  профиль для повседневных дел, второй — без VPN для банков. Неудобно,
+  но лучше, чем выключать вручную.</span></li>
+</ol>
+
+<p>Если ничего из этого не помогает, а выключать VPN ради каждого платежа
+надоело — это как раз тот случай, когда стоит менять сервис. Возможность
+не думать о переключениях стоит дешевле, чем ежедневное раздражение.</p>
+
+<p>Что ещё почитать по теме: <a href="/blog/kakoy-vpn-rabotaet/">какой VPN
+работает в России сейчас</a> — там разобрано, по каким признакам вообще
+выбирать сервис, и <a href="/kak-podklyuchit/">как подключиться</a>, если
+вы уже определились.</p>
+
+
+    <h2>Частые вопросы</h2>
+    <div class="faq">
+      <div class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Почему банк не работает, когда включён VPN?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1">
+          <div><p>Приложение видит вход с зарубежного адреса и включает защиту от мошенничества: просит подтверждения, показывает ошибку или временно ограничивает вход. Для банка это выглядит как попытка входа из другой страны.</p></div>
+        </div>
+      </div>
+      <div class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>Могут ли заблокировать счёт из-за VPN?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2">
+          <div><p>Постоянной блокировки из-за VPN не бывает: банк может приостановить сессию и запросить подтверждение, но счёт от этого не закрывается. Тем не менее лишние срабатывания защиты неприятны, и их проще не вызывать.</p></div>
+        </div>
+      </div>
+      <div class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>Что такое раздельное туннелирование?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3">
+          <div><p>Настройка, при которой часть трафика идёт через VPN, а часть — напрямую. Российские банки, платёжные системы и госсервисы отправляются напрямую, всё остальное — через туннель. Переключать ничего не нужно.</p></div>
+        </div>
+      </div>
+      <div class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>Почему Сбербанк не работает БЕЗ VPN, если я за границей?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4">
+          <div><p>Обратная ситуация: часть российских сервисов ограничивает доступ с зарубежных адресов. Здесь помогает VPN с выходом через российский IP — для банка вы окажетесь дома.</p></div>
+        </div>
+      </div>
+      <div class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>Оплата картой не проходит при включённом VPN. Почему?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5">
+          <div><p>Платёжные шлюзы проверяют, откуда пришёл платёж, и зарубежный адрес повышает оценку риска — операция отклоняется. Решение то же: платёжные системы должны идти мимо туннеля.</p></div>
+        </div>
+      </div>
+      <div class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q6" aria-controls="a6">
+            <span>Обязательно ли выключать VPN ради банка?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6">
+          <div><p>Нет, если сервис настроен правильно. Выключать приходится только там, где весь трафик идёт через туннель без исключений.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p><strong>Проверить на своей сети.</strong> 3 дня
+      бесплатно, карта не нужна: если у вас не заработает — вы ничего
+      не потеряли.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251">Попробовать 3 дня бесплатно</a>
+    </div>
+
+    <h2>Читать дальше</h2>
+    <ul class="facts">
+      <li><a href="/blog/kakoy-vpn-rabotaet/">Какой VPN работает в России сейчас</a></li>
+      <li><a href="/blog/proxy-dlya-telegram/">Прокси для Телеграм: что это и чем отличается от VPN</a></li>
+      <li><a href="/blog/belye-spiski/">Отключили мобильный интернет: что работает</a></li>
+    </ul>
+  </div>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <h4>VPN Просто</h4>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Если ничего не открывается</h4>
+        <ul>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/">Что происходит с доступом</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Связь</h4>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Канал «Цифровая свобода»</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Документы</h4>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2026 VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"]}</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Сбербанк не работает с VPN: почему и что делать", "description": "Банковские приложения и Госуслуги плохо реагируют на зарубежный адрес. Разбираем, почему так происходит и как настроить VPN, чтобы не выключать его каждый раз.", "datePublished": "2026-08-14", "dateModified": "2026-08-14", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/vpn-i-banki/"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@type": "Organization", "name": "Команда VPN Просто"}, "publisher": {"@type": "Organization", "name": "VPN Просто", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Сбербанк не работает с VPN: почему и что делать", "item": "https://prostokey.com/blog/vpn-i-banki/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему банк не работает, когда включён VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Приложение видит вход с зарубежного адреса и включает защиту от мошенничества: просит подтверждения, показывает ошибку или временно ограничивает вход. Для банка это выглядит как попытка входа из другой страны."}}, {"@type": "Question", "name": "Могут ли заблокировать счёт из-за VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Постоянной блокировки из-за VPN не бывает: банк может приостановить сессию и запросить подтверждение, но счёт от этого не закрывается. Тем не менее лишние срабатывания защиты неприятны, и их проще не вызывать."}}, {"@type": "Question", "name": "Что такое раздельное туннелирование?", "acceptedAnswer": {"@type": "Answer", "text": "Настройка, при которой часть трафика идёт через VPN, а часть — напрямую. Российские банки, платёжные системы и госсервисы отправляются напрямую, всё остальное — через туннель. Переключать ничего не нужно."}}, {"@type": "Question", "name": "Почему Сбербанк не работает БЕЗ VPN, если я за границей?", "acceptedAnswer": {"@type": "Answer", "text": "Обратная ситуация: часть российских сервисов ограничивает доступ с зарубежных адресов. Здесь помогает VPN с выходом через российский IP — для банка вы окажетесь дома."}}, {"@type": "Question", "name": "Оплата картой не проходит при включённом VPN. Почему?", "acceptedAnswer": {"@type": "Answer", "text": "Платёжные шлюзы проверяют, откуда пришёл платёж, и зарубежный адрес повышает оценку риска — операция отклоняется. Решение то же: платёжные системы должны идти мимо туннеля."}}, {"@type": "Question", "name": "Обязательно ли выключать VPN ради банка?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, если сервис настроен правильно. Выключать приходится только там, где весь трафик идёт через туннель без исключений."}}]}</script>
+<script src="/app.js?v=6ad01f03" defer></script>
+</body>
+</html>

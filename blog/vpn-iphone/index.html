@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){try{var t=localStorage.getItem("theme");
+if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<title>VPN на iPhone, когда приложений нет в App Store — VPN Просто</title>
+<meta name="description" content="Из App Store удалили сотни VPN-приложений. Что делать владельцу iPhone, чем ключ доступа отличается от приложения и как настроить соединение без магазина.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/blog/vpn-iphone/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="VPN на iPhone, когда приложений нет в App Store">
+<meta property="og:description" content="Из App Store удалили сотни VPN-приложений. Что делать владельцу iPhone, чем ключ доступа отличается от приложения и как настроить соединение без магазина.">
+<meta property="og:url" content="https://prostokey.com/blog/vpn-iphone/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="VPN Просто — стабильный VPN, банки работают">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts.css?v=eb1fbac3" as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/fonts.css?v=eb1fbac3"></noscript>
+<link rel="stylesheet" href="/style.css?v=ad768182">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<div class="aurora aurora--soft" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/" aria-current="page">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <div class="theme-sw" role="group" aria-label="Тема оформления" data-theme-switch hidden>
+        <button type="button" data-set="light" aria-pressed="false" title="Светлая тема"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg></button>
+        <button type="button" data-set="system" aria-pressed="true" title="Как в системе"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></button>
+        <button type="button" data-set="dark" aria-pressed="false" title="Тёмная тема"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
+      </div>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<article class="section article">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → VPN на iPhone, когда приложений нет в App Store</p>
+    <h1>VPN на iPhone, когда приложений нет в App Store</h1>
+    <p class="meta">
+      <span>Обновлено: 14 августа 2026</span>
+      <span>Команда VPN Просто</span>
+    </p>
+
+    <p class="lead">Из российского App Store удалили сотни VPN-приложений, и переустановить
+их уже нельзя. Рабочее решение — не искать очередную программу, а
+использовать подход «ключ вместо приложения»: сервис выдаёт строку
+настроек, которая работает в любом подходящем клиенте. Ключ невозможно
+удалить из магазина, поэтому такая схема переживает чистки.
+</p>
+
+<nav class="toc" aria-label="Содержание">
+  <p class="toc__head">В этой статье</p>
+  <ol>
+    <li><a href="#chto-proizoshlo">Что произошло с приложениями</a></li>
+    <li><a href="#klyuch">Ключ вместо приложения</a></li>
+    <li><a href="#vstroennyy">Почему встроенный VPN в iOS не подходит</a></li>
+    <li><a href="#kak">Как настроить на iPhone</a></li>
+    <li><a href="#podgotovka">Что сделать, пока всё работает</a></li>
+    <li><a href="#opasnosti">Каких приложений стоит избегать</a></li>
+    <li><a href="#pochemu-my">Почему мы не делаем своё приложение</a></li>
+    <li><a href="#chastye">Что делать в частых ситуациях</a></li>
+  </ol>
+</nav>
+
+
+<h2 id="chto-proizoshlo">Что произошло с приложениями</h2>
+
+<p>Начиная с 2024 года VPN-программы удаляются из российского App Store
+по требованию регулятора, и к 2026 году счёт пошёл на сотни. Удаление
+работает так: приложение исчезает из поиска и с витрины, скачать его
+в российской учётной записи больше нельзя.</p>
+
+<p>Что это значит на практике:</p>
+
+<ul class="facts">
+  <li><strong>Установленное продолжает работать</strong> — до тех пор,
+  пока не потребуется обновление.</li>
+  <li><strong>Переустановить не получится.</strong> Сменили телефон,
+  сбросили настройки, случайно удалили — программы больше нет.</li>
+  <li><strong>Обновления не приходят.</strong> А они в этой области
+  критичны: клиенты дорабатывают под меняющиеся условия сети.</li>
+  <li><strong>Пополнение счёта Apple ID ограничено</strong> у ряда
+  операторов, что осложняет оплату подписок внутри приложений.</li>
+</ul>
+
+<p>Отсюда вывод, неприятный для сервисов с собственными приложениями:
+их канал доставки перекрыт полностью, и сделать они с этим ничего
+не могут.</p>
+
+<h2 id="klyuch">Ключ вместо приложения</h2>
+
+<p>Есть другой подход, который в этих условиях оказался устойчивее.
+Сервис не делает своё приложение вообще. Вместо этого он выдаёт
+<strong>ключ доступа</strong> — строку с настройками подключения. Она
+вставляется в бесплатный клиент, а клиент — обычная программа общего
+назначения, которая умеет работать с разными сервисами.</p>
+
+<p>Разница принципиальная. Приложение конкретного VPN-сервиса — это
+цель для удаления: его легко найти по названию. Клиент общего
+назначения — просто инструмент, у него нет привязки к конкретному
+сервису. А ключ вообще не является программой: это текст, который вы
+получаете в мессенджере и храните у себя.</p>
+
+<div class="tablewrap">
+  <table>
+    <thead>
+      <tr><th></th><th>Своё приложение сервиса</th><th>Ключ + клиент</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Что происходит при удалении из магазина</td>
+        <td>сервис теряет доступ к пользователям</td>
+        <td>ничего: ключ не в магазине</td>
+      </tr>
+      <tr>
+        <td>Смена телефона</td>
+        <td>переустановить нельзя</td>
+        <td>ставится любой доступный клиент</td>
+      </tr>
+      <tr>
+        <td>Обновления</td>
+        <td>не приходят</td>
+        <td>обновляется клиент, ключ прежний</td>
+      </tr>
+      <tr>
+        <td>Смена сервиса</td>
+        <td>нужно новое приложение</td>
+        <td>достаточно вставить другой ключ</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="vstroennyy">Почему встроенный VPN в iOS не подходит</h2>
+
+<p>В настройках iPhone есть раздел «VPN» — логично предположить, что
+можно обойтись им. К сожалению, нет.</p>
+
+<p>Встроенная поддержка рассчитана на корпоративные протоколы, которые
+создавались для подключения сотрудников к офисной сети. Они не
+маскируют трафик: их соединения распознаются фильтрующим оборудованием
+так же легко, как WireGuard и OpenVPN. В российских сетях они сейчас
+не работают.</p>
+
+<p>Современные протоколы — VLESS + Reality и Hysteria2 — в iOS
+не встроены, поэтому и нужен отдельный клиент.</p>
+
+<h2 id="kak">Как настроить на iPhone</h2>
+
+<ol class="steps">
+  <li><b>Получить ключ</b><span>В нашем случае — в боте: он выдаёт
+  строку настроек и 3 дня бесплатного доступа.</span></li>
+  <li><b>Поставить клиент</b><span>Подходят Happ, V2RayTun, Streisand.
+  Часть из них доступна в российском магазине не всегда — актуальную
+  ссылку подскажет бот.</span></li>
+  <li><b>Вставить ключ</b><span>В клиенте нажимаете «Добавить» и
+  выбираете добавление из буфера обмена. Настройки разбираются
+  автоматически.</span></li>
+  <li><b>Разрешить создание VPN</b><span>iOS попросит подтверждение —
+  это стандартный системный запрос при первом подключении.</span></li>
+</ol>
+
+<p>Подробнее по всем платформам — на странице
+<a href="/kak-podklyuchit/">как подключиться</a>.</p>
+
+<div class="inline-cta">
+  <p><strong>Проверить без риска.</strong> 3 дня
+  бесплатно, карта не нужна. Ключ приходит сразу, вместе с подсказкой,
+  какой клиент поставить именно на ваш iPhone.</p>
+  <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251">Попробовать 3 дня бесплатно</a>
+</div>
+
+<h2 id="podgotovka">Что стоит сделать, пока всё работает</h2>
+
+<p>Владельцам iPhone это касается сильнее, чем остальных: если
+приложение недоступно в магазине, восстановить доступ в спешке не
+получится. Несколько вещей, которые занимают пять минут сейчас и
+экономят вечер потом.</p>
+
+<p><strong>Сохраните ключ отдельно от мессенджера.</strong> Скопируйте
+строку настроек в заметки или менеджер паролей. Если мессенджер
+перестанет открываться, ключ останется под рукой.</p>
+
+<p><strong>Не удаляйте работающий клиент.</strong> Даже если сейчас
+им не пользуетесь: установить заново может не получиться. Программа
+не мешает и не расходует заряд, пока соединение выключено.</p>
+
+<p><strong>Проверьте, что помните способ получить ключ.</strong>
+Название бота, адрес сайта сервиса — то, по чему вы найдёте доступ,
+если начнёте с чистого телефона.</p>
+
+<p><strong>Заранее посмотрите запасной клиент.</strong> Их несколько,
+и они работают с одним и тем же ключом. Знать хотя бы два названия —
+полезная страховка.</p>
+
+<h2 id="opasnosti">Каких приложений стоит избегать</h2>
+
+<p>Когда привычные программы исчезают, люди ставят что попало — и это
+основной риск момента. Признаки, при которых лучше не устанавливать.</p>
+
+<ul class="facts">
+  <li><strong>Просят установить профиль конфигурации или
+  сертификат.</strong> Это даёт приложению возможность просматривать
+  ваш трафик. Нормальному VPN-клиенту такое не нужно.</li>
+  <li><strong>Обещают полную анонимность.</strong> Признак, что сервис
+  либо не разбирается, либо намеренно вводит в заблуждение.</li>
+  <li><strong>Бесплатно и без ограничений.</strong> Серверы стоят денег;
+  если вы не платите, то расплачиваетесь данными или вниманием.</li>
+  <li><strong>Нет никакой информации о том, кто за этим стоит.</strong>
+  Приложение без сайта, без поддержки и без внятного описания — плохой
+  выбор для программы, через которую пойдёт весь ваш трафик.</li>
+</ul>
+
+<section class="unique">
+  <h2 id="pochemu-my">Почему мы не делаем своё приложение</h2>
+
+  <p>Нас периодически спрашивают, когда появится «приложение VPN
+  Просто». Ответ: скорее всего, никогда — и это осознанное решение,
+  а не нехватка ресурсов.</p>
+
+  <p><strong>Приложение — это единая точка отказа.</strong> Свою
+  программу нужно поддерживать в двух магазинах, проходить проверки и
+  жить с риском удаления. Для VPN-сервиса, работающего с российской
+  аудиторией, этот риск не гипотетический: сотни приложений уже удалены.
+  Сервис, у которого весь доступ завязан на собственную программу,
+  в один день теряет всех пользователей iPhone — и ничего не может
+  сделать.</p>
+
+  <p><strong>Ключ живёт по другим правилам.</strong> То, что мы выдаём, —
+  строка настроек: адрес сервера, параметры протокола, идентификатор.
+  Это не программа, её нельзя удалить из магазина, заблокировать
+  «по названию» или лишить обновлений. Человек хранит её у себя и может
+  вставить в любой клиент, который умеет работать с нашими протоколами,
+  — а таких несколько, и они развиваются независимо друг от друга.</p>
+
+  <p><strong>Побочный плюс — свобода выбора.</strong> Кому-то нужен
+  клиент попроще, кому-то с тонкими настройками, кому-то версия для
+  телевизора. Мы не обязаны угадывать и делать всё это сами: человек
+  берёт тот инструмент, который ему удобнее, а мы отвечаем за то, что
+  умеем — за серверы, протоколы и правила маршрутизации.</p>
+
+  <p><strong>Что мы за это платим.</strong> Честно: подключение
+  получается чуть сложнее, чем «скачал приложение, нажал кнопку». Нужно
+  поставить клиент и вставить ключ — примерно две минуты для человека,
+  который делает это впервые. Мы компенсируем это тем, что бот подсказывает
+  клиент под конкретное устройство и помогает, если что-то не выходит.
+  Обмен неравноценный только на первый взгляд: две минуты один раз —
+  против риска остаться без доступа в момент очередной чистки
+  магазина.</p>
+
+  <p><strong>Как это выглядит при смене телефона.</strong> Сценарий,
+  на котором чаще всего спотыкаются владельцы iPhone: купили новый,
+  перенесли данные, а VPN-приложения на месте нет и скачать негде.
+  С ключом порядок другой: ставите любой доступный клиент, вставляете
+  ту же строку настроек — и соединение работает. Ключ при этом никуда
+  не пропадает: он лежит в переписке с ботом, и его всегда можно
+  запросить заново.</p>
+
+  <p><strong>Что мы делаем со своей стороны.</strong> Следим за тем,
+  какие клиенты остаются доступными и корректно работают с нашими
+  протоколами, и держим в боте актуальные ссылки под каждую платформу.
+  Это тоже скучная поддерживающая работа — списки меняются, приложения
+  переименовываются и исчезают, — но именно она избавляет человека от
+  необходимости разбираться в этом самостоятельно.</p>
+</section>
+
+<h2 id="chastye">Что делать в частых ситуациях</h2>
+
+<p><strong>Меняю телефон, старое приложение не переустановить.</strong>
+Возьмите ключ у своего сервиса и поставьте один из клиентов общего
+назначения. Если сервис не выдаёт ключ, а работает только через своё
+приложение, — это повод его сменить.</p>
+
+<p><strong>Приложение работает, но давно не обновлялось.</strong>
+Оно может перестать поддерживать актуальные настройки в любой момент.
+Разумно заранее подготовить запасной вариант, а не разбираться в тот
+день, когда связь пропадёт.</p>
+
+<p><strong>Всё удалил, ничего не работает, интернет ограничен.</strong>
+Замкнутый круг: чтобы получить ключ, нужен мессенджер, а он не
+открывается. Решается через <a href="/telegram/">страницу восстановления
+доступа</a> — там прокси, который возвращает мессенджер без установки
+программ.</p>
+
+<p><strong>Не понимаю, какой сервис выбрать.</strong> Критерии
+разобраны отдельно: <a href="/blog/kakoy-vpn-rabotaet/">какой VPN
+работает в России сейчас</a>.</p>
+
+<p><strong>Соединение поднялось, но приложения работают через
+раз.</strong> На iPhone частая причина — режим экономии заряда: система
+усыпляет фоновые процессы, и туннель тихо отключается при погасшем
+экране. Проверьте, что для клиента разрешена фоновая активность и
+отключён режим низкого энергопотребления. Вторая типичная причина —
+старый профиль в клиенте: удалите его и добавьте ключ заново.</p>
+
+<h2 id="itog">Коротко</h2>
+
+<p>Удаление приложений из магазина сделало неудобной, но не невозможной
+работу VPN на iPhone. Схема «ключ плюс клиент общего назначения»
+устойчивее фирменных программ: ключ нельзя удалить из App Store,
+клиентов несколько, и они взаимозаменяемы. Настройка занимает пару
+минут один раз — дальше соединение работает так же, как работало бы
+через приложение, только без риска однажды его лишиться.</p>
+
+
+    <h2>Частые вопросы</h2>
+    <div class="faq">
+      <div class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Почему VPN-приложения пропали из App Store?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1">
+          <div><p>Их удаляют по требованию регулятора: за 2026 год из российского магазина убрали сотни программ. Установленные ранее приложения остаются на устройстве, но обновить или переустановить их уже нельзя.</p></div>
+        </div>
+      </div>
+      <div class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>Можно ли пользоваться VPN на iPhone без приложения из магазина?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2">
+          <div><p>Да. Нужен клиент, поддерживающий современные протоколы, и ключ доступа. Сам ключ — это строка настроек: её нельзя удалить из магазина, она работает в любом подходящем клиенте.</p></div>
+        </div>
+      </div>
+      <div class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>Что будет с уже установленным приложением?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3">
+          <div><p>Оно продолжит работать, пока не потребуется обновление. Проблема возникает при смене телефона или сбросе настроек: заново установить программу из российского магазина не получится.</p></div>
+        </div>
+      </div>
+      <div class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>Есть ли встроенный VPN в самом iPhone?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4">
+          <div><p>В настройках iOS есть раздел VPN, но он рассчитан на корпоративные протоколы, которые в России сейчас фильтруются. Для современных маскирующих протоколов нужен отдельный клиент.</p></div>
+        </div>
+      </div>
+      <div class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>Безопасно ли ставить сторонние VPN-клиенты?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5">
+          <div><p>Клиенты с открытым кодом и понятной репутацией — да. Опасаться стоит бесплатных программ неизвестного происхождения, которые просят лишние разрешения или установку сертификатов.</p></div>
+        </div>
+      </div>
+      <div class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q6" aria-controls="a6">
+            <span>Работает ли это на iPad и Mac?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6">
+          <div><p>Да, подход тот же: клиент плюс ключ. Один и тот же ключ добавляется на все ваши устройства — в подписку входят два, а всего можно подключить до шести — по 60 ₽ в месяц за каждое дополнительное.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p><strong>Проверить на своей сети.</strong> 3 дня
+      бесплатно, карта не нужна: если у вас не заработает — вы ничего
+      не потеряли.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251">Попробовать 3 дня бесплатно</a>
+    </div>
+
+    <h2>Читать дальше</h2>
+    <ul class="facts">
+      <li><a href="/blog/kakoy-vpn-rabotaet/">Какой VPN работает в России сейчас</a></li>
+      <li><a href="/blog/vpn-i-banki/">Сбербанк не работает с VPN: почему и что делать</a></li>
+      <li><a href="/blog/proxy-dlya-telegram/">Прокси для Телеграм: что это и чем отличается от VPN</a></li>
+    </ul>
+  </div>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <h4>VPN Просто</h4>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Если ничего не открывается</h4>
+        <ul>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/">Что происходит с доступом</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Связь</h4>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Канал «Цифровая свобода»</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Документы</h4>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2026 VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"]}</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "VPN на iPhone, когда приложений нет в App Store", "description": "Из российского App Store удалили сотни VPN-приложений. Разбираем, что делать владельцу iPhone и почему подход «ключ вместо приложения» оказался устойчивее.", "datePublished": "2026-08-14", "dateModified": "2026-08-14", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/vpn-iphone/"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@type": "Organization", "name": "Команда VPN Просто"}, "publisher": {"@type": "Organization", "name": "VPN Просто", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "VPN на iPhone, когда приложений нет в App Store", "item": "https://prostokey.com/blog/vpn-iphone/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему VPN-приложения пропали из App Store?", "acceptedAnswer": {"@type": "Answer", "text": "Их удаляют по требованию регулятора: за 2026 год из российского магазина убрали сотни программ. Установленные ранее приложения остаются на устройстве, но обновить или переустановить их уже нельзя."}}, {"@type": "Question", "name": "Можно ли пользоваться VPN на iPhone без приложения из магазина?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Нужен клиент, поддерживающий современные протоколы, и ключ доступа. Сам ключ — это строка настроек: её нельзя удалить из магазина, она работает в любом подходящем клиенте."}}, {"@type": "Question", "name": "Что будет с уже установленным приложением?", "acceptedAnswer": {"@type": "Answer", "text": "Оно продолжит работать, пока не потребуется обновление. Проблема возникает при смене телефона или сбросе настроек: заново установить программу из российского магазина не получится."}}, {"@type": "Question", "name": "Есть ли встроенный VPN в самом iPhone?", "acceptedAnswer": {"@type": "Answer", "text": "В настройках iOS есть раздел VPN, но он рассчитан на корпоративные протоколы, которые в России сейчас фильтруются. Для современных маскирующих протоколов нужен отдельный клиент."}}, {"@type": "Question", "name": "Безопасно ли ставить сторонние VPN-клиенты?", "acceptedAnswer": {"@type": "Answer", "text": "Клиенты с открытым кодом и понятной репутацией — да. Опасаться стоит бесплатных программ неизвестного происхождения, которые просят лишние разрешения или установку сертификатов."}}, {"@type": "Question", "name": "Работает ли это на iPad и Mac?", "acceptedAnswer": {"@type": "Answer", "text": "Да, подход тот же: клиент плюс ключ. Один и тот же ключ добавляется на все ваши устройства — в подписку входят два, а всего можно подключить до шести — по 60 ₽ в месяц за каждое дополнительное."}}]}</script>
+<script src="/app.js?v=6ad01f03" defer></script>
+</body>
+</html>
