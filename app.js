@@ -415,4 +415,34 @@
       });
     }).catch(function () { /* бэкенда нет (демо) — секция живёт без подгрузки */ });
   }
+
+  /* --- Вторая половина воронки с внешних каналов ---------------------
+     Первая половина — /go/bot/?src=... — уже записала метку в
+     sessionStorage и отправила «пришёл на сайт». Здесь — общий для всех
+     страниц кусок: ловим клик по ЛЮБОЙ кнопке «в бота» (их много, они
+     стоят по всему сайту) и, если метка ещё не протухла, шлём «дошёл
+     до бота». Без этого куска первая половина показывала бы только
+     «зашли на сайт», а не «дошли ли до бота или потерялись». */
+  var REF_MAX_AGE_MS = 2 * 60 * 60 * 1000; // 2 часа — дольше сессии в браузере не считаем
+  var BOT_HREF_RE = /^https:\/\/t\.me\/vpn_prosto_bot\b/;
+
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('a[href]');
+    if (!link || !BOT_HREF_RE.test(link.href)) return;
+
+    var raw;
+    try { raw = sessionStorage.getItem('vpnp_ref'); } catch (err) { return; }
+    if (!raw) return;
+
+    var ref;
+    try { ref = JSON.parse(raw); } catch (err) { return; }
+    if (!ref || !ref.src || Date.now() - ref.ts > REF_MAX_AGE_MS) return;
+
+    try {
+      fetch('https://tolyanchik027.hlab.kz/watch-api/ref?src=' + encodeURIComponent(ref.src) + '&evt=convert',
+            { mode: 'no-cors', keepalive: true });
+    } catch (err) { /* не блокирует переход в бота */ }
+
+    try { sessionStorage.removeItem('vpnp_ref'); } catch (err) {} // не считать дважды с двух кнопок подряд
+  }, true); // capture — сработает раньше, чем браузер уйдёт по ссылке
 })();

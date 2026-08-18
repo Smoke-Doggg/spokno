@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>(function(){try{var t=localStorage.getItem("theme");
 if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
-<title>Открываем бота — VPN Просто</title>
-<meta name="description" content="Служебная страница перехода в Telegram-бота VPN Просто — подключение и ключ выдаются прямо там.">
+<title>Добро пожаловать — VPN Просто</title>
+<meta name="description" content="Переход с внешнего канала на сайт VPN Просто — служебная страница, ведёт на главную.">
 <meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -17,8 +17,8 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="VPN Просто">
-<meta property="og:title" content="Открываем бота">
-<meta property="og:description" content="Служебная страница перехода в Telegram-бота VPN Просто — подключение и ключ выдаются прямо там.">
+<meta property="og:title" content="Добро пожаловать">
+<meta property="og:description" content="Переход с внешнего канала на сайт VPN Просто — служебная страница, ведёт на главную.">
 <meta property="og:url" content="https://prostokey.com/go/bot/">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:image" content="https://prostokey.com/og-image.png">
@@ -78,8 +78,8 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 <main id="main">
 <section class="section">
   <div class="wrap" style="text-align:center; padding-top:60px; padding-bottom:60px">
-    <h1 class="lead" style="font-size:inherit">Открываем бота в Telegram…</h1>
-    <p><a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251" id="go-link">Открыть вручную</a></p>
+    <h1 class="lead" style="font-size:inherit">Секунду…</h1>
+    <p><a class="btn btn--primary" href="/" id="go-link">Перейти на сайт</a></p>
   </div>
 </section>
 <script>
@@ -87,18 +87,20 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
   var ALLOWED = ["digitalfreedom", "aieasy", "svoizagranicey"];
   var params = new URLSearchParams(location.search);
   var src = params.get("src");
-  var dest = document.getElementById("go-link").href;
 
   if (src && ALLOWED.indexOf(src) !== -1) {
     try {
-      fetch("https://tolyanchik027.hlab.kz/watch-api/ref?src=" + encodeURIComponent(src),
+      sessionStorage.setItem("vpnp_ref", JSON.stringify({src: src, ts: Date.now()}));
+    } catch (e) { /* приватный режим браузера — просто не запомним, не критично */ }
+    try {
+      fetch("https://tolyanchik027.hlab.kz/watch-api/ref?src=" + encodeURIComponent(src) + "&evt=land",
             {mode: "no-cors", keepalive: true});
-    } catch (e) { /* счётчик необязателен для перехода */ }
+    } catch (e) {}
   }
-  location.replace(dest);
+  location.replace("/");
 })();
 </script>
-<noscript><meta http-equiv="refresh" content="0;url=https://t.me/vpn_prosto_bot?start=5817865251"></noscript>
+<noscript><meta http-equiv="refresh" content="0;url=/"></noscript>
 </main>
 
 <footer class="foot">
@@ -153,11 +155,11 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage",
-"name":"\u041e\u0442\u043a\u0440\u044b\u0432\u0430\u0435\u043c \u0431\u043e\u0442\u0430 \u2014 VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/go/bot/",
+"name":"\u0414\u043e\u0431\u0440\u043e \u043f\u043e\u0436\u0430\u043b\u043e\u0432\u0430\u0442\u044c \u2014 VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/go/bot/",
 "inLanguage":"ru-RU","dateModified":"2026-08-19",
 "isPartOf":{"@type":"WebSite","name":"VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/"},
 "author":{"@type":"Organization","name":"\u041a\u043e\u043c\u0430\u043d\u0434\u0430 VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/"},
 "publisher":{"@type":"Organization","name":"VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/"}}</script>
-<script src="/app.js?v=6ad01f03" defer></script>
+<script src="/app.js?v=de01357f" defer></script>
 </body>
 </html>
