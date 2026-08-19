@@ -453,6 +453,13 @@ strong { font-weight: 600; color: var(--ink); }
 }
 .card > :last-child { margin-bottom: 0; }
 .card h3 { margin-bottom: 10px; }
+/* Заголовки карточек в ряду — под две строки, даже если текст занял одну.
+   Иначе абзацы соседних карточек начинаются на разной высоте, и глаз
+   цепляется за рассинхронизацию раньше, чем за смысл. Только там, где
+   карточки стоят рядом: в одиночной карточке резерв был бы дырой. */
+@media (min-width: 1024px) {
+  .grid--3 > .card > h3 { min-height: 2lh; }
+}
 .card p { color: var(--graphite); font-size: 16px; }
 
 @media (hover: hover) {
