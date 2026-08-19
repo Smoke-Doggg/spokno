@@ -340,8 +340,16 @@
   var stopZone = document.getElementById('price');
   if (sticky) {
     var hero = document.querySelector('.hero');
+    /* Плашка нужна, когда главной кнопки не видно. Раньше считали по доле
+       высоты hero — на длинном первом экране это давало две одинаковые
+       зелёные кнопки одновременно. Следим за самой кнопкой. */
+    var heroBtn = hero && hero.querySelector('.btn--primary');
+    var useObserver = heroBtn && 'IntersectionObserver' in window;
+    var btnGone = false;
     var toggle = function () {
-      var passedHero = hero ? window.scrollY > hero.offsetHeight * 0.8 : false;
+      var passedHero = useObserver
+        ? btnGone
+        : (hero ? window.scrollY > hero.offsetHeight * 0.8 : false);
       var inStop = false;
       if (stopZone) {
         var r = stopZone.getBoundingClientRect();
@@ -351,6 +359,12 @@
     };
     toggle();
     window.addEventListener('scroll', toggle, { passive: true });
+    if (useObserver) {
+      new IntersectionObserver(function (es) {
+        btnGone = !es[0].isIntersecting;
+        toggle();
+      }, { threshold: 0 }).observe(heroBtn);
+    }
   }
 
   /* --- Отзывы: отправка формы и подгрузка одобренных ------------------- */
@@ -445,4 +459,25 @@
 
     try { sessionStorage.removeItem('vpnp_ref'); } catch (err) {} // не считать дважды с двух кнопок подряд
   }, true); // capture — сработает раньше, чем браузер уйдёт по ссылке
+
+  /* --- Пауза бегущей строки ------------------------------------------- */
+  /* Выбор человека держим до конца сессии: если он остановил строку, она
+     не должна поехать снова на другой странице. */
+  var mq = document.querySelector('[data-marquee]');
+  if (mq) {
+    var band = mq.closest('.trust');
+    var stop = false;
+    try { stop = sessionStorage.getItem('vpnp_marquee') === 'off'; } catch (e) {}
+    var apply = function () {
+      band.classList.toggle('is-paused', stop);
+      mq.setAttribute('aria-pressed', stop ? 'true' : 'false');
+      mq.setAttribute('aria-label', stop ? 'Возобновить прокрутку' : 'Остановить прокрутку');
+    };
+    apply();
+    mq.addEventListener('click', function () {
+      stop = !stop;
+      try { sessionStorage.setItem('vpnp_marquee', stop ? 'off' : 'on'); } catch (e) {}
+      apply();
+    });
+  }
 })();
