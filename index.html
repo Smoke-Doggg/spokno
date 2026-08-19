@@ -35,7 +35,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
       type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
       type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=9e5b42a8">
+<link rel="stylesheet" href="/style.css?v=32eac3fa">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -362,48 +362,58 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
       Один ключ — 2 устройства, можно расширить
       до 6.</p>
     </div>
-    <div class="grid grid--5 platforms">
-      <div class="card card--hover platform reveal" data-delay="0">
-        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+    <ul class="platform-list">
+      <li class="platform-row reveal" data-delay="0">
+        <span class="icon-badge" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></div>
-        <h3>iPhone и iPad</h3>
-        <p>Клиенты убрали из российского App Store — ставится из магазина другой страны. Бот подскажет, как именно.</p>
-        <p class="platform__link"><a href="https://apps.apple.com/us/app/happ-proxy-utility/id6504287215" rel="noopener">Happ в App Store</a></p>
-      </div>
-      <div class="card card--hover platform reveal" data-delay="60">
-        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></span>
+        <span class="platform-row__body">
+          <b>iPhone и iPad</b>
+          <span>Клиенты убрали из российского App Store — ставится из магазина другой страны. Бот подскажет, как именно.</span>
+        </span>
+        <a class="platform-row__link" href="https://apps.apple.com/us/app/happ-proxy-utility/id6504287215" rel="noopener">Happ в App Store</a>
+      </li>
+      <li class="platform-row reveal" data-delay="50">
+        <span class="icon-badge" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></div>
-        <h3>Android</h3>
-        <p>Happ из Google Play, для телефонов без сервисов Google — APK-файлом.</p>
-        <p class="platform__link"><a href="https://play.google.com/store/apps/details?id=com.happproxy" rel="noopener">Happ в Google Play</a></p>
-      </div>
-      <div class="card card--hover platform reveal" data-delay="120">
-        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></span>
+        <span class="platform-row__body">
+          <b>Android</b>
+          <span>Happ из Google Play, для телефонов без сервисов Google — APK-файлом.</span>
+        </span>
+        <a class="platform-row__link" href="https://play.google.com/store/apps/details?id=com.happproxy" rel="noopener">Happ в Google Play</a>
+      </li>
+      <li class="platform-row reveal" data-delay="100">
+        <span class="icon-badge" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.3 2.6a1 1 0 0 1-.9 1.4H3.6a1 1 0 0 1-.9-1.4L4 16"/></svg></div>
-        <h3>Windows</h3>
-        <p>Установщик Happ — скачали, поставили, вставили ключ.</p>
-        <p class="platform__link"><a href="https://github.com/Happ-proxy/happ-desktop/releases/latest/download/setup-Happ.x64.exe" rel="noopener">Скачать Happ</a></p>
-      </div>
-      <div class="card card--hover platform reveal" data-delay="180">
-        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.3 2.6a1 1 0 0 1-.9 1.4H3.6a1 1 0 0 1-.9-1.4L4 16"/></svg></span>
+        <span class="platform-row__body">
+          <b>Windows</b>
+          <span>Установщик Happ — скачали, поставили, вставили ключ.</span>
+        </span>
+        <a class="platform-row__link" href="https://github.com/Happ-proxy/happ-desktop/releases/latest/download/setup-Happ.x64.exe" rel="noopener">Скачать Happ</a>
+      </li>
+      <li class="platform-row reveal" data-delay="150">
+        <span class="icon-badge" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
-        <h3>macOS</h3>
-        <p>Установщик со страницы разработчика — магазин и вторая учётная запись не нужны. Работает на Apple Silicon и Intel.</p>
-        <p class="platform__link"><a href="https://github.com/Happ-proxy/happ-desktop/releases/latest/download/Happ.macOS.universal.dmg" rel="noopener">Скачать Happ для Mac</a></p>
-      </div>
-      <div class="card card--hover platform reveal" data-delay="240">
-        <div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+        <span class="platform-row__body">
+          <b>macOS</b>
+          <span>Установщик со страницы разработчика — магазин и вторая учётная запись не нужны. Работает на Apple Silicon и Intel.</span>
+        </span>
+        <a class="platform-row__link" href="https://github.com/Happ-proxy/happ-desktop/releases/latest/download/Happ.macOS.universal.dmg" rel="noopener">Скачать Happ для Mac</a>
+      </li>
+      <li class="platform-row reveal" data-delay="200">
+        <span class="icon-badge" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="15" x="2" y="7" rx="2"/><path d="m17 2-5 5-5-5"/></svg></div>
-        <h3>Телевизоры</h3>
-        <p>Android TV и Apple TV — Happ с интерфейсом под пульт.</p>
-        <p class="platform__link"><a href="https://play.google.com/store/apps/details?id=com.happproxy" rel="noopener">Happ для Android TV</a></p>
-      </div>
-    </div>
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="15" x="2" y="7" rx="2"/><path d="m17 2-5 5-5-5"/></svg></span>
+        <span class="platform-row__body">
+          <b>Телевизоры</b>
+          <span>Android TV и Apple TV — Happ с интерфейсом под пульт.</span>
+        </span>
+        <a class="platform-row__link" href="https://play.google.com/store/apps/details?id=com.happproxy" rel="noopener">Happ для Android TV</a>
+      </li>
+    </ul>
     <p class="section-foot reveal">Пошаговая настройка под каждую систему —
     на странице <a href="/kak-podklyuchit/">«Как подключить»</a>. Если клиент
     пропал из магазина, бот всегда подскажет актуальную ссылку.</p>
