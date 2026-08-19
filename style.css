@@ -520,14 +520,10 @@ strong { font-weight: 600; color: var(--ink); }
 }
 .chips li:active { transform: scale(.97); transition-duration: 100ms; }
 
-.code-chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 16px; padding: 0; list-style: none; }
-.code-chips li {
-  font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
-  font-size: 14px; font-weight: 500;
-  background: var(--surface-alt); border-radius: var(--r-sm);
-  padding: 8px 12px; color: var(--ink);
-}
-
+/* Названия протоколов — обычным текстом, выделены только насыщенностью.
+   Код-шрифт означает «это можно скопировать и выполнить»; в имени
+   технологии копировать нечего. То же правило применено на втором экране. */
+.protocols { font-weight: 600; color: var(--ink); margin: 0 0 16px; font-size: 15px; }
 /* --- Шаги -------------------------------------------------------------- */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; grid-template-columns: repeat(3, 1fr); position: relative; }
 .steps::before {
