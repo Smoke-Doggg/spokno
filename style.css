@@ -1467,10 +1467,12 @@ main, .foot { position: relative; z-index: 1; }
 @media (hover: hover) { .foot-cols a.tg-link:hover { color: var(--tg-text); text-decoration: underline; } }
 
 /* --- Форма отзыва ------------------------------------------------------ */
-.review-form-wrap { margin-top: 26px; display: flex; justify-content: center; }
+/* 48px, а не 26: здесь меняется тема — «вот что говорят» переходит
+   в «напишите сами», и переход должен читаться. */
+.review-form-wrap { margin-top: 48px; display: flex; justify-content: center; }
 .review-form {
   width: min(560px, 100%); background: var(--card); border: 1px solid var(--line);
-  border-radius: var(--r-lg); padding: 22px 24px;
+  border-radius: var(--r-lg); padding: 26px 28px;
 }
 .review-form h3 { margin-bottom: 4px; }
 .review-form label {
