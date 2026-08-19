@@ -932,10 +932,12 @@ td strong { color: var(--ink); }
 .device-wrap { display: flex; justify-content: center; }
 
 .device {
-  /* 220px даёт высоту 477px — ровно высота левой колонки от заголовка
-     до кнопки. Макет обрамляет её целиком, и пустоты под ним не остаётся.
-     На узких экранах колонки складываются в одну, и там размер свой. */
-  --w: 220px;
+  /* Высота корпуса — ширина × 2.168, и она подогнана под левую колонку:
+     макет обрамляет её от заголовка до кнопки, пустоты под ним не остаётся.
+     250px → 542px, ровно высота колонки после того, как в шаг «Поставить
+     программу» добавились значки платформ. Меняете содержимое колонки —
+     проверьте это число заново. */
+  --w: 250px;
   position: relative;
   width: var(--w);
   height: calc(var(--w) * 2.168);
@@ -1126,6 +1128,12 @@ td strong { color: var(--ink); }
   transition: opacity 320ms var(--ease), transform 320ms var(--ease);
 }
 
+/* Между 900 и 1180px текст в левой колонке переносится чаще, колонка
+   вырастает — и корпусу нужно быть крупнее, чтобы низ по-прежнему сходился
+   с кнопкой. */
+@media (min-width: 901px) and (max-width: 1070px) {
+  .device { --w: 286px; }
+}
 @media (max-width: 900px) {
   .device { --w: 260px; }
 }
@@ -1137,11 +1145,11 @@ td strong { color: var(--ink); }
 }
 
 /* --- Б4: строка платформ ------------------------------------------------- */
-.platforms {
-  display: flex; align-items: center; flex-wrap: wrap; gap: 12px 16px;
-  margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line);
-}
 .chips--icon li { display: inline-flex; align-items: center; gap: 7px; }
+/* Значки внутри шага — мельче и приглушённее самого шага: это подтверждение
+   сказанного, а не отдельное заявление. */
+.step__chips { margin-top: 12px; }
+.step__chips li { font-size: 13px; padding: 5px 10px; }
 .chips--icon svg { color: var(--muted); }
 @media (hover: hover) {
   .chips--icon li:hover svg { color: var(--accent-text); }
@@ -1165,9 +1173,6 @@ td strong { color: var(--ink); }
 
 @media (max-width: 560px) {
   .stat { padding-inline: 12px; }
-  .platforms { gap: 10px 12px; }
-  /* семь чипов укладываем в две строки: подпись выносим наверх */
-  .platforms { flex-direction: column; align-items: flex-start; gap: 12px; }
   .chips--icon { gap: 7px; }
   .chips--icon li { padding: 5px 9px; font-size: 13px; gap: 5px; }
   .chips--icon svg { width: 14px; height: 14px; }
