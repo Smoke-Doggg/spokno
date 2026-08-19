@@ -35,7 +35,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
       type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
       type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=4a67c628">
+<link rel="stylesheet" href="/style.css?v=de50eac2">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -554,13 +554,9 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
     <div class="devices">
       <div class="devices__copy">
         <h3>Один ключ — вся семья</h3>
-        <p>В подписку входят 2 устройства: например,
-        телефон и ноутбук. Если нужно больше — добавьте их к тому же ключу
-        в личном кабинете бота, до 6 штук: каждое
-        дополнительное стоит 60 ₽ в месяц. Отдельные
-        подписки покупать не нужно.</p>
-        <p class="small">Так один ключ закрывает и ваши устройства, и
-        устройства близких: телефон, планшет, компьютер, телевизор.</p>
+        <p>Один ключ закрывает и ваши устройства, и устройства близких:
+        телефон, планшет, компьютер, телевизор. Добавляются в личном
+        кабинете бота, отдельные подписки покупать не нужно.</p>
       </div>
       <div class="devices__table">
         <div class="tablewrap">
@@ -618,9 +614,6 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           самого быстрого — тоже включены</span></li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>2 устройства в подписке, можно добавить до 6 по 60 ₽ в месяц</span></li>
-        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
      stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Автосписаний нет: продлеваете, когда сами захотите</span></li>
         <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -633,44 +626,35 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
       <h3>Почему не 100 ₽</h3>
       <p class="why-price__lead">Дешевле действительно есть. Разница обычно
       не в жадности, а в том, что именно вы покупаете.</p>
-      <div class="why-price__cols">
-        <div>
-          <p class="why-price__head">Что чаще всего значит «дешевле»</p>
-          <ul class="minus">
-            <li>Один сервер и кнопка «включить». Перестало работать — выключить
-              и включить, вдруг подключится к живому.</li>
-            <li>Страну не выбрать, второго протокола нет: когда фильтры научатся
-              распознавать первый, ждёте.</li>
-            <li>Ради банка и Госуслуг VPN приходится выключать вручную —
-              по несколько раз в день.</li>
-            <li>Сервис работает первый месяц, и никто не знает, переживёт ли он
-              следующую волну блокировок.</li>
-          </ul>
+      <dl class="why-pairs">
+        <div class="why-pair why-pair--head" aria-hidden="true">
+          <span>Что чаще всего значит «дешевле»</span>
+          <span>Как у нас</span>
         </div>
-        <div>
-          <p class="why-price__head">Что входит в 349 ₽ у нас</p>
-          <ul class="checks">
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>6 стран на выбор
-              и российский сервер — без доплат за локации</span></li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Автовыбор сам ходит между серверами,
-              а если прижало — есть мост, на который можно перейти вручную</span></li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Банки, Госуслуги и российские сайты
-              идут мимо туннеля — выключать ничего не нужно</span></li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>5-й год работы
-              и одна цена без «премиум-пакетов»</span></li>
-          </ul>
+        <div class="why-pair">
+          <dt>Один сервер и кнопка «включить». Перестало работать — выключить
+            и включить, вдруг подключится к живому.</dt>
+          <dd>6 стран и автовыбор: сервер
+            меняется сам, вам ничего не нажимать.</dd>
         </div>
-      </div>
-      <p class="why-price__foot">Если по итогу не подойдёт — вернём деньги
-        за неиспользованные дни. Вы ничем не рискуете.</p>
+        <div class="why-pair">
+          <dt>Страну не выбрать, второго протокола нет: когда фильтры научатся
+            распознавать первый, ждёте.</dt>
+          <dd>Два протокола. Научатся распознавать один — остаётся второй,
+            плюс мост на самый тяжёлый случай.</dd>
+        </div>
+        <div class="why-pair">
+          <dt>Ради банка и Госуслуг VPN приходится выключать вручную —
+            по несколько раз в день.</dt>
+          <dd>Банки и Госуслуги идут мимо туннеля сами. Выключать нечего.</dd>
+        </div>
+        <div class="why-pair">
+          <dt>Сервис работает первый месяц, и никто не знает, переживёт ли он
+            следующую волну блокировок.</dt>
+          <dd>Мы работаем 5-й год и пережили все волны
+            блокировок, включая те, что унесли сотни сервисов.</dd>
+        </div>
+      </dl>
     </div>
   </div>
 </section>

@@ -1502,28 +1502,45 @@ main, .foot { position: relative; z-index: 1; }
 }
 .why-price > h3 { font-size: 21px; margin-bottom: 6px; }
 .why-price__lead { color: var(--muted); font-size: 15px; max-width: 62ch; }
-.why-price__cols {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 20px;
+/* Возражение и ответ — парами в одной строке. Возражение приглушено,
+   ответ основным цветом: глаз идёт слева направо и видит, что каждое
+   опасение закрыто. */
+.why-pairs { margin: 20px 0 0; display: grid; gap: 0; }
+.why-pair {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 26px;
+  padding: 14px 0; border-top: 1px solid var(--line);
+  align-items: start;
 }
-.why-price__head {
+.why-pair:first-child { border-top: 0; padding-top: 0; }
+.why-pair--head {
+  padding-bottom: 4px;
   font-size: 13px; font-weight: 700; letter-spacing: .02em;
-  text-transform: uppercase; color: var(--muted); margin-bottom: 12px;
+  text-transform: uppercase; color: var(--muted);
 }
-.why-price .minus { list-style: none; margin: 0; padding: 0;
-  display: flex; flex-direction: column; gap: 11px; }
-.why-price .minus li {
-  position: relative; padding-left: 22px; font-size: 14.5px; line-height: 1.5;
-  color: var(--muted);
+.why-pair--head span:last-child { padding-left: 26px; }
+.why-pair dt {
+  position: relative; padding-left: 22px;
+  font-size: 14.5px; line-height: 1.5; color: var(--muted);
 }
-.why-price .minus li::before {
+.why-pair dt::before {
   content: ""; position: absolute; left: 4px; top: .62em;
   width: 9px; height: 2px; border-radius: 2px; background: var(--line-strong);
 }
-.why-price__foot {
-  margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line);
-  font-size: 14.5px; color: var(--muted);
+.why-pair dd {
+  margin: 0; position: relative; padding-left: 26px;
+  font-size: 14.5px; line-height: 1.5; color: var(--graphite);
+}
+.why-pair dd::before {
+  content: ""; position: absolute; left: 2px; top: .34em;
+  width: 13px; height: 7px; border-left: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent); transform: rotate(-45deg);
 }
 @media (max-width: 720px) {
   .why-price { padding: 22px 20px; }
-  .why-price__cols { grid-template-columns: 1fr; gap: 22px; }
+  /* Ответ уходит под возражение — иначе на телефоне обе колонки
+     сжимаются до нечитаемой ширины. */
+  .why-pair { grid-template-columns: 1fr; gap: 10px; }
+  /* Подписи колонок здесь врут: колонок нет, и они читаются как два
+     подряд идущих заголовка. Пары и без них понятны по значкам. */
+  .why-pair--head { display: none; }
 }
