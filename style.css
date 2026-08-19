@@ -882,9 +882,13 @@ td strong { color: var(--ink); }
 .connect {
   display: grid; gap: clamp(32px, 4vw, 56px);
   grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
-  align-items: center;
+  /* По верху, а не по центру: макет телефона вдвое выше колонки со шагами,
+     и центрирование оставляло 131px пустоты между подзаголовком и первым
+     шагом — читалось как провал. Внизу та же пустота выглядит обычным
+     отступом до следующего блока. */
+  align-items: start;
 }
-.connect__col { display: grid; align-content: center; }
+.connect__col { display: grid; align-content: start; }
 .connect .steps { grid-template-columns: 1fr; gap: 26px; }
 .connect-cta { margin-top: 40px; }
 .connect .steps::before {
