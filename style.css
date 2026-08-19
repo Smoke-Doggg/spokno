@@ -636,6 +636,8 @@ strong { font-weight: 600; color: var(--ink); }
 .faq__a p { padding: 0 20px 20px; font-size: 16px; color: var(--graphite); max-width: 72ch; }
 
 /* --- Финальный CTA ------------------------------------------------------ */
+/* По центру, а не по левому краю: контент занимал 572px из 1132,
+   и 42% тёмной плашки пустовало — она читалась как чёрное пятно. */
 .cta-plate {
   position: relative; overflow: hidden;
   background: var(--plate-bg);
@@ -643,17 +645,26 @@ strong { font-weight: 600; color: var(--ink); }
   -webkit-backdrop-filter: var(--card-filter);
   backdrop-filter: var(--card-filter);
   border-radius: 24px;
-  padding: clamp(40px, 6vw, 72px);
-  display: grid; gap: 20px; justify-items: start;
+  padding: clamp(36px, 5vw, 60px) clamp(24px, 4vw, 48px);
+  display: grid; gap: 18px; justify-items: center; text-align: center;
 }
+/* Свечение по центру за заголовком, а не в пустом углу справа:
+   раньше оно подсвечивало ровно ту часть плашки, где ничего не было. */
 .cta-plate::after {
-  content: ""; position: absolute; top: -40%; right: -10%; width: 60%; height: 160%;
-  background: radial-gradient(closest-side, rgba(22, 199, 132, .12), transparent 70%);
+  content: ""; position: absolute; top: -60%; left: 50%; translate: -50% 0;
+  width: 80%; height: 200%;
+  background: radial-gradient(closest-side, rgba(22, 199, 132, .16), transparent 70%);
   pointer-events: none;
 }
 .cta-plate > * { position: relative; z-index: 1; }
-.cta-plate h2 { color: var(--plate-ink); max-width: 18ch; }
+.cta-plate h2 { color: var(--plate-ink); max-width: 30ch; }
 .cta-plate p { color: var(--plate-dim); max-width: 52ch; }
+/* max-width снимаем: ряд кнопок размечен тем же <p>, что и абзацы,
+   и ограничение в 52 символа не давало двум кнопкам встать рядом. */
+.cta-plate .btn-row {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+  max-width: none;
+}
 .cta-plate .cta-note { color: var(--plate-faint); }
 .btn--onDark { border-color: var(--line-strong); color: var(--plate-ink); background: transparent; }
 .btn--onDark:hover { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .4); }
