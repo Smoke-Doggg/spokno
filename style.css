@@ -1175,28 +1175,25 @@ td strong { color: var(--ink); }
 /* --- Переключатель темы ---------------------------------------------- */
 /* hidden снимается скриптом: без JS переключателя честно нет */
 .theme-sw {
-  display: flex; gap: 2px;
+  display: inline-flex; align-items: center; gap: 7px;
+  height: 40px; padding: 0 13px;
   background: var(--surface-alt);
   border: 1px solid var(--line);
   border-radius: var(--r-pill);
-  padding: 3px;
+  color: var(--muted); cursor: pointer;
+  font: inherit; font-size: 13.5px; font-weight: 500;
+  white-space: nowrap;
 }
 .theme-sw[hidden] { display: none; }
-.theme-sw button {
-  display: grid; place-items: center;
-  /* Три круглые мишени подряд: на 34px промахи пальцем постоянны.
-     40px + 3px отступа контейнера дают 46px общей высоты полосы. */
-  width: 40px; height: 40px;
-  border: 0; border-radius: 50%;
-  background: none; color: var(--muted); cursor: pointer;
-  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+@media (hover: hover) {
+  .theme-sw:hover { color: var(--ink); border-color: var(--line-strong); }
 }
-@media (hover: hover) { .theme-sw button:hover { color: var(--ink); } }
-.theme-sw button[aria-pressed="true"] {
-  background: var(--card); color: var(--ink);
-  box-shadow: var(--shadow-card);
-}
-.theme-sw button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.theme-sw:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* Виден значок только текущего режима — остальные ждут своей очереди. */
+.theme-sw__i { display: none; }
+.theme-sw[data-mode="system"] .theme-sw__i[data-i="system"],
+.theme-sw[data-mode="light"]  .theme-sw__i[data-i="light"],
+.theme-sw[data-mode="dark"]   .theme-sw__i[data-i="dark"] { display: grid; }
 
 /* Плавный переход только в момент переключения темы */
 html.theme-anim, html.theme-anim body,
@@ -1251,8 +1248,12 @@ html.theme-anim .panel, html.theme-anim .foot {
 .aurora--soft .aur { opacity: .38; }
 .aurora--soft .aur--3 { display: none; }
 
-/* Контент всегда поверх авроры */
-main, .head, .foot { position: relative; z-index: 1; }
+/* Контент всегда поверх авроры.
+   Шапку сюда не включаем: правило перебивало её собственные position: sticky
+   и z-index: 50 — шапка переставала быть липкой, а раскрытое меню уходило
+   под содержимое страницы и читалось сквозь заголовок. Своего z-index: 50
+   ей достаточно, чтобы быть над авророй с нулём. */
+main, .foot { position: relative; z-index: 1; }
 
 /* --- Акцентное слово H1: штрих в светлой, перелив в тёмной ------------ */
 :root {

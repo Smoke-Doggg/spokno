@@ -31,7 +31,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 <link rel="preload" href="/fonts.css?v=eb1fbac3" as="style"
       onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/fonts.css?v=eb1fbac3"></noscript>
-<link rel="stylesheet" href="/style.css?v=f221d9d1">
+<link rel="stylesheet" href="/style.css?v=3f572f80">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -51,18 +51,19 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
       <a href="/kak-podklyuchit/">Как подключить</a>
       <a href="/blog/" aria-current="page">Блог</a>
       <a href="/partnerskaya/">Партнёрам</a>
-      <div class="theme-sw" role="group" aria-label="Тема оформления" data-theme-switch hidden>
-        <button type="button" data-set="light" aria-pressed="false" title="Светлая тема"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system" hidden>
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
      stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
-<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg></button>
-        <button type="button" data-set="system" aria-pressed="true" title="Как в системе"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></button>
-        <button type="button" data-set="dark" aria-pressed="false" title="Тёмная тема"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
-      </div>
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
       <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
     </nav>
     <button class="burger" id="burger" type="button"
@@ -511,6 +512,6 @@ VPN включён всегда, банк работает всегда, пер�
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Сбербанк не работает с VPN: что делать", "description": "Банковские приложения и Госуслуги плохо реагируют на зарубежный адрес. Разбираем, почему так происходит и как настроить VPN, чтобы не выключать его каждый раз.", "datePublished": "2026-08-14", "dateModified": "2026-08-14", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/vpn-i-banki/", "name": "Сбербанк не работает с VPN: что делать"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@type": "Organization", "name": "Команда VPN Просто", "url": "https://prostokey.com/"}, "publisher": {"@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Сбербанк не работает с VPN: что делать", "item": "https://prostokey.com/blog/vpn-i-banki/"}]}]</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему банк не работает, когда включён VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Приложение видит вход с зарубежного адреса и включает защиту от мошенничества: просит подтверждения, показывает ошибку или временно ограничивает вход. Для банка это выглядит как попытка входа из другой страны."}}, {"@type": "Question", "name": "Могут ли заблокировать счёт из-за VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Постоянной блокировки из-за VPN не бывает: банк может приостановить сессию и запросить подтверждение, но счёт от этого не закрывается. Тем не менее лишние срабатывания защиты неприятны, и их проще не вызывать."}}, {"@type": "Question", "name": "Что такое раздельное туннелирование?", "acceptedAnswer": {"@type": "Answer", "text": "Настройка, при которой часть трафика идёт через VPN, а часть — напрямую. Российские банки, платёжные системы и госсервисы отправляются напрямую, всё остальное — через туннель. Переключать ничего не нужно."}}, {"@type": "Question", "name": "Почему Сбербанк не работает БЕЗ VPN, если я за границей?", "acceptedAnswer": {"@type": "Answer", "text": "Обратная ситуация: часть российских сервисов ограничивает доступ с зарубежных адресов. Здесь помогает VPN с выходом через российский IP — для банка вы окажетесь дома."}}, {"@type": "Question", "name": "Оплата картой не проходит при включённом VPN. Почему?", "acceptedAnswer": {"@type": "Answer", "text": "Платёжные шлюзы проверяют, откуда пришёл платёж, и зарубежный адрес повышает оценку риска — операция отклоняется. Решение то же: платёжные системы должны идти мимо туннеля."}}, {"@type": "Question", "name": "Обязательно ли выключать VPN ради банка?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, если сервис настроен правильно. Выключать приходится только там, где весь трафик идёт через туннель без исключений."}}]}</script>
-<script src="/app.js?v=7e2b7db7" defer></script>
+<script src="/app.js?v=c9eaf8d1" defer></script>
 </body>
 </html>

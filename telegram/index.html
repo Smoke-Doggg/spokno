@@ -31,7 +31,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 <link rel="preload" href="/fonts.css?v=eb1fbac3" as="style"
       onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/fonts.css?v=eb1fbac3"></noscript>
-<link rel="stylesheet" href="/style.css?v=f221d9d1">
+<link rel="stylesheet" href="/style.css?v=3f572f80">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -51,18 +51,19 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
       <a href="/kak-podklyuchit/">Как подключить</a>
       <a href="/blog/">Блог</a>
       <a href="/partnerskaya/">Партнёрам</a>
-      <div class="theme-sw" role="group" aria-label="Тема оформления" data-theme-switch hidden>
-        <button type="button" data-set="light" aria-pressed="false" title="Светлая тема"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system" hidden>
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
      stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
-<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg></button>
-        <button type="button" data-set="system" aria-pressed="true" title="Как в системе"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></button>
-        <button type="button" data-set="dark" aria-pressed="false" title="Тёмная тема"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
-      </div>
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
       <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
     </nav>
     <button class="burger" id="burger" type="button"
@@ -369,6 +370,6 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 "author":{"@type":"Organization","name":"\u041a\u043e\u043c\u0430\u043d\u0434\u0430 VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/"},
 "publisher":{"@type":"Organization","name":"VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему Telegram работает, но не грузятся фото и голосовые?", "acceptedAnswer": {"@type": "Answer", "text": "Ограничивают не весь мессенджер целиком, а передачу медиафайлов: текст проходит, а картинки и голосовые упираются в фильтры. Прокси или VPN снимают именно это ограничение."}}, {"@type": "Question", "name": "Прокси в Telegram — это безопасно?", "acceptedAnswer": {"@type": "Answer", "text": "Поддержка прокси встроена в само приложение, ставить сторонние программы не нужно. Переписка остаётся зашифрованной. Но выбирать адреса из случайных источников не стоит: неизвестно, кто их держит."}}, {"@type": "Question", "name": "Прокси перестал работать через пару дней. Почему?", "acceptedAnswer": {"@type": "Answer", "text": "Раньше адреса просто перегружались и попадали в фильтры. С весны 2026 хуже: фильтры научились узнавать Telegram по самому приложению, а не по адресу сервера — поэтому не спасает ни смена адреса, ни маскировка. У VPN настройки обновляются на нашей стороне."}}, {"@type": "Question", "name": "Чем прокси отличается от VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Прокси чинит только Telegram и не требует установки программ, VPN поднимает весь интернет — но нужен клиент. Раньше прокси был быстрой помощью «на сейчас»; с весны 2026 фильтры научились распознавать его почти сразу, и рабочим остался только VPN."}}, {"@type": "Question", "name": "У меня отключили мобильный интернет — поможет ли прокси?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Когда мобильный интернет ограничивают целиком, доступны только сайты из разрешённого списка, и прокси в этот список не входит. Поможет домашний Wi-Fi или проводной интернет."}}, {"@type": "Question", "name": "Нужно ли платить, чтобы вернуть Telegram?", "acceptedAnswer": {"@type": "Answer", "text": "Попробовать — нет: первые 3 дня бесплатны и карта не нужна. Бесплатные способы вроде публичных прокси весной 2026 почти перестали работать, поэтому честно предупреждаем: искать их смысла мало."}}]}</script>
-<script src="/app.js?v=7e2b7db7" defer></script>
+<script src="/app.js?v=c9eaf8d1" defer></script>
 </body>
 </html>

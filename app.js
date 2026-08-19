@@ -52,6 +52,9 @@
   /* --- Переключатель темы --------------------------------------------- */
   var sw = document.querySelector('[data-theme-switch]');
   if (sw) {
+    /* Порядок обхода: от «как в системе» к ручному выбору и обратно. */
+    var NEXT = { system: 'light', light: 'dark', dark: 'system' };
+    var LABELS = { system: 'Как в системе', light: 'Светлая', dark: 'Тёмная' };
     sw.hidden = false;
     var metaL = document.querySelector('meta[name="theme-color"][media*="light"]');
     var metaD = document.querySelector('meta[name="theme-color"][media*="dark"]');
@@ -62,9 +65,16 @@
         document.documentElement.removeAttribute('data-theme');
         mode = 'system';
       }
-      sw.querySelectorAll('button').forEach(function (b) {
-        b.setAttribute('aria-pressed', String(b.dataset.set === mode));
-      });
+      sw.dataset.mode = mode;
+      var label = LABELS[mode];
+      sw.querySelector('[data-theme-label]').textContent = label;
+      /* Читалке нужно и текущее состояние, и что случится по нажатию —
+         иначе кнопка со словом «Тёмная» звучит как «включить тёмную». */
+      /* Подпись показывает текущий режим. Чтобы её не прочли как «переключить
+         на светлую», подсказка при наведении говорит, что будет по нажатию. */
+      var next = LABELS[NEXT[mode]].toLowerCase();
+      sw.setAttribute('aria-label', 'Тема: ' + label.toLowerCase() + '. Переключить на ' + next);
+      sw.setAttribute('title', 'Нажмите, чтобы переключить на ' + next);
       /* шторка браузера в цвет темы при ручном выборе */
       if (metaL && metaD) {
         if (mode === 'light') { metaL.media = 'all'; metaD.media = 'not all'; }
@@ -81,11 +91,9 @@
     var saved = null;
     try { saved = localStorage.getItem('theme'); } catch (e) {}
     apply(saved || 'system', false);
-    sw.addEventListener('click', function (e) {
-      var b = e.target.closest('button');
-      if (!b) return;
+    sw.addEventListener('click', function () {
       document.documentElement.classList.add('theme-anim');
-      apply(b.dataset.set, true);
+      apply(NEXT[sw.dataset.mode] || 'light', true);
       setTimeout(function () {
         document.documentElement.classList.remove('theme-anim');
       }, 300);
@@ -468,16 +476,19 @@
     var band = mq.closest('.trust');
     var stop = false;
     try { stop = sessionStorage.getItem('vpnp_marquee') === 'off'; } catch (e) {}
-    var apply = function () {
+    /* Не «apply»: весь файл — одна функция, и var с этим именем уже занято
+       переключателем темы. Совпадение имён затирало его молча — тема
+       переставала переключаться, а ошибки в консоли не было. */
+    var syncPause = function () {
       band.classList.toggle('is-paused', stop);
       mq.setAttribute('aria-pressed', stop ? 'true' : 'false');
       mq.setAttribute('aria-label', stop ? 'Возобновить прокрутку' : 'Остановить прокрутку');
     };
-    apply();
+    syncPause();
     mq.addEventListener('click', function () {
       stop = !stop;
       try { sessionStorage.setItem('vpnp_marquee', stop ? 'off' : 'on'); } catch (e) {}
-      apply();
+      syncPause();
     });
   }
 })();

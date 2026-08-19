@@ -31,7 +31,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 <link rel="preload" href="/fonts.css?v=eb1fbac3" as="style"
       onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/fonts.css?v=eb1fbac3"></noscript>
-<link rel="stylesheet" href="/style.css?v=f221d9d1">
+<link rel="stylesheet" href="/style.css?v=3f572f80">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -51,18 +51,19 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
       <a href="/kak-podklyuchit/">Как подключить</a>
       <a href="/blog/" aria-current="page">Блог</a>
       <a href="/partnerskaya/">Партнёрам</a>
-      <div class="theme-sw" role="group" aria-label="Тема оформления" data-theme-switch hidden>
-        <button type="button" data-set="light" aria-pressed="false" title="Светлая тема"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system" hidden>
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
      stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
-<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg></button>
-        <button type="button" data-set="system" aria-pressed="true" title="Как в системе"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></button>
-        <button type="button" data-set="dark" aria-pressed="false" title="Тёмная тема"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
-      </div>
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
       <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
     </nav>
     <button class="burger" id="burger" type="button"
@@ -510,6 +511,6 @@ IP-адрес, время и объём переданных данных. По 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Прокси для Телеграм или VPN: что выбрать", "description": "Прокси настраивается внутри самого мессенджера и чинит только его. Разбираем, как он устроен, чем отличается от VPN, кому подойдёт и почему перестаёт работать.", "datePublished": "2026-08-14", "dateModified": "2026-08-14", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/proxy-dlya-telegram/", "name": "Прокси для Телеграм или VPN: что выбрать"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@type": "Organization", "name": "Команда VPN Просто", "url": "https://prostokey.com/"}, "publisher": {"@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Прокси для Телеграм или VPN: что выбрать", "item": "https://prostokey.com/blog/proxy-dlya-telegram/"}]}]</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Что такое MTProto-прокси?", "acceptedAnswer": {"@type": "Answer", "text": "Тип прокси, созданный разработчиками Telegram специально для своего мессенджера. Поддержка встроена в приложение, ставить ничего не нужно, а соединение маскируется под обычный защищённый трафик."}}, {"@type": "Question", "name": "Прокси для Телеграм — это безопасно?", "acceptedAnswer": {"@type": "Answer", "text": "Переписка остаётся зашифрованной, читать её владелец прокси не может. Но он видит факт подключения и объём трафика, поэтому адреса из случайных источников лучше не использовать."}}, {"@type": "Question", "name": "Чем прокси отличается от VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Прокси работает только для Telegram и не требует установки программ. VPN поднимает весь интернет — сайты, приложения, видео, — но нужен отдельный клиент. Прокси — быстрая помощь, VPN — постоянное решение."}}, {"@type": "Question", "name": "Почему бесплатные прокси быстро перестают работать?", "acceptedAnswer": {"@type": "Answer", "text": "Публичные адреса используют тысячи людей одновременно: они перегружаются и быстро попадают в фильтры. Поэтому списки приходится обновлять каждые несколько дней."}}, {"@type": "Question", "name": "Замедляет ли прокси интернет?", "acceptedAnswer": {"@type": "Answer", "text": "Он влияет только на Telegram: остальной трафик идёт как обычно. Скорость самого мессенджера зависит от загруженности прокси — публичные обычно заметно медленнее."}}, {"@type": "Question", "name": "Нужен ли прокси, если уже есть VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, при работающем VPN мессенджер и так открывается. Прокси полезен в обратной ситуации: когда VPN ещё не настроен, а Telegram нужен прямо сейчас."}}]}</script>
-<script src="/app.js?v=7e2b7db7" defer></script>
+<script src="/app.js?v=c9eaf8d1" defer></script>
 </body>
 </html>
