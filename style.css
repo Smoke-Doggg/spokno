@@ -590,14 +590,19 @@ strong { font-weight: 600; color: var(--ink); }
 .plan__save--none { color: var(--muted); }
 .plan .btn { margin-top: auto; }
 
+/* Внутри левой колонки, а не полосой по центру страницы: выравнивание
+   по левому краю, разделитель отделяет условия от рассказа про ключ. */
 .price-foot {
-  display: grid; gap: 16px; justify-items: center;
+  display: grid; gap: 18px; justify-items: start;
   margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--line);
 }
+.price-foot .checks { gap: 16px; }
+.price-foot .pay-line { text-align: left; }
 .price-foot .checks { justify-items: start; }
+/* Не моноширинным: способы оплаты — не код. То же правило применено
+   к названиям протоколов на втором и пятом экранах. */
 .pay-line {
-  font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
-  font-size: 13px; color: var(--muted); text-align: center; margin: 0;
+  font-size: 14px; color: var(--muted); text-align: center; margin: 0;
 }
 .privacy-note { margin-top: 28px; max-width: 62ch; }
 
@@ -1180,10 +1185,12 @@ td strong { color: var(--ink); }
 
 /* --- Устройства на один ключ --------------------------------------------- */
 .devices {
-  display: grid; gap: clamp(24px, 3vw, 40px);
+  display: grid; gap: clamp(28px, 3.5vw, 48px);
   grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
-  align-items: center;
-  margin-top: 36px; padding-top: 32px;
+  /* По верху: таблица втрое выше текста, и центрирование сталкивало
+     заголовок «Один ключ» на 126px вниз — слева зияла дыра. */
+  align-items: start;
+  margin-top: 48px; padding-top: 44px;
   border-top: 1px solid var(--line);
 }
 .devices__copy { display: grid; gap: 12px; }
@@ -1497,23 +1504,26 @@ main, .foot { position: relative; z-index: 1; }
 
 /* --- «Почему не 100 ₽»: снимаем ценовое возражение --------------------- */
 .why-price {
-  margin-top: 26px; background: var(--card); backdrop-filter: var(--card-filter);
-  border: 1px solid var(--line); border-radius: var(--r-lg); padding: 26px 28px;
+  margin-top: 48px; background: var(--card); backdrop-filter: var(--card-filter);
+  border: 1px solid var(--line); border-radius: var(--r-lg);
+  padding: clamp(28px, 3vw, 40px);
 }
-.why-price > h3 { font-size: 21px; margin-bottom: 6px; }
+.why-price > h3 { font-size: 21px; margin-bottom: 8px; }
 .why-price__lead { color: var(--muted); font-size: 15px; max-width: 62ch; }
 /* Возражение и ответ — парами в одной строке. Возражение приглушено,
    ответ основным цветом: глаз идёт слева направо и видит, что каждое
    опасение закрыто. */
-.why-pairs { margin: 20px 0 0; display: grid; gap: 0; }
+/* Без линий между парами: четыре разделителя на четыре строки давали
+   табличную рябь. Пары держатся вместе выравниванием, а разделяет их
+   воздух — его и добавили вместо линий. */
+.why-pairs { margin: 28px 0 0; display: grid; gap: 26px; }
 .why-pair {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 26px;
-  padding: 14px 0; border-top: 1px solid var(--line);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
   align-items: start;
 }
-.why-pair:first-child { border-top: 0; padding-top: 0; }
 .why-pair--head {
-  padding-bottom: 4px;
+  padding-bottom: 6px; margin-bottom: 2px;
+  border-bottom: 1px solid var(--line);
   font-size: 13px; font-weight: 700; letter-spacing: .02em;
   text-transform: uppercase; color: var(--muted);
 }
