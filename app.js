@@ -488,7 +488,7 @@
     if (!ref || !ref.src || Date.now() - ref.ts > REF_MAX_AGE_MS) return;
 
     try {
-      fetch('https://tolyanchik027.hlab.kz/watch-api/ref?src=' + encodeURIComponent(ref.src) + '&evt=convert',
+      fetch('https://stat.prostokey.com/watch-api/ref?src=' + encodeURIComponent(ref.src) + '&evt=convert',
             { mode: 'no-cors', keepalive: true });
     } catch (err) { /* не блокирует переход в бота */ }
 
@@ -526,7 +526,7 @@
 
      Логов у GitHub Pages для нас не существует, поэтому другого способа
      узнать, что происходит на сайте, просто нет. */
-  var HIT = 'https://tolyanchik027.hlab.kz/watch-api/hit';
+  var HIT = 'https://stat.prostokey.com/watch-api/hit';
 
   var send = function (params) {
     var qs = Object.keys(params)
