@@ -35,7 +35,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
       type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
       type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=ee10ac09">
+<link rel="stylesheet" href="/style.css?v=784a0d3f">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -227,7 +227,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 
     <h2 id="chastye-voprosy">Частые вопросы</h2>
     <div class="faq">
-      <div class="faq__item" data-open="false">
+      <div id="vopros-pochemu-telegram-rabotaet-no-ne-gruzyatsya-foto-i-golosovye" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q1" aria-controls="a1">
@@ -241,7 +241,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Ограничивают не весь мессенджер целиком, а передачу медиафайлов: текст проходит, а картинки и голосовые упираются в фильтры. Прокси или VPN снимают именно это ограничение.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-proksi-v-telegram-eto-bezopasno" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q2" aria-controls="a2">
@@ -255,7 +255,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Поддержка прокси встроена в само приложение, ставить сторонние программы не нужно. Переписка остаётся зашифрованной. Но выбирать адреса из случайных источников не стоит: неизвестно, кто их держит.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-proksi-perestal-rabotat-cherez-paru-dney-pochemu" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q3" aria-controls="a3">
@@ -269,7 +269,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Раньше адреса просто перегружались и попадали в фильтры. С весны 2026 хуже: фильтры научились узнавать Telegram по самому приложению, а не по адресу сервера — поэтому не спасает ни смена адреса, ни маскировка. У VPN настройки обновляются на нашей стороне.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-chem-proksi-otlichaetsya-ot-vpn" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q4" aria-controls="a4">
@@ -283,7 +283,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Прокси чинит только Telegram и не требует установки программ, VPN поднимает весь интернет — но нужен клиент. Раньше прокси был быстрой помощью «на сейчас»; с весны 2026 фильтры научились распознавать его почти сразу, и рабочим остался только VPN.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-u-menya-otklyuchili-mobilnyy-internet-pomozhet-li-proksi" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q5" aria-controls="a5">
@@ -297,7 +297,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Нет. Когда мобильный интернет ограничивают целиком, доступны только сайты из разрешённого списка, и прокси в этот список не входит. Поможет домашний Wi-Fi или проводной интернет.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-nuzhno-li-platit-chtoby-vernut-telegram" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q6" aria-controls="a6">
@@ -379,6 +379,6 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 "author":{"@type":"Organization","name":"\u041a\u043e\u043c\u0430\u043d\u0434\u0430 VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/"},
 "publisher":{"@type":"Organization","name":"VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему Telegram работает, но не грузятся фото и голосовые?", "acceptedAnswer": {"@type": "Answer", "text": "Ограничивают не весь мессенджер целиком, а передачу медиафайлов: текст проходит, а картинки и голосовые упираются в фильтры. Прокси или VPN снимают именно это ограничение."}}, {"@type": "Question", "name": "Прокси в Telegram — это безопасно?", "acceptedAnswer": {"@type": "Answer", "text": "Поддержка прокси встроена в само приложение, ставить сторонние программы не нужно. Переписка остаётся зашифрованной. Но выбирать адреса из случайных источников не стоит: неизвестно, кто их держит."}}, {"@type": "Question", "name": "Прокси перестал работать через пару дней. Почему?", "acceptedAnswer": {"@type": "Answer", "text": "Раньше адреса просто перегружались и попадали в фильтры. С весны 2026 хуже: фильтры научились узнавать Telegram по самому приложению, а не по адресу сервера — поэтому не спасает ни смена адреса, ни маскировка. У VPN настройки обновляются на нашей стороне."}}, {"@type": "Question", "name": "Чем прокси отличается от VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Прокси чинит только Telegram и не требует установки программ, VPN поднимает весь интернет — но нужен клиент. Раньше прокси был быстрой помощью «на сейчас»; с весны 2026 фильтры научились распознавать его почти сразу, и рабочим остался только VPN."}}, {"@type": "Question", "name": "У меня отключили мобильный интернет — поможет ли прокси?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Когда мобильный интернет ограничивают целиком, доступны только сайты из разрешённого списка, и прокси в этот список не входит. Поможет домашний Wi-Fi или проводной интернет."}}, {"@type": "Question", "name": "Нужно ли платить, чтобы вернуть Telegram?", "acceptedAnswer": {"@type": "Answer", "text": "Попробовать — нет: первые 3 дня бесплатны и карта не нужна. Бесплатные способы вроде публичных прокси весной 2026 почти перестали работать, поэтому честно предупреждаем: искать их смысла мало."}}]}</script>
-<script src="/app.js?v=dec06e04" defer></script>
+<script src="/app.js?v=3e7e17bc" defer></script>
 </body>
 </html>

@@ -35,7 +35,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
       type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
       type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=ee10ac09">
+<link rel="stylesheet" href="/style.css?v=784a0d3f">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -88,7 +88,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
     напишите в бота, там отвечает живой человек.</p>
 
     <div class="faq">
-      <div class="faq__item" data-open="false">
+      <div id="vopros-nuzhno-li-platit-srazu" class="faq__item" data-open="false">
         <h2 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q1" aria-controls="a1">
@@ -102,7 +102,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Нет. Первые 3 дня бесплатны, карту привязывать не нужно — бот выдаёт ключ сразу. Если не подойдёт, просто не продлевайте.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-a-esli-oplachu-i-razonravitsya" class="faq__item" data-open="false">
         <h2 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q2" aria-controls="a2">
@@ -116,7 +116,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Вернём деньги за неиспользованные дни — напишите в бота. День считается как 1/30 цены месяца; на длинных тарифах использованное время пересчитывается по обычной цене 349 ₽ за месяц, разница возвращается. Подробно — в условиях использования.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-pridetsya-vyklyuchat-vpn-radi-sberbanka-ili-gosuslug" class="faq__item" data-open="false">
         <h2 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q3" aria-controls="a3">
@@ -130,7 +130,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Нет, и это главное отличие. Банки, СБП, Госуслуги, сайты в зоне .ru и другие российские сервисы идут напрямую, мимо туннеля. Переключать ничего не нужно.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-nuzhno-li-stavit-prilozhenie-iz-app-store" class="faq__item" data-open="false">
         <h2 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q4" aria-controls="a4">
@@ -144,7 +144,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Нет. Мы выдаём ключ, а не собственное приложение — поэтому удаление программ из магазинов нас не касается. Ключ вставляется в бесплатный клиент, бот подскажет какой.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-skolko-ustroystv-mozhno-podklyuchit" class="faq__item" data-open="false">
         <h2 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q5" aria-controls="a5">
@@ -158,7 +158,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>В подписку входят два устройства — например, телефон и компьютер. К одному ключу можно подключить до шести: каждое сверх двух стоит 60 ₽ в месяц. То есть четыре устройства обойдутся в 469 ₽ в месяц, шесть — в 589 ₽. Количество меняется в личном кабинете бота.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-mozhno-li-podelitsya-klyuchom-s-semey" class="faq__item" data-open="false">
         <h2 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q6" aria-controls="a6">
@@ -172,7 +172,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Да, для этого и сделана возможность добавлять устройства: один ключ на шесть устройств закрывает и ваши телефон с ноутбуком, и устройства близких. Это заметно дешевле отдельных подписок: шесть устройств на одном ключе — 589 ₽ в месяц против 2094 ₽ за шесть отдельных.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-kak-oplatit" class="faq__item" data-open="false">
         <h2 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q7" aria-controls="a7">
@@ -186,7 +186,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>СБП или банковской картой — Мир, Visa, Mastercard. Оплата проходит в боте, автосписаний нет: продлеваете вручную, когда захотите.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-chto-budet-kogda-zablokiruyut-ocherednoy-protokol" class="faq__item" data-open="false">
         <h2 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q8" aria-controls="a8">
@@ -200,7 +200,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>У нас два независимых транспорта и несколько серверов: если один перестаёт работать, соединение переходит на другой. За 5 лет мы прошли все крупные волны блокировок и каждый раз выдавали работающие настройки.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-est-li-vygoda-pri-oplate-za-neskolko-mesyacev" class="faq__item" data-open="false">
         <h2 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q9" aria-controls="a9">
@@ -214,7 +214,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Да: 3 месяца — 999 ₽ (333 ₽ за месяц), 6 месяцев — 1899 ₽ (316 ₽ за месяц), 12 месяцев — 3599 ₽ (300 ₽ за месяц). Годовой тариф экономит 589 ₽ по сравнению с помесячной оплатой. Начать всё равно советуем с месяца — сначала убедитесь, что у вашего оператора всё работает.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-vy-pokazyvaete-reklamu" class="faq__item" data-open="false">
         <h2 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q10" aria-controls="a10">
@@ -228,7 +228,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Нет. Мы не встраиваем рекламу в трафик, не подменяем содержимое сайтов и не показываем баннеры в боте. Сервис живёт на подписку — зарабатывать на вас иначе нам незачем.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-vy-hranite-istoriyu-posescheniy" class="faq__item" data-open="false">
         <h2 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q11" aria-controls="a11">
@@ -242,7 +242,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Нет. Мы не ведём журнал посещённых сайтов и не храним содержимое трафика — такого журнала просто нет. Данные никому не продаются и не передаются. Что именно нужно сервису для работы, описано в политике конфиденциальности.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-mozhno-li-polzovatsya-vpn-legalno" class="faq__item" data-open="false">
         <h2 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q12" aria-controls="a12">
@@ -257,6 +257,8 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
         </div>
       </div>
     </div>
+
+    <nav class="related" aria-label="Другие материалы"><p class="toc__head">Читайте также</p><ul><li><a href="/blog/kakoy-vpn-rabotaet/">Какой VPN работает в России сейчас</a></li><li><a href="/blog/vpn-i-banki/">Сбербанк не работает с VPN: что делать</a></li><li><a href="/blog/proxy-dlya-telegram/">Прокси для Телеграм или VPN: что выбрать</a></li><li><a href="/blog/belye-spiski/">Отключили мобильный интернет: что делать</a></li></ul></nav>
 
     <div class="inline-cta">
       <p><strong>Проще один раз попробовать.</strong> 3 дня
@@ -328,6 +330,6 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 "author":{"@type":"Organization","name":"\u041a\u043e\u043c\u0430\u043d\u0434\u0430 VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/"},
 "publisher":{"@type":"Organization","name":"VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Нужно ли платить сразу?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Первые 3 дня бесплатны, карту привязывать не нужно — бот выдаёт ключ сразу. Если не подойдёт, просто не продлевайте."}}, {"@type": "Question", "name": "А если оплачу и разонравится?", "acceptedAnswer": {"@type": "Answer", "text": "Вернём деньги за неиспользованные дни — напишите в бота. День считается как 1/30 цены месяца; на длинных тарифах использованное время пересчитывается по обычной цене 349 ₽ за месяц, разница возвращается. Подробно — в условиях использования."}}, {"@type": "Question", "name": "Придётся выключать VPN ради Сбербанка или Госуслуг?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, и это главное отличие. Банки, СБП, Госуслуги, сайты в зоне .ru и другие российские сервисы идут напрямую, мимо туннеля. Переключать ничего не нужно."}}, {"@type": "Question", "name": "Нужно ли ставить приложение из App Store?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Мы выдаём ключ, а не собственное приложение — поэтому удаление программ из магазинов нас не касается. Ключ вставляется в бесплатный клиент, бот подскажет какой."}}, {"@type": "Question", "name": "Сколько устройств можно подключить?", "acceptedAnswer": {"@type": "Answer", "text": "В подписку входят два устройства — например, телефон и компьютер. К одному ключу можно подключить до шести: каждое сверх двух стоит 60 ₽ в месяц. То есть четыре устройства обойдутся в 469 ₽ в месяц, шесть — в 589 ₽. Количество меняется в личном кабинете бота."}}, {"@type": "Question", "name": "Можно ли поделиться ключом с семьёй?", "acceptedAnswer": {"@type": "Answer", "text": "Да, для этого и сделана возможность добавлять устройства: один ключ на шесть устройств закрывает и ваши телефон с ноутбуком, и устройства близких. Это заметно дешевле отдельных подписок: шесть устройств на одном ключе — 589 ₽ в месяц против 2094 ₽ за шесть отдельных."}}, {"@type": "Question", "name": "Как оплатить?", "acceptedAnswer": {"@type": "Answer", "text": "СБП или банковской картой — Мир, Visa, Mastercard. Оплата проходит в боте, автосписаний нет: продлеваете вручную, когда захотите."}}, {"@type": "Question", "name": "Что будет, когда заблокируют очередной протокол?", "acceptedAnswer": {"@type": "Answer", "text": "У нас два независимых транспорта и несколько серверов: если один перестаёт работать, соединение переходит на другой. За 5 лет мы прошли все крупные волны блокировок и каждый раз выдавали работающие настройки."}}, {"@type": "Question", "name": "Есть ли выгода при оплате за несколько месяцев?", "acceptedAnswer": {"@type": "Answer", "text": "Да: 3 месяца — 999 ₽ (333 ₽ за месяц), 6 месяцев — 1899 ₽ (316 ₽ за месяц), 12 месяцев — 3599 ₽ (300 ₽ за месяц). Годовой тариф экономит 589 ₽ по сравнению с помесячной оплатой. Начать всё равно советуем с месяца — сначала убедитесь, что у вашего оператора всё работает."}}, {"@type": "Question", "name": "Вы показываете рекламу?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Мы не встраиваем рекламу в трафик, не подменяем содержимое сайтов и не показываем баннеры в боте. Сервис живёт на подписку — зарабатывать на вас иначе нам незачем."}}, {"@type": "Question", "name": "Вы храните историю посещений?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Мы не ведём журнал посещённых сайтов и не храним содержимое трафика — такого журнала просто нет. Данные никому не продаются и не передаются. Что именно нужно сервису для работы, описано в политике конфиденциальности."}}, {"@type": "Question", "name": "Можно ли пользоваться VPN легально?", "acceptedAnswer": {"@type": "Answer", "text": "Пользоваться VPN частному лицу в России не запрещено — ограничения касаются рекламы и распространения средств обхода, а не самого факта использования защищённого соединения."}}]}</script>
-<script src="/app.js?v=dec06e04" defer></script>
+<script src="/app.js?v=3e7e17bc" defer></script>
 </body>
 </html>

@@ -35,7 +35,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
       type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
       type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=ee10ac09">
+<link rel="stylesheet" href="/style.css?v=784a0d3f">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -306,7 +306,7 @@ VLESS + Reality и Hysteria2, устроены так, чтобы соедине
 
     <h2 id="chastye-voprosy">Частые вопросы</h2>
     <div class="faq">
-      <div class="faq__item" data-open="false">
+      <div id="vopros-provayder-vidit-chto-ya-polzuyus-vpn" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q1" aria-controls="a1">
@@ -320,7 +320,7 @@ VLESS + Reality и Hysteria2, устроены так, чтобы соедине
           <div><p>Он видит зашифрованное соединение с одним адресом. Современные протоколы вроде VLESS + Reality выглядят как обращение к обычному защищённому сайту, поэтому отличить их от рядового трафика сложно — но сам факт постоянного обмена данными с одним сервером скрыть нельзя.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-mozhet-li-provayder-prochitat-moyu-perepisku" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q2" aria-controls="a2">
@@ -334,7 +334,7 @@ VLESS + Reality и Hysteria2, устроены так, чтобы соедине
           <div><p>Нет. Содержимое защищённых соединений шифруется на вашем устройстве и расшифровывается у получателя — это работает и без VPN. Провайдер видит, к какому сервису вы обратились, но не то, что вы там написали.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-znachit-vpn-servisu-ya-doveryayu-bolshe-chem-provayderu" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q3" aria-controls="a3">
@@ -348,7 +348,7 @@ VLESS + Reality и Hysteria2, устроены так, чтобы соедине
           <div><p>По сути да, и в этом смысл выбора. Провайдера вы обычно не выбирали, а сервис выбираете сами и можете сменить. Поэтому важно, чтобы он прямо называл, что хранит.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-vy-hranite-istoriyu-moih-posescheniy" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q4" aria-controls="a4">
@@ -362,7 +362,7 @@ VLESS + Reality и Hysteria2, устроены так, чтобы соедине
           <div><p>Нет. Мы храним идентификатор в мессенджере, факт и дату оплаты, реферальные связи, число подключённых устройств и объём трафика по подписке. Адреса посещаемых сайтов и содержимое трафика в этот список не входят.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-zachem-togda-vy-schitaete-trafik" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q5" aria-controls="a5">
@@ -376,7 +376,7 @@ VLESS + Reality и Hysteria2, устроены так, чтобы соедине
           <div><p>Чтобы соблюдать условия подписки и замечать злоупотребления — например, когда один ключ раздали сотне посторонних. Объём и число устройств не говорят о том, что вы открывали.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-skryvaet-li-vpn-moy-adres-polnostyu" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q6" aria-controls="a6">
@@ -390,7 +390,7 @@ VLESS + Reality и Hysteria2, устроены так, чтобы соедине
           <div><p>От сайтов — да, они видят адрес сервера. От провайдера и от сервиса — нет: подключение идёт с вашего домашнего адреса, иначе оно невозможно.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-nuzhno-li-chto-to-nastraivat-chtoby-zaprosy-k-sluzhbe-imen-n" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q7" aria-controls="a7">
@@ -479,6 +479,6 @@ VLESS + Reality и Hysteria2, устроены так, чтобы соедине
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Что видит провайдер, а что — VPN-сервис", "description": "Что провайдер знает о вашем интернете без VPN, что меняется с включённым и что при этом видит сам сервис. Со списком того, что храним мы.", "datePublished": "2026-08-20", "dateModified": "2026-08-20", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/chto-vidit-provayder/", "name": "Что видит провайдер, а что — VPN-сервис"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@type": "Organization", "name": "Команда VPN Просто", "url": "https://prostokey.com/"}, "publisher": {"@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Что видит провайдер, а что — VPN-сервис", "item": "https://prostokey.com/blog/chto-vidit-provayder/"}]}]</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Провайдер видит, что я пользуюсь VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Он видит зашифрованное соединение с одним адресом. Современные протоколы вроде VLESS + Reality выглядят как обращение к обычному защищённому сайту, поэтому отличить их от рядового трафика сложно — но сам факт постоянного обмена данными с одним сервером скрыть нельзя."}}, {"@type": "Question", "name": "Может ли провайдер прочитать мою переписку?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Содержимое защищённых соединений шифруется на вашем устройстве и расшифровывается у получателя — это работает и без VPN. Провайдер видит, к какому сервису вы обратились, но не то, что вы там написали."}}, {"@type": "Question", "name": "Значит, VPN-сервису я доверяю больше, чем провайдеру?", "acceptedAnswer": {"@type": "Answer", "text": "По сути да, и в этом смысл выбора. Провайдера вы обычно не выбирали, а сервис выбираете сами и можете сменить. Поэтому важно, чтобы он прямо называл, что хранит."}}, {"@type": "Question", "name": "Вы храните историю моих посещений?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Мы храним идентификатор в мессенджере, факт и дату оплаты, реферальные связи, число подключённых устройств и объём трафика по подписке. Адреса посещаемых сайтов и содержимое трафика в этот список не входят."}}, {"@type": "Question", "name": "Зачем тогда вы считаете трафик?", "acceptedAnswer": {"@type": "Answer", "text": "Чтобы соблюдать условия подписки и замечать злоупотребления — например, когда один ключ раздали сотне посторонних. Объём и число устройств не говорят о том, что вы открывали."}}, {"@type": "Question", "name": "Скрывает ли VPN мой адрес полностью?", "acceptedAnswer": {"@type": "Answer", "text": "От сайтов — да, они видят адрес сервера. От провайдера и от сервиса — нет: подключение идёт с вашего домашнего адреса, иначе оно невозможно."}}, {"@type": "Question", "name": "Нужно ли что-то настраивать, чтобы запросы к службе имён не утекали?", "acceptedAnswer": {"@type": "Answer", "text": "В нашей подписке это уже настроено: запросы уходят внутри туннеля. Проверить можно на любом сервисе определения адреса — там обычно показано, через чью службу имён идёт запрос."}}]}</script>
-<script src="/app.js?v=dec06e04" defer></script>
+<script src="/app.js?v=3e7e17bc" defer></script>
 </body>
 </html>

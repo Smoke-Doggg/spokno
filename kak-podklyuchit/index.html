@@ -35,7 +35,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
       type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
       type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=ee10ac09">
+<link rel="stylesheet" href="/style.css?v=784a0d3f">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -233,7 +233,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 
     <h2 id="chastye-voprosy">Частые вопросы</h2>
     <div class="faq">
-      <div class="faq__item" data-open="false">
+      <div id="vopros-pochemu-u-vas-net-svoego-prilozheniya" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q1" aria-controls="a1">
@@ -247,7 +247,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Приложения VPN-сервисов удаляют из магазинов — за 2026 год из российского App Store их убрали сотни. Мы выдаём ключ, который работает в любом подходящем клиенте: пропасть таким образом он не может.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-kakoy-klient-vybrat-esli-vse-ravno" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q2" aria-controls="a2">
@@ -261,7 +261,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Happ: он есть на всех платформах, включая телевизоры, и поддерживает оба наших протокола. Актуальную ссылку под ваше устройство даст бот.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-mozhno-li-postavit-na-neskolko-ustroystv" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q3" aria-controls="a3">
@@ -275,7 +275,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Да. Два устройства входят в подписку, всего к ключу можно подключить до шести — каждое сверх двух стоит 60 ₽ в месяц. Ключ используется один и тот же, количество меняется в личном кабинете бота.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-nuzhno-li-vyklyuchat-vpn-chtoby-zayti-v-bank" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q4" aria-controls="a4">
@@ -289,7 +289,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Нет. Банки, СБП, Госуслуги и российские сайты идут напрямую, мимо туннеля. Если какой-то сервис всё же не открывается — напишите в бота, добавим его в список прямых.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-chto-delat-esli-klyuch-perestal-rabotat" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q5" aria-controls="a5">
@@ -303,7 +303,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
           <div><p>Сначала переключите сервер в клиенте — обычно этого достаточно. Если не помогло, возьмите свежий ключ в боте: после волн блокировок мы обновляем настройки на своей стороне.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-mozhno-li-nastroit-vpn-na-routere" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q6" aria-controls="a6">
@@ -383,11 +383,11 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage",
 "name":"\u041a\u0430\u043a \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0438\u0442\u044c\u0441\u044f: \u043f\u043e\u0448\u0430\u0433\u043e\u0432\u0430\u044f \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f \u2014 VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/kak-podklyuchit/",
-"inLanguage":"ru-RU","dateModified":"2026-08-19",
+"inLanguage":"ru-RU","dateModified":"2026-08-21",
 "isPartOf":{"@type":"WebSite","name":"VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/"},
 "author":{"@type":"Organization","name":"\u041a\u043e\u043c\u0430\u043d\u0434\u0430 VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/"},
 "publisher":{"@type":"Organization","name":"VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему у вас нет своего приложения?", "acceptedAnswer": {"@type": "Answer", "text": "Приложения VPN-сервисов удаляют из магазинов — за 2026 год из российского App Store их убрали сотни. Мы выдаём ключ, который работает в любом подходящем клиенте: пропасть таким образом он не может."}}, {"@type": "Question", "name": "Какой клиент выбрать, если всё равно?", "acceptedAnswer": {"@type": "Answer", "text": "Happ: он есть на всех платформах, включая телевизоры, и поддерживает оба наших протокола. Актуальную ссылку под ваше устройство даст бот."}}, {"@type": "Question", "name": "Можно ли поставить на несколько устройств?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Два устройства входят в подписку, всего к ключу можно подключить до шести — каждое сверх двух стоит 60 ₽ в месяц. Ключ используется один и тот же, количество меняется в личном кабинете бота."}}, {"@type": "Question", "name": "Нужно ли выключать VPN, чтобы зайти в банк?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Банки, СБП, Госуслуги и российские сайты идут напрямую, мимо туннеля. Если какой-то сервис всё же не открывается — напишите в бота, добавим его в список прямых."}}, {"@type": "Question", "name": "Что делать, если ключ перестал работать?", "acceptedAnswer": {"@type": "Answer", "text": "Сначала переключите сервер в клиенте — обычно этого достаточно. Если не помогло, возьмите свежий ключ в боте: после волн блокировок мы обновляем настройки на своей стороне."}}, {"@type": "Question", "name": "Можно ли настроить VPN на роутере?", "acceptedAnswer": {"@type": "Answer", "text": "Технически возможно на роутерах с поддержкой нужных протоколов, но настройка сложнее и зависит от модели. Напишите в бота — подскажем, реально ли это в вашем случае."}}]}</script>
-<script src="/app.js?v=dec06e04" defer></script>
+<script src="/app.js?v=3e7e17bc" defer></script>
 </body>
 </html>

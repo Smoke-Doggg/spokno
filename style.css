@@ -615,7 +615,11 @@ strong { font-weight: 600; color: var(--ink); }
 }
 
 /* --- FAQ --------------------------------------------------------------- */
-.faq { display: grid; }
+/* Уже контейнера: на всю ширину строка ответа выходила в 99 знаков,
+   а стрелка отрывалась от вопроса на 857px — глаз переставал их связывать.
+   Там, где блок уже (внутри статьи), это и так было видно: стрелка стояла
+   в 40px от текста. */
+.faq { display: grid; max-width: 620px; }
 .faq__item { border-bottom: 1px solid var(--line); }
 .faq__q {
   width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px;

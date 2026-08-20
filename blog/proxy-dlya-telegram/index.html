@@ -35,7 +35,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
       type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
       type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=ee10ac09">
+<link rel="stylesheet" href="/style.css?v=784a0d3f">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -359,7 +359,7 @@ IP-адрес, время и объём переданных данных. По 
 
     <h2 id="chastye-voprosy">Частые вопросы</h2>
     <div class="faq">
-      <div class="faq__item" data-open="false">
+      <div id="vopros-chto-takoe-mtproto-proksi" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q1" aria-controls="a1">
@@ -373,7 +373,7 @@ IP-адрес, время и объём переданных данных. По 
           <div><p>Тип прокси, созданный разработчиками Telegram специально для своего мессенджера. Поддержка встроена в приложение, ставить ничего не нужно, а соединение маскируется под обычный защищённый трафик.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-proksi-dlya-telegram-eto-bezopasno" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q2" aria-controls="a2">
@@ -387,7 +387,7 @@ IP-адрес, время и объём переданных данных. По 
           <div><p>Переписка остаётся зашифрованной, читать её владелец прокси не может. Но он видит факт подключения и объём трафика, поэтому адреса из случайных источников лучше не использовать.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-chem-proksi-otlichaetsya-ot-vpn" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q3" aria-controls="a3">
@@ -401,7 +401,7 @@ IP-адрес, время и объём переданных данных. По 
           <div><p>Прокси работает только для Telegram и не требует установки программ. VPN поднимает весь интернет — сайты, приложения, видео, — но нужен отдельный клиент. Прокси — быстрая помощь, VPN — постоянное решение.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-pochemu-besplatnye-proksi-bystro-perestayut-rabotat" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q4" aria-controls="a4">
@@ -415,7 +415,7 @@ IP-адрес, время и объём переданных данных. По 
           <div><p>Публичные адреса используют тысячи людей одновременно: они перегружаются и быстро попадают в фильтры. Поэтому списки приходится обновлять каждые несколько дней.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-zamedlyaet-li-proksi-internet" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q5" aria-controls="a5">
@@ -429,7 +429,7 @@ IP-адрес, время и объём переданных данных. По 
           <div><p>Он влияет только на Telegram: остальной трафик идёт как обычно. Скорость самого мессенджера зависит от загруженности прокси — публичные обычно заметно медленнее.</p></div>
         </div>
       </div>
-      <div class="faq__item" data-open="false">
+      <div id="vopros-nuzhen-li-proksi-esli-uzhe-est-vpn" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q6" aria-controls="a6">
@@ -518,6 +518,6 @@ IP-адрес, время и объём переданных данных. По 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Прокси для Телеграм или VPN: что выбрать", "description": "Прокси настраивается внутри самого мессенджера и чинит только его. Разбираем, как он устроен, чем отличается от VPN, кому подойдёт и почему перестаёт работать.", "datePublished": "2026-08-14", "dateModified": "2026-08-14", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/proxy-dlya-telegram/", "name": "Прокси для Телеграм или VPN: что выбрать"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@type": "Organization", "name": "Команда VPN Просто", "url": "https://prostokey.com/"}, "publisher": {"@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Прокси для Телеграм или VPN: что выбрать", "item": "https://prostokey.com/blog/proxy-dlya-telegram/"}]}]</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Что такое MTProto-прокси?", "acceptedAnswer": {"@type": "Answer", "text": "Тип прокси, созданный разработчиками Telegram специально для своего мессенджера. Поддержка встроена в приложение, ставить ничего не нужно, а соединение маскируется под обычный защищённый трафик."}}, {"@type": "Question", "name": "Прокси для Телеграм — это безопасно?", "acceptedAnswer": {"@type": "Answer", "text": "Переписка остаётся зашифрованной, читать её владелец прокси не может. Но он видит факт подключения и объём трафика, поэтому адреса из случайных источников лучше не использовать."}}, {"@type": "Question", "name": "Чем прокси отличается от VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Прокси работает только для Telegram и не требует установки программ. VPN поднимает весь интернет — сайты, приложения, видео, — но нужен отдельный клиент. Прокси — быстрая помощь, VPN — постоянное решение."}}, {"@type": "Question", "name": "Почему бесплатные прокси быстро перестают работать?", "acceptedAnswer": {"@type": "Answer", "text": "Публичные адреса используют тысячи людей одновременно: они перегружаются и быстро попадают в фильтры. Поэтому списки приходится обновлять каждые несколько дней."}}, {"@type": "Question", "name": "Замедляет ли прокси интернет?", "acceptedAnswer": {"@type": "Answer", "text": "Он влияет только на Telegram: остальной трафик идёт как обычно. Скорость самого мессенджера зависит от загруженности прокси — публичные обычно заметно медленнее."}}, {"@type": "Question", "name": "Нужен ли прокси, если уже есть VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, при работающем VPN мессенджер и так открывается. Прокси полезен в обратной ситуации: когда VPN ещё не настроен, а Telegram нужен прямо сейчас."}}]}</script>
-<script src="/app.js?v=dec06e04" defer></script>
+<script src="/app.js?v=3e7e17bc" defer></script>
 </body>
 </html>

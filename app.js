@@ -49,6 +49,28 @@
     });
   });
 
+  /* Ссылка вида /faq/#vopros-… открывает нужный ответ сразу.
+     Без этого переход приводил к свёрнутому пункту: человек попадал
+     на свой вопрос и всё равно должен был нажать, чтобы увидеть ответ. */
+  var openByHash = function () {
+    var id = decodeURIComponent(String(location.hash || '').slice(1));
+    if (!id) return;
+    var item = document.getElementById(id);
+    if (!item || !item.classList.contains('faq__item')) return;
+    var group = item.closest('.faq');
+    if (group) {
+      group.querySelectorAll('.faq__item[data-open="true"]').forEach(function (o) {
+        o.setAttribute('data-open', 'false');
+        o.querySelector('.faq__q').setAttribute('aria-expanded', 'false');
+      });
+    }
+    item.setAttribute('data-open', 'true');
+    item.querySelector('.faq__q').setAttribute('aria-expanded', 'true');
+    item.scrollIntoView({ block: 'start' });
+  };
+  openByHash();
+  window.addEventListener('hashchange', openByHash);
+
   /* --- Переключатель темы --------------------------------------------- */
   var sw = document.querySelector('[data-theme-switch]');
   if (sw) {
