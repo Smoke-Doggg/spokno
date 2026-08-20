@@ -775,10 +775,15 @@ td strong { color: var(--ink); }
 .unique h2 { margin-top: 0; }
 
 .facts { list-style: none; margin: 16px 0; padding: 0; display: grid; gap: 12px; }
-.facts li { display: grid; grid-template-columns: 7px 1fr; gap: 14px; align-items: start; }
+/* Не grid на самом пункте: в пункте лежит <strong> и следом обычный текст,
+   и сетка раскладывала их по ячейкам — текст рассыпался по одному слову
+   в строку, а пункт вырастал до 800px. Маркер ставим отступом
+   и абсолютным ::before, содержимое остаётся сплошным потоком. */
+.facts li { position: relative; padding-left: 21px; }
 .facts li::before {
-  content: ""; width: 7px; height: 7px; border-radius: 50%;
-  background: var(--accent); margin-top: 10px;
+  content: ""; position: absolute; left: 0; top: .62em;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent);
 }
 
 /* Липкая шапка 68px: без отступа якорь останавливается под ней и человек
