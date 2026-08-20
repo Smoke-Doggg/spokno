@@ -1,0 +1,30 @@
+# VPN Просто
+
+> VPN-сервис для России: ключ выдаёт бот в Telegram, своего приложения нет. Банки, Госуслуги и российские сайты идут мимо туннеля — выключать VPN ради них не нужно.
+
+Работает на протоколах VLESS + Reality и Hysteria2: трафик неотличим от обычного HTTPS. Шесть стран плюс российский сервер, одна цена 349 ₽ в месяц без градаций тарифов, первые 3 дня бесплатно без привязки карты.
+
+## Основные страницы
+
+- [Главная](https://prostokey.com/): что за сервис, цена, что входит в подписку
+- [Telegram не работает](https://prostokey.com/telegram/): почему перестал открываться мессенджер и что помогает вместо публичных прокси
+- [Как подключиться](https://prostokey.com/kak-podklyuchit/): три шага — ключ в боте, бесплатный клиент, вставить ключ
+- [Вопросы и ответы](https://prostokey.com/faq/): оплата, возврат, устройства, законность использования
+- [О сервисе](https://prostokey.com/o-servise/): сколько лет работаем, как устроено внутри, почему не показываем владельца
+- [Партнёрская программа](https://prostokey.com/partnerskaya/): пять уровней начислений с каждой оплаты
+
+## Документы
+
+- [Условия использования](https://prostokey.com/usloviya/)
+- [Политика конфиденциальности](https://prostokey.com/privacy/): что храним и чего не храним
+
+## Статьи
+
+- [Что видит провайдер, а что — VPN-сервис](https://prostokey.com/blog/chto-vidit-provayder/)
+- [Happ или V2RayTun: какой клиент выбрать](https://prostokey.com/blog/vybor-klienta/)
+- [Какой VPN работает в России сейчас](https://prostokey.com/blog/kakoy-vpn-rabotaet/)
+- [Сбербанк не работает с VPN: что делать](https://prostokey.com/blog/vpn-i-banki/)
+- [Прокси для Телеграм или VPN: что выбрать](https://prostokey.com/blog/proxy-dlya-telegram/)
+- [Отключили мобильный интернет: что делать](https://prostokey.com/blog/belye-spiski/)
+- [VPN на iPhone без приложений из App Store](https://prostokey.com/blog/vpn-iphone/)
+- [Как оплатить VPN из России в 2026 году](https://prostokey.com/blog/kak-oplatit-vpn/)
