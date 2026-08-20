@@ -712,7 +712,7 @@ td strong { color: var(--ink); }
 .article .wrap { max-width: 672px; }
 /* Мелкие подписи не растягиваем на всю колонку: 14-й кегль на длинной
    строке читается хуже всего, а здесь строка доходила до 102 знаков. */
-.article .meta, .article .cta-note { max-width: 58ch; }
+.article .meta, .article .cta-note, .article .small { max-width: 58ch; }
 
 /* Оглавление длинной страницы. Тихое: это указатель, а не содержание —
    он не должен спорить с текстом за внимание. */

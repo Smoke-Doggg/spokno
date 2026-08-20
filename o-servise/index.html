@@ -35,7 +35,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
       type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
       type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=784a0d3f">
+<link rel="stylesheet" href="/style.css?v=bacc79b9">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -80,7 +80,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 </header>
 
 <main id="main">
-<section class="section">
+<section class="section article">
   <div class="wrap">
     <p class="crumbs"><a href="/">Главная</a> → О сервисе</p>
     <h1>О сервисе</h1>
@@ -88,7 +88,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
     когда остальные отваливаются. 5-й год, без смены
     названия и без исчезновений с деньгами.</p>
 
-    <h2>Коротко цифрами</h2>
+    <h2 id="korotko-ciframi">Коротко цифрами</h2>
     <div class="tablewrap">
       <table>
         <tbody>
@@ -103,7 +103,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
     <p class="small">Цифры — как есть на 21 августа 2026. Округляем вниз:
     приятнее недосказать, чем приукрасить.</p>
 
-    <h2>Как это устроено внутри</h2>
+    <h2 id="kak-eto-ustroeno-vnutri">Как это устроено внутри</h2>
     <p>Своего приложения у нас нет — и это осознанно. Приложения VPN-сервисов
     удаляют из магазинов сотнями, и вместе с приложением исчезает доступ.
     Мы выдаём ключ, который работает в любом подходящем клиенте: пропасть
@@ -127,7 +127,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
         идут мимо туннеля: банк не ломается, выключать ничего не надо</span></li>
     </ul>
 
-    <h2>Почему мы не показываем владельца</h2>
+    <h2 id="pochemu-my-ne-pokazyvaem-vladelca">Почему мы не показываем владельца</h2>
     <p>Это самый частый вопрос, и ответ у нас прямой. В России с 2024 года
     рассказывать о средствах обхода блокировок запрещено, а с сентября
     2025-го за это штрафуют. Публичный владелец у такого сервиса — это
@@ -139,7 +139,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
     работы и живым человеком в поддержке. Это честнее, чем фотография
     директора на сайте.</p>
 
-    <h2>Чего мы не делаем</h2>
+    <h2 id="chego-my-ne-delaem">Чего мы не делаем</h2>
     <ul class="facts">
       <li>Не храним историю посещённых сайтов и содержимое трафика.</li>
       <li>Не ставим на сайт ни одного счётчика и рекламного скрипта —
@@ -149,7 +149,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
         от посторонних в сети, но это не средство сокрытия личности.</li>
     </ul>
 
-    <h2>Что будет, если сайт заблокируют</h2>
+    <h2 id="chto-budet-esli-sayt-zablokiruyut">Что будет, если сайт заблокируют</h2>
     <p>Мы исходим из того, что это вопрос времени, а не вероятности. Поэтому
     у сайта есть зеркало на другом домене, а связь с вами живёт
     в <a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener">канале</a> —
@@ -163,6 +163,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
      stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Попробовать 3 дня бесплатно</a>
     </div>
+    <nav class="related" aria-label="Другие материалы"><p class="toc__head">Читайте также</p><ul><li><a href="/blog/kakoy-vpn-rabotaet/">Какой VPN работает в России сейчас</a></li><li><a href="/blog/vpn-i-banki/">Сбербанк не работает с VPN: что делать</a></li><li><a href="/blog/proxy-dlya-telegram/">Прокси для Телеграм или VPN: что выбрать</a></li><li><a href="/blog/belye-spiski/">Отключили мобильный интернет: что делать</a></li></ul></nav>
   </div>
 </section>
 </main>
