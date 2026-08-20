@@ -701,7 +701,32 @@ td strong { color: var(--ink); }
 
 /* --- Статьи -------------------------------------------------------------- */
 .article { padding-block: clamp(40px, 5vw, 72px); }
-.article .wrap { max-width: 760px; }
+/* 672px даёт около 68 знаков в строке при кегле 17 — оптимум читаемости.
+   Было 760px и 77–84 знака: превышение небольшое, но страницы длинные
+   (телеграм — 5,6 экрана сплошного чтения), и на такой длине оно
+   накапливается в усталость. */
+.article .wrap { max-width: 672px; }
+/* Мелкие подписи не растягиваем на всю колонку: 14-й кегль на длинной
+   строке читается хуже всего, а здесь строка доходила до 102 знаков. */
+.article .meta, .article .cta-note { max-width: 58ch; }
+
+/* Оглавление длинной страницы. Тихое: это указатель, а не содержание —
+   он не должен спорить с текстом за внимание. */
+.toc {
+  margin: 28px 0 8px; padding: 18px 20px;
+  background: var(--surface-alt); border-radius: var(--r-card);
+}
+.toc__head {
+  margin: 0 0 10px; font-size: 13px; font-weight: 700;
+  letter-spacing: .02em; text-transform: uppercase; color: var(--muted);
+}
+.toc ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.toc li { margin: 0; }
+.toc a {
+  font-size: 15.5px; color: var(--graphite); text-decoration: none;
+  display: inline-block; padding: 2px 0;
+}
+.toc a:hover { color: var(--accent-text); text-decoration: underline; }
 .article h1 { font-size: clamp(32px, 3.6vw, 46px); }
 .article h2 { font-size: clamp(24px, 2.4vw, 32px); margin-top: 1.8em; }
 .article h3 { margin-top: 1.6em; margin-bottom: .4em; }
