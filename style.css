@@ -727,6 +727,18 @@ td strong { color: var(--ink); }
   display: inline-block; padding: 2px 0;
 }
 .toc a:hover { color: var(--accent-text); text-decoration: underline; }
+
+/* «Читайте также» — тем же тихим тоном, что и оглавление: это указатель
+   дальше, а не призыв. */
+.related { margin: 40px 0 8px; padding-top: 24px; border-top: 1px solid var(--line); }
+.related ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.related li { margin: 0; }
+.related a { font-size: 16px; color: var(--graphite); text-decoration: none; }
+.related a:hover { color: var(--accent-text); text-decoration: underline; }
+/* Ссылка на статью прямо в разделе — с отступом, чтобы не слипалась
+   с абзацем, к которому относится. */
+.more-link { margin-top: 14px; font-size: 15.5px; }
+.more-link a { font-weight: 600; }
 .article h1 { font-size: clamp(32px, 3.6vw, 46px); }
 .article h2 { font-size: clamp(24px, 2.4vw, 32px); margin-top: 1.8em; }
 .article h3 { margin-top: 1.6em; margin-bottom: .4em; }
