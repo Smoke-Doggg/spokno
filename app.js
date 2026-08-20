@@ -518,4 +518,129 @@
       syncPause();
     });
   }
+
+  /* --- Свой счёт посещений -------------------------------------------- */
+  /* Считаем сами и обезличенно: без cookie, без идентификаторов, без
+     передачи кому-либо. На сервере событие превращается в +1 к счётчику
+     и исчезает — журнала посещений нет, как и обещано на сайте.
+
+     Логов у GitHub Pages для нас не существует, поэтому другого способа
+     узнать, что происходит на сайте, просто нет. */
+  var HIT = 'https://tolyanchik027.hlab.kz/watch-api/hit';
+
+  var send = function (params) {
+    var qs = Object.keys(params)
+      .filter(function (k) { return params[k] !== undefined && params[k] !== ''; })
+      .map(function (k) { return k + '=' + encodeURIComponent(params[k]); })
+      .join('&');
+    var url = HIT + '?' + qs;
+    /* sendBeacon переживает уход со страницы — обычный запрос браузер
+       отменил бы на полпути, и события «ушёл» терялись бы чаще всего. */
+    try {
+      if (navigator.sendBeacon && navigator.sendBeacon(url)) return;
+    } catch (e) {}
+    try { fetch(url, { mode: 'no-cors', keepalive: true }); } catch (e) {}
+  };
+
+  /* Откуда пришёл. Полный адрес не берём — только узнаваемый источник:
+     подробнее и не нужно, а хранить чужие адреса незачем. */
+  var source = function () {
+    var m;
+    try { m = new URL(location.href).searchParams.get('src'); } catch (e) {}
+    if (m) return 'канал:' + m;
+    var r = document.referrer;
+    if (!r) return 'прямой';
+    var host;
+    try { host = new URL(r).hostname.replace(/^www\./, ''); } catch (e) { return 'иное'; }
+    if (host === location.hostname) return 'внутренний';
+    if (/(^|\.)google\./.test(host)) return 'google';
+    if (/(^|\.)(yandex|ya)\./.test(host)) return 'yandex';
+    if (/(^|\.)bing\./.test(host)) return 'bing';
+    if (/duckduckgo/.test(host)) return 'duckduckgo';
+    if (/(^|\.)mail\./.test(host)) return 'mail';
+    if (/rambler/.test(host)) return 'rambler';
+    if (/(^|\.)(t|telegram)\./.test(host)) return 'telegram';
+    return 'иное';
+  };
+
+  var device = function () {
+    var w = window.innerWidth;
+    if (w < 640) return 'mobile';
+    if (w < 1024) return 'tablet';
+    return 'desktop';
+  };
+  var widthBucket = function () {
+    var w = window.innerWidth;
+    return w < 480 ? 'xs' : w < 768 ? 'sm' : w < 1200 ? 'md' : w < 1600 ? 'lg' : 'xl';
+  };
+
+  var firstInSession = false;
+  try {
+    if (!sessionStorage.getItem('vpnp_seen')) {
+      sessionStorage.setItem('vpnp_seen', '1');
+      firstInSession = true;
+    }
+  } catch (e) {}
+
+  var page = location.pathname;
+  var tz = '';
+  try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+
+  send({
+    e: 'view', p: page, r: source(), d: device(), w: widthBucket(),
+    t: document.documentElement.getAttribute('data-theme') ||
+       (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'),
+    tz: tz, n: firstInSession ? '1' : '0'
+  });
+
+  /* Глубина чтения: каждую четверть отмечаем один раз. */
+  var marks = { 25: false, 50: false, 75: false, 100: false };
+  var onScroll = function () {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    if (h <= 0) return;
+    var pct = Math.round((window.scrollY / h) * 100);
+    [25, 50, 75, 100].forEach(function (m) {
+      if (!marks[m] && pct >= m) {
+        marks[m] = true;
+        send({ e: 'scroll', p: page, s: String(m) });
+      }
+    });
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* Клики по важному. Что именно нажали — по виду ссылки, а не по тексту. */
+  document.addEventListener('click', function (ev) {
+    var a = ev.target.closest && ev.target.closest('a, button');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    var kind =
+      /t\.me|tg:\/\//.test(href) ? (/channel|svoboda/i.test(a.textContent) ? 'channel' : 'bot') :
+      /^\/blog\//.test(href) ? 'article' :
+      a.closest('.toc') ? 'toc' :
+      a.classList.contains('faq__q') ? 'faq' :
+      a.closest('.foot') ? 'foot' : null;
+    if (kind) send({ e: 'click', k: kind });
+  }, true);
+
+  /* Ошибки скриптов: поломка должна находиться сразу, а не через месяц. */
+  window.addEventListener('error', function (ev) {
+    send({ e: 'error', m: String((ev && ev.message) || 'unknown').slice(0, 80) });
+  });
+
+  /* Уход со страницы: сколько пробыл и дочитал ли хоть до четверти. */
+  var started = Date.now();
+  var reported = false;
+  var onLeave = function () {
+    if (reported) return;
+    reported = true;
+    send({
+      e: 'leave', p: page,
+      sec: String(Math.round((Date.now() - started) / 1000)),
+      s: marks[25] ? 'read' : 'bounce'
+    });
+  };
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'hidden') onLeave();
+  });
+  window.addEventListener('pagehide', onLeave);
 })();
