@@ -155,7 +155,7 @@ body {
   margin: 0;
   background: var(--surface);
   color: var(--graphite);
-  font: 400 17px/1.6 Onest, Manrope, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font: 400 17px/1.6 Onest, 'Onest резерв', Manrope, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -310,7 +310,7 @@ strong { font-weight: 600; color: var(--ink); }
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   height: 52px; padding: 0 28px;
   border: 1px solid transparent; border-radius: var(--r-btn);
-  font: 600 16px/1 Onest, system-ui, sans-serif;
+  font: 600 16px/1 Onest, 'Onest резерв', system-ui, sans-serif;
   text-decoration: none; cursor: pointer; white-space: nowrap;
   transition: background-color var(--dur) var(--ease),
               transform var(--dur) var(--ease),
@@ -362,6 +362,68 @@ strong { font-weight: 600; color: var(--ink); }
   padding: 7px 14px; border-radius: var(--r-pill);
   background: var(--accent-soft); color: var(--accent-text);
   font-size: 14px; font-weight: 600;
+}
+
+/* Запасной шрифт с метриками Onest.
+
+   Пока Onest грузится, текст рисуется системным шрифтом, у которого другие
+   ascent/descent и другая ширина знака. Когда Onest доезжает, строки меняют
+   высоту, и весь текст под ними прыгает: замер Lighthouse показывал сдвиг
+   0,161 при допустимых 0,1, причём двигался ровно `p.lead` — самый крупный
+   элемент первого экрана.
+
+   font-display: swap этим и опасен. Лечится не отказом от swap, а тем, что
+   запасному шрифту навязывают метрики основного: тогда подмена проходит
+   без сдвига. Высоты взяты из самого файла шрифта (hhea: unitsPerEm 1000,
+   ascent 970, descent -305, lineGap 0).
+
+   size-adjust подобран замером, а не выведен из метрик. Дело в переносах:
+   системный шрифт шире Onest, и заголовок первого экрана укладывался у него
+   в три строки вместо двух — при подмене всё содержимое подскакивало на
+   40 пикселей разом. Три строки держатся до 95%, две начинаются с 93%;
+   92% взяты с запасом от порога.
+
+   Объявление живёт здесь, а не в fonts.css: тот подключён асинхронно
+   (preload as=style + onload), и к первой отрисовке его правил ещё нет.
+   Файла этот @font-face не грузит, только описывает метрики уже
+   установленного в системе шрифта — блокирующему style.css он ничего
+   не стоит. */
+@font-face{
+  font-family:'Onest резерв';
+  src:local('Arial'), local('Helvetica Neue'), local('Roboto'), local('DejaVu Sans');
+  ascent-override:97%;
+  descent-override:30.5%;
+  line-gap-override:0%;
+  size-adjust:92%;
+}
+
+
+
+/* Секции ниже первого экрана не размечаются, пока до них не долистали.
+
+   Главная — тринадцать экранов и 73 КБ разметки. Браузер верстал их все
+   сразу, и на слабом телефоне (замер эмулирует процессор вчетверо
+   медленнее) это занимало секунды: шрифт заголовка лежал в кэше уже
+   на 650-й миллисекунде, а применялся только на 2200-й — раньше у
+   браузера просто не доходили руки. Из-за этого заголовок успевал
+   отрисоваться системным шрифтом, а потом перескакивал.
+
+   content-visibility: auto разрешает пропустить вёрстку невидимого,
+   а contain-intrinsic-size подсказывает примерную высоту, чтобы полоса
+   прокрутки не прыгала. Первый экран (.hero) исключён намеренно: его
+   видно сразу, откладывать нечего. */
+.section:not(.hero){
+  content-visibility: auto;
+  /* Ориентир взят по медиане настоящих высот (замер: 1214 px на телефоне,
+     676 px на широком экране). Если ошибиться сильно, полоса прокрутки
+     прыгает на первом пролистывании: с общими 800 px страница на телефоне
+     «вырастала» с 11,6 до 16,4 тысячи пикселей по мере раскрытия секций.
+     Ключевое слово auto велит браузеру запомнить настоящий размер после
+     первой вёрстки, поэтому дальше оценка не нужна. */
+  contain-intrinsic-size: auto 1200px;
+}
+@media (min-width: 900px){
+  .section:not(.hero){ contain-intrinsic-size: auto 680px; }
 }
 
 /* --- Hero ------------------------------------------------------------ */
@@ -625,7 +687,7 @@ strong { font-weight: 600; color: var(--ink); }
   width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px;
   padding: 18px 20px; margin: 0;
   background: none; border: 0; border-radius: var(--r-btn);
-  font: 600 17px/1.4 Onest, system-ui, sans-serif; color: var(--ink);
+  font: 600 17px/1.4 Onest, 'Onest резерв', system-ui, sans-serif; color: var(--ink);
   text-align: left; cursor: pointer;
   transition: background-color var(--dur) var(--ease);
 }
@@ -1081,7 +1143,7 @@ td strong { color: var(--ink); }
   display: grid;
   grid-template-rows: auto auto 1fr auto;
   background: #17212B;
-  font-family: Onest, system-ui, sans-serif;
+  font-family: Onest, 'Onest резерв', system-ui, sans-serif;
 }
 .tg__status {
   display: flex; align-items: center; justify-content: space-between;
