@@ -279,10 +279,15 @@
       nodes.push({ x: Math.random(), y: Math.random(),
         vx: (Math.random() - .5) * .0004, vy: (Math.random() - .5) * .0004, f: 0 });
     }
-    var netVisible = function () {
-      return !document.hidden && getComputedStyle(cv).display !== 'none' &&
-        cv.getBoundingClientRect().bottom > 0;
-    };
+    /* Видимость держим флагами, а не замером в кадре.
+       Прежде netVisible() вызывался из netFrame шестьдесят раз в секунду,
+       а внутри — getComputedStyle и getBoundingClientRect: браузер обязан
+       пересчитать раскладку немедленно, и весь этот пересчёт ложился
+       в основной поток (Style & Layout 756 мс, Rendering 730 мс в замере).
+       IntersectionObserver сообщает о попадании в экран сам, даром. */
+    var netInView = false;
+    var netShown = function () { return getComputedStyle(cv).display !== 'none'; };
+    var netVisible = function () { return !document.hidden && netInView && netShown(); };
     var netFrame = function () {
       if (!netOn) return;
       if (!netVisible()) { netOn = false; return; }
@@ -325,10 +330,14 @@
     var netEnsure = function () {
       if (netVisible() && !netOn) { sizeNet(); netOn = true; netFrame(); }
     };
-    netEnsure();
+    /* Попадание в экран — дело наблюдателя, а не обработчика прокрутки:
+       тот дёргал бы getBoundingClientRect на каждый пиксель пролистывания. */
+    new IntersectionObserver(function (es) {
+      netInView = es[0].isIntersecting;
+      if (netInView) netEnsure(); else netOn = false;
+    }).observe(cv);
     addEventListener('resize', function () { if (netOn) sizeNet(); });
     document.addEventListener('visibilitychange', netEnsure);
-    addEventListener('scroll', netEnsure, { passive: true });
     /* переключение темы прячет/показывает canvas — следим за атрибутом */
     new MutationObserver(netEnsure)
       .observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
