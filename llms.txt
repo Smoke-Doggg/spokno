@@ -20,6 +20,7 @@
 
 ## Статьи
 
+- [Как поставить Happ на iPhone](https://prostokey.com/blog/happ-iphone/)
 - [Что видит провайдер, а что — VPN-сервис](https://prostokey.com/blog/chto-vidit-provayder/)
 - [Happ или V2RayTun: какой клиент выбрать](https://prostokey.com/blog/vybor-klienta/)
 - [Какой VPN работает в России сейчас](https://prostokey.com/blog/kakoy-vpn-rabotaet/)
