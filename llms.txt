@@ -20,6 +20,7 @@
 
 ## Статьи
 
+- [Как установить Happ на Android](https://prostokey.com/blog/happ-android/)
 - [VPN-ключ на 3 дня: что входит и как получить](https://prostokey.com/blog/klyuch-na-3-dnya/)
 - [Как поставить Happ на iPhone](https://prostokey.com/blog/happ-iphone/)
 - [Что видит провайдер, а что — VPN-сервис](https://prostokey.com/blog/chto-vidit-provayder/)

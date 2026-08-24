@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){try{var t=localStorage.getItem("theme");
+if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<title>Как установить Happ на Android — VPN Просто</title>
+<meta name="description" content="Два способа поставить Happ на Android: из Google Play и файлом APK, если сервисов Google нет. Вставка ключа и настройки, из-за которых рвётся связь.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stat.prostokey.com; font-src 'self' data:; connect-src 'self' https://stat.prostokey.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/blog/happ-android/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="Как установить Happ на Android">
+<meta property="og:description" content="Два способа поставить Happ на Android: из Google Play и файлом APK, если сервисов Google нет. Вставка ключа и настройки, из-за которых рвётся связь.">
+<meta property="og:url" content="https://prostokey.com/blog/happ-android/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="VPN Просто — стабильный VPN, банки работают">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/fonts.css?v=1260ba6b">
+<link rel="preload" href="/fonts/onest-800-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=6e72c0ba">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<div class="aurora aurora--soft" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/" aria-current="page">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system" hidden>
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<article class="section article">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → Как установить Happ на Android</p>
+    <h1>Как установить Happ на Android</h1>
+    <p class="meta">
+      <span>Обновлено: 25 августа 2026</span>
+      <span>Команда VPN Просто</span>
+    </p>
+
+    <p class="lead">На Android установка самая простая из всех платформ: Happ есть в Google
+Play, ставится как любое приложение. Если сервисов Google на телефоне нет,
+подойдёт файл APK с официальной страницы разработчика. Ключ вставляется
+из буфера обмена, всё вместе занимает минуты три. Отдельного внимания
+требуют только настройки экономии заряда — из-за них соединение рвётся.
+</p>
+
+<nav class="toc" aria-label="Содержание">
+  <p class="toc__head">В этой статье</p>
+  <ol>
+    <li><a href="#dva-sposoba">Два способа установки</a></li>
+    <li><a href="#play">Из Google Play</a></li>
+    <li><a href="#apk">Файлом APK, без сервисов Google</a></li>
+    <li><a href="#klyuch">Как вставить ключ</a></li>
+    <li><a href="#android-tv">Android TV: та же программа</a></li>
+    <li><a href="#zaryad">Настройки, из-за которых соединение рвётся</a></li>
+    <li><a href="#nash-vzglyad">Почему мы даём ссылку именно на эту страницу</a></li>
+    <li><a href="#oshibki">Если что-то пошло не так</a></li>
+    <li><a href="#korotko">Коротко</a></li>
+  </ol>
+</nav>
+
+
+<h2 id="dva-sposoba">Два способа установки</h2>
+
+<p>Оба рабочие, разница только в том, есть ли на телефоне сервисы Google.
+На аппаратах Huawei последних лет, на некоторых китайских моделях и на
+прошивках без Google Play их нет — тогда остаётся второй путь.</p>
+
+<div class="tablewrap">
+  <table>
+    <thead>
+      <tr><th></th><th>Google Play</th><th>Файл APK</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Кому</td><td>большинству телефонов</td><td>без сервисов Google</td></tr>
+      <tr><td>Обновления</td><td>приходят сами</td><td>ставятся вручную</td></tr>
+      <tr><td>Сложность</td><td>как любое приложение</td><td>нужно разрешить установку из файла</td></tr>
+      <tr><td>Размер</td><td>—</td><td>около 61 МБ</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Если Google Play на телефоне работает — ставьте оттуда. Ручные
+обновления легко забыть, а устаревший клиент со временем перестаёт
+понимать новые настройки.</p>
+
+<h2 id="play">Из Google Play</h2>
+
+<ol class="steps">
+  <li><b>Найдите приложение</b><span>Ищите по названию Happ — Proxy
+    Utility. Программа бесплатная, встроенных покупок нет.</span></li>
+  <li><b>Установите</b><span>Обычная установка, менять регион учётной
+    записи или что-либо ещё не требуется. В отличие от App Store,
+    из Google Play такие программы не удаляли.</span></li>
+  <li><b>Откройте и разрешите создание VPN</b><span>Android покажет
+    системный запрос при первом подключении. Без него соединение
+    не поднимется.</span></li>
+</ol>
+
+<h2 id="apk">Файлом APK, без сервисов Google</h2>
+
+<p>APK — обычный установочный файл. Скачивать его нужно только со
+страницы разработчика: там же лежит исходный код, и видно, кто и когда
+выпустил версию. На 18 августа 2026 года последний выпуск — 4.1.0
+от 7 августа, файл около 61 МБ.</p>
+
+<ol class="steps">
+  <li><b>Скачайте файл</b><span>Со страницы выпусков проекта Happ.
+    Актуальную ссылку подскажет бот — она же продублирована на странице
+    <a href="/kak-podklyuchit/">как подключиться</a>.</span></li>
+  <li><b>Разрешите установку</b><span>Android спросит, доверяете ли вы
+    источнику — браузеру или файловому менеджеру, из которого ставите.
+    Разрешение выдаётся один раз и его потом можно отозвать.</span></li>
+  <li><b>Установите и откройте</b><span>Дальше всё как при обычной
+    установке.</span></li>
+  <li><b>Запомните, где брали</b><span>Обновления придётся ставить руками:
+    заходить на ту же страницу и скачивать свежий файл. Раз в пару
+    месяцев достаточно.</span></li>
+</ol>
+
+<div class="callout">
+  <p><strong>Чего делать не стоит.</strong> Не скачивайте APK с
+  файлообменников, из чатов и с сайтов-каталогов «скачать бесплатно».
+  Установочный файл легко пересобрать с добавленным кодом, и внешне это
+  никак не проявится. Программа, которая работает с вашим сетевым
+  трафиком, — последнее, что стоит брать из случайного места.</p>
+</div>
+
+<h2 id="klyuch">Как вставить ключ</h2>
+
+<p>Ключ — строка настроек из бота, к программе она не привязана. Тот же
+ключ работает на других ваших устройствах и в других клиентах.</p>
+
+<ol class="steps">
+  <li><b>Скопируйте ключ в боте</b><span>Одно нажатие копирует строку
+    целиком. Перепечатывать вручную не нужно — она длинная.</span></li>
+  <li><b>В Happ выберите добавление из буфера</b><span>Настройки
+    разберутся сами: адреса, протокол, параметры.</span></li>
+  <li><b>Выберите страну и подключитесь</b><span>Первым пунктом идёт
+    автовыбор — он сам находит живой сервер. Стран
+    6, доплат за них нет.</span></li>
+</ol>
+
+<h2 id="android-tv">Android TV: та же программа, другой пульт</h2>
+
+<p>На телевизорах и приставках с Android ставится тот же Happ из
+Google Play — отдельной версии искать не нужно. Управление пультом
+предусмотрено, но набирать что-либо на экранной клавиатуре мучительно,
+поэтому ключ туда лучше не вводить руками.</p>
+
+<p>Обходной путь простой: откройте на телевизоре бота в браузере или
+войдите в свой аккаунт мессенджера, скопируйте ключ там же и вставьте
+из буфера. Если на приставке нет ни того ни другого, помогает приложение
+удалённой клавиатуры с телефона — оно превращает телефон в устройство
+ввода для телевизора.</p>
+
+<p>Ключ на телевизоре тот же, что на телефоне. Отдельную подписку
+заводить не нужно: в нашу входит 2 устройства,
+расширить можно до 6 по 60 ₽
+в месяц за каждое сверх включённых. Телевизор считается таким же
+устройством, как телефон.</p>
+
+<h2 id="zaryad">Настройки, из-за которых соединение рвётся</h2>
+
+<p>Это главная особенность Android и частая причина жалоб «работает,
+но отваливается». Система агрессивно усыпляет фоновые приложения ради
+заряда, и клиент попадает под раздачу.</p>
+
+<ul class="facts">
+  <li><strong>Экономия заряда</strong><span>в настройках приложения
+    выберите для Happ вариант без ограничений — иначе система выгрузит
+    его из памяти</span></li>
+  <li><strong>Автозапуск</strong><span>на прошивках Xiaomi, Huawei, Oppo
+    и Vivo это отдельный пункт, и по умолчанию он выключен</span></li>
+  <li><strong>Очистка памяти</strong><span>если пользуетесь чистильщиком,
+    добавьте клиент в исключения</span></li>
+  <li><strong>Постоянный VPN</strong><span>в системных настройках сети
+    есть опция не отключать соединение — включите её после того,
+    как убедились, что всё работает</span></li>
+</ul>
+
+<p>Проверить просто: подключитесь, заблокируйте экран на полчаса, потом
+откройте мессенджер. Если он не открывается, а после разблокировки
+телефона всё оживает — дело именно в усыплении, а не в сервере.</p>
+
+<section class="unique">
+  <h2 id="nash-vzglyad">Почему мы даём ссылку именно на эту страницу</h2>
+
+  <p>В инструкциях по установке APK принято давать ссылку куда попало —
+  на каталог приложений, на файлообменник, иногда на собственный сервер
+  «чтобы удобнее». Мы даём только страницу выпусков самого проекта, и
+  у этого есть причина, которую стоит объяснить.</p>
+
+  <p>Установочный файл Android можно пересобрать: распаковать, добавить
+  свой код, собрать обратно. Внешне приложение останется тем же —
+  название, значок, интерфейс. Программа, которая по своей работе видит
+  весь ваш сетевой трафик, при такой подмене превращается в полную
+  противоположность тому, зачем её ставили. Проверить это глазами
+  человек не может, поэтому единственная защита — брать файл там, где
+  его выложил автор.</p>
+
+  <p>На странице выпусков видно то, чего не видно нигде больше: номер
+  версии, дату публикации, размер файла и рядом — исходный код. На
+  18 августа 2026 года там лежит выпуск 4.1.0 от 7 августа, объёмом
+  около 61 МБ. Если файл, который вам предлагают, заметно отличается
+  по размеру или его версия старше — это повод не ставить.</p>
+
+  <p><strong>Своё приложение мы не делаем, и это не лень.</strong>
+  Приложение сервиса удаляют из магазина вместе с сервисом — так за
+  2026 год ушли сотни VPN-программ. Клиент, не принадлежащий никакому
+  сервису, удалять не за что: он сам по себе ничего не обходит и ни к
+  кому не подключается, пока вы не дали ему ключ. Пока схема «чужая
+  программа плюс наш ключ» держится, чистка магазина не отрезает вас
+  от подписки.</p>
+
+  <p>Отдельно о размере файла. Шестьдесят с лишним мегабайт для такой
+  программы кажутся излишеством, но объясняются просто: внутри собраны
+  сразу несколько сетевых движков под разные протоколы, включая наши
+  VLESS + Reality и Hysteria2. Именно поэтому один клиент понимает
+  ключи разных сервисов, а вам не приходится держать по программе
+  на каждый.</p>
+
+  <p>Из той же логики — почему на Android ситуация спокойнее, чем на
+  технике Apple. Здесь у человека есть и магазин, и запасной путь через
+  файл, и второй клиент на случай, если первый подведёт. Владельцу
+  iPhone сейчас доступен только магазин другой страны, и запасной
+  программы у него не осталось вовсе. Разбор по платформам — в статье
+  <a href="/blog/vybor-klienta/">про выбор клиента</a>.</p>
+</section>
+
+<h2 id="oshibki">Если что-то пошло не так</h2>
+
+<p><strong>Ключ вставился, серверов нет.</strong> Дело не в программе.
+В боте, в разделе «Мой VPN», посмотрите строку с локациями подписки;
+если она пустая, помогает кнопка обновления подписки. Список придёт
+в клиент сам.</p>
+
+<p><strong>Соединение поднимается, интернета нет.</strong> Попробуйте
+другую страну или включите автовыбор. Если не помогло — проверьте, не
+включён ли одновременно второй VPN или режим экономии трафика.</p>
+
+<p><strong>Работает на Wi-Fi, не работает на мобильном.</strong>
+У операторов фильтрация жёстче. Автовыбор переберёт серверы сам
+и остановится на живом.</p>
+
+<p><strong>Не ставится APK.</strong> Android не даёт установить файл,
+пока источнику не выдано разрешение. Оно спрашивается один раз и
+привязано к тому приложению, из которого вы открыли файл: разрешили
+браузеру — из файлового менеджера всё равно спросит заново.</p>
+
+<p><strong>Пишет, что приложение повреждено.</strong> Чаще всего файл
+скачался не до конца — на мобильном интернете это обычное дело при
+шестидесяти мегабайтах. Скачайте заново, лучше по Wi-Fi, и сверьте
+размер с тем, что указан на странице выпусков.</p>
+
+<p><strong>После обновления системы соединение перестало
+подниматься.</strong> Крупные обновления Android сбрасывают выданные
+разрешения, включая настройки экономии заряда и разрешение на создание
+VPN. Пройдите заново по списку из раздела выше — обычно этого
+достаточно.</p>
+
+<h2 id="korotko">Коротко</h2>
+
+<ul class="facts">
+  <li><strong>Google Play — основной путь</strong><span>эти программы
+    оттуда не удаляли</span></li>
+  <li><strong>APK — для телефонов без Google</strong><span>только со
+    страницы выпусков проекта</span></li>
+  <li><strong>Ключ вставляется из буфера</strong><span>и работает
+    на всех ваших устройствах</span></li>
+  <li><strong>Отключите экономию заряда для клиента</strong><span>иначе
+    система усыпит его и соединение оборвётся</span></li>
+  <li><strong>Проверить бесплатно</strong><span>3 дня без
+    карты, дальше 349 ₽ в месяц</span></li>
+</ul>
+
+
+    <h2 id="chastye-voprosy">Частые вопросы</h2>
+    <div class="faq">
+      <div id="vopros-pochemu-na-android-prilozhenie-est-a-na-iphone-net" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Почему на Android приложение есть, а на iPhone нет?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1">
+          <div><p>Из Google Play такие программы не удаляли, из российского раздела App Store — удалили. Поэтому на Android установка обычная, а владельцу iPhone нужен магазин другой страны.</p></div>
+        </div>
+      </div>
+      <div id="vopros-bezopasno-li-stavit-apk" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>Безопасно ли ставить APK?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2">
+          <div><p>Если файл взят со страницы выпусков самого проекта — да. С файлообменников и каталогов «скачать бесплатно» — нет: установочный файл легко пересобрать с чужим кодом, и внешне это никак не проявится.</p></div>
+        </div>
+      </div>
+      <div id="vopros-soedinenie-obryvaetsya-kogda-telefon-v-karmane-chto-delat" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>Соединение обрывается, когда телефон в кармане. Что делать?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3">
+          <div><p>Отключите для клиента экономию заряда и разрешите автозапуск — на прошивках Xiaomi, Huawei, Oppo и Vivo это отдельные пункты. Система усыпляет фоновые приложения, и клиент попадает под раздачу.</p></div>
+        </div>
+      </div>
+      <div id="vopros-nuzhno-li-obnovlyat-programmu-esli-vse-rabotaet" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>Нужно ли обновлять программу, если всё работает?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4">
+          <div><p>Раз в пару месяцев стоит. Устаревший клиент со временем перестаёт понимать новые настройки. При установке из Google Play обновления приходят сами, при установке файлом — только вручную.</p></div>
+        </div>
+      </div>
+      <div id="vopros-mozhno-li-pustit-cherez-tunnel-tolko-otdelnye-prilozheniya" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>Можно ли пустить через туннель только отдельные приложения?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5">
+          <div><p>На Android клиенты это умеют. Но у нас разделение уже настроено на стороне сервиса: российские сайты, банки и платёжные системы идут напрямую, мимо туннеля, и настраивать вручную ничего не нужно.</p></div>
+        </div>
+      </div>
+      <div id="vopros-klyuch-vstavilsya-a-serverov-v-spiske-net" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q6" aria-controls="a6">
+            <span>Ключ вставился, а серверов в списке нет.</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6">
+          <div><p>Проблема не в программе. В боте, в разделе «Мой VPN», посмотрите строку с локациями подписки: если она пустая, помогает кнопка обновления подписки. Список придёт в клиент сам, переустанавливать ничего не нужно.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p><strong>Проверить на своей сети.</strong> 3 дня
+      бесплатно, карта не нужна: если у вас не заработает — вы ничего
+      не потеряли.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Получить ключ</a>
+    </div>
+
+    <h2 id="chitat-dalshe">Читать дальше</h2>
+    <ul class="facts">
+      <li><a href="/blog/vybor-klienta/">Happ или V2RayTun: какой клиент выбрать</a></li>
+      <li><a href="/blog/happ-iphone/">Как поставить Happ на iPhone</a></li>
+      <li><a href="/blog/vpn-i-banki/">Сбербанк не работает с VPN: что делать</a></li>
+    </ul>
+  </div>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <p class="foot-head">Сервис</p>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/#price">Цена</a></li>
+          <li><a href="/o-servise/">О сервисе</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Помощь</p>
+        <ul>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Связь</p>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Канал «Цифровая свобода»</a></li>
+          <li class="foot-alt">Не открывается? <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть
+            в приложении</a> или найдите <b class="mono">@vpn_prosto_bot</b></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Документы</p>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2021—<span data-year>2026</span> VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Как установить Happ на Android", "description": "Два способа: из Google Play и файлом APK для телефонов без сервисов Google. Вставка ключа и настройки Android, из-за которых соединение рвётся.", "datePublished": "2026-08-25", "dateModified": "2026-08-25", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/happ-android/", "name": "Как установить Happ на Android"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@type": "Organization", "name": "Команда VPN Просто", "url": "https://prostokey.com/"}, "publisher": {"@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Как установить Happ на Android", "item": "https://prostokey.com/blog/happ-android/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему на Android приложение есть, а на iPhone нет?", "acceptedAnswer": {"@type": "Answer", "text": "Из Google Play такие программы не удаляли, из российского раздела App Store — удалили. Поэтому на Android установка обычная, а владельцу iPhone нужен магазин другой страны."}}, {"@type": "Question", "name": "Безопасно ли ставить APK?", "acceptedAnswer": {"@type": "Answer", "text": "Если файл взят со страницы выпусков самого проекта — да. С файлообменников и каталогов «скачать бесплатно» — нет: установочный файл легко пересобрать с чужим кодом, и внешне это никак не проявится."}}, {"@type": "Question", "name": "Соединение обрывается, когда телефон в кармане. Что делать?", "acceptedAnswer": {"@type": "Answer", "text": "Отключите для клиента экономию заряда и разрешите автозапуск — на прошивках Xiaomi, Huawei, Oppo и Vivo это отдельные пункты. Система усыпляет фоновые приложения, и клиент попадает под раздачу."}}, {"@type": "Question", "name": "Нужно ли обновлять программу, если всё работает?", "acceptedAnswer": {"@type": "Answer", "text": "Раз в пару месяцев стоит. Устаревший клиент со временем перестаёт понимать новые настройки. При установке из Google Play обновления приходят сами, при установке файлом — только вручную."}}, {"@type": "Question", "name": "Можно ли пустить через туннель только отдельные приложения?", "acceptedAnswer": {"@type": "Answer", "text": "На Android клиенты это умеют. Но у нас разделение уже настроено на стороне сервиса: российские сайты, банки и платёжные системы идут напрямую, мимо туннеля, и настраивать вручную ничего не нужно."}}, {"@type": "Question", "name": "Ключ вставился, а серверов в списке нет.", "acceptedAnswer": {"@type": "Answer", "text": "Проблема не в программе. В боте, в разделе «Мой VPN», посмотрите строку с локациями подписки: если она пустая, помогает кнопка обновления подписки. Список придёт в клиент сам, переустанавливать ничего не нужно."}}]}</script>
+<script src="/app.js?v=92680746" defer></script>
+<img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/happ-android/"
+     alt="" width="1" height="1" decoding="async"
+     style="position:absolute;left:-9999px;width:1px;height:1px" aria-hidden="true"></body>
+</html>
