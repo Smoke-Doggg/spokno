@@ -33,7 +33,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
       type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
       type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=114e95d1">
+<link rel="stylesheet" href="/style.css?v=6e72c0ba">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -83,7 +83,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
     <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → Сбербанк не работает с VPN: что делать</p>
     <h1>Сбербанк не работает с VPN: что делать</h1>
     <p class="meta">
-      <span>Обновлено: 14 августа 2026</span>
+      <span>Обновлено: 24 августа 2026</span>
       <span>Команда VPN Просто</span>
     </p>
 
@@ -400,46 +400,74 @@ VPN включён всегда, банк работает всегда, пер�
           <div><p>Настройка, при которой часть трафика идёт через VPN, а часть — напрямую. Российские банки, платёжные системы и госсервисы отправляются напрямую, всё остальное — через туннель. Переключать ничего не нужно.</p></div>
         </div>
       </div>
-      <div id="vopros-pochemu-sberbank-ne-rabotaet-bez-vpn-esli-ya-za-granicey" class="faq__item" data-open="false">
-        <h3 style="font-size:inherit">
-          <button class="faq__q" type="button" aria-expanded="false"
-                  id="q4" aria-controls="a4">
-            <span>Почему Сбербанк не работает БЕЗ VPN, если я за границей?</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
-          </button>
-        </h3>
-        <div class="faq__a" id="a4" role="region" aria-labelledby="q4">
-          <div><p>Обратная ситуация: часть российских сервисов ограничивает доступ с зарубежных адресов. Здесь помогает VPN с выходом через российский IP — для банка вы окажетесь дома.</p></div>
-        </div>
-      </div>
       <div id="vopros-oplata-kartoy-ne-prohodit-pri-vklyuchennom-vpn-pochemu" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
-                  id="q5" aria-controls="a5">
+                  id="q4" aria-controls="a4">
             <span>Оплата картой не проходит при включённом VPN. Почему?</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
      stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
           </button>
         </h3>
-        <div class="faq__a" id="a5" role="region" aria-labelledby="q5">
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4">
           <div><p>Платёжные шлюзы проверяют, откуда пришёл платёж, и зарубежный адрес повышает оценку риска — операция отклоняется. Решение то же: платёжные системы должны идти мимо туннеля.</p></div>
         </div>
       </div>
-      <div id="vopros-obyazatelno-li-vyklyuchat-vpn-radi-banka" class="faq__item" data-open="false">
+      <div id="vopros-bank-pishet-otklyuchite-vpn-chto-delat" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>Банк пишет «отключите VPN» — что делать?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5">
+          <div><p>Это то же самое предупреждение о зарубежном адресе, просто прямым текстом. Выключать вручную не нужно каждый раз — один раз настройте раздельное туннелирование, и банк перестанет его показывать, потому что перестанет видеть заграничный адрес.</p></div>
+        </div>
+      </div>
+      <div id="vopros-mozhet-li-prilozhenie-banka-glushit-vpn" class="faq__item" data-open="false">
         <h3 style="font-size:inherit">
           <button class="faq__q" type="button" aria-expanded="false"
                   id="q6" aria-controls="a6">
-            <span>Обязательно ли выключать VPN ради банка?</span>
+            <span>Может ли приложение банка «глушить» VPN?</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
      stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
           </button>
         </h3>
         <div class="faq__a" id="a6" role="region" aria-labelledby="q6">
-          <div><p>Нет, если сервис настроен правильно. Выключать приходится только там, где весь трафик идёт через туннель без исключений.</p></div>
+          <div><p>Нет, само отключить VPN на телефоне оно не может — такого доступа у обычного приложения нет. Оно только видит адрес, с которого пришёл запрос, и решает показать предупреждение или ограничить сессию. Само соединение при этом продолжает работать.</p></div>
+        </div>
+      </div>
+      <div id="vopros-doma-s-vpn-bank-rabotaet-a-na-ulice-cherez-mobilnyy-internet" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q7" aria-controls="a7">
+            <span>Дома с VPN банк работает, а на улице через мобильный интернет — нет. Почему?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a7" role="region" aria-labelledby="q7">
+          <div><p>Раздельное туннелирование настраивается на уровне телефона, а не сети, поэтому от Wi-Fi к мобильному интернету поведение меняться не должно. Если разница есть, чаще всего дело в режиме «Постоянный VPN» в настройках телефона — на мобильной сети он иногда завёрнут через VPN то, что дома шло напрямую. Стоит проверить эту настройку отдельно для мобильной сети.</p></div>
+        </div>
+      </div>
+      <div id="vopros-schityvaet-li-vpn-parol-ili-login-ot-sberbanka" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q8" aria-controls="a8">
+            <span>Считывает ли VPN пароль или логин от Сбербанка?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a8" role="region" aria-labelledby="q8">
+          <div><p>Нет. Соединение с банком идёт по HTTPS и зашифровано от приложения до сервера банка — VPN меняет только видимый адрес, но не может прочитать то, что внутри зашифрованного канала. Это касается любого VPN, не только нашего.</p></div>
         </div>
       </div>
     </div>
@@ -515,9 +543,9 @@ VPN включён всегда, банк работает всегда, пер�
 
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Сбербанк не работает с VPN: что делать", "description": "Банковские приложения и Госуслуги плохо реагируют на зарубежный адрес. Разбираем, почему так происходит и как настроить VPN, чтобы не выключать его каждый раз.", "datePublished": "2026-08-14", "dateModified": "2026-08-14", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/vpn-i-banki/", "name": "Сбербанк не работает с VPN: что делать"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@type": "Organization", "name": "Команда VPN Просто", "url": "https://prostokey.com/"}, "publisher": {"@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Сбербанк не работает с VPN: что делать", "item": "https://prostokey.com/blog/vpn-i-banki/"}]}]</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему банк не работает, когда включён VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Приложение видит вход с зарубежного адреса и включает защиту от мошенничества: просит подтверждения, показывает ошибку или временно ограничивает вход. Для банка это выглядит как попытка входа из другой страны."}}, {"@type": "Question", "name": "Могут ли заблокировать счёт из-за VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Постоянной блокировки из-за VPN не бывает: банк может приостановить сессию и запросить подтверждение, но счёт от этого не закрывается. Тем не менее лишние срабатывания защиты неприятны, и их проще не вызывать."}}, {"@type": "Question", "name": "Что такое раздельное туннелирование?", "acceptedAnswer": {"@type": "Answer", "text": "Настройка, при которой часть трафика идёт через VPN, а часть — напрямую. Российские банки, платёжные системы и госсервисы отправляются напрямую, всё остальное — через туннель. Переключать ничего не нужно."}}, {"@type": "Question", "name": "Почему Сбербанк не работает БЕЗ VPN, если я за границей?", "acceptedAnswer": {"@type": "Answer", "text": "Обратная ситуация: часть российских сервисов ограничивает доступ с зарубежных адресов. Здесь помогает VPN с выходом через российский IP — для банка вы окажетесь дома."}}, {"@type": "Question", "name": "Оплата картой не проходит при включённом VPN. Почему?", "acceptedAnswer": {"@type": "Answer", "text": "Платёжные шлюзы проверяют, откуда пришёл платёж, и зарубежный адрес повышает оценку риска — операция отклоняется. Решение то же: платёжные системы должны идти мимо туннеля."}}, {"@type": "Question", "name": "Обязательно ли выключать VPN ради банка?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, если сервис настроен правильно. Выключать приходится только там, где весь трафик идёт через туннель без исключений."}}]}</script>
-<script src="/app.js?v=7ee2a000" defer></script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Сбербанк не работает с VPN: что делать", "description": "Банковские приложения и Госуслуги плохо реагируют на зарубежный адрес. Разбираем, почему так происходит и как настроить VPN, чтобы не выключать его каждый раз.", "datePublished": "2026-08-14", "dateModified": "2026-08-24", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/vpn-i-banki/", "name": "Сбербанк не работает с VPN: что делать"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@type": "Organization", "name": "Команда VPN Просто", "url": "https://prostokey.com/"}, "publisher": {"@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Сбербанк не работает с VPN: что делать", "item": "https://prostokey.com/blog/vpn-i-banki/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему банк не работает, когда включён VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Приложение видит вход с зарубежного адреса и включает защиту от мошенничества: просит подтверждения, показывает ошибку или временно ограничивает вход. Для банка это выглядит как попытка входа из другой страны."}}, {"@type": "Question", "name": "Могут ли заблокировать счёт из-за VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Постоянной блокировки из-за VPN не бывает: банк может приостановить сессию и запросить подтверждение, но счёт от этого не закрывается. Тем не менее лишние срабатывания защиты неприятны, и их проще не вызывать."}}, {"@type": "Question", "name": "Что такое раздельное туннелирование?", "acceptedAnswer": {"@type": "Answer", "text": "Настройка, при которой часть трафика идёт через VPN, а часть — напрямую. Российские банки, платёжные системы и госсервисы отправляются напрямую, всё остальное — через туннель. Переключать ничего не нужно."}}, {"@type": "Question", "name": "Оплата картой не проходит при включённом VPN. Почему?", "acceptedAnswer": {"@type": "Answer", "text": "Платёжные шлюзы проверяют, откуда пришёл платёж, и зарубежный адрес повышает оценку риска — операция отклоняется. Решение то же: платёжные системы должны идти мимо туннеля."}}, {"@type": "Question", "name": "Банк пишет «отключите VPN» — что делать?", "acceptedAnswer": {"@type": "Answer", "text": "Это то же самое предупреждение о зарубежном адресе, просто прямым текстом. Выключать вручную не нужно каждый раз — один раз настройте раздельное туннелирование, и банк перестанет его показывать, потому что перестанет видеть заграничный адрес."}}, {"@type": "Question", "name": "Может ли приложение банка «глушить» VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, само отключить VPN на телефоне оно не может — такого доступа у обычного приложения нет. Оно только видит адрес, с которого пришёл запрос, и решает показать предупреждение или ограничить сессию. Само соединение при этом продолжает работать."}}, {"@type": "Question", "name": "Дома с VPN банк работает, а на улице через мобильный интернет — нет. Почему?", "acceptedAnswer": {"@type": "Answer", "text": "Раздельное туннелирование настраивается на уровне телефона, а не сети, поэтому от Wi-Fi к мобильному интернету поведение меняться не должно. Если разница есть, чаще всего дело в режиме «Постоянный VPN» в настройках телефона — на мобильной сети он иногда завёрнут через VPN то, что дома шло напрямую. Стоит проверить эту настройку отдельно для мобильной сети."}}, {"@type": "Question", "name": "Считывает ли VPN пароль или логин от Сбербанка?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Соединение с банком идёт по HTTPS и зашифровано от приложения до сервера банка — VPN меняет только видимый адрес, но не может прочитать то, что внутри зашифрованного канала. Это касается любого VPN, не только нашего."}}]}</script>
+<script src="/app.js?v=92680746" defer></script>
 <img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/vpn-i-banki/"
      alt="" width="1" height="1" decoding="async"
      style="position:absolute;left:-9999px;width:1px;height:1px" aria-hidden="true"></body>

@@ -447,8 +447,30 @@
     });
   }
 
-  var rgrid = document.querySelector('[data-reviews-grid]');
-  if (rgrid && window.fetch) {
+  var rmarquee = document.querySelector('[data-reviews-marquee]');
+  var rtrack = document.querySelector('[data-reviews-track]');
+
+  function startReviewsMarquee() {
+    if (!rmarquee || !rtrack) return;
+    var reduceMotion = window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;           // остаётся лентой с ручным горизонтальным скроллом
+    var cards = Array.prototype.slice.call(rtrack.children);
+    if (!cards.length) return;
+    // Дублируем один раз — на границе дублей анимация просто уходит в цикл незаметно.
+    cards.forEach(function (c) { rtrack.appendChild(c.cloneNode(true)); });
+    rtrack.style.animationDuration = Math.max(30, cards.length * 3.5) + 's';
+    rtrack.classList.add('is-running');
+
+    var pause = function () { rmarquee.classList.add('is-paused'); };
+    var resume = function () { rmarquee.classList.remove('is-paused'); };
+    rmarquee.addEventListener('pointerdown', pause);
+    rmarquee.addEventListener('pointerup', resume);
+    rmarquee.addEventListener('pointercancel', resume);
+    rmarquee.addEventListener('pointerleave', resume);
+  }
+
+  if (rtrack && window.fetch) {
     fetch('/api/reviews').then(function (r) {
       if (!r.ok) throw 0;
       return r.json();
@@ -469,9 +491,12 @@
         b.textContent = rv.nick;
         who.appendChild(b);
         card.appendChild(src); card.appendChild(txt); card.appendChild(who);
-        rgrid.appendChild(card);
+        rtrack.appendChild(card);
       });
-    }).catch(function () { /* бэкенда нет (демо) — секция живёт без подгрузки */ });
+    }).catch(function () { /* бэкенда нет (демо) — секция живёт без подгрузки */ })
+      .then(startReviewsMarquee);
+  } else {
+    startReviewsMarquee();
   }
 
   /* --- Вторая половина воронки с внешних каналов ---------------------

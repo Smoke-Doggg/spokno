@@ -1367,6 +1367,35 @@ td strong { color: var(--ink); }
 .review__who { margin: 0; display: flex; align-items: baseline; gap: 10px; }
 .review__who b { font-size: 14px; font-weight: 600; color: var(--ink); }
 .review__who .mono { font-size: 12px; color: var(--muted); }
+
+.reviews-marquee {
+  position: relative;
+  overflow: hidden;
+  margin-inline: calc(var(--gut) * -1);
+  padding-inline: var(--gut);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+          mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+  cursor: pointer;
+}
+.reviews-track { display: flex; gap: 20px; width: max-content; }
+.reviews-track.is-running {
+  animation-name: reviews-scroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.reviews-marquee.is-paused .reviews-track { animation-play-state: paused; }
+.reviews-track .review { width: 320px; flex: none; }
+@keyframes reviews-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (max-width: 640px) {
+  .reviews-track .review { width: 260px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reviews-marquee { overflow-x: auto; -webkit-overflow-scrolling: touch; -webkit-mask-image: none; mask-image: none; }
+  .reviews-track { animation: none !important; }
+}
 .reviews-cta { justify-content: center; margin-top: 36px; }
 
 /* --- Переключатель темы ---------------------------------------------- */
