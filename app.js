@@ -506,6 +506,86 @@
      стоят по всему сайту) и, если метка ещё не протухла, шлём «дошёл
      до бота». Без этого куска первая половина показывала бы только
      «зашли на сайт», а не «дошли ли до бота или потерялись». */
+  /* --- Страница /proverka/: показать IP и страну, тест WebRTC -------
+     Адрес отдаёт наш же приёмник (endpoint /ip) и не записывает его.
+     Тест WebRTC запускается ТОЛЬКО по кнопке: он отправляет один
+     служебный запрос на публичный STUN-сервер — ровно так утечка и
+     происходит, поэтому честная проверка без этого запроса невозможна.
+     Автоматически страница ничего внешнего не дёргает. */
+  var ipBox = document.querySelector('[data-ip-check]');
+  if (ipBox && window.fetch) {
+    var ipVal = ipBox.querySelector('[data-ip-value]');
+    var ipGeo = ipBox.querySelector('[data-ip-country]');
+    var ipVerdict = ipBox.querySelector('[data-ip-verdict]');
+    var myIp = '';
+    var COUNTRY = {RU:'Россия', KZ:'Казахстан', BY:'Беларусь', DE:'Германия',
+      NL:'Нидерланды', FI:'Финляндия', PL:'Польша', IT:'Италия', US:'США',
+      TR:'Турция', AE:'ОАЭ', GE:'Грузия', AM:'Армения', RS:'Сербия',
+      TH:'Таиланд', IN:'Индия', FR:'Франция', GB:'Великобритания',
+      KG:'Киргизия', UZ:'Узбекистан'};
+    fetch('https://stat.prostokey.com/watch-api/ip')
+      .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+      .then(function (d) {
+        myIp = d.ip || '';
+        ipVal.textContent = myIp || 'не удалось определить';
+        var c = (d.country || '').toUpperCase();
+        ipGeo.textContent = c ? (COUNTRY[c] || ('код страны: ' + c)) : '—';
+        if (c === 'RU') {
+          ipVerdict.textContent = 'Адрес российский: либо VPN выключен, ' +
+            'либо выбран российский сервер. Если выбран зарубежный — ' +
+            'соединение не работает.';
+        } else if (c) {
+          ipVerdict.textContent = 'Адрес не российский — соединение ' +
+            'работает: сайты видят вас из другой страны.';
+        }
+      })
+      .catch(function () {
+        ipVal.textContent = 'сервер проверки недоступен';
+      });
+
+    var wBtn = document.querySelector('[data-webrtc-btn]');
+    var wOut = document.querySelector('[data-webrtc-result]');
+    if (wBtn && wOut) wBtn.addEventListener('click', function () {
+      wBtn.disabled = true;
+      wOut.textContent = 'проверяем…';
+      var found = {};
+      var pc;
+      try {
+        pc = new RTCPeerConnection({iceServers: [{urls: 'stun:stun.l.google.com:19302'}]});
+      } catch (e) {
+        wOut.textContent = 'Браузер не поддерживает WebRTC — утечки этим путём нет.';
+        return;
+      }
+      pc.createDataChannel('t');
+      pc.onicecandidate = function (ev) {
+        if (!ev.candidate) { finish(); return; }
+        var m = / ([0-9a-f.:]+) \d+ typ (host|srflx)/.exec(ev.candidate.candidate);
+        if (m && m[1].indexOf('.local') === -1) found[m[1]] = m[2];
+      };
+      pc.createOffer().then(function (o) { return pc.setLocalDescription(o); });
+      var done = false;
+      function finish() {
+        if (done) return; done = true;
+        try { pc.close(); } catch (e) {}
+        var ips = Object.keys(found);
+        var leak = ips.filter(function (a) {
+          return found[a] === 'srflx' && a !== myIp;
+        });
+        if (leak.length) {
+          wOut.textContent = 'Утечка есть: WebRTC отдаёт адрес ' + leak[0] +
+            ', отличный от видимого (' + (myIp || '—') + '). Так бывает ' +
+            'с VPN-расширениями браузера — полноценный клиент закрывает этот путь.';
+        } else if (ips.length) {
+          wOut.textContent = 'Утечки не видно: WebRTC не раскрывает адрес, ' +
+            'отличный от видимого сайтами.';
+        } else {
+          wOut.textContent = 'WebRTC не вернул адресов — утечки этим путём нет.';
+        }
+      }
+      setTimeout(finish, 4000);
+    });
+  }
+
   var REF_MAX_AGE_MS = 2 * 60 * 60 * 1000; // 2 часа — дольше сессии в браузере не считаем
   var BOT_HREF_RE = /^https:\/\/t\.me\/vpn_prosto_bot\b/;
 
