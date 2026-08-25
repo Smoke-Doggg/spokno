@@ -1,11 +1,6 @@
-/* Прогрессивное улучшение: без этого файла страница полностью работает.
-   Только transform/opacity, всё гасится при prefers-reduced-motion. */
 (function () {
   'use strict';
-
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* --- Бордер у шапки после прокрутки ------------------------------- */
   var head = document.getElementById('head');
   if (head) {
     var onScroll = function () {
@@ -14,8 +9,6 @@
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
   }
-
-  /* --- Мобильное меню ------------------------------------------------ */
   var burger = document.getElementById('burger');
   var nav = document.getElementById('nav');
   if (burger && nav) {
@@ -30,8 +23,6 @@
       }
     });
   }
-
-  /* --- Аккордеон FAQ -------------------------------------------------- */
   document.querySelectorAll('.faq__q').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var item = btn.closest('.faq__item');
@@ -48,10 +39,6 @@
       btn.setAttribute('aria-expanded', String(!open));
     });
   });
-
-  /* Ссылка вида /faq/#vopros-… открывает нужный ответ сразу.
-     Без этого переход приводил к свёрнутому пункту: человек попадал
-     на свой вопрос и всё равно должен был нажать, чтобы увидеть ответ. */
   var openByHash = function () {
     var id = decodeURIComponent(String(location.hash || '').slice(1));
     if (!id) return;
@@ -70,11 +57,8 @@
   };
   openByHash();
   window.addEventListener('hashchange', openByHash);
-
-  /* --- Переключатель темы --------------------------------------------- */
   var sw = document.querySelector('[data-theme-switch]');
   if (sw) {
-    /* Порядок обхода: от «как в системе» к ручному выбору и обратно. */
     var NEXT = { system: 'light', light: 'dark', dark: 'system' };
     var LABELS = { system: 'Как в системе', light: 'Светлая', dark: 'Тёмная' };
     sw.hidden = false;
@@ -90,14 +74,9 @@
       sw.dataset.mode = mode;
       var label = LABELS[mode];
       sw.querySelector('[data-theme-label]').textContent = label;
-      /* Читалке нужно и текущее состояние, и что случится по нажатию —
-         иначе кнопка со словом «Тёмная» звучит как «включить тёмную». */
-      /* Подпись показывает текущий режим. Чтобы её не прочли как «переключить
-         на светлую», подсказка при наведении говорит, что будет по нажатию. */
       var next = LABELS[NEXT[mode]].toLowerCase();
       sw.setAttribute('aria-label', 'Тема: ' + label.toLowerCase() + '. Переключить на ' + next);
       sw.setAttribute('title', 'Нажмите, чтобы переключить на ' + next);
-      /* шторка браузера в цвет темы при ручном выборе */
       if (metaL && metaD) {
         if (mode === 'light') { metaL.media = 'all'; metaD.media = 'not all'; }
         else if (mode === 'dark') { metaD.media = 'all'; metaL.media = 'not all'; }
@@ -121,13 +100,9 @@
       }, 300);
     });
   }
-
-  /* Год в подвале — тоже текущий, а не из даты последней сборки. */
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = String(new Date().getFullYear());
   });
-
-  /* --- Б1: дата «проверено сегодня» — всегда текущая ------------------ */
   var MONTHS = ['января','февраля','марта','апреля','мая','июня',
                 'июля','августа','сентября','октября','ноября','декабря'];
   var now = new Date();
@@ -139,8 +114,6 @@
   document.querySelectorAll('[data-today-short]').forEach(function (el) {
     el.textContent = dd;
   });
-
-  /* --- Б3: счётчик цифр доверия --------------------------------------- */
   var counters = document.querySelectorAll('[data-count]');
   if (counters.length) {
     var fmtCount = function (n) {
@@ -176,9 +149,6 @@
       counters.forEach(runCount);
     }
   }
-
-
-  /* --- Панель статусов: печать при появлении + перепрос ---------------- */
   var stRows = [].slice.call(document.querySelectorAll('.panel__list [data-st]'));
   if (stRows.length && !reduced && 'IntersectionObserver' in window) {
     var typed = false;
@@ -198,7 +168,6 @@
             }, 22);
           }, 350 * idx);
         });
-        /* перепрос случайной строки — панель «дышит» */
         setInterval(function () {
           if (document.hidden) return;
           var lis = document.querySelectorAll('.panel__list li');
@@ -210,8 +179,6 @@
     }, { threshold: .5 });
     pio.observe(stRows[0]);
   }
-
-  /* --- Мокап: проигрываемый сценарий диалога -------------------------- */
   var device = document.querySelector('[data-chat]');
   if (device && !reduced) {
     var feed = device.querySelector('[data-feed]');
@@ -219,7 +186,6 @@
     var peer = device.querySelector('[data-peer-status]');
     var kb = device.querySelector('[data-kb]');
     device.setAttribute('data-chat', 'on');
-
     var dtimers = [];
     var dclear = function () { dtimers.forEach(clearTimeout); dtimers = []; };
     var dat = function (ms, fn) { dtimers.push(setTimeout(fn, ms)); };
@@ -228,28 +194,25 @@
       msgs[i].classList.add('is-shown');
       feed.scrollTop = feed.scrollHeight;
     };
-
     var dplay = function () {
       dclear();
       msgs.forEach(function (m) { m.classList.remove('is-shown', 'is-gone'); });
       if (kb) kb.classList.remove('is-pressed');
       if (peer) { peer.textContent = 'бот'; peer.classList.remove('is-typing'); }
-
-      dat(300,  function () { dshow(0); });                       /* приветствие */
+      dat(300,  function () { dshow(0); });                       
       dat(1900, function () { if (kb) kb.classList.add('is-pressed'); });
       dat(2250, function () { if (kb) kb.classList.remove('is-pressed'); dshow(1); });
-      dat(2900, function () {                                      /* печатает */
+      dat(2900, function () {                                      
         dshow(2);
         if (peer) { peer.textContent = 'печатает…'; peer.classList.add('is-typing'); }
       });
-      dat(4300, function () {                                      /* ключ + активация */
+      dat(4300, function () {                                      
         msgs[2].classList.add('is-gone');
         if (peer) { peer.textContent = 'бот'; peer.classList.remove('is-typing'); }
         dshow(3);
       });
-      dat(13000, dplay);                                           /* долгий финальный кадр */
+      dat(13000, dplay);                                           
     };
-
     var drunning = false;
     var ddio = new IntersectionObserver(function (es) {
       es.forEach(function (e) {
@@ -262,13 +225,11 @@
       if (document.hidden) { dclear(); drunning = false; }
     });
   }
-
-  /* --- Живая сеть в hero (только светлая тема) ------------------------ */
   var cv = document.querySelector('[data-net]');
   if (cv && !reduced) {
     var cx = cv.getContext('2d');
     var W, H, nodes = [], pulsesN = [], netOn = false;
-    var colInk = 'rgba(9,74,48,', colAc = 'rgba(22,199,132,';  /* тёмно-зелёные узлы вместо серых */
+    var colInk = 'rgba(9,74,48,', colAc = 'rgba(22,199,132,';  
     var sizeNet = function () {
       var r = cv.getBoundingClientRect();
       W = cv.width = Math.max(1, r.width * devicePixelRatio);
@@ -279,12 +240,6 @@
       nodes.push({ x: Math.random(), y: Math.random(),
         vx: (Math.random() - .5) * .0004, vy: (Math.random() - .5) * .0004, f: 0 });
     }
-    /* Видимость держим флагами, а не замером в кадре.
-       Прежде netVisible() вызывался из netFrame шестьдесят раз в секунду,
-       а внутри — getComputedStyle и getBoundingClientRect: браузер обязан
-       пересчитать раскладку немедленно, и весь этот пересчёт ложился
-       в основной поток (Style & Layout 756 мс, Rendering 730 мс в замере).
-       IntersectionObserver сообщает о попадании в экран сам, даром. */
     var netInView = false;
     var netShown = function () { return getComputedStyle(cv).display !== 'none'; };
     var netVisible = function () { return !document.hidden && netInView && netShown(); };
@@ -330,25 +285,19 @@
     var netEnsure = function () {
       if (netVisible() && !netOn) { sizeNet(); netOn = true; netFrame(); }
     };
-    /* Попадание в экран — дело наблюдателя, а не обработчика прокрутки:
-       тот дёргал бы getBoundingClientRect на каждый пиксель пролистывания. */
     new IntersectionObserver(function (es) {
       netInView = es[0].isIntersecting;
       if (netInView) netEnsure(); else netOn = false;
     }).observe(cv);
     addEventListener('resize', function () { if (netOn) sizeNet(); });
     document.addEventListener('visibilitychange', netEnsure);
-    /* переключение темы прячет/показывает canvas — следим за атрибутом */
     new MutationObserver(netEnsure)
       .observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
     if (matchMedia('(prefers-color-scheme: dark)').addEventListener) {
       matchMedia('(prefers-color-scheme: dark)').addEventListener('change', netEnsure);
     }
   }
-
   if (reduced) return;
-
-  /* --- Появление блоков при прокрутке --------------------------------- */
   var reveals = document.querySelectorAll('.reveal');
   if (reveals.length && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
@@ -364,8 +313,6 @@
   } else {
     reveals.forEach(function (el) { el.classList.add('reveal--in'); });
   }
-
-  /* --- Лёгкий параллакс панели в первом экране ------------------------ */
   var panel = document.querySelector('[data-parallax]');
   if (panel) {
     var ticking = false;
@@ -378,15 +325,10 @@
       if (!ticking) { ticking = true; requestAnimationFrame(move); }
     }, { passive: true });
   }
-
-  /* --- Липкая кнопка на мобильном ------------------------------------- */
   var sticky = document.querySelector('.sticky-cta');
   var stopZone = document.getElementById('price');
   if (sticky) {
     var hero = document.querySelector('.hero');
-    /* Плашка нужна, когда главной кнопки не видно. Раньше считали по доле
-       высоты hero — на длинном первом экране это давало две одинаковые
-       зелёные кнопки одновременно. Следим за самой кнопкой. */
     var heroBtn = hero && hero.querySelector('.btn--primary');
     var useObserver = heroBtn && 'IntersectionObserver' in window;
     var btnGone = false;
@@ -410,8 +352,6 @@
       }, { threshold: 0 }).observe(heroBtn);
     }
   }
-
-  /* --- Отзывы: отправка формы и подгрузка одобренных ------------------- */
   var rform = document.querySelector('[data-review-form]');
   if (rform && window.fetch) {
     var note = rform.querySelector('[data-review-note]');
@@ -446,10 +386,8 @@
       });
     });
   }
-
   var rmarquee = document.querySelector('[data-reviews-marquee]');
   var rtrack = document.querySelector('[data-reviews-track]');
-
   function startReviewsMarquee() {
     if (!rmarquee || !rtrack) return;
     var reduceMotion = window.matchMedia &&
@@ -461,7 +399,6 @@
     cards.forEach(function (c) { rtrack.appendChild(c.cloneNode(true)); });
     rtrack.style.animationDuration = Math.max(30, cards.length * 3.5) + 's';
     rtrack.classList.add('is-running');
-
     var pause = function () { rmarquee.classList.add('is-paused'); };
     var resume = function () { rmarquee.classList.remove('is-paused'); };
     rmarquee.addEventListener('pointerdown', pause);
@@ -469,7 +406,6 @@
     rmarquee.addEventListener('pointercancel', resume);
     rmarquee.addEventListener('pointerleave', resume);
   }
-
   if (rtrack && window.fetch) {
     fetch('/api/reviews').then(function (r) {
       if (!r.ok) throw 0;
@@ -493,25 +429,11 @@
         card.appendChild(src); card.appendChild(txt); card.appendChild(who);
         rtrack.appendChild(card);
       });
-    }).catch(function () { /* бэкенда нет (демо) — секция живёт без подгрузки */ })
+    }).catch(function () {  })
       .then(startReviewsMarquee);
   } else {
     startReviewsMarquee();
   }
-
-  /* --- Вторая половина воронки с внешних каналов ---------------------
-     Первая половина — /go/bot/?src=... — уже записала метку в
-     sessionStorage и отправила «пришёл на сайт». Здесь — общий для всех
-     страниц кусок: ловим клик по ЛЮБОЙ кнопке «в бота» (их много, они
-     стоят по всему сайту) и, если метка ещё не протухла, шлём «дошёл
-     до бота». Без этого куска первая половина показывала бы только
-     «зашли на сайт», а не «дошли ли до бота или потерялись». */
-  /* --- Страница /proverka/: показать IP и страну, тест WebRTC -------
-     Адрес отдаёт наш же приёмник (endpoint /ip) и не записывает его.
-     Тест WebRTC запускается ТОЛЬКО по кнопке: он отправляет один
-     служебный запрос на публичный STUN-сервер — ровно так утечка и
-     происходит, поэтому честная проверка без этого запроса невозможна.
-     Автоматически страница ничего внешнего не дёргает. */
   var ipBox = document.querySelector('[data-ip-check]');
   if (ipBox && window.fetch) {
     var ipVal = ipBox.querySelector('[data-ip-value]');
@@ -545,7 +467,6 @@
       .catch(function () {
         ipVal.textContent = 'сервер проверки недоступен';
       });
-
     var wBtn = document.querySelector('[data-webrtc-btn]');
     var wOut = document.querySelector('[data-webrtc-result]');
     if (wBtn && wOut) wBtn.addEventListener('click', function () {
@@ -588,41 +509,28 @@
       setTimeout(finish, 4000);
     });
   }
-
   var REF_MAX_AGE_MS = 2 * 60 * 60 * 1000; // 2 часа — дольше сессии в браузере не считаем
   var BOT_HREF_RE = /^https:\/\/t\.me\/vpn_prosto_bot\b/;
-
   document.addEventListener('click', function (e) {
     var link = e.target.closest && e.target.closest('a[href]');
     if (!link || !BOT_HREF_RE.test(link.href)) return;
-
     var raw;
     try { raw = sessionStorage.getItem('vpnp_ref'); } catch (err) { return; }
     if (!raw) return;
-
     var ref;
     try { ref = JSON.parse(raw); } catch (err) { return; }
     if (!ref || !ref.src || Date.now() - ref.ts > REF_MAX_AGE_MS) return;
-
     try {
       fetch('https://stat.prostokey.com/watch-api/ref?src=' + encodeURIComponent(ref.src) + '&evt=convert',
             { mode: 'no-cors', keepalive: true });
-    } catch (err) { /* не блокирует переход в бота */ }
-
+    } catch (err) {  }
     try { sessionStorage.removeItem('vpnp_ref'); } catch (err) {} // не считать дважды с двух кнопок подряд
   }, true); // capture — сработает раньше, чем браузер уйдёт по ссылке
-
-  /* --- Пауза бегущей строки ------------------------------------------- */
-  /* Выбор человека держим до конца сессии: если он остановил строку, она
-     не должна поехать снова на другой странице. */
   var mq = document.querySelector('[data-marquee]');
   if (mq) {
     var band = mq.closest('.trust');
     var stop = false;
     try { stop = sessionStorage.getItem('vpnp_marquee') === 'off'; } catch (e) {}
-    /* Не «apply»: весь файл — одна функция, и var с этим именем уже занято
-       переключателем темы. Совпадение имён затирало его молча — тема
-       переставала переключаться, а ошибки в консоли не было. */
     var syncPause = function () {
       band.classList.toggle('is-paused', stop);
       mq.setAttribute('aria-pressed', stop ? 'true' : 'false');
@@ -635,27 +543,8 @@
       syncPause();
     });
   }
-
-  /* --- Свой счёт посещений -------------------------------------------- */
-  /* Считаем сами и обезличенно: без cookie, без идентификаторов, без
-     передачи кому-либо. На сервере событие превращается в +1 к счётчику
-     и исчезает — журнала посещений нет, как и обещано на сайте.
-
-     Логов у GitHub Pages для нас не существует, поэтому другого способа
-     узнать, что происходит на сайте, просто нет. */
   var HIT = 'https://stat.prostokey.com/watch-api/hit';
-
-  /* Автоматические браузеры в статистику не идут.
-
-     21.08.2026 замеры скорости и проверки вёрстки, гонявшиеся с сервера
-     весь день, положили в счётчик 136 просмотров вместо двух настоящих —
-     и картина дня стала выдумкой: 123 захода с ширины 390 пикселей, на
-     которой шли тесты, и 125 «из Казахстана», где стоит сервер. Отличить
-     их по адресу или часовому поясу нельзя: живые казахстанские посетители
-     выглядят так же. А вот webdriver честно выставляют и Playwright,
-     и Lighthouse, и любой автоматический обход. */
   var АВТОМАТ = navigator.webdriver === true;
-
   var send = function (params) {
     if (АВТОМАТ) return;
     var qs = Object.keys(params)
@@ -663,16 +552,11 @@
       .map(function (k) { return k + '=' + encodeURIComponent(params[k]); })
       .join('&');
     var url = HIT + '?' + qs;
-    /* sendBeacon переживает уход со страницы — обычный запрос браузер
-       отменил бы на полпути, и события «ушёл» терялись бы чаще всего. */
     try {
       if (navigator.sendBeacon && navigator.sendBeacon(url)) return;
     } catch (e) {}
     try { fetch(url, { mode: 'no-cors', keepalive: true }); } catch (e) {}
   };
-
-  /* Откуда пришёл. Полный адрес не берём — только узнаваемый источник:
-     подробнее и не нужно, а хранить чужие адреса незачем. */
   var source = function () {
     var m;
     try { m = new URL(location.href).searchParams.get('src'); } catch (e) {}
@@ -691,7 +575,6 @@
     if (/(^|\.)(t|telegram)\./.test(host)) return 'telegram';
     return 'иное';
   };
-
   var device = function () {
     var w = window.innerWidth;
     if (w < 640) return 'mobile';
@@ -702,7 +585,6 @@
     var w = window.innerWidth;
     return w < 480 ? 'xs' : w < 768 ? 'sm' : w < 1200 ? 'md' : w < 1600 ? 'lg' : 'xl';
   };
-
   var firstInSession = false;
   try {
     if (!sessionStorage.getItem('vpnp_seen')) {
@@ -710,19 +592,15 @@
       firstInSession = true;
     }
   } catch (e) {}
-
   var page = location.pathname;
   var tz = '';
   try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
-
   send({
     e: 'view', p: page, r: source(), d: device(), w: widthBucket(),
     t: document.documentElement.getAttribute('data-theme') ||
        (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'),
     tz: tz, n: firstInSession ? '1' : '0'
   });
-
-  /* Глубина чтения: каждую четверть отмечаем один раз. */
   var marks = { 25: false, 50: false, 75: false, 100: false };
   var onScroll = function () {
     var h = document.documentElement.scrollHeight - window.innerHeight;
@@ -736,8 +614,6 @@
     });
   };
   window.addEventListener('scroll', onScroll, { passive: true });
-
-  /* Клики по важному. Что именно нажали — по виду ссылки, а не по тексту. */
   document.addEventListener('click', function (ev) {
     var a = ev.target.closest && ev.target.closest('a, button');
     if (!a) return;
@@ -750,13 +626,9 @@
       a.closest('.foot') ? 'foot' : null;
     if (kind) send({ e: 'click', k: kind });
   }, true);
-
-  /* Ошибки скриптов: поломка должна находиться сразу, а не через месяц. */
   window.addEventListener('error', function (ev) {
     send({ e: 'error', m: String((ev && ev.message) || 'unknown').slice(0, 80) });
   });
-
-  /* Уход со страницы: сколько пробыл и дочитал ли хоть до четверти. */
   var started = Date.now();
   var reported = false;
   var onLeave = function () {

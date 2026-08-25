@@ -1,15 +1,3 @@
-/* ===================================================================
-   VPN Просто — светлый fintech-премиум
-   Дизайн-система по ТЗ: единый зелёный акцент, гротеск Onest,
-   моноширинные технические детали, строгая сетка, ноль декора.
-   =================================================================== */
-
-/* --- Токены: правило трёх блоков ------------------------------------
-   1) :root — светлая тема «Финтех» (база, работает без JS);
-   2) @media dark + :not([data-theme=light]) — тёмная «Аврора» для
-      системного режима;
-   3) [data-theme=dark] — та же «Аврора» для ручного выбора.
-   Компоненты красятся ТОЛЬКО через токены. --------------------------- */
 :root {
   --ink:         #0B0D10;
   --graphite:    #3A4149;
@@ -19,7 +7,7 @@
   --surface:     #FFFFFF;
   --surface-alt: #F5F6F8;
   --card:        #FFFFFF;
-  --card-filter: none;              /* стекло включается в тёмной */
+  --card-filter: none;              
   --accent:      #16C784;
   --accent-hov:  #0EA968;
   --accent-soft: #E6F9F1;
@@ -31,21 +19,19 @@
   --btn-glow:    0 8px 24px rgba(22, 199, 132, .35);
   --code-bg:     #F5F6F8;
   --code-ink:    #0B0D10;
-  --plate-bg:    #0B0D10;           /* тёмная CTA-плашка в светлой теме */
+  --plate-bg:    #0B0D10;           
   --plate-ink:   #FFFFFF;
   --plate-dim:   rgba(255, 255, 255, .7);
   --plate-faint: rgba(255, 255, 255, .55);
   --head-bg:     rgba(255, 255, 255, .8);
-  /* Telegram-цвет: узнаваемый синий, затемнён до AA (фирменный даёт 3:1) */
   --tg-btn:      #177AAD;
   --tg-btn-h:    #146B9C;
   --tg-btn-t:    #FFFFFF;
   --tg-text:     #146B9C;
   --tg-glow:     0 8px 24px rgba(34, 158, 217, .3);
-  --net-display: block;             /* живая сеть — только в светлой */
-  --aurora-display: none;           /* аврора — только в тёмной */
+  --net-display: block;             
+  --aurora-display: none;           
   --device-ring: 0 0 0 0 transparent;
-
   --r-btn:  12px;
   --r-card: 20px;
   --r-sm:   8px;
@@ -57,9 +43,6 @@
   --ease: cubic-bezier(.16, 1, .3, 1);
   --dur:  240ms;
 }
-
-/* Тёмная «Аврора»: значения продублированы в двух блоках намеренно —
-   системный режим и ручной выбор должны совпадать байт в байт. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --head-bg:     rgba(7, 11, 21, .65);
@@ -99,7 +82,6 @@
     --shadow-card:  0 1px 2px rgba(0, 0, 0, .3);
   }
 }
-
 :root[data-theme="dark"] {
   --head-bg:     rgba(7, 11, 21, .65);
   --ink:         #F2F5FA;
@@ -137,20 +119,14 @@
   --shadow-hover: 0 12px 32px rgba(0, 0, 0, .5);
   --shadow-card:  0 1px 2px rgba(0, 0, 0, .3);
 }
-
-/* Слабые устройства без backdrop-filter: стекло → плотная заливка */
 @supports not (backdrop-filter: blur(1px)) {
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) { --card: rgba(22, 28, 42, .92); }
   }
   :root[data-theme="dark"] { --card: rgba(22, 28, 42, .92); }
 }
-
-/* --- Сброс ----------------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; }
-
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-
 body {
   margin: 0;
   background: var(--surface);
@@ -158,13 +134,9 @@ body {
   font: 400 17px/1.6 Onest, 'Onest резерв', Manrope, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-
 img, svg { max-width: 100%; display: block; }
 svg { flex: none; }
-
-/* --- Типографика ----------------------------------------------------- */
 h1, h2, h3, h4 { color: var(--ink); margin: 0; text-wrap: balance; }
-
 h1 {
   font-size: clamp(38px, 4.4vw, 60px);
   line-height: 1.05;
@@ -184,17 +156,12 @@ h3 {
   letter-spacing: -.01em;
 }
 h4 { font-size: 15px; line-height: 1.4; font-weight: 700; }
-
 p { margin: 0 0 1em; }
 p:last-child { margin-bottom: 0; }
-
 a { color: var(--accent-text); text-underline-offset: 3px; }
 a:hover { text-decoration-thickness: 2px; }
-
 strong { font-weight: 600; color: var(--ink); }
-
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
-
 .lead {
   font-size: clamp(17px, 1.5vw, 19px);
   line-height: 1.6;
@@ -202,8 +169,6 @@ strong { font-weight: 600; color: var(--ink); }
   max-width: 54ch;
 }
 .small, .cta-note { font-size: 14px; line-height: 1.5; font-weight: 500; color: var(--muted); }
-
-/* Моноширинные технические детали — фирменная фактура */
 .mono, code {
   font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: .92em;
@@ -218,7 +183,6 @@ strong { font-weight: 600; color: var(--ink); }
   color: var(--muted);
   margin: 0;
 }
-/* Названия протоколов внутри текста */
 .code-chip {
   font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
   font-size: .92em;
@@ -229,24 +193,17 @@ strong { font-weight: 600; color: var(--ink); }
   color: var(--code-ink);
   white-space: nowrap;
 }
-
 .num { font-variant-numeric: tabular-nums; }
-
-/* --- Каркас ---------------------------------------------------------- */
 .wrap {
   width: 100%;
   max-width: var(--maxw);
   margin-inline: auto;
   padding-inline: var(--gut);
 }
-
-/* padding × 2 = расстояние между секциями: 64px (моб) … 112px (десктоп) */
 .section { padding-block: clamp(32px, 3.9vw, 56px); }
 .section--alt { background: var(--surface-alt); }
 .section--tight { padding-block: clamp(32px, 3.5vw, 48px); }
-
 .section-head { display: grid; gap: 12px; margin-bottom: 40px; max-width: 60ch; }
-
 .skip {
   position: absolute; left: -9999px; top: 0;
   background: var(--surface); color: var(--ink);
@@ -254,8 +211,6 @@ strong { font-weight: 600; color: var(--ink); }
   box-shadow: var(--shadow-hover);
 }
 .skip:focus { left: 16px; top: 16px; }
-
-/* --- Индикатор статуса ----------------------------------------------- */
 .dot {
   width: 8px; height: 8px; border-radius: 50%;
   background: var(--accent); flex: none;
@@ -268,8 +223,6 @@ strong { font-weight: 600; color: var(--ink); }
     100% { box-shadow: 0 0 0 0 rgba(22, 199, 132, 0); }
   }
 }
-
-/* --- Шапка ----------------------------------------------------------- */
 .head {
   position: sticky; top: 0; z-index: 50;
   height: 68px;
@@ -281,22 +234,18 @@ strong { font-weight: 600; color: var(--ink); }
 }
 .head--scrolled { border-bottom-color: var(--line); }
 .head > .wrap { display: flex; align-items: center; gap: 28px; height: 100%; }
-
 .logo {
   display: inline-flex; align-items: center; gap: 9px;
   font-weight: 700; font-size: 18px; letter-spacing: -.01em;
   color: var(--ink); text-decoration: none; margin-right: auto;
 }
-
 .nav { display: flex; align-items: center; gap: 26px; }
-/* :not(.btn) обязательно: иначе правило перебивает цвет и вес CTA в шапке */
 .nav a:not(.btn) {
   font-size: 15px; font-weight: 500; color: var(--graphite);
   text-decoration: none; transition: color var(--dur) var(--ease);
 }
 .nav a:not(.btn):hover,
 .nav a:not(.btn)[aria-current="page"] { color: var(--ink); }
-
 .burger {
   display: none;
   width: 44px; height: 44px;
@@ -304,8 +253,6 @@ strong { font-weight: 600; color: var(--ink); }
   background: none; border: 1px solid var(--line);
   border-radius: var(--r-btn); cursor: pointer; color: var(--ink);
 }
-
-/* --- Кнопки ---------------------------------------------------------- */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   height: 52px; padding: 0 28px;
@@ -318,7 +265,6 @@ strong { font-weight: 600; color: var(--ink); }
               border-color var(--dur) var(--ease);
 }
 .btn:hover { text-decoration: none; }
-
 .btn--primary { background: var(--accent-btn); color: var(--accent-btn-t); font-weight: 700; }
 @media (hover: hover) {
   .btn--primary:hover {
@@ -327,7 +273,6 @@ strong { font-weight: 600; color: var(--ink); }
     box-shadow: var(--btn-glow);
   }
 }
-/* Тактильное «нажатие» — работает и на тач-устройствах */
 .btn--primary:active,
 .btn--ghost:active,
 .btn--onDark:active {
@@ -336,18 +281,13 @@ strong { font-weight: 600; color: var(--ink); }
   box-shadow: none;
 }
 .btn:focus-visible { outline: 2px solid #0B0D10; outline-offset: 2px; }
-
 .btn--ghost { border-color: var(--line-strong); color: var(--ink); background: transparent; }
 @media (hover: hover) {
   .btn--ghost:hover { background: var(--surface-alt); border-color: var(--accent); }
   }
-
 .btn--sm { height: 40px; padding: 0 18px; font-size: 15px; }
 .btn--wide { width: 100%; }
-
 .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
-
-/* Ссылка со стрелкой */
 .arrow-link {
   display: inline-flex; align-items: center; gap: 7px;
   color: var(--accent-text); font-weight: 600; text-decoration: none;
@@ -355,39 +295,12 @@ strong { font-weight: 600; color: var(--ink); }
 .arrow-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 .arrow-link svg { transition: transform var(--dur) var(--ease); }
 .arrow-link:hover svg { transform: translateX(3px); }
-
-/* --- Бейдж ----------------------------------------------------------- */
 .badge {
   display: inline-flex; align-items: center; gap: 9px;
   padding: 7px 14px; border-radius: var(--r-pill);
   background: var(--accent-soft); color: var(--accent-text);
   font-size: 14px; font-weight: 600;
 }
-
-/* Запасной шрифт с метриками Onest.
-
-   Пока Onest грузится, текст рисуется системным шрифтом, у которого другие
-   ascent/descent и другая ширина знака. Когда Onest доезжает, строки меняют
-   высоту, и весь текст под ними прыгает: замер Lighthouse показывал сдвиг
-   0,161 при допустимых 0,1, причём двигался ровно `p.lead` — самый крупный
-   элемент первого экрана.
-
-   font-display: swap этим и опасен. Лечится не отказом от swap, а тем, что
-   запасному шрифту навязывают метрики основного: тогда подмена проходит
-   без сдвига. Высоты взяты из самого файла шрифта (hhea: unitsPerEm 1000,
-   ascent 970, descent -305, lineGap 0).
-
-   size-adjust подобран замером, а не выведен из метрик. Дело в переносах:
-   системный шрифт шире Onest, и заголовок первого экрана укладывался у него
-   в три строки вместо двух — при подмене всё содержимое подскакивало на
-   40 пикселей разом. Три строки держатся до 95%, две начинаются с 93%;
-   92% взяты с запасом от порога.
-
-   Объявление живёт здесь, а не в fonts.css: тот подключён асинхронно
-   (preload as=style + onload), и к первой отрисовке его правил ещё нет.
-   Файла этот @font-face не грузит, только описывает метрики уже
-   установленного в системе шрифта — блокирующему style.css он ничего
-   не стоит. */
 @font-face{
   font-family:'Onest резерв';
   src:local('Arial'), local('Helvetica Neue'), local('Roboto'), local('DejaVu Sans');
@@ -396,62 +309,14 @@ strong { font-weight: 600; color: var(--ink); }
   line-gap-override:0%;
   size-adjust:92%;
 }
-
-
-
-/* Секции ниже первого экрана не размечаются, пока до них не долистали.
-
-   Главная — тринадцать экранов и 73 КБ разметки. Браузер верстал их все
-   сразу, и на слабом телефоне (замер эмулирует процессор вчетверо
-   медленнее) это занимало секунды: шрифт заголовка лежал в кэше уже
-   на 650-й миллисекунде, а применялся только на 2200-й — раньше у
-   браузера просто не доходили руки. Из-за этого заголовок успевал
-   отрисоваться системным шрифтом, а потом перескакивал.
-
-   content-visibility: auto разрешает пропустить вёрстку невидимого,
-   а contain-intrinsic-size подсказывает примерную высоту, чтобы полоса
-   прокрутки не прыгала. Первый экран (.hero) исключён намеренно: его
-   видно сразу, откладывать нечего. */
 .section:not(.hero){
   content-visibility: auto;
-  /* Ориентир взят по медиане настоящих высот (замер: 1214 px на телефоне,
-     676 px на широком экране). Если ошибиться сильно, полоса прокрутки
-     прыгает на первом пролистывании: с общими 800 px страница на телефоне
-     «вырастала» с 11,6 до 16,4 тысячи пикселей по мере раскрытия секций.
-     Ключевое слово auto велит браузеру запомнить настоящий размер после
-     первой вёрстки, поэтому дальше оценка не нужна. */
   contain-intrinsic-size: auto 1200px;
 }
 @media (min-width: 900px){
   .section:not(.hero){ contain-intrinsic-size: auto 680px; }
 }
-
-
-
-/* Под заголовок первого экрана место резервируется заранее.
-
-   Пока Onest грузится, текст рисует системный шрифт-заглушка. Он шире:
-   заголовок занимает у него три строки вместо двух, и в момент подмены
-   всё содержимое подскакивает на 40 точек. Замер оценивал сдвиг в 0,138
-   при допустимых 0,1 — единственное, что оставалось у сайта вне нормы.
-
-   Пробовали подгонять метрики запасного шрифта (font-size-adjust,
-   ascent-override, size-adjust на @font-face). В период ожидания браузер
-   берёт не следующий шрифт из списка, а свою заглушку, и подгонка на неё
-   действует непредсказуемо: одно и то же значение в соседних прогонах
-   давало разный результат. Полагаться на это нельзя — тем более что
-   системный шрифт у каждого свой: SF Pro на айфоне, Roboto на андроиде.
-
-   Резерв высоты от шрифта не зависит вовсе: три строки помещаются любым,
-   две — тем более. Проверено на восьми ширинах от 320 до 1280.
-   Расплата — воздух под заголовком, когда шрифт уже применён. */
 h1{ min-height: 3.15em; }
-
-/* --- Hero ------------------------------------------------------------ */
-/* clip — чтобы свечение под панелью не давало горизонтальной прокрутки.
-   Именно clip, а не hidden: hidden ломает sticky-шапку. */
-/* position: relative обязателен: без него absolute-canvas сети
-   позиционируется от окна и overflow-x: clip его не режет */
 .hero { position: relative; padding-block: clamp(40px, 5vw, 72px) clamp(48px, 5.5vw, 80px); overflow-x: clip; }
 .hero .wrap {
   display: grid; align-items: center;
@@ -459,10 +324,7 @@ h1{ min-height: 3.15em; }
   grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
 }
 .hero-copy { display: grid; gap: 22px; justify-items: start; }
-/* Заголовку нужна вся ширина колонки: иначе «Интернет работает.» рвётся */
 .hero-copy h1 { text-wrap: normal; }
-
-/* Панель статусов — главный визуал */
 .panel-wrap { position: relative; }
 .panel-wrap::before {
   content: ""; position: absolute; inset: -18% -12% -22% -12%;
@@ -495,32 +357,22 @@ h1{ min-height: 3.15em; }
   font-size: 13px; font-weight: 400; color: var(--muted); text-align: right;
 }
 .panel__foot { font-size: 14px; color: var(--muted); padding-top: 14px; border-top: 1px solid var(--line); }
-
-/* --- Полоса доверия --------------------------------------------------- */
 .trust {
   background: var(--surface-alt); border-block: 1px solid var(--line);
   overflow: hidden;
-  /* Текст растворяется у краёв, а не обрывается на полуслове.
-     36px хватает, чтобы обрубок не читался как ошибка вёрстки. */
   -webkit-mask-image: linear-gradient(to right, transparent, #000 36px,
                                       #000 calc(100% - 72px), transparent);
           mask-image: linear-gradient(to right, transparent, #000 36px,
                                       #000 calc(100% - 72px), transparent);
 }
-
-/* --- Карточки и сетки ------------------------------------------------- */
 .grid { display: grid; gap: 20px; }
 .grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (max-width: 1023px) {
 }
-/* Список платформ. Разделитель сверху раньше приходил случайно, вместе
-   с чужим классом .platforms, который заодно ломал раскладку. */
 .platform-list {
   list-style: none; margin: 28px 0 0; padding: 0;
   border-top: 1px solid var(--line);
-  /* Уже контейнера: на всю ширину между описанием и ссылкой оставалось
-     около 700px пустоты, и глаз терял, какая ссылка к какой строке. */
   max-width: 940px;
 }
 .platform-row {
@@ -540,8 +392,6 @@ h1{ min-height: 3.15em; }
 @media (hover: hover) {
   .platform-row:hover .icon-badge { background: var(--accent); color: #fff; }
 }
-/* На узком экране ссылка уходит под текст: в строку она уже не помещается,
-   а переносить её по словам — ломать «Happ в Google Play» пополам. */
 @media (max-width: 640px) {
   .platform-row {
     grid-template-columns: auto minmax(0, 1fr);
@@ -552,7 +402,6 @@ h1{ min-height: 3.15em; }
   .platform-row__link { grid-area: link; margin-top: 6px; }
 }
 .section-foot { margin-top: 22px; text-align: center; color: var(--muted); font-size: 14.5px; }
-
 .card {
   background: var(--card);
   -webkit-backdrop-filter: var(--card-filter);
@@ -566,31 +415,21 @@ h1{ min-height: 3.15em; }
 }
 .card > :last-child { margin-bottom: 0; }
 .card h3 { margin-bottom: 10px; }
-/* Заголовки карточек в ряду — под две строки, даже если текст занял одну.
-   Иначе абзацы соседних карточек начинаются на разной высоте, и глаз
-   цепляется за рассинхронизацию раньше, чем за смысл. Только там, где
-   карточки стоят рядом: в одиночной карточке резерв был бы дырой. */
 @media (min-width: 1024px) {
   .grid--3 > .card > h3 { min-height: 2lh; }
 }
 .card p { color: var(--graphite); font-size: 16px; }
-
 @media (hover: hover) {
   .card--hover:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(11, 13, 16, .10); }
 }
-
 .icon-badge {
   width: 44px; height: 44px; border-radius: 50%;
   background: var(--accent-soft); color: var(--accent);
   display: grid; place-items: center; margin-bottom: 18px;
 }
-
-/* --- Список с галочками ------------------------------------------------ */
 .checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
 .checks li { display: grid; grid-template-columns: 20px 1fr; gap: 12px; align-items: start; font-size: 16px; }
 .checks svg { color: var(--accent); margin-top: 2px; }
-
-/* --- Чипы стран -------------------------------------------------------- */
 .chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 16px; padding: 0; list-style: none; }
 .chips li {
   padding: 6px 14px; border: 1px solid var(--line); border-radius: var(--r-pill);
@@ -602,12 +441,7 @@ h1{ min-height: 3.15em; }
   .chips li:hover { border-color: var(--accent); transform: translateY(-1px); }
 }
 .chips li:active { transform: scale(.97); transition-duration: 100ms; }
-
-/* Названия протоколов — обычным текстом, выделены только насыщенностью.
-   Код-шрифт означает «это можно скопировать и выполнить»; в имени
-   технологии копировать нечего. То же правило применено на втором экране. */
 .protocols { font-weight: 600; color: var(--ink); margin: 0 0 16px; font-size: 15px; }
-/* --- Шаги -------------------------------------------------------------- */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; grid-template-columns: repeat(3, 1fr); position: relative; }
 .steps::before {
   content: ""; position: absolute; top: 18px; left: 12%; right: 12%;
@@ -624,8 +458,6 @@ h1{ min-height: 3.15em; }
 }
 .step b { font-size: 18px; font-weight: 700; color: var(--ink); }
 .step span { color: var(--graphite); font-size: 16px; }
-
-/* --- Цена: сетка тарифов ------------------------------------------------- */
 .plans {
   display: grid; gap: 16px; overflow: visible; padding-top: 11px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -672,9 +504,6 @@ h1{ min-height: 3.15em; }
 }
 .plan__save--none { color: var(--muted); }
 .plan .btn { margin-top: auto; }
-
-/* Внутри левой колонки, а не полосой по центру страницы: выравнивание
-   по левому краю, разделитель отделяет условия от рассказа про ключ. */
 .price-foot {
   display: grid; gap: 18px; justify-items: start;
   margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--line);
@@ -682,13 +511,10 @@ h1{ min-height: 3.15em; }
 .price-foot .checks { gap: 16px; }
 .price-foot .pay-line { text-align: left; }
 .price-foot .checks { justify-items: start; }
-/* Не моноширинным: способы оплаты — не код. То же правило применено
-   к названиям протоколов на втором и пятом экранах. */
 .pay-line {
   font-size: 14px; color: var(--muted); text-align: center; margin: 0;
 }
 .privacy-note { margin-top: 28px; max-width: 62ch; }
-
 @media (max-width: 1024px) {
   .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -696,12 +522,6 @@ h1{ min-height: 3.15em; }
   .plans { grid-template-columns: 1fr; }
   .plan { padding: 24px 20px 20px; }
 }
-
-/* --- FAQ --------------------------------------------------------------- */
-/* Уже контейнера: на всю ширину строка ответа выходила в 99 знаков,
-   а стрелка отрывалась от вопроса на 857px — глаз переставал их связывать.
-   Там, где блок уже (внутри статьи), это и так было видно: стрелка стояла
-   в 40px от текста. */
 .faq { display: grid; max-width: 620px; }
 .faq__item { border-bottom: 1px solid var(--line); }
 .faq__q {
@@ -721,10 +541,6 @@ h1{ min-height: 3.15em; }
 .faq__item[data-open="true"] .faq__a { grid-template-rows: 1fr; }
 .faq__a > div { overflow: hidden; }
 .faq__a p { padding: 0 20px 20px; font-size: 16px; color: var(--graphite); max-width: 72ch; }
-
-/* --- Финальный CTA ------------------------------------------------------ */
-/* По центру, а не по левому краю: контент занимал 572px из 1132,
-   и 42% тёмной плашки пустовало — она читалась как чёрное пятно. */
 .cta-plate {
   position: relative; overflow: hidden;
   background: var(--plate-bg);
@@ -735,8 +551,6 @@ h1{ min-height: 3.15em; }
   padding: clamp(36px, 5vw, 60px) clamp(24px, 4vw, 48px);
   display: grid; gap: 18px; justify-items: center; text-align: center;
 }
-/* Свечение по центру за заголовком, а не в пустом углу справа:
-   раньше оно подсвечивало ровно ту часть плашки, где ничего не было. */
 .cta-plate::after {
   content: ""; position: absolute; top: -60%; left: 50%; translate: -50% 0;
   width: 80%; height: 200%;
@@ -746,8 +560,6 @@ h1{ min-height: 3.15em; }
 .cta-plate > * { position: relative; z-index: 1; }
 .cta-plate h2 { color: var(--plate-ink); max-width: 30ch; }
 .cta-plate p { color: var(--plate-dim); max-width: 52ch; }
-/* max-width снимаем: ряд кнопок размечен тем же <p>, что и абзацы,
-   и ограничение в 52 символа не давало двум кнопкам встать рядом. */
 .cta-plate .btn-row {
   display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
   max-width: none;
@@ -755,22 +567,17 @@ h1{ min-height: 3.15em; }
 .cta-plate .cta-note { color: var(--plate-faint); }
 .btn--onDark { border-color: var(--line-strong); color: var(--plate-ink); background: transparent; }
 .btn--onDark:hover { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .4); }
-
-/* --- Врезка CTA внутри текста ------------------------------------------- */
 .inline-cta {
   background: var(--accent-soft); border: 1px solid var(--accent-line);
   border-radius: var(--r-card); padding: 28px;
   margin: 36px 0; display: grid; gap: 16px; justify-items: start;
 }
 .inline-cta p { margin: 0; max-width: 60ch; color: var(--graphite); }
-
 .callout {
   background: var(--surface-alt); border: 1px solid var(--line);
   border-left: 3px solid var(--accent);
   border-radius: var(--r-sm); padding: 20px 24px; margin: 28px 0;
 }
-
-/* --- Таблицы ------------------------------------------------------------ */
 .tablewrap {
   overflow-x: auto; border: 1px solid var(--line);
   border-radius: var(--r-card); background: var(--card); margin: 24px 0;
@@ -785,20 +592,9 @@ th {
 td { padding: 14px 20px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--graphite); }
 tr:last-child td { border-bottom: 0; }
 td strong { color: var(--ink); }
-
-/* --- Статьи -------------------------------------------------------------- */
 .article { padding-block: clamp(40px, 5vw, 72px); }
-/* 672px даёт около 68 знаков в строке при кегле 17 — оптимум читаемости.
-   Было 760px и 77–84 знака: превышение небольшое, но страницы длинные
-   (телеграм — 5,6 экрана сплошного чтения), и на такой длине оно
-   накапливается в усталость. */
 .article .wrap { max-width: 672px; }
-/* Мелкие подписи не растягиваем на всю колонку: 14-й кегль на длинной
-   строке читается хуже всего, а здесь строка доходила до 102 знаков. */
 .article .meta, .article .cta-note, .article .small { max-width: 58ch; }
-
-/* Оглавление длинной страницы. Тихое: это указатель, а не содержание —
-   он не должен спорить с текстом за внимание. */
 .toc {
   margin: 28px 0 8px; padding: 18px 20px;
   background: var(--surface-alt); border-radius: var(--r-card);
@@ -814,16 +610,11 @@ td strong { color: var(--ink); }
   display: inline-block; padding: 2px 0;
 }
 .toc a:hover { color: var(--accent-text); text-decoration: underline; }
-
-/* «Читайте также» — тем же тихим тоном, что и оглавление: это указатель
-   дальше, а не призыв. */
 .related { margin: 40px 0 8px; padding-top: 24px; border-top: 1px solid var(--line); }
 .related ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .related li { margin: 0; }
 .related a { font-size: 16px; color: var(--graphite); text-decoration: none; }
 .related a:hover { color: var(--accent-text); text-decoration: underline; }
-/* Ссылка на статью прямо в разделе — с отступом, чтобы не слипалась
-   с абзацем, к которому относится. */
 .more-link { margin-top: 14px; font-size: 15.5px; }
 .more-link a { font-weight: 600; }
 .article h1 { font-size: clamp(32px, 3.6vw, 46px); }
@@ -833,7 +624,6 @@ td strong { color: var(--ink); }
 .article ul, .article ol { padding-left: 22px; margin: 16px 0; }
 .article li { margin: 8px 0; }
 .article .lead { font-size: 19px; color: var(--ink); font-weight: 500; max-width: none; }
-
 .meta {
   display: flex; flex-wrap: wrap; gap: 8px 20px;
   font-size: 14px; font-weight: 500; color: var(--muted); margin: 12px 0 28px;
@@ -841,7 +631,6 @@ td strong { color: var(--ink); }
 .crumbs { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
 .crumbs a { color: var(--muted); }
 .crumbs a:hover { color: var(--ink); }
-
 .toc {
   background: var(--surface-alt); border: 1px solid var(--line);
   border-radius: var(--r-card); padding: 24px 28px; margin: 28px 0;
@@ -853,28 +642,16 @@ td strong { color: var(--ink); }
 }
 .toc ol { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
 .toc li { margin: 0; }
-
 .unique { border-left: 3px solid var(--accent); padding-left: 26px; margin: 40px 0; }
 .unique h2 { margin-top: 0; }
-
 .facts { list-style: none; margin: 16px 0; padding: 0; display: grid; gap: 12px; }
-/* Не grid на самом пункте: в пункте лежит <strong> и следом обычный текст,
-   и сетка раскладывала их по ячейкам — текст рассыпался по одному слову
-   в строку, а пункт вырастал до 800px. Маркер ставим отступом
-   и абсолютным ::before, содержимое остаётся сплошным потоком. */
 .facts li { position: relative; padding-left: 21px; }
 .facts li::before {
   content: ""; position: absolute; left: 0; top: .62em;
   width: 7px; height: 7px; border-radius: 50%;
   background: var(--accent);
 }
-
-/* Липкая шапка 68px: без отступа якорь останавливается под ней и человек
-   видит середину блока вместо его начала. Касается и кнопки «Как это
-   работает» в первом экране — единственного якоря на главной. */
 .article h2[id], .article h3[id], section[id], [id]:target { scroll-margin-top: 88px; }
-
-/* --- Список статей -------------------------------------------------------- */
 .postlist { list-style: none; padding: 0; margin: 0; display: grid; }
 .postlist li { padding: 28px 0; border-bottom: 1px solid var(--line); }
 .postlist li:last-child { border-bottom: 0; }
@@ -887,20 +664,16 @@ td strong { color: var(--ink); }
   font-size: 12px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase;
   color: var(--muted); margin: 0 0 8px;
 }
-
-/* --- Подвал ---------------------------------------------------------------- */
 .foot { background: var(--surface-alt); border-top: 1px solid var(--line); padding-block: 56px 32px; }
 .foot .wrap { display: grid; gap: 36px; }
 .foot-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
 .foot-cols .foot-head { margin-bottom: 14px; font-size: 16px; font-weight: 700;
-  color: var(--ink); }   /* подпись колонки, не заголовок документа */
+  color: var(--ink); }   
 .foot-cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .foot-cols a { font-size: 15px; color: var(--graphite); text-decoration: none; }
 .foot-cols a:hover { color: var(--accent-text); }
 .foot-legal { border-top: 1px solid var(--line); padding-top: 24px; font-size: 14px; color: var(--muted); }
 .foot-legal p { margin: 0 0 8px; max-width: 80ch; }
-
-/* --- Липкая мобильная плашка ------------------------------------------------ */
 .sticky-cta {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
   display: none; padding: 8px 16px calc(8px + env(safe-area-inset-bottom));
@@ -912,8 +685,6 @@ td strong { color: var(--ink); }
 }
 .sticky-cta--on { transform: translateY(0); }
 .sticky-cta .btn { height: 48px; width: 100%; }
-
-/* --- Появление при прокрутке -------------------------------------------------- */
 @media (prefers-reduced-motion: no-preference) {
   .js .reveal { opacity: 0; transform: translateY(16px); }
   .js .reveal--in {
@@ -921,14 +692,11 @@ td strong { color: var(--ink); }
     transition: opacity 500ms var(--ease), transform 500ms var(--ease);
   }
 }
-
-/* --- Адаптив ------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   .hero .wrap { grid-template-columns: 1fr; }
   .hero-copy h1 { max-width: 18ch; }
   .panel-wrap { max-width: 520px; }
 }
-
 @media (max-width: 900px) {
   .nav { display: none; }
   .nav--open {
@@ -943,7 +711,6 @@ td strong { color: var(--ink); }
   .steps::before { display: none; }
   .foot-cols { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 560px) {
   :root { --gut: 16px; }
   body { font-size: 16px; }
@@ -952,7 +719,6 @@ td strong { color: var(--ink); }
   .btn { height: 48px; width: 100%; }
   .btn--sm, .nav .btn { width: auto; }
   .btn-row { gap: 10px; }
-  /* Название и статус — в две строки: иначе накладываются на узком экране */
   .panel__list li {
     grid-template-columns: 8px 1fr;
     grid-template-areas: "dot name" ". status";
@@ -962,13 +728,9 @@ td strong { color: var(--ink); }
   .panel__list b { grid-area: name; }
   .panel__list span:last-child { grid-area: status; text-align: left; }
   .sticky-cta { display: block; }
-  /* Отступ под липкую плашку: 8 + 48 + 8 = 64px её высоты. Без него плашка
-     накрывает низ любой страницы — на главной съедала первый пункт панели. */
   body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
   .unique { padding-left: 18px; }
 }
-
-/* --- Блок прокси на странице Telegram --------------------------------- */
 .proxybox {
   background: var(--accent-soft);
   border: 1px solid var(--accent-line);
@@ -988,8 +750,6 @@ td strong { color: var(--ink); }
 .proxylist { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
 .proxylist li { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .proxy-alt { font-size: 14px; }
-
-/* Шаги внутри статей — простой вертикальный список без соединительной линии */
 .article .steps { grid-template-columns: 1fr; gap: 16px; counter-reset: st; }
 .article .steps::before { display: none; }
 .article .steps li {
@@ -1012,15 +772,6 @@ td strong { color: var(--ink); }
 }
 .article .steps b { display: block; color: var(--ink); font-size: 17px; margin-bottom: 4px; }
 .article .steps span { color: var(--graphite); font-size: 16px; }
-
-/* ===================================================================
-   ТЗ-2: живой статус, цифры доверия, мокап бота, строка платформ
-   =================================================================== */
-
-/* --- Б1: статус «проверено сегодня» ------------------------------------ */
-/* Не flex: во flex-контейнере дата — отдельный неразрывный элемент, и при
-   переносе строки она отрывается к правому краю («Проверено сегодня,» слева,
-   «19 августа» справа). Обычный поток с точкой на отступе — текст течёт целиком. */
 .live-status {
   display: block; position: relative; padding-left: 17px;
   margin: 0; font-size: 14px; font-weight: 500; color: var(--graphite);
@@ -1029,8 +780,6 @@ td strong { color: var(--ink); }
 .live-status [data-today] { white-space: nowrap; }
 .panel__foot .live-status { margin-bottom: 6px; }
 .panel__foot { display: grid; gap: 2px; }
-
-/* --- Б3: цифры доверия -------------------------------------------------- */
 .section--stats { background: var(--surface-alt); border-bottom: 1px solid var(--line); }
 .stats {
   display: grid; grid-template-columns: repeat(4, 1fr);
@@ -1043,19 +792,11 @@ td strong { color: var(--ink); }
   letter-spacing: -.02em; color: var(--ink); line-height: 1.1;
   font-variant-numeric: tabular-nums;
 }
-/* > span — иначе правило перебивает размер цифры внутри <b> */
 .stat > span { font-size: 14px; color: var(--muted); }
-
-/* --- Б2: мокап телефона с экраном бота ---------------------------------- */
-/* clip — блик мокапа шире корпуса и на планшетной ширине выходил за экран */
 #kak-rabotaet { overflow-x: clip; }
 .connect {
   display: grid; gap: clamp(32px, 4vw, 56px);
   grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
-  /* По верху, а не по центру: макет телефона вдвое выше колонки со шагами,
-     и центрирование оставляло 131px пустоты между подзаголовком и первым
-     шагом — читалось как провал. Внизу та же пустота выглядит обычным
-     отступом до следующего блока. */
   align-items: start;
 }
 .connect__col { display: grid; align-content: start; }
@@ -1069,19 +810,8 @@ td strong { color: var(--ink); }
   grid-template-columns: 36px 1fr; display: grid; gap: 16px; align-items: start;
 }
 .connect .step div { display: grid; gap: 4px; }
-
-
-/* --- ТЗ-3: реалистичный мокап iPhone -------------------------------------
-   Слои: фаска → корпус → утопленный экран → блик.
-   Пропорции экрана 393×852 (iPhone 16), радиус = ширина × 0.12.       */
 .device-wrap { display: flex; justify-content: center; }
-
 .device {
-  /* Высота корпуса — ширина × 2.168, и она подогнана под левую колонку:
-     макет обрамляет её от заголовка до кнопки, пустоты под ним не остаётся.
-     250px → 542px, ровно высота колонки после того, как в шаг «Поставить
-     программу» добавились значки платформ. Меняете содержимое колонки —
-     проверьте это число заново. */
   --w: 250px;
   position: relative;
   width: var(--w);
@@ -1097,15 +827,12 @@ td strong { color: var(--ink); }
     0 40px 80px 12px rgba(11, 13, 16, .05),
     var(--device-ring);
 }
-
-/* Тёмный корпус под стеклом */
 .device::before {
   content: "";
   position: absolute; inset: 2px;
   border-radius: calc(var(--w) * .125);
   background: #0B0D11;
 }
-/* Резкий блик по стеклу */
 .device::after {
   content: "";
   position: absolute; inset: -25%;
@@ -1116,8 +843,6 @@ td strong { color: var(--ink); }
     rgba(255, 255, 255, 0) 44%);
   pointer-events: none;
 }
-
-/* Боковые кнопки */
 .device__btn {
   position: absolute;
   width: 2px;
@@ -1133,7 +858,6 @@ td strong { color: var(--ink); }
   border-radius: 0 2px 2px 0;
   background: linear-gradient(270deg, #23282F, #3E454E);
 }
-
 .device__screen {
   position: relative;
   height: 100%;
@@ -1143,8 +867,6 @@ td strong { color: var(--ink); }
   box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, .4);
   z-index: 1;
 }
-
-/* Dynamic Island */
 .device__island {
   position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
   width: 33%; height: 22px;
@@ -1157,8 +879,6 @@ td strong { color: var(--ink); }
   width: 9px; height: 9px; border-radius: 50%;
   background: radial-gradient(circle at 35% 35%, #1D2836, #05070A 70%);
 }
-
-/* --- Экран Telegram (тёмная тема) ---------------------------------------- */
 .tg {
   height: 100%;
   display: grid;
@@ -1172,7 +892,6 @@ td strong { color: var(--ink); }
   font-size: calc(var(--w) * .0448); font-weight: 600; letter-spacing: -.01em;
 }
 .tg__icons { display: inline-flex; align-items: center; gap: 4px; color: #fff; }
-
 .tg__head {
   display: flex; align-items: center; gap: calc(var(--w) * .03);
   padding: calc(var(--w) * .03) calc(var(--w) * .045) calc(var(--w) * .037);
@@ -1189,12 +908,7 @@ td strong { color: var(--ink); }
 .tg__peer b { color: #fff; font-size: 13px; font-weight: 600; }
 .tg__peer i { color: #6D7F8F; font-size: 11px; font-style: normal; }
 .tg__peer i.is-typing { color: #64B5EF; }
-
 .tg__feed {
-  /* Размеры от ширины корпуса, а не в пикселях: при уменьшении макета
-     содержимое ужимается вместе с ним. Иначе первое сообщение бота —
-     самое важное, про ключ и три бесплатных дня — уезжает за верхний край
-     и обрезается: лента прижата к низу и прячет всё, что не влезло. */
   padding: calc(var(--w) * .045) calc(var(--w) * .037);
   display: flex; flex-direction: column; justify-content: flex-end;
   gap: calc(var(--w) * .03);
@@ -1210,8 +924,6 @@ td strong { color: var(--ink); }
   color: #5E7182; font-size: calc(var(--w) * .0466);
 }
 .tg__bar svg { color: #64B5EF; }
-
-/* --- Сообщения ------------------------------------------------------------ */
 .msg {
   max-width: 86%;
   padding: calc(var(--w) * .026) calc(var(--w) * .034) calc(var(--w) * .019);
@@ -1224,7 +936,6 @@ td strong { color: var(--ink); }
 .msg--in  { background: #182533; border-bottom-left-radius: 4px; align-self: flex-start; }
 .msg--out { background: #2B5278; border-bottom-right-radius: 4px; align-self: flex-end; }
 .msg--out .msg__time { color: #7DA8CE; }
-
 .msg__time {
   display: inline-flex; align-items: center; gap: 3px;
   justify-self: end;
@@ -1247,8 +958,6 @@ td strong { color: var(--ink); }
 }
 .msg__kb.is-pressed { background: rgba(100, 181, 239, .3); transform: scale(.97); }
 .msg__ok { color: #16C784; font-weight: 700; }
-
-/* Индикатор «печатает» */
 .msg--typing { background: #182533; border-bottom-left-radius: 4px; align-self: flex-start;
   padding: 10px 12px; }
 .typing { display: inline-flex; gap: 4px; }
@@ -1262,73 +971,48 @@ td strong { color: var(--ink); }
     30%           { opacity: 1;   transform: translateY(-3px); }
   }
 }
-
-/* Появление сообщений: скрываем только когда сценарий действительно
-   управляется скриптом — иначе диалог виден целиком. */
 .js .device[data-chat="on"] .msg { opacity: 0; transform: translateY(8px) scale(.98); }
-/* убранный индикатор набора не должен оставлять пустоту в ленте */
 .js .device[data-chat="on"] .msg.is-gone { display: none; }
 .js .device[data-chat="on"] .msg.is-shown {
   opacity: 1; transform: none;
   transition: opacity 320ms var(--ease), transform 320ms var(--ease);
 }
-
-/* Между 900 и 1180px текст в левой колонке переносится чаще, колонка
-   вырастает — и корпусу нужно быть крупнее, чтобы низ по-прежнему сходился
-   с кнопкой. */
 @media (min-width: 901px) and (max-width: 1070px) {
   .device { --w: 286px; }
 }
 @media (max-width: 900px) {
   .device { --w: 260px; }
 }
-/* Блик шире корпуса на 25% — на экранах уже 400px он вылезал за край
-   и давал горизонтальную прокрутку. Псевдоэлемент, поэтому его не видно
-   в обычном поиске «кто вылез». */
 @media (max-width: 560px) {
   .device::after { inset: -6%; }
 }
-
-/* --- Б4: строка платформ ------------------------------------------------- */
 .chips--icon li { display: inline-flex; align-items: center; gap: 7px; }
-/* Значки внутри шага — мельче и приглушённее самого шага: это подтверждение
-   сказанного, а не отдельное заявление. */
 .step__chips { margin-top: 12px; }
 .step__chips li { font-size: 13px; padding: 5px 10px; }
 .chips--icon svg { color: var(--muted); }
 @media (hover: hover) {
   .chips--icon li:hover svg { color: var(--accent-text); }
 }
-
-/* Флаги в чипах стран */
 .chips li { display: inline-flex; align-items: center; gap: 8px; }
 .flag { border-radius: 2px; }
-
-/* --- А3: выравнивание и мелкий ритм -------------------------------------- */
 .price-note { max-width: 480px; margin-top: 20px; }
 .faq__h { font-size: inherit; font-weight: inherit; margin: 0; }
 .faq-more { margin-top: 28px; }
-
 @media (max-width: 900px) {
   .connect { grid-template-columns: 1fr; }
   .phone { max-width: 320px; margin-inline: auto; }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 28px 0; }
   .stat:nth-child(3) { border-left: 0; }
 }
-
 @media (max-width: 560px) {
   .stat { padding-inline: 12px; }
   .chips--icon { gap: 7px; }
   .chips--icon li { padding: 5px 9px; font-size: 13px; gap: 5px; }
   .chips--icon svg { width: 14px; height: 14px; }
 }
-
-/* --- Устройства на один ключ --------------------------------------------- */
 .devices {
   display: grid; gap: clamp(28px, 3.5vw, 48px);
   grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
-  /* По верху: таблица втрое выше текста, и центрирование сталкивало
-     заголовок «Один ключ» на 126px вниз — слева зияла дыра. */
   align-items: start;
   margin-top: 48px; padding-top: 44px;
   border-top: 1px solid var(--line);
@@ -1342,21 +1026,15 @@ td strong { color: var(--ink); }
 .devices__table td:last-child { text-align: right; white-space: nowrap; }
 .devices__table tr.is-base td { color: var(--accent-text); font-weight: 500; }
 .devices__table .small { margin: 0; }
-
 @media (max-width: 860px) {
   .devices { grid-template-columns: 1fr; }
 }
-
-/* --- ТЗ-3: подпись под панелью статусов --------------------------------- */
 .panel__stamp {
   margin: 10px 0 0; padding-top: 12px;
   border-top: 1px solid var(--line);
   font-size: 12px; color: var(--muted);
 }
-/* Завершающая строка в сообщении бота */
 .msg__done { display: flex; align-items: center; gap: 6px; margin: 2px 0 0; font-size: 12px; }
-
-/* --- Отзывы (секция скрыта до наполнения реальными) ----------------------- */
 .review { display: grid; gap: 14px; align-content: start; }
 .review__src {
   display: flex; align-items: center; gap: 8px; margin: 0;
@@ -1367,7 +1045,6 @@ td strong { color: var(--ink); }
 .review__who { margin: 0; display: flex; align-items: baseline; gap: 10px; }
 .review__who b { font-size: 14px; font-weight: 600; color: var(--ink); }
 .review__who .mono { font-size: 12px; color: var(--muted); }
-
 .reviews-marquee {
   position: relative;
   overflow: hidden;
@@ -1397,9 +1074,6 @@ td strong { color: var(--ink); }
   .reviews-track { animation: none !important; }
 }
 .reviews-cta { justify-content: center; margin-top: 36px; }
-
-/* --- Переключатель темы ---------------------------------------------- */
-/* hidden снимается скриптом: без JS переключателя честно нет */
 .theme-sw {
   display: inline-flex; align-items: center; gap: 7px;
   height: 40px; padding: 0 13px;
@@ -1415,23 +1089,16 @@ td strong { color: var(--ink); }
   .theme-sw:hover { color: var(--ink); border-color: var(--line-strong); }
 }
 .theme-sw:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-/* Виден значок только текущего режима — остальные ждут своей очереди. */
 .theme-sw__i { display: none; }
 .theme-sw[data-mode="system"] .theme-sw__i[data-i="system"],
 .theme-sw[data-mode="light"]  .theme-sw__i[data-i="light"],
 .theme-sw[data-mode="dark"]   .theme-sw__i[data-i="dark"] { display: grid; }
-
-/* Плавный переход только в момент переключения темы */
 html.theme-anim, html.theme-anim body,
 html.theme-anim .card, html.theme-anim .head, html.theme-anim .plan,
 html.theme-anim .panel, html.theme-anim .foot {
   transition: background-color 250ms var(--ease), color 250ms var(--ease),
               border-color 250ms var(--ease) !important;
 }
-
-/* --- Ambient-слои: ровно один активен, выбор темой через токены ------- */
-
-/* Живая сеть — светлая тема, только hero лендинга */
 .net {
   display: var(--net-display);
   position: absolute;
@@ -1443,8 +1110,6 @@ html.theme-anim .panel, html.theme-anim .foot {
 @media (max-width: 1024px) {
   .net { right: -18%; width: 88%; top: auto; bottom: -8%; height: 58%; }
 }
-
-/* Аврора — тёмная тема, весь вьюпорт */
 .aurora {
   display: var(--aurora-display);
   position: fixed; inset: 0;
@@ -1470,18 +1135,9 @@ html.theme-anim .panel, html.theme-anim .foot {
     to   { transform: translate(5vw, 4vh) scale(1.15); }
   }
 }
-/* Приглушённая аврора внутренних страниц: только верх, слабее */
 .aurora--soft .aur { opacity: .38; }
 .aurora--soft .aur--3 { display: none; }
-
-/* Контент всегда поверх авроры.
-   Шапку сюда не включаем: правило перебивало её собственные position: sticky
-   и z-index: 50 — шапка переставала быть липкой, а раскрытое меню уходило
-   под содержимое страницы и читалось сквозь заголовок. Своего z-index: 50
-   ей достаточно, чтобы быть над авророй с нулём. */
 main, .foot { position: relative; z-index: 1; }
-
-/* --- Акцентное слово H1: штрих в светлой, перелив в тёмной ------------ */
 :root {
   --hl-stroke-display: block;
   --hl-bg: none;
@@ -1518,8 +1174,6 @@ main, .foot { position: relative; z-index: 1; }
   }
   @keyframes hl-draw { to { stroke-dashoffset: 0; } }
 }
-
-/* --- Лента доверия: бегущая, пауза при наведении ---------------------- */
 .trust { overflow: hidden; }
 .trust__track { display: flex; width: max-content; }
 .trust__track ul {
@@ -1534,8 +1188,6 @@ main, .foot { position: relative; z-index: 1; }
   content: ""; position: absolute; left: -2px; top: 50%; transform: translateY(-50%);
   width: 4px; height: 4px; border-radius: 50%; background: var(--line-strong);
 }
-/* Кнопка паузы: небольшая и приглушённая — это служебный элемент, а не
-   призыв к действию. Мишень 44px держим за счёт padding, а не размера значка. */
 .trust__pause {
   position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
   width: 44px; height: 44px; padding: 0;
@@ -1545,7 +1197,6 @@ main, .foot { position: relative; z-index: 1; }
 }
 .trust__pause::before {
   content: ""; width: 10px; height: 12px;
-  /* Две полосы — знак паузы; при остановке меняется на треугольник «играть» */
   border-left: 3px solid currentColor; border-right: 3px solid currentColor;
 }
 .trust__pause[aria-pressed="true"]::before {
@@ -1556,7 +1207,6 @@ main, .foot { position: relative; z-index: 1; }
 }
 .trust__pause:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 @media (hover: hover) { .trust__pause:hover { color: var(--ink); } }
-
 @media (prefers-reduced-motion: no-preference) {
   .trust { position: relative; }
   .trust__pause { display: grid; }
@@ -1565,12 +1215,8 @@ main, .foot { position: relative; z-index: 1; }
   .trust.is-paused .trust__track { animation-play-state: paused; }
   @keyframes trust-run { to { transform: translateX(-50%); } }
 }
-
-/* --- Перепрос строки панели ------------------------------------------- */
 .panel__list li { border-radius: 8px; transition: background-color .6s var(--ease); }
 .panel__list li.is-hot { background: var(--accent-soft); }
-
-/* --- Луч по рамке тарифа (светлая) / свечение (тёмная) ----------------- */
 :root { --beam-display: block; --best-glow: 0 12px 44px rgba(22, 199, 132, .12); }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -1597,8 +1243,6 @@ main, .foot { position: relative; z-index: 1; }
   }
   @keyframes beam-run { to { --beam-a: 360deg; } }
 }
-
-/* --- Блик по главным кнопкам ------------------------------------------ */
 .btn--shine { overflow: hidden; }
 @media (prefers-reduced-motion: no-preference) {
   .btn--shine::after {
@@ -1614,8 +1258,6 @@ main, .foot { position: relative; z-index: 1; }
     96%, 100% { transform: translateX(130%); }
   }
 }
-
-/* --- Telegram-элементы: сразу видно, что ссылка ведёт в телегу -------- */
 .btn--tg {
   background: var(--tg-btn); color: var(--tg-btn-t); border-color: transparent;
 }
@@ -1626,7 +1268,6 @@ main, .foot { position: relative; z-index: 1; }
   }
 }
 .btn--tg svg { flex: none; }
-
 .tg-link {
   color: var(--tg-text);
   display: inline-flex; align-items: center; gap: 5px;
@@ -1634,10 +1275,6 @@ main, .foot { position: relative; z-index: 1; }
 .tg-link svg { flex: none; }
 .foot-cols a.tg-link { color: var(--tg-text); }
 @media (hover: hover) { .foot-cols a.tg-link:hover { color: var(--tg-text); text-decoration: underline; } }
-
-/* --- Форма отзыва ------------------------------------------------------ */
-/* 48px, а не 26: здесь меняется тема — «вот что говорят» переходит
-   в «напишите сами», и переход должен читаться. */
 .review-form-wrap { margin-top: 48px; display: flex; justify-content: center; }
 .review-form {
   width: min(560px, 100%); background: var(--card); border: 1px solid var(--line);
@@ -1661,8 +1298,6 @@ main, .foot { position: relative; z-index: 1; }
 .review-form__note { margin-top: 12px; font-size: 14.5px; }
 .review-form__note.is-ok { color: var(--accent-deep, #0b8a57); font-weight: 600; }
 .review-form__note.is-err { color: #c0392b; }
-
-/* --- Запасной вход в бота (t.me — внешняя точка отказа) --------------- */
 .cta-alt {
   margin-top: 8px; font-size: 13px; line-height: 1.5; color: var(--muted);
 }
@@ -1672,8 +1307,6 @@ main, .foot { position: relative; z-index: 1; }
 .foot-alt { font-size: 13px; color: var(--muted); line-height: 1.5; margin-top: 4px; }
 .foot-alt a { text-decoration: underline; text-underline-offset: 2px; }
 .foot-alt b { font-weight: 600; }
-
-/* --- «Почему не 100 ₽»: снимаем ценовое возражение --------------------- */
 .why-price {
   margin-top: 48px; background: var(--card); backdrop-filter: var(--card-filter);
   border: 1px solid var(--line); border-radius: var(--r-lg);
@@ -1681,12 +1314,6 @@ main, .foot { position: relative; z-index: 1; }
 }
 .why-price > h3 { font-size: 21px; margin-bottom: 8px; }
 .why-price__lead { color: var(--muted); font-size: 15px; max-width: 62ch; }
-/* Возражение и ответ — парами в одной строке. Возражение приглушено,
-   ответ основным цветом: глаз идёт слева направо и видит, что каждое
-   опасение закрыто. */
-/* Без линий между парами: четыре разделителя на четыре строки давали
-   табличную рябь. Пары держатся вместе выравниванием, а разделяет их
-   воздух — его и добавили вместо линий. */
 .why-pairs { margin: 28px 0 0; display: grid; gap: 26px; }
 .why-pair {
   display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
@@ -1718,10 +1345,6 @@ main, .foot { position: relative; z-index: 1; }
 }
 @media (max-width: 720px) {
   .why-price { padding: 22px 20px; }
-  /* Ответ уходит под возражение — иначе на телефоне обе колонки
-     сжимаются до нечитаемой ширины. */
   .why-pair { grid-template-columns: 1fr; gap: 10px; }
-  /* Подписи колонок здесь врут: колонок нет, и они читаются как два
-     подряд идущих заголовка. Пары и без них понятны по значкам. */
   .why-pair--head { display: none; }
 }
