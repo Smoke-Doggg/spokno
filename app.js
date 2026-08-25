@@ -544,7 +544,8 @@
     });
   }
   var HIT = 'https://stat.prostokey.com/watch-api/hit';
-  var АВТОМАТ = navigator.webdriver === true;
+  var МЕТКА_ЗАМЕРА = /(^|[?&])lh=1(&|$)/.test(location.search);
+  var АВТОМАТ = navigator.webdriver === true || МЕТКА_ЗАМЕРА;
   var send = function (params) {
     if (АВТОМАТ) return;
     var qs = Object.keys(params)
