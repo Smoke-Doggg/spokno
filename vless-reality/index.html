@@ -102,7 +102,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
      stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Попробовать оба протокола</a>
     </div>
 
-    <nav class="toc" aria-label="Содержание страницы"><p class="toc__head">На этой странице</p><ul><li><a href="#dlya-chego-sozdavalsya">Для чего создавался каждый протокол</a></li><li><a href="#kak-vidno-so-storony">Как соединение выглядит со стороны сети</a></li><li><a href="#vless-reality">Как устроен VLESS + Reality</a></li><li><a href="#hysteria2">Как устроен Hysteria2</a></li><li><a href="#tablica-sravneniya">Таблица сравнения</a></li><li><a href="#kogda-wireguard-normalno">Когда WireGuard всё же работает</a></li><li><a href="#kak-proverit">Как узнать, какой протокол используется сейчас</a></li><li><a href="#pochemu-dva">Почему у нас два протокола, а не один</a></li><li><a href="#korotko">Коротко</a></li><li><a href="#chastye-voprosy">Частые вопросы</a></li></ul></nav>
+    <nav class="toc" aria-label="Содержание страницы"><p class="toc__head">На этой странице</p><ul><li><a href="#dlya-chego-sozdavalsya">Для чего создавался каждый протокол</a></li><li><a href="#kak-vidno-so-storony">Как соединение выглядит со стороны сети</a></li><li><a href="#vless-reality">Как устроен VLESS + Reality</a></li><li><a href="#hysteria2">Как устроен Hysteria2</a></li><li><a href="#tablica-sravneniya">Таблица сравнения</a></li><li><a href="#kogda-wireguard-normalno">Когда WireGuard всё же работает</a></li><li><a href="#kak-proverit">Как узнать, какой протокол используется сейчас</a></li><li><a href="#pochemu-dva">Почему у нас два протокола, а не один</a></li><li><a href="#kupit-vless">Где взять VLESS-ключ и сколько он стоит</a></li><li><a href="#korotko">Коротко</a></li><li><a href="#chastye-voprosy">Частые вопросы</a></li></ul></nav>
 
 
 <h2 id="dlya-chego-sozdavalsya">Для чего создавался каждый протокол</h2>
@@ -266,6 +266,28 @@ Hysteria2 не останавливает передачу в ожидании �
   разница, разобранная выше, объясняет, почему одно соединение иногда
   ведёт себя стабильнее другого на конкретной сети.</p>
 </section>
+
+<h2 id="kupit-vless">Где взять VLESS-ключ и сколько он стоит</h2>
+
+<p>Спрашивают обычно так: «VLESS VPN купить». Уточним, что именно
+покупается, потому что тут легко переплатить за воздух.</p>
+
+<p>VLESS — это протокол, а не товар. Отдельно он не продаётся и стоить
+сам по себе не может: платят за доступ к серверу, который его понимает.
+Поэтому «купить VLESS» на деле означает «взять подписку у сервиса,
+который выдаёт ключи этого формата».</p>
+
+<p>У нас VLESS с Reality входит в обычную подписку, отдельной цены
+за него нет и доплаты тоже. Ключ приходит в Telegram и работает
+в любом подходящем клиенте — привязки к нашей программе нет, потому что
+и программы своей у нас нет. Цены и сроки — на странице
+<a href="/kupit/">купить VPN</a>, а попробовать можно
+3 дня бесплатно без карты.</p>
+
+<p>Отдельно про запрос «VLESS на роутер»: технически это возможно,
+но требует прошивки, которая понимает протокол, — заводские её обычно
+не понимают. Что подходит, а что нет, разобрано на странице
+<a href="/router/">VPN для роутера</a>.</p>
 
 <h2 id="korotko">Коротко</h2>
 
