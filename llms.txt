@@ -47,6 +47,6 @@
 - [Какой VPN работает в России сейчас](https://prostokey.com/blog/kakoy-vpn-rabotaet/)
 - [Сбербанк не работает с VPN: что делать](https://prostokey.com/blog/vpn-i-banki/)
 - [Прокси для Телеграм или VPN: что выбрать](https://prostokey.com/blog/proxy-dlya-telegram/)
-- [Отключили мобильный интернет: что делать](https://prostokey.com/blog/belye-spiski/)
+- [Белые списки интернета: что работает и что делать](https://prostokey.com/blog/belye-spiski/)
 - [VPN на iPhone без приложений из App Store](https://prostokey.com/blog/vpn-iphone/)
 - [Как оплатить VPN из России в 2026 году](https://prostokey.com/blog/kak-oplatit-vpn/)

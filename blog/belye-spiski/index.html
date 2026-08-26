@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>(function(){try{var t=localStorage.getItem("theme");
 if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
-<title>Отключили мобильный интернет: что делать — VPN Просто</title>
-<meta name="description" content="Мобильный интернет ограничили до списка разрешённых сервисов. Что остаётся доступным, почему VPN в этот момент бесполезен и что стоит подготовить заранее.">
+<title>Белые списки интернета — VPN Просто</title>
+<meta name="description" content="Белые списки интернета: мобильный трафик ограничен перечнем разрешённых сервисов. Что остаётся доступным, почему VPN тут бесполезен и можно ли это обойти.">
 <meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stat.prostokey.com; font-src 'self' data:; connect-src 'self' https://stat.prostokey.com; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -16,8 +16,8 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="VPN Просто">
-<meta property="og:title" content="Отключили мобильный интернет: что делать">
-<meta property="og:description" content="Мобильный интернет ограничили до списка разрешённых сервисов. Что остаётся доступным, почему VPN в этот момент бесполезен и что стоит подготовить заранее.">
+<meta property="og:title" content="Белые списки интернета">
+<meta property="og:description" content="Белые списки интернета: мобильный трафик ограничен перечнем разрешённых сервисов. Что остаётся доступным, почему VPN тут бесполезен и можно ли это обойти.">
 <meta property="og:url" content="https://prostokey.com/blog/belye-spiski/">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:image" content="https://prostokey.com/og-image.png">
@@ -80,14 +80,15 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 <main id="main">
 <article class="section article">
   <div class="wrap">
-    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → Отключили мобильный интернет: что делать</p>
-    <h1>Отключили мобильный интернет: что делать</h1>
+    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → Белые списки интернета: что работает и что делать</p>
+    <h1>Белые списки интернета: что работает и что делать</h1>
     <p class="meta">
       <span>Обновлено: 14 августа 2026</span>
       <span>Команда VPN Просто</span>
     </p>
 
-    <p class="lead">Когда мобильный интернет ограничивают, работает только список разрешённых
+    <p class="lead">Белые списки интернета — это когда мобильный трафик ограничивают
+до перечня разрешённых сервисов: работает только список разрешённых
 сервисов — государственные порталы, часть российских платформ и
 банковские приложения. Всё остальное не открывается, и VPN здесь не
 помогает: соединение с его сервером в список не входит. Помогает
@@ -101,6 +102,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
     <li><a href="#kak-ustroeno">Как это устроено</a></li>
     <li><a href="#chto-rabotaet">Что остаётся доступным</a></li>
     <li><a href="#pochemu-vpn">Почему VPN не помогает</a></li>
+    <li><a href="#obhod">Можно ли обойти белый список</a></li>
     <li><a href="#kak-ponyat">Как отличить от обычного сбоя</a></li>
     <li><a href="#chto-delat">Что делать прямо сейчас</a></li>
     <li><a href="#voprosy">Что обычно спрашивают в первый день</a></li>
@@ -115,7 +117,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 <p>Обычные блокировки работают по принципу «запрещено конкретное,
 разрешено остальное». Здесь логика перевёрнута: когда оператор получает
 команду ограничить мобильный трафик, его оборудование пропускает запросы
-только к разрешённым адресам. Всё, чего нет в перечне, просто не
+только к адресам из белого списка. Всё, чего в нём нет, просто не
 отвечает.</p>
 
 <p>Практическое следствие — картина, которая сбивает с толку: интернет
@@ -125,7 +127,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 хотя причина не в устройстве.</p>
 
 <p>Такие ограничения вводятся точечно — по регионам и на время. С осени
-2025 года они стали регулярными, а список разрешённых сервисов за это
+2025 года они стали регулярными, а сам белый список за это
 время заметно вырос: с нескольких десятков до более чем сотни позиций.</p>
 
 <h2 id="chto-rabotaet">Что остаётся доступным</h2>
@@ -163,7 +165,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
   </table>
 </div>
 
-<p>Важная деталь: попадание сервиса в список не гарантирует, что он
+<p>Важная деталь: попадание сервиса в белый список не гарантирует, что он
 заработает полностью. Приложение может открыться, но не загрузить
 картинки или видео, если они раздаются со сторонних адресов, которых
 в перечне нет.</p>
@@ -174,8 +176,8 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 
 <p>VPN решает задачу «сайт заблокирован, а интернет есть»: он строит
 соединение до своего сервера и через него открывает всё остальное. Но
-здесь проблема другого рода — сети как таковой нет, кроме разрешённого
-списка. Соединение с VPN-сервером в этот список не входит, поэтому оно
+здесь проблема другого рода — сети как таковой нет, кроме белого
+списка. Соединение с VPN-сервером в него не входит, поэтому оно
 просто не устанавливается.</p>
 
 <p>Ровно по той же причине бесполезны прокси, смена DNS и прочие
@@ -188,6 +190,30 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
   Обойти ограничение, при котором оборудование оператора пропускает
   только конкретные адреса, нельзя ни одним VPN.</p>
 </div>
+
+<h2 id="obhod">Можно ли обойти белый список</h2>
+
+<p>Запрос «как обойти белые списки интернета» задают часто, и честный
+ответ на него неприятный: обойти нельзя. Не потому, что способ секретный
+или дорогой, а потому, что обходить нечего — канала наружу в этот момент
+просто нет.</p>
+
+<p>Разница с обычными блокировками принципиальная. Когда сайт заблокирован,
+сеть работает, и можно уйти в неё другим маршрутом: через сервер в другой
+стране, через прокси, через что угодно. При белом списке маршрута нет
+вовсе: оборудование оператора пропускает запросы только к перечисленным
+адресам, и сервер, через который вы собирались уйти, в этот перечень
+не входит. Соединение с ним не устанавливается — обходить оказывается
+не откуда и не куда.</p>
+
+<p>Поэтому советы вроде «поставьте другой VPN» или «смените протокол»
+здесь не работают. И если сервис обещает работу при отключённом мобильном
+интернете, это либо непонимание того, как устроено ограничение, либо
+расчёт на то, что вы не проверите.</p>
+
+<p>Что действительно помогает — ниже: домашний Wi-Fi, если он есть,
+и подготовка заранее. Это скучнее обещания волшебной кнопки, зато
+правда.</p>
 
 <h2 id="kak-ponyat">Как отличить от обычного сбоя</h2>
 
@@ -496,7 +522,7 @@ if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)
 
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Отключили мобильный интернет: что делать", "description": "При ограничении мобильного интернета остаётся доступен список разрешённых сервисов. Что в него входит, почему VPN в этот момент не помогает и что можно сделать заранее.", "datePublished": "2026-08-14", "dateModified": "2026-08-14", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/belye-spiski/", "name": "Отключили мобильный интернет: что делать"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@type": "Organization", "name": "Команда VPN Просто", "url": "https://prostokey.com/"}, "publisher": {"@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Отключили мобильный интернет: что делать", "item": "https://prostokey.com/blog/belye-spiski/"}]}]</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Белые списки интернета: что работает и что делать", "description": "При ограничении мобильного интернета остаётся доступен список разрешённых сервисов. Что в него входит, почему VPN в этот момент не помогает и что можно сделать заранее.", "datePublished": "2026-08-14", "dateModified": "2026-08-14", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/belye-spiski/", "name": "Белые списки интернета: что работает и что делать"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@type": "Organization", "name": "Команда VPN Просто", "url": "https://prostokey.com/"}, "publisher": {"@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Белые списки интернета: что работает и что делать", "item": "https://prostokey.com/blog/belye-spiski/"}]}]</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Что такое белые списки?", "acceptedAnswer": {"@type": "Answer", "text": "Перечень сайтов и сервисов, которые остаются доступны, когда мобильный интернет ограничивают. Работает наоборот по сравнению с блокировками: закрыто всё, кроме разрешённого."}}, {"@type": "Question", "name": "Поможет ли VPN, когда отключили мобильный интернет?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Соединение с VPN-сервером само по себе не входит в список разрешённого, поэтому подключиться не получится. Это ограничение сети, а не блокировка конкретного сервиса."}}, {"@type": "Question", "name": "Работает ли домашний Wi-Fi при таких ограничениях?", "acceptedAnswer": {"@type": "Answer", "text": "Обычно да: ограничения касаются мобильного интернета операторов. Проводной интернет и Wi-Fi от домашнего провайдера продолжают работать в обычном режиме."}}, {"@type": "Question", "name": "Что входит в список разрешённого?", "acceptedAnswer": {"@type": "Answer", "text": "Государственные сервисы, часть крупных российских платформ, банковские и социально значимые сайты. Список меняется и может отличаться в разных регионах."}}, {"@type": "Question", "name": "Как понять, что дело в ограничении, а не в телефоне?", "acceptedAnswer": {"@type": "Answer", "text": "Признак характерный: часть сайтов открывается мгновенно, а остальные не грузятся вовсе. Если у знакомых на том же операторе картина такая же — дело в сети."}}, {"@type": "Question", "name": "Что можно сделать заранее?", "acceptedAnswer": {"@type": "Answer", "text": "Скачать нужное впрок, договориться с близкими о способе связи, знать, где рядом есть Wi-Fi. Когда ограничение уже включилось, вариантов почти не остаётся."}}]}</script>
 <script src="/app.js?v=9c55c88e" defer></script>
 <img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/belye-spiski/"
