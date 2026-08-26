@@ -13,12 +13,30 @@
 - [О сервисе](https://prostokey.com/o-servise/): сколько лет работаем, как устроено внутри, почему не показываем владельца
 - [Партнёрская программа](https://prostokey.com/partnerskaya/): пять уровней начислений с каждой оплаты
 
+## Куда подключить
+
+- [VPN для айфона](https://prostokey.com/iphone/): приложений VPN нет в российском App Store, нужна вторая учётная запись Apple — разбираем порядок
+- [VPN для Андроид](https://prostokey.com/android/): клиент из Google Play, а на телефонах без сервисов Google — установка APK-файлом
+- [VPN для компьютера](https://prostokey.com/windows/): Windows и macOS: установщик с сайта проекта, магазин приложений не участвует
+- [VPN для телевизора](https://prostokey.com/tv/): Android TV и Apple TV ставят клиент сами, Samsung и LG — только через приставку или роутер
+- [VPN для роутера](https://prostokey.com/router/): закрывает все устройства дома разом, но подходит не каждой прошивке — Keenetic и OpenWrt да, заводские обычно нет
+
+## Частые задачи
+
+- [VPN через Телеграм-бота](https://prostokey.com/telegram-bot/): как устроена выдача ключа без регистрации и почты
+- [VPN с пробным периодом](https://prostokey.com/probnyy-period/): три дня бесплатно без карты и без автосписаний
+- [VPN с российским IP](https://prostokey.com/rossiyskiy-ip/): российский адрес для банков и Госуслуг из-за границы
+- [VLESS и Reality](https://prostokey.com/vless-reality/): чем протоколы отличаются и какой выбрать
+- [Проверить, работает ли VPN](https://prostokey.com/proverka/): показывает видимый адрес и страну, адрес не сохраняется
+
 ## Документы
 
 - [Условия использования](https://prostokey.com/usloviya/)
 - [Политика конфиденциальности](https://prostokey.com/privacy/): что храним и чего не храним
 
 ## Статьи
+
+- [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
 - [Как установить Happ на Android](https://prostokey.com/blog/happ-android/)
 - [VPN-ключ на 3 дня: что входит и как получить](https://prostokey.com/blog/klyuch-na-3-dnya/)
