@@ -39,6 +39,7 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [Дискорд не работает: почему молчит голос и что делать](https://prostokey.com/blog/discord-ne-rabotaet/)
 - [Hiddify: как подключить и стоит ли выбирать](https://prostokey.com/blog/hiddify/)
 - [Happ на андроид: как установить](https://prostokey.com/blog/happ-android/)
 - [VPN-ключ на 3 дня: что входит и как получить](https://prostokey.com/blog/klyuch-na-3-dnya/)
