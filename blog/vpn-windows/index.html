@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){try{var t=localStorage.getItem("theme");
+if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<title>VPN на Windows: установка и настройка — VPN Просто</title>
+<meta name="description" content="Установка клиента на Windows: где скачать, что делать с предупреждением системы, куда вставить ключ и почему антивирус иногда мешает соединению.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stat.prostokey.com; font-src 'self' data:; connect-src 'self' https://stat.prostokey.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/blog/vpn-windows/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="VPN на Windows: установка и настройка">
+<meta property="og:description" content="Установка клиента на Windows: где скачать, что делать с предупреждением системы, куда вставить ключ и почему антивирус иногда мешает соединению.">
+<meta property="og:url" content="https://prostokey.com/blog/vpn-windows/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="VPN Просто — стабильный VPN, банки работают">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/fonts.css?v=1260ba6b">
+<link rel="preload" href="/fonts/onest-800-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=6e72c0ba">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<div class="aurora aurora--soft" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/" aria-current="page">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system" hidden>
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<article class="section article">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → VPN на Windows: установка и настройка</p>
+    <h1>VPN на Windows: установка и настройка</h1>
+    <p class="meta">
+      <span>Обновлено: 1 сентября 2026</span>
+      <span>Команда VPN Просто</span>
+    </p>
+
+    <p class="lead">Ставить VPN на Windows проще, чем на телефон: магазин не нужен, клиент
+берётся обычным установщиком со страницы разработчика. Скачали файл, поставили, вставили ключ из буфера —
+минут пять вместе со скачиванием. Отдельного внимания требуют две вещи:
+предупреждение системы при запуске незнакомого файла и антивирус,
+который иногда мешает соединению.
+</p>
+
+<nav class="toc" aria-label="Содержание">
+  <p class="toc__head">В этой статье</p>
+  <ol>
+    <li><a href="#chto-skachat">Что скачать</a></li>
+    <li><a href="#ustanovka">Установка по шагам</a></li>
+    <li><a href="#klyuch">Как вставить ключ</a></li>
+    <li><a href="#proverit">Что проверить после подключения</a></li>
+    <li><a href="#preduprezhdenie">Предупреждение системы</a></li>
+    <li><a href="#antivirus">Антивирус и брандмауэр</a></li>
+    <li><a href="#zapasnoy">Запасной клиент</a></li>
+    <li><a href="#pochemu-ottuda">Почему мы даём ссылку на страницу выпусков</a></li>
+    <li><a href="#oshibki">Если что-то пошло не так</a></li>
+    <li><a href="#korotko">Коротко</a></li>
+  </ol>
+</nav>
+
+
+<h2 id="chto-skachat">Что скачать</h2>
+
+<p>Основной клиент — Happ. Установщик лежит на странице выпусков проекта,
+там же исходный код и даты сборок. На 18 августа 2026 года последняя
+версия для настольных систем — 3.3.6 от 20 июля, файл для обычных
+процессоров занимает 113 МБ.</p>
+
+<p>Сборок две: для привычных процессоров Intel и AMD и отдельная для
+ноутбуков на процессорах ARM — такие встречаются среди тонких моделей
+последних лет. Если не уверены, какой у вас, посмотрите в параметрах
+системы строку с типом процессора.</p>
+
+<p>Ссылку на нужный файл выдаёт бот вместе с ключом; она же есть на
+странице <a href="/kak-podklyuchit/">как подключиться</a>.</p>
+
+<h2 id="ustanovka">Установка по шагам</h2>
+
+<ol class="steps">
+  <li><b>Скачайте установщик</b><span>Только со страницы выпусков
+    проекта. Не с каталогов «скачать бесплатно» и не из чатов —
+    почему, объясняем ниже.</span></li>
+  <li><b>Запустите файл</b><span>Windows может показать предупреждение
+    о неизвестном издателе. Это не признак вируса, разбор — в отдельном
+    разделе.</span></li>
+  <li><b>Разрешите установку</b><span>Система спросит подтверждение
+    администратора: программа ставит собственный сетевой компонент,
+    без него туннель не поднять.</span></li>
+  <li><b>Откройте программу</b><span>Дальше остаётся вставить ключ.</span></li>
+</ol>
+
+<h2 id="klyuch">Как вставить ключ</h2>
+
+<p>Ключ — строка настроек из бота. К программе она не привязана: тот же
+ключ работает на телефоне, планшете и телевизоре.</p>
+
+<ol class="steps">
+  <li><b>Скопируйте ключ</b><span>В боте одно нажатие копирует строку
+    целиком. Выделять мышью не нужно: строка длинная, и потерянный
+    хвост даёт ошибку, которую потом долго ищут.</span></li>
+  <li><b>Выберите добавление из буфера</b><span>Программа разберёт
+    настройки сама.</span></li>
+  <li><b>Выберите страну и подключитесь</b><span>Первым пунктом идёт
+    автовыбор — он сам находит живой сервер. Стран
+    6, доплат за них нет.</span></li>
+</ol>
+
+<h2 id="proverit">Что проверить сразу после подключения</h2>
+
+<p>Три проверки занимают минуту и снимают почти все последующие вопросы.
+Сделать их лучше сразу, пока помните, что и где нажимали.</p>
+
+<ol class="steps">
+  <li><b>Сменился ли адрес</b><span>Откройте любой сервис определения
+    адреса до подключения и после. Страна и адрес должны отличаться —
+    это подтверждает, что трафик действительно идёт через туннель.</span></li>
+  <li><b>Открываются ли российские сайты</b><span>Банк, Госуслуги,
+    маркетплейс. При правильной настройке они идут напрямую, мимо
+    туннеля, и выключать соединение ради них не нужно. Если банк просит
+    подтверждений, которых раньше не просил, — что-то настроено не так,
+    разбор в статье <a href="/blog/vpn-i-banki/">про банки и VPN</a>.</span></li>
+  <li><b>Не просела ли скорость</b><span>Откройте видео в высоком
+    качестве. Небольшая просадка нормальна — трафик идёт через другую
+    страну. Заметное падение обычно лечится сменой локации или
+    автовыбором.</span></li>
+</ol>
+
+<p>Если что-то из трёх не сходится, чинить проще сейчас, чем через
+неделю: сейчас вы точно знаете, что изменилось на компьютере, а через
+неделю придётся вспоминать.</p>
+
+<h2 id="preduprezhdenie">Предупреждение системы</h2>
+
+<p>При запуске скачанного установщика Windows может показать синее окно
+с надписью, что издатель неизвестен. Пугаться не нужно, но и щёлкать
+не глядя тоже: разберём, что это значит.</p>
+
+<p>Система сверяет программу с базой известных ей файлов и с цифровой
+подписью издателя. У небольших проектов подписи обычно нет: она платная
+и требует проверки того, кто её получает. Поэтому предупреждение говорит
+не «файл опасен», а «файл системе незнаком».</p>
+
+<p><strong>Что действительно защищает</strong> — не реакция на окно,
+а место, откуда взят файл. Установщик со страницы выпусков проекта
+и установщик с каталога-агрегатора выглядят одинаково и оба вызовут
+одно и то же предупреждение. Разница только в том, кто их собрал.</p>
+
+<h2 id="antivirus">Антивирус и брандмауэр</h2>
+
+<p>Программы, работающие с сетевым трафиком, регулярно попадают под
+подозрение защитных пакетов — по устройству они похожи на то, от чего
+эти пакеты защищают. Проявляется это по-разному:</p>
+
+<ul class="facts">
+  <li><strong>Файл удаляется сразу после скачивания</strong><span>антивирус
+    убирает его из папки загрузок, иногда молча</span></li>
+  <li><strong>Установка проходит, соединение не поднимается</strong><span>сетевой
+    компонент заблокирован брандмауэром</span></li>
+  <li><strong>Работает, но очень медленно</strong><span>трафик идёт
+    через проверку защитного пакета</span></li>
+</ul>
+
+<p>Лечится добавлением программы в исключения. Отключать защиту целиком
+не нужно и не стоит: исключение для одного приложения — соразмерная
+мера, отключённый антивирус — нет.</p>
+
+<h2 id="zapasnoy">Запасной клиент</h2>
+
+<p>На Windows, в отличие от техники Apple, запасной вариант есть:
+V2RayTun, установщик берётся с сайта разработчика. Тот же ключ, та же
+логика, другой интерфейс.</p>
+
+<p>Держать вторую программу установленной имеет смысл заранее. Она
+не мешает и не расходует ресурсы, пока соединение выключено, а в день,
+когда основная начнёт капризничать, искать замену будет некогда. Разбор
+различий — в статье <a href="/blog/vybor-klienta/">про выбор клиента</a>.</p>
+
+<p>Одновременно включать оба клиента нельзя: два туннеля в системе
+конфликтуют, и обычно не работает ни один. Переключаться нужно
+последовательно — отключить соединение в первой программе, только потом
+поднимать во второй.</p>
+
+<p>Ключ у них общий, вводить его повторно не придётся: если строка
+сохранена в заметках или в буфере, вставка занимает секунду. Отдельная
+подписка для второго клиента не нужна — устройство считается одно,
+независимо от того, сколько программ на нём установлено.</p>
+
+<section class="unique">
+  <h2 id="pochemu-ottuda">Почему мы даём ссылку на страницу выпусков</h2>
+
+  <p>Установщик для Windows можно взять в десятке мест: каталоги
+  программ, файлообменники, зеркала, чужие сайты с инструкциями. Мы
+  указываем только страницу выпусков самого проекта, и на это есть
+  причина, которую стоит проговорить вслух.</p>
+
+  <p>Исполняемый файл легко пересобрать. Внешне ничего не изменится —
+  тот же значок, то же название, тот же интерфейс, — а внутрь добавится
+  что угодно. Для программы, которая по своей работе видит весь сетевой
+  трафик, это худший из возможных сценариев: она превращается ровно
+  в то, от чего должна была защищать. Проверить подмену на глаз человек
+  не может, и никакое предупреждение Windows тут не поможет — оно
+  одинаково для честного файла и для переделанного.</p>
+
+  <p>Единственная работающая проверка — сверить то, что вы скачали,
+  с тем, что выложил автор. На странице выпусков видно номер версии,
+  дату и точный размер файла. На 18 августа 2026 года там лежит
+  версия 3.3.6 от 20 июля: сборка для Intel и AMD — 113 МБ, для
+  процессоров ARM — 80 МБ, а рядом лежат версии для macOS и Linux
+  из того же выпуска. Если предложенный вам файл заметно другого
+  размера или его версия старше — это повод не запускать.</p>
+
+  <p><strong>Своего приложения у нас нет намеренно.</strong> Программу
+  сервиса удаляют из магазина вместе с сервисом, и за 2026 год так ушли
+  сотни VPN-приложений. Чужой клиент удалять не за что: сам по себе он
+  никуда не подключается и ничего не обходит, пока вы не дали ему ключ.
+  Пока схема «независимая программа плюс наш ключ» держится, чистка
+  магазинов не отрезает вас от подписки — она отрезает от одной
+  оболочки, которую можно заменить за пять минут.</p>
+
+  <p>Побочная выгода этой же схемы видна как раз на Windows: тут вообще
+  нет магазина как посредника. Никто не может ни удалить программу
+  из каталога, ни ограничить её по региону учётной записи. Поэтому
+  из всех платформ Windows сейчас самая спокойная — и если вы
+  настраиваете доступ для человека, которому важно, чтобы «просто
+  работало и не отваливалось», начинать стоит с компьютера.</p>
+</section>
+
+<h2 id="oshibki">Если что-то пошло не так</h2>
+
+<p><strong>Файл исчез после скачивания.</strong> Его убрал антивирус.
+Добавьте программу в исключения и скачайте заново.</p>
+
+<p><strong>Установщик не запускается.</strong> Проверьте, что скачали
+сборку под свой тип процессора: файл для ARM на обычном компьютере
+не пойдёт, и наоборот.</p>
+
+<p><strong>Соединение не поднимается ни на одном сервере.</strong>
+Порядок проверки — в статье
+о том, что делать, когда клиент
+не подключается. Начинать нужно с подписки и локаций в боте,
+а не с переустановки.</p>
+
+<p><strong>Интернет пропал совсем после отключения VPN.</strong>
+Редкий случай, когда сетевые настройки остались переключёнными.
+Помогает перезапуск программы с последующим корректным отключением,
+в крайнем случае — перезагрузка компьютера.</p>
+
+<h2 id="korotko">Коротко</h2>
+
+<ul class="facts">
+  <li><strong>Магазин не нужен</strong><span>обычный установщик со
+    страницы выпусков проекта</span></li>
+  <li><strong>Предупреждение об издателе — не приговор</strong><span>оно
+    означает «файл незнаком», а не «файл опасен»</span></li>
+  <li><strong>Антивирус в исключения</strong><span>программу, а не всю
+    защиту целиком</span></li>
+  <li><strong>Есть запасной клиент</strong><span>на Windows, в отличие
+    от техники Apple</span></li>
+  <li><strong>Проверить бесплатно</strong><span>3 дня без
+    карты, дальше 349 ₽ в месяц</span></li>
+</ul>
+
+
+    <h2 id="chastye-voprosy">Частые вопросы</h2>
+    <div class="faq">
+      <div id="vopros-nuzhen-li-magazin-prilozheniy" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Нужен ли магазин приложений?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1">
+          <div><p>Нет. На Windows клиент ставится обычным установщиком со страницы выпусков проекта. Ни учётной записи, ни смены региона не требуется — в этом Windows сейчас проще всех остальных платформ.</p></div>
+        </div>
+      </div>
+      <div id="vopros-windows-pishet-chto-izdatel-neizvesten-eto-virus" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>Windows пишет, что издатель неизвестен. Это вирус?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2">
+          <div><p>Нет. Предупреждение означает, что у программы нет цифровой подписи и система её не знает. Подпись стоит денег и требует юридического лица, у небольших проектов её обычно нет. Защищает не реакция на окно, а то, откуда взят файл.</p></div>
+        </div>
+      </div>
+      <div id="vopros-antivirus-udalil-ustanovschik-chto-delat" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>Антивирус удалил установщик. Что делать?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3">
+          <div><p>Добавить программу в исключения и скачать заново. Клиенты работают с сетевым трафиком и по устройству похожи на то, от чего защищают антивирусы, — ложные срабатывания тут обычное дело. Отключать защиту целиком не нужно.</p></div>
+        </div>
+      </div>
+      <div id="vopros-kakuyu-sborku-skachivat" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>Какую сборку скачивать?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4">
+          <div><p>Для обычных компьютеров на Intel и AMD — основную, для ноутбуков на процессорах ARM — отдельную. Тип процессора виден в параметрах системы. Файл не той сборки просто не запустится.</p></div>
+        </div>
+      </div>
+      <div id="vopros-tot-zhe-klyuch-podoydet-dlya-telefona" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>Тот же ключ подойдёт для телефона?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5">
+          <div><p>Да. Ключ не привязан ни к программе, ни к устройству: одна и та же строка настроек работает на компьютере, телефоне и телевизоре. В подписку входит два устройства, расширить можно до шести.</p></div>
+        </div>
+      </div>
+      <div id="vopros-est-li-na-windows-zapasnoy-klient" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q6" aria-controls="a6">
+            <span>Есть ли на Windows запасной клиент?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6">
+          <div><p>Да, V2RayTun — установщик берётся с сайта разработчика. Тот же ключ, другой интерфейс. На технике Apple запасного варианта сейчас нет, а на Windows он есть, и держать его установленным заранее имеет смысл.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p><strong>Проверить на своей сети.</strong> 3 дня
+      бесплатно, карта не нужна: если у вас не заработает — вы ничего
+      не потеряли.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Получить ключ</a>
+    </div>
+
+    <h2 id="chitat-dalshe">Читать дальше</h2>
+    <ul class="facts">
+      <li><a href="/blog/vybor-klienta/">Happ или V2RayTun: какой клиент выбрать</a></li>
+      <li><a href="/blog/discord-ne-rabotaet/">Дискорд не работает: почему молчит голос и что делать</a></li>
+      <li><a href="/blog/hiddify/">Hiddify: как подключить и стоит ли выбирать</a></li>
+    </ul>
+  </div>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <p class="foot-head">Сервис</p>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/#price">Цена</a></li>
+          <li><a href="/o-servise/">О сервисе</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Помощь</p>
+        <ul>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Связь</p>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Канал «Цифровая свобода»</a></li>
+          <li class="foot-alt">Не открывается? <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть
+            в приложении</a> или найдите <b class="mono">@vpn_prosto_bot</b></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Документы</p>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2021—<span data-year>2026</span> VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "VPN на Windows: установка и настройка", "description": "Установка клиента на Windows: где скачать, что означает предупреждение системы, куда вставить ключ и почему антивирус иногда мешает соединению.", "datePublished": "2026-09-01", "dateModified": "2026-09-01", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/vpn-windows/", "name": "VPN на Windows: установка и настройка"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@type": "Organization", "name": "Команда VPN Просто", "url": "https://prostokey.com/"}, "publisher": {"@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "VPN на Windows: установка и настройка", "item": "https://prostokey.com/blog/vpn-windows/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Нужен ли магазин приложений?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. На Windows клиент ставится обычным установщиком со страницы выпусков проекта. Ни учётной записи, ни смены региона не требуется — в этом Windows сейчас проще всех остальных платформ."}}, {"@type": "Question", "name": "Windows пишет, что издатель неизвестен. Это вирус?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Предупреждение означает, что у программы нет цифровой подписи и система её не знает. Подпись стоит денег и требует юридического лица, у небольших проектов её обычно нет. Защищает не реакция на окно, а то, откуда взят файл."}}, {"@type": "Question", "name": "Антивирус удалил установщик. Что делать?", "acceptedAnswer": {"@type": "Answer", "text": "Добавить программу в исключения и скачать заново. Клиенты работают с сетевым трафиком и по устройству похожи на то, от чего защищают антивирусы, — ложные срабатывания тут обычное дело. Отключать защиту целиком не нужно."}}, {"@type": "Question", "name": "Какую сборку скачивать?", "acceptedAnswer": {"@type": "Answer", "text": "Для обычных компьютеров на Intel и AMD — основную, для ноутбуков на процессорах ARM — отдельную. Тип процессора виден в параметрах системы. Файл не той сборки просто не запустится."}}, {"@type": "Question", "name": "Тот же ключ подойдёт для телефона?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Ключ не привязан ни к программе, ни к устройству: одна и та же строка настроек работает на компьютере, телефоне и телевизоре. В подписку входит два устройства, расширить можно до шести."}}, {"@type": "Question", "name": "Есть ли на Windows запасной клиент?", "acceptedAnswer": {"@type": "Answer", "text": "Да, V2RayTun — установщик берётся с сайта разработчика. Тот же ключ, другой интерфейс. На технике Apple запасного варианта сейчас нет, а на Windows он есть, и держать его установленным заранее имеет смысл."}}]}</script>
+<script src="/app.js?v=9c55c88e" defer></script>
+<img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/vpn-windows/"
+     alt="" width="1" height="1" decoding="async"
+     style="position:absolute;left:-9999px;width:1px;height:1px" aria-hidden="true"></body>
+</html>

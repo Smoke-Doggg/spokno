@@ -39,6 +39,7 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [VPN на Windows: установка и настройка](https://prostokey.com/blog/vpn-windows/)
 - [Как устроен список серверов в подписке](https://prostokey.com/blog/spisok-serverov/)
 - [Дискорд не работает: почему молчит голос и что делать](https://prostokey.com/blog/discord-ne-rabotaet/)
 - [Hiddify: как подключить и стоит ли выбирать](https://prostokey.com/blog/hiddify/)
