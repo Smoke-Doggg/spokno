@@ -39,6 +39,7 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [Тикток не работает с VPN: почему и что делать](https://prostokey.com/blog/tiktok-ne-rabotaet/)
 - [Твич не работает: где ломается и что делать](https://prostokey.com/blog/twitch-ne-rabotaet/)
 - [VPN на роутере: интернет для всего дома](https://prostokey.com/blog/vpn-router/)
 - [Гугл плей не работает: три разные беды и что делать](https://prostokey.com/blog/google-play-ne-rabotaet/)

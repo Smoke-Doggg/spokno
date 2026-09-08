@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){try{var t=localStorage.getItem("theme");
+if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<title>Тикток не работает с VPN — VPN Просто</title>
+<meta name="description" content="Тикток не работает с впн или показывает старую ленту. Что ограничил сам сервис, а что провайдер, и почему смена адреса не всегда меняет регион приложения.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stat.prostokey.com; font-src 'self' data:; connect-src 'self' https://stat.prostokey.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/blog/tiktok-ne-rabotaet/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="Тикток не работает с VPN">
+<meta property="og:description" content="Тикток не работает с впн или показывает старую ленту. Что ограничил сам сервис, а что провайдер, и почему смена адреса не всегда меняет регион приложения.">
+<meta property="og:url" content="https://prostokey.com/blog/tiktok-ne-rabotaet/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="VPN Просто — стабильный VPN, банки работают">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/fonts.css?v=1260ba6b">
+<link rel="preload" href="/fonts/onest-800-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=6e72c0ba">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<div class="aurora aurora--soft" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/" aria-current="page">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system" hidden>
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<article class="section article">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → Тикток не работает с VPN: почему и что делать</p>
+    <h1>Тикток не работает с VPN: почему и что делать</h1>
+    <p class="meta">
+      <span>Обновлено: 8 сентября 2026</span>
+      <span>Команда VPN Просто</span>
+    </p>
+
+    <p class="lead">С тиктоком путаница чаще, чем с другими сервисами: половина жалоб
+не про блокировку вовсе. Приложение в России открывается и видео
+показывает — ограничены отдельные возможности, и ограничил их сам
+сервис, а не надзорное ведомство. Поэтому и получается, что тикток
+не работает с впн ровно так же, как без него: туннель меняет адрес,
+а решает приложение не только по адресу.
+</p>
+
+<nav class="toc" aria-label="Содержание">
+  <p class="toc__head">В этой статье</p>
+  <ol>
+    <li><a href="#kto-ogranichil">Кто и что здесь ограничил</a></li>
+    <li><a href="#chto-reshaet">Что туннель решает, а что нет</a></li>
+    <li><a href="#region">Почему регион не меняется одним адресом</a></li>
+    <li><a href="#po-poryadku">Что проверить, если не открывается вовсе</a></li>
+    <li><a href="#brauzer">Веб-версия вместо приложения</a></li>
+    <li><a href="#kak-u-nas">Как это устроено у нас</a></li>
+    <li><a href="#ne-obeshchaem">Чего мы не обещаем</a></li>
+  </ol>
+</nav>
+
+
+<h2 id="kto-ogranichil">Кто и что здесь ограничил</h2>
+
+<p>Это главное, что стоит понять до всех настроек, потому что отсюда
+растут почти все неверные ожидания.</p>
+
+<p>Сервис не заблокирован в России надзорным ведомством — в отличие
+от мессенджера, домен которого
+убрали из адресной системы, или <a href="/telegram/">Телеграма</a>,
+который замедляют. Приложение открывается, лента листается, видео
+играют.</p>
+
+<p>Ограничения ввёл сам сервис, ещё в марте 2022 года, и по своей
+инициативе: с российских адресов отключены публикация новых роликов
+и прямые эфиры. Причина была в законе об ответственности за
+распространение заведомо ложных сведений — модерировать такой объём
+на таких условиях сервис не взялся и просто закрыл публикацию для
+российских адресов.</p>
+
+<ul class="facts">
+  <li><strong>Работает</strong><span>просмотр, поиск, лайки, комментарии,
+    сохранение — обычное пользование лентой</span></li>
+  <li><strong>Не работает с российского адреса</strong><span>публикация
+    роликов, прямые эфиры, а также монетизация и продвижение</span></li>
+  <li><strong>Работает частично</strong><span>лента: часть зарубежного
+    контента до российских адресов доходит хуже</span></li>
+</ul>
+
+<h2 id="chto-reshaet">Что туннель решает, а что нет</h2>
+
+<p>Раз ограничение привязано к адресу, логично предположить, что смена
+адреса его снимает. Отчасти так и есть — но только отчасти, и вот где
+проходит граница.</p>
+
+<p><strong>Туннель помогает с лентой.</strong> Если вы видите
+преимущественно старые российские ролики, а хочется обычной глобальной
+выдачи, смена страны это меняет: подборка собирается в том числе
+по тому, откуда вы смотрите.</p>
+
+<p><strong>Туннель помогает с доступом.</strong> Если у вашего оператора
+приложение вообще не грузится — а на мобильных сетях такое случается
+в дни массовых ограничений, — соединение через туннель возвращает
+доступ, как и любому другому сервису.</p>
+
+<p><strong>Туннель не меняет регион аккаунта.</strong> И это причина
+большинства разочарований. Кнопки «сменить страну» в приложении нет,
+регион определяется не одним признаком, и адрес — только один из них.
+Подробнее — в следующем разделе.</p>
+
+<h2 id="region">Почему регион не меняется одним адресом</h2>
+
+<p>Приложение складывает вывод о том, откуда вы, из нескольких сигналов
+сразу: адрес в сети, язык системы и язык самого приложения, данные
+о местоположении, страна оператора связи, часовой пояс и то, какой
+контент вы смотрите и лайкаете.</p>
+
+<p>Когда сигналы расходятся — адрес немецкий, язык русский, оператор
+российский, геолокация показывает Москву, — приложение видит
+противоречие. И ведёт себя осторожно: не переключается на новый регион,
+а остаётся при прежнем выводе. Внешне это выглядит как «впн включён,
+а ничего не поменялось».</p>
+
+<p>Отсюда практический вывод, неприятный, но честный: одним включением
+соединения регион не переключается. И это не поломка туннеля и не
+дефект сервиса — это устройство самого приложения, и никакой VPN
+изменить его не может.</p>
+
+<div class="callout">
+  <p><strong>Чего мы не станем советовать.</strong> В сети хватает
+  инструкций, как заставить приложение поверить в другой регион:
+  вынуть симкарту, стереть данные, подменить местоположение. Мы такие
+  советы давать не будем. Публикацию сервис закрыл не случайно, а из-за
+  ответственности за то, что публикуется, — и помогать обойти это
+  ограничение значит перекладывать риск на вас. Смотреть ленту туннель
+  помогает, и на этом наша область заканчивается.</p>
+</div>
+
+<h2 id="po-poryadku">Что проверить, если не открывается вовсе</h2>
+
+<p>Отдельно разберём случай, когда приложение не грузится совсем —
+это уже обычная история с доступом, и лечится она как у всех
+сервисов.</p>
+
+<ol class="steps">
+  <li><b>Проверьте, что туннель поднялся</b><span>Откройте
+  <a href="/proverka/">страницу проверки</a>: если адрес и страна
+  не сменились, дело не в приложении, а в соединении.</span></li>
+  <li><b>Смените локацию</b><span>Адреса серверов попадают в списки,
+  и соединение может подниматься, но тут же обрываться. Другая страна
+  проверяется за секунды.</span></li>
+  <li><b>Не выбирайте российскую локацию</b><span>Она в подписку входит,
+  но нужна для обратной задачи — доступа к банкам из-за границы. Для
+  ленты она вернёт вас ровно к тому, с чего начали.</span></li>
+  <li><b>Переключите протокол</b><span>На мобильном интернете
+  фильтрация строже, чем на домашнем, и разные протоколы держатся
+  по-разному.</span></li>
+  <li><b>Перезапустите приложение полностью</b><span>Закройте из списка
+  запущенных, а не сверните: иначе оно продолжит держаться за прежнее
+  соединение.</span></li>
+  <li><b>Сравните с браузером</b><span>Откройте веб-версию. Работает
+  там, но не в приложении — значит дело в приложении и его данных,
+  а не в канале.</span></li>
+</ol>
+
+<h2 id="brauzer">Веб-версия вместо приложения</h2>
+
+<p>Про этот способ забывают, а он решает часть проблем сам собой.
+Сервис работает в браузере, и версия в браузере знает о вас заметно
+меньше приложения: у неё нет доступа к оператору связи, к точным
+данным о местоположении и к системным настройкам, из которых
+складывается вывод о регионе.</p>
+
+<p>Практический смысл простой. Если приложение упорно показывает
+привычную ленту, откройте сайт в браузере при включённом туннеле —
+нередко выдача там сразу выглядит иначе. Это не обход ограничений,
+а просто другой набор сигналов: браузер сообщает о вас меньше, и адрес
+в нём весит больше.</p>
+
+<p>У способа есть цена. В браузере нет части возможностей приложения,
+листать ленту менее удобно, а уведомления приходят хуже. Как временная
+проверка «дело в канале или в приложении» — работает отлично; как
+постоянный способ пользоваться — на любителя.</p>
+
+<section class="unique">
+  <h2 id="kak-u-nas">Как это устроено у нас</h2>
+
+  <p>Начнём с того, что прямо относится к теме: российский сервер
+  у нас в подписке есть, но для ленты его брать не нужно. Он решает
+  обратную задачу — <a href="/rossiyskiy-ip/">вернуть доступ к банкам
+  и госсервисам</a> тем, кто уехал. Если вы в России и хотите обычную
+  глобальную выдачу, берите любую другую из шести стран.</p>
+
+  <p>Раздельного доступа это не касается: мимо туннеля у нас уходит
+  узкий перечень российских сервисов, <a href="/blog/vpn-i-banki/">разобранный
+  отдельно</a>, и видеосервисов в нём нет. Но помните про раздел выше:
+  даже когда весь трафик идёт через туннель, регион приложение считает
+  не только по нему. Здесь наш узкий перечень помогает меньше, чем
+  в других случаях, — и честнее это сказать, чем умолчать.</p>
+
+  <p>Протоколов в подписке два, оба маскируются под обычный защищённый
+  трафик, и переключаются они в клиенте вручную. Универсального ответа,
+  какой лучше, не существует: у операторов фильтрация настроена
+  по-разному, и то, что уверенно держится на домашнем интернете, может
+  проседать на мобильном. Если приложение перестало грузиться именно
+  в мобильной сети — первым делом стоит попробовать второй протокол.</p>
+
+  <p>Отдельно про автоматический выбор сервера, потому что на этой теме
+  он вредит чаще всего. Клиенты обычно предлагают режим «выбрать
+  быстрейший», и он честно выбирает ближайший — то есть российский,
+  если он в списке. Для скорости это верное решение, для ленты — худшее
+  из возможных: вы получаете тот же регион, с которого начали. У нас
+  российская локация в подписке есть, и именно поэтому предупреждаем:
+  для этой задачи страну указывайте руками.</p>
+
+  <p>Доплат за локации нет ни за одну: смена страны — первое, что
+  приходится делать при любых ограничениях, и брать за это отдельные
+  деньги было бы странно. В подписку входит два устройства
+  одновременно, а к одному ключу можно подключить до шести — телефон,
+  компьютер и, скажем, планшет закрываются одним ключом, отдельные
+  подписки не нужны.</p>
+
+  <p>Если перебрали локации и протоколы, а приложение всё равно молчит,
+  напишите в бота: там отвечает живой человек. Ограничения меняются
+  волнами, и часто мы уже знаем, какая настройка работает сегодня
+  у конкретного оператора, — это быстрее, чем собирать советы
+  по форумам, где половина устарела ещё в прошлом сезоне.</p>
+
+  <p>Проверять всё это стоит на своей сети и своём устройстве:
+  у операторов фильтрация настроена по-разному, и чужой отзыв здесь
+  ничего не доказывает. Первые 3 дня бесплатны, карта
+  не нужна, автосписаний нет — подписка не продлевается сама, и
+  отменять её не требуется.</p>
+</section>
+
+<h2 id="ne-obeshchaem">Чего мы не обещаем</h2>
+
+<p>Не обещаем, что вы сможете публиковать ролики. Это ограничение
+самого сервиса, а не сети, и никакой туннель его не снимает.
+Обещания «полный доступ ко всем возможностям» в чужой рекламе стоит
+читать именно так: возможности, которые закрыл сам сервис, VPN
+не возвращает.</p>
+
+<p>Не обещаем мгновенной смены ленты. Подборка перестраивается
+не сразу и учитывает не только страну, но и то, что вы смотрели
+раньше. Первые дни после смены локации лента может выглядеть
+привычно — это нормально и ни о чём плохом не говорит.</p>
+
+<p>И не обещаем стабильности на все времена. Ограничения меняются
+волнами, и то, что работало в прошлом месяце, может потребовать
+другой настройки. Единственное, что мы обещаем всерьёз: после каждой
+волны выдавать настройки, которые снова поднимают соединение, — и не
+брать за это доплат.</p>
+
+
+    <h2 id="chastye-voprosy">Частые вопросы</h2>
+    <div class="faq">
+      <div id="vopros-tiktok-zablokirovan-v-rossii" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Тикток заблокирован в России?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1">
+          <div><p>Нет. Приложение открывается, лента листается, видео играют. Ограничения ввёл сам сервис в марте 2022 года: с российских адресов закрыты публикация роликов и прямые эфиры. Это его решение, а не блокировка надзорного ведомства.</p></div>
+        </div>
+      </div>
+      <div id="vopros-pochemu-posle-vklyucheniya-vpn-nichego-ne-izmenilos" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>Почему после включения VPN ничего не изменилось?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2">
+          <div><p>Регион приложение определяет не по одному адресу, а по совокупности: язык системы, данные о местоположении, страна оператора, часовой пояс, что вы смотрите. Когда сигналы расходятся, приложение остаётся при прежнем выводе.</p></div>
+        </div>
+      </div>
+      <div id="vopros-smogu-li-ya-vykladyvat-roliki-cherez-vpn" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>Смогу ли я выкладывать ролики через VPN?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3">
+          <div><p>Мы этого не обещаем и помогать обходить ограничение не будем. Публикацию сервис закрыл из-за ответственности за содержание, и обход перекладывает риск на вас. Туннель помогает смотреть ленту — на этом наша область заканчивается.</p></div>
+        </div>
+      </div>
+      <div id="vopros-lenta-ostalas-prezhney-posle-smeny-strany" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>Лента осталась прежней после смены страны.</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4">
+          <div><p>Подборка перестраивается не сразу и учитывает не только страну, но и историю просмотров. Первые дни лента может выглядеть привычно — это нормально.</p></div>
+        </div>
+      </div>
+      <div id="vopros-kakuyu-stranu-vybrat" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>Какую страну выбрать?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5">
+          <div><p>Любую, кроме российской: она в подписку входит, но нужна для обратной задачи — доступа к банкам из-за границы. Для ленты она вернёт ровно то, с чего вы начали.</p></div>
+        </div>
+      </div>
+      <div id="vopros-prilozhenie-ne-gruzitsya-voobsche-eto-tozhe-pro-region" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q6" aria-controls="a6">
+            <span>Приложение не грузится вообще. Это тоже про регион?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6">
+          <div><p>Нет, это обычная проблема доступа, и лечится как у всех сервисов: проверить, что туннель поднялся, сменить локацию, переключить протокол, полностью перезапустить приложение.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p><strong>Проверить на своей сети.</strong> 3 дня
+      бесплатно, карта не нужна: если у вас не заработает — вы ничего
+      не потеряли.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Проверить на своём подключении</a>
+    </div>
+
+    <h2 id="chitat-dalshe">Читать дальше</h2>
+    <ul class="facts">
+      <li><a href="/blog/kakoy-vpn-rabotaet/">Какой VPN работает в России сейчас</a></li>
+      <li><a href="/blog/twitch-ne-rabotaet/">Твич не работает: где ломается и что делать</a></li>
+      <li><a href="/blog/google-play-ne-rabotaet/">Гугл плей не работает: три разные беды и что делать</a></li>
+    </ul>
+  </div>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <p class="foot-head">Сервис</p>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/#price">Цена</a></li>
+          <li><a href="/o-servise/">О сервисе</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Помощь</p>
+        <ul>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Связь</p>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Канал «Цифровая свобода»</a></li>
+          <li class="foot-alt">Не открывается? <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть
+            в приложении</a> или найдите <b class="mono">@vpn_prosto_bot</b></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Документы</p>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2021—<span data-year>2026</span> VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Тикток не работает с VPN: почему и что делать", "description": "Приложение открывается, но лента старая, а публикация закрыта. Что ограничил сам сервис, а что провайдер, и почему смена адреса не всегда меняет регион.", "datePublished": "2026-09-08", "dateModified": "2026-09-08", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/tiktok-ne-rabotaet/", "name": "Тикток не работает с VPN: почему и что делать"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@type": "Organization", "name": "Команда VPN Просто", "url": "https://prostokey.com/"}, "publisher": {"@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Тикток не работает с VPN: почему и что делать", "item": "https://prostokey.com/blog/tiktok-ne-rabotaet/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Тикток заблокирован в России?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Приложение открывается, лента листается, видео играют. Ограничения ввёл сам сервис в марте 2022 года: с российских адресов закрыты публикация роликов и прямые эфиры. Это его решение, а не блокировка надзорного ведомства."}}, {"@type": "Question", "name": "Почему после включения VPN ничего не изменилось?", "acceptedAnswer": {"@type": "Answer", "text": "Регион приложение определяет не по одному адресу, а по совокупности: язык системы, данные о местоположении, страна оператора, часовой пояс, что вы смотрите. Когда сигналы расходятся, приложение остаётся при прежнем выводе."}}, {"@type": "Question", "name": "Смогу ли я выкладывать ролики через VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Мы этого не обещаем и помогать обходить ограничение не будем. Публикацию сервис закрыл из-за ответственности за содержание, и обход перекладывает риск на вас. Туннель помогает смотреть ленту — на этом наша область заканчивается."}}, {"@type": "Question", "name": "Лента осталась прежней после смены страны.", "acceptedAnswer": {"@type": "Answer", "text": "Подборка перестраивается не сразу и учитывает не только страну, но и историю просмотров. Первые дни лента может выглядеть привычно — это нормально."}}, {"@type": "Question", "name": "Какую страну выбрать?", "acceptedAnswer": {"@type": "Answer", "text": "Любую, кроме российской: она в подписку входит, но нужна для обратной задачи — доступа к банкам из-за границы. Для ленты она вернёт ровно то, с чего вы начали."}}, {"@type": "Question", "name": "Приложение не грузится вообще. Это тоже про регион?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, это обычная проблема доступа, и лечится как у всех сервисов: проверить, что туннель поднялся, сменить локацию, переключить протокол, полностью перезапустить приложение."}}]}</script>
+<script src="/app.js?v=9c55c88e" defer></script>
+<img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/tiktok-ne-rabotaet/"
+     alt="" width="1" height="1" decoding="async"
+     style="position:absolute;left:-9999px;width:1px;height:1px" aria-hidden="true"></body>
+</html>
