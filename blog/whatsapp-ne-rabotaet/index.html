@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){try{var t=localStorage.getItem("theme");
+if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<title>Ватсап не работает с VPN — VPN Просто</title>
+<meta name="description" content="Ватсап не открывается даже с включённым VPN. Почему российский сервер тут не подходит и что проверить по порядку, чтобы мессенджер заработал.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stat.prostokey.com; font-src 'self' data:; connect-src 'self' https://stat.prostokey.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/blog/whatsapp-ne-rabotaet/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="Ватсап не работает с VPN">
+<meta property="og:description" content="Ватсап не открывается даже с включённым VPN. Почему российский сервер тут не подходит и что проверить по порядку, чтобы мессенджер заработал.">
+<meta property="og:url" content="https://prostokey.com/blog/whatsapp-ne-rabotaet/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="VPN Просто — стабильный VPN, банки работают">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/fonts.css?v=1260ba6b">
+<link rel="preload" href="/fonts/onest-800-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=6e72c0ba">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<div class="aurora aurora--soft" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/" aria-current="page">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system" hidden>
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<article class="section article">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → Ватсап не работает с VPN: почему и что делать</p>
+    <h1>Ватсап не работает с VPN: почему и что делать</h1>
+    <p class="meta">
+      <span>Обновлено: 11 сентября 2026</span>
+      <span>Команда VPN Просто</span>
+    </p>
+
+    <p class="lead">Если ватсап не работает с впн, дело почти всегда в одной из двух вещей,
+и обе — про то, каким именно каналом идёт трафик. Мессенджер ограничивают
+не так, как обычный сайт: у него отдельно перекрыты звонки, отдельно
+убран домен из российской системы адресов, и отдельно ограничена отправка
+сообщений с российских адресов. Из-за последнего многие настройки,
+которые обычно выручают, здесь дают обратный результат.
+</p>
+
+<nav class="toc" aria-label="Содержание">
+  <p class="toc__head">В этой статье</p>
+  <ol>
+    <li><a href="#chto-slomano">Что именно сломано и когда</a></li>
+    <li><a href="#rossiyskiy-server">Почему российский сервер тут мешает</a></li>
+    <li><a href="#drugie-prichiny">Другие причины, по которым туннель не спасает</a></li>
+    <li><a href="#po-poryadku">Что проверить по порядку</a></li>
+    <li><a href="#zvonki">Звонки — отдельная история</a></li>
+    <li><a href="#kompyuter">Компьютер и веб-версия</a></li>
+    <li><a href="#kak-u-nas">Как это устроено у нас</a></li>
+    <li><a href="#ne-obeshchaem">Чего мы не обещаем</a></li>
+  </ol>
+</nav>
+
+
+<h2 id="chto-slomano">Что именно сломано и когда</h2>
+
+<p>Ограничения вводились не разом, а слоями, и это важно: каждый слой
+лечится по-своему, а лежат они друг на друге.</p>
+
+<ul class="facts">
+  <li><strong>Август 2025 — звонки</strong><span>голосовые и видеозвонки
+    перекрыли по всей стране. Переписка тогда продолжала работать</span></li>
+  <li><strong>Осень 2025 — доступ по регионам</strong><span>сначала юг,
+    затем несколько десятков регионов: мессенджер стал открываться
+    через раз</span></li>
+  <li><strong>Февраль 2026 — домен убран из адресной системы</strong><span>адрес
+    мессенджера перестал разрешаться штатным путём. С этого момента
+    без туннеля он не открывается вовсе</span></li>
+  <li><strong>Сейчас — ограничение по адресу отправителя</strong><span>приложение
+    запускается, но сообщения не уходят, если ваш видимый адрес
+    российский</span></li>
+</ul>
+
+<p>Последний пункт и есть причина большинства жалоб «включил, а всё
+равно не работает». Он же объясняет, почему совет «выбери сервер
+поближе» здесь вредит вместо того, чтобы помочь.</p>
+
+<h2 id="rossiyskiy-server">Почему российский сервер тут мешает</h2>
+
+<p>Российский адрес в подписке — вещь полезная: он нужен, чтобы банки и
+госсервисы не принимали вас за иностранца, когда вы за границей. Мы сами
+держим такой сервер и <a href="/rossiyskiy-ip/">отдельно про него
+пишем</a>.</p>
+
+<p>Но для этого мессенджера он не подходит принципиально. Ограничение
+устроено так, что отправка блокируется именно с российских адресов —
+и туннель, который выводит вас через сервер в России, приводит ровно
+туда же, откуда вы и начали. Соединение при этом честно поднято, значок
+горит, страница проверки покажет смену адреса — а сообщения всё равно
+не уходят.</p>
+
+<p>Поэтому первое, что нужно сделать, — убедиться, что вы не на
+российской локации. Если сервер выбирается автоматически «по
+скорости», он вполне может выбрать её как ближайшую: с точки зрения
+скорости это лучший выбор, с точки зрения мессенджера — худший.</p>
+
+<h2 id="drugie-prichiny">Другие причины, по которым туннель не спасает</h2>
+
+<h3>Устройство спрашивает адрес мимо туннеля</h3>
+
+<p>Домен мессенджера убран из российской адресной системы — то есть
+сломан сам этап, на котором устройство узнаёт, куда идти. Обычно этот
+запрос уходит внутри туннеля и проблемы нет. Но если клиент настроен
+так, что адреса разрешаются в обход, устройство спрашивает дорогу
+у местной системы и получает ответ «такого нет». Внешне это выглядит
+как «интернет есть, мессенджер не грузится».</p>
+
+<p>Лечится это в настройках клиента — там, где указано, каким путём
+разрешать адреса. Если разбираться не хочется, проще сменить клиент:
+ключ не привязан к программе и переносится в другую за минуту.</p>
+
+<h3>Сервер уже под фильтрацией</h3>
+
+<p>Обычная история для любого сервиса: адрес сервера попал в списки,
+соединение поднимается и тут же обрывается. Проверяется сменой локации
+на другую страну — не российскую, по причине выше.</p>
+
+<h3>Приложение помнит прежнее состояние</h3>
+
+<p>Мессенджер держит соединение постоянно и переподключается сам,
+но после включения туннеля может продолжать держаться за прежний
+маршрут. Полный перезапуск — закрыть из списка запущенных, а не
+свернуть — обычно решает.</p>
+
+<h2 id="po-poryadku">Что проверить по порядку</h2>
+
+<ol class="steps">
+  <li><b>Смените локацию на нероссийскую</b><span>Это первое и самое
+  важное отличие от других сервисов. Если стоит автоматический выбор —
+  выключите его и укажите страну вручную.</span></li>
+  <li><b>Проверьте, что адрес действительно сменился</b><span>Откройте
+  <a href="/proverka/">страницу проверки</a>: она покажет видимый адрес
+  и страну. Российская страна при включённом туннеле — это и есть ваша
+  причина.</span></li>
+  <li><b>Полностью перезапустите мессенджер</b><span>Закройте из списка
+  запущенных приложений и откройте заново. Свернуть и развернуть
+  недостаточно: соединение при этом не пересоздаётся.</span></li>
+  <li><b>Попробуйте второй протокол</b><span>Если в клиенте есть выбор,
+  переключитесь. На мобильном интернете фильтрация строже, чем
+  на домашнем, и разные протоколы держатся по-разному.</span></li>
+  <li><b>Проверьте на другой сети</b><span>Мобильный интернет вместо
+  Wi-Fi или наоборот. Это сразу показывает, режет ли конкретный
+  оператор.</span></li>
+  <li><b>Проверьте настройку разрешения адресов</b><span>В клиенте должно
+  быть указано, что адреса разрешаются через туннель, а не средствами
+  устройства. Это тот самый случай с убранным доменом.</span></li>
+</ol>
+
+<h2 id="zvonki">Звонки — отдельная история</h2>
+
+<p>Звонки перекрыли раньше переписки и другим способом, поэтому
+типичная картина выглядит странно: сообщения ходят нормально, а звонок
+не проходит вовсе. Дело в том, что переписка и голос идут разными типами
+пакетов. Фильтрации не обязательно ломать соединение целиком — достаточно
+отбрасывать пакеты того типа, на котором работает голос, и приходят они
+с адресов, известных как серверные. Текст при этом проскакивает, потому
+что для него используется другой транспорт.</p>
+
+<p>Отсюда практический вывод: если у вас работает переписка, но не идут
+звонки, менять настройки бесполезно — это не поломка на вашей стороне.
+Помогает только смена локации на ту, чьи адреса ещё не в списках,
+и то не всегда.</p>
+
+<p>Если разговор важен, надёжнее не биться с мессенджером, а созвониться
+там, где связь сейчас устойчивее. Это неприятный, но честный совет: мы
+не можем обещать, что звонок пройдёт, и не станем делать вид, что
+можем.</p>
+
+<h2 id="kompyuter">Компьютер и веб-версия</h2>
+
+<p>Настольная версия и версия в браузере устроены не как отдельный
+мессенджер, а как продолжение телефона: они привязываются к нему и
+держат с ним связь. Отсюда две особенности, о которых редко пишут.</p>
+
+<p>Первая: соединение нужно на обоих устройствах. Если туннель включён
+только на компьютере, а телефон сидит на обычном канале, связка может
+не установиться — телефон остаётся частью цепочки даже тогда, когда
+переписку вы ведёте с ноутбука. Ключ у нас не привязан к устройству,
+и в подписку входит два одновременно, так что покупать что-то
+дополнительно для этого не нужно.</p>
+
+<p>Вторая: страна на обоих устройствах должна быть нероссийской.
+Ситуация, когда на телефоне выбрана одна локация, а на компьютере
+другая, сама по себе не страшна, но если одна из них российская —
+вернётся то самое ограничение по адресу отправителя.</p>
+
+<p>Если связка не устанавливается, начните с телефона: включите туннель
+там, дождитесь, пока мессенджер оживёт, и только потом подключайте
+компьютер. Обратный порядок работает хуже — компьютер пытается достучаться
+до телефона, которого с его точки зрения нет.</p>
+
+<section class="unique">
+  <h2 id="kak-u-nas">Как это устроено у нас</h2>
+
+  <p>Сразу о главном, потому что это прямо касается темы: российский
+  сервер у нас в подписку входит, но для этого мессенджера его выбирать
+  не нужно. Он существует для обратной задачи — вернуть доступ к банкам
+  и госсервисам тем, кто уехал. Если вы в России и вам нужен мессенджер,
+  берите любую из остальных локаций.</p>
+
+  <p>Раздельный доступ мессенджера не касается: мимо туннеля у нас уходит
+  узкий перечень российских сервисов, <a href="/blog/vpn-i-banki/">разобранный
+  отдельно</a>, и мессенджера в нём нет. Это важно проговорить именно здесь:
+  если бы он туда попал, вы получили бы ровно то ограничение по адресу
+  отправителя, о котором вся эта статья, — причём получили бы его
+  от собственного VPN.</p>
+
+  <p>Протоколов в подписке два, и оба маскируются под обычный защищённый
+  трафик — тот самый случай, когда фильтрации нечего опознавать.
+  Переключаются они в клиенте вручную: универсального ответа, какой
+  выбрать, не существует, потому что у операторов настройки разные.
+  Если на мобильном интернете мессенджер молчит, а на домашнем работает,
+  первым делом стоит попробовать второй протокол.</p>
+
+  <p>Своего приложения у нас нет намеренно, и здесь это выручает. Разрешение
+  адресов настраивается по-разному в разных клиентах, и если ваш этого
+  не умеет или прячет настройку слишком глубоко, ключ переносится
+  в другую программу за минуту — он не привязан к конкретной. Сервис
+  со своим единственным приложением такого выхода не оставляет.</p>
+
+  <p>Локаций шесть стран, доплат за них нет: смена сервера — первое,
+  что приходится делать при таких ограничениях, и брать за это деньги
+  было бы странно. В подписку входит два устройства одновременно,
+  а к одному ключу можно подключить до шести — это как раз про случай
+  выше, когда мессенджер нужен и на телефоне, и на компьютере.</p>
+
+  <p>Если перебрали локации и протоколы, а мессенджер молчит — напишите
+  в бота, там отвечает живой человек, а не автоответчик. Ограничения
+  меняются волнами, и нередко мы уже знаем, какая настройка работает
+  сегодня у вашего оператора: собирать это по форумам самостоятельно
+  дольше и без гарантии, что совет свежий.</p>
+
+  <p>Проверять стоит на своей сети и своём устройстве: у операторов
+  фильтрация настроена по-разному, и чужой отзыв здесь ничего не
+  доказывает. Первые 3 дня бесплатны и карта не нужна —
+  именно чтобы проверка ничего не стоила и ничем не грозила. Автосписаний
+  у нас нет вовсе: подписка не продлевается сама, и отменять её не
+  требуется.</p>
+</section>
+
+<h2 id="ne-obeshchaem">Чего мы не обещаем</h2>
+
+<p>Мы не обещаем, что мессенджер будет работать всегда. Ограничения
+меняются, и то, что помогало на прошлой неделе, может перестать
+помогать завтра — это касается любого сервиса, а не только нашего.
+Обещать тут можно одно: что после каждой волны мы выдаём настройки,
+которые снова поднимают соединение.</p>
+
+<p>Не обещаем и звонков. Голосовой трафик режут отдельно и охотнее
+переписки, и заранее сказать, пройдёт ли конкретный звонок, нельзя.
+Если для вас важны именно звонки, проверьте это в первые бесплатные дни
+и решайте по результату, а не по нашим словам.</p>
+
+<p>И не обещаем, что поможет первый же шаг из списка. Обычно срабатывает
+смена локации — но какая именно подойдёт у вашего оператора, выясняется
+только перебором. Поэтому мы и настаиваем на проверке до оплаты.</p>
+
+
+    <h2 id="chastye-voprosy">Частые вопросы</h2>
+    <div class="faq">
+      <div id="vopros-pochemu-vatsap-ne-rabotaet-hotya-vpn-vklyuchen" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Почему ватсап не работает, хотя VPN включён?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1">
+          <div><p>Чаще всего выбрана российская локация. Отправка сообщений ограничена именно с российских адресов, поэтому туннель через сервер в России приводит туда же, откуда вы начали. Смените страну на любую другую.</p></div>
+        </div>
+      </div>
+      <div id="vopros-avtovybor-servera-eto-udobno" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>Автовыбор сервера — это удобно?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2">
+          <div><p>Для мессенджера нет. Такой режим ищет самый быстрый отклик, а быстрее всего отвечает сервер поближе — то есть российский, если он в списке. Отправка с него как раз и заблокирована, так что страну здесь нужно задавать руками.</p></div>
+        </div>
+      </div>
+      <div id="vopros-soedinenie-podnyalos-adres-smenilsya-a-soobscheniya-ne-uhody" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>Соединение поднялось, адрес сменился, а сообщения не уходят.</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3">
+          <div><p>Проверьте, какая именно страна отображается. Если российская — причина в ней. Если нет, дело обычно в разрешении адресов: домен мессенджера убран из российской адресной системы, и если клиент спрашивает адрес в обход туннеля, ответа он не получит.</p></div>
+        </div>
+      </div>
+      <div id="vopros-pochemu-ne-prohodyat-zvonki-hotya-perepiska-rabotaet" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>Почему не проходят звонки, хотя переписка работает?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4">
+          <div><p>Звонки перекрыли раньше переписки и другим способом. Голосовой трафик заметнее и режется охотнее, поэтому он может не проходить даже там, где сообщения ходят нормально. Гарантий по звонкам не даёт никто.</p></div>
+        </div>
+      </div>
+      <div id="vopros-pomogaet-li-smena-protokola" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>Помогает ли смена протокола?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5">
+          <div><p>Часто да, особенно на мобильном интернете: у операторов фильтрация настроена строже, чем на домашних сетях. Если в клиенте есть выбор протокола, переключение — второе, что стоит попробовать после смены страны.</p></div>
+        </div>
+      </div>
+      <div id="vopros-na-telefone-rabotaet-na-kompyutere-net" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q6" aria-controls="a6">
+            <span>На телефоне работает, на компьютере нет.</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6">
+          <div><p>Настольная версия мессенджера привязана к телефону и требует своего соединения. Убедитесь, что туннель включён на обоих устройствах: в подписку у нас входят два, так что отдельный ключ для этого не нужен.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p><strong>Проверить на своей сети.</strong> 3 дня
+      бесплатно, карта не нужна: если у вас не заработает — вы ничего
+      не потеряли.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Проверить на своём подключении</a>
+    </div>
+
+    <h2 id="chitat-dalshe">Читать дальше</h2>
+    <ul class="facts">
+      <li><a href="/blog/kakoy-vpn-rabotaet/">Бесплатный рабочий VPN: как выбрать в России</a></li>
+      <li><a href="/blog/proxy-dlya-telegram/">Прокси для Телеграмм: безопасно ли это</a></li>
+      <li><a href="/blog/tiktok-ne-rabotaet/">Тикток не работает с VPN: почему и что делать</a></li>
+    </ul>
+  </div>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <p class="foot-head">Сервис</p>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/#price">Цена</a></li>
+          <li><a href="/o-servise/">О сервисе</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Помощь</p>
+        <ul>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Связь</p>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Канал «Цифровая свобода»</a></li>
+          <li class="foot-alt">Не открывается? <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть
+            в приложении</a> или найдите <b class="mono">@vpn_prosto_bot</b></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Документы</p>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2021—<span data-year>2026</span> VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Ватсап не работает с VPN: почему и что делать", "description": "Мессенджер не открывается даже с включённым туннелем. Почему российский сервер тут не подходит, при чём здесь адресная система и что проверить по порядку.", "datePublished": "2026-09-11", "dateModified": "2026-09-11", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/whatsapp-ne-rabotaet/", "name": "Ватсап не работает с VPN: почему и что делать"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@type": "Organization", "name": "Команда VPN Просто", "url": "https://prostokey.com/"}, "publisher": {"@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Ватсап не работает с VPN: почему и что делать", "item": "https://prostokey.com/blog/whatsapp-ne-rabotaet/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему ватсап не работает, хотя VPN включён?", "acceptedAnswer": {"@type": "Answer", "text": "Чаще всего выбрана российская локация. Отправка сообщений ограничена именно с российских адресов, поэтому туннель через сервер в России приводит туда же, откуда вы начали. Смените страну на любую другую."}}, {"@type": "Question", "name": "Автовыбор сервера — это удобно?", "acceptedAnswer": {"@type": "Answer", "text": "Для мессенджера нет. Такой режим ищет самый быстрый отклик, а быстрее всего отвечает сервер поближе — то есть российский, если он в списке. Отправка с него как раз и заблокирована, так что страну здесь нужно задавать руками."}}, {"@type": "Question", "name": "Соединение поднялось, адрес сменился, а сообщения не уходят.", "acceptedAnswer": {"@type": "Answer", "text": "Проверьте, какая именно страна отображается. Если российская — причина в ней. Если нет, дело обычно в разрешении адресов: домен мессенджера убран из российской адресной системы, и если клиент спрашивает адрес в обход туннеля, ответа он не получит."}}, {"@type": "Question", "name": "Почему не проходят звонки, хотя переписка работает?", "acceptedAnswer": {"@type": "Answer", "text": "Звонки перекрыли раньше переписки и другим способом. Голосовой трафик заметнее и режется охотнее, поэтому он может не проходить даже там, где сообщения ходят нормально. Гарантий по звонкам не даёт никто."}}, {"@type": "Question", "name": "Помогает ли смена протокола?", "acceptedAnswer": {"@type": "Answer", "text": "Часто да, особенно на мобильном интернете: у операторов фильтрация настроена строже, чем на домашних сетях. Если в клиенте есть выбор протокола, переключение — второе, что стоит попробовать после смены страны."}}, {"@type": "Question", "name": "На телефоне работает, на компьютере нет.", "acceptedAnswer": {"@type": "Answer", "text": "Настольная версия мессенджера привязана к телефону и требует своего соединения. Убедитесь, что туннель включён на обоих устройствах: в подписку у нас входят два, так что отдельный ключ для этого не нужен."}}]}</script>
+<script src="/app.js?v=9c55c88e" defer></script>
+<img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/whatsapp-ne-rabotaet/"
+     alt="" width="1" height="1" decoding="async"
+     style="position:absolute;left:-9999px;width:1px;height:1px" aria-hidden="true"></body>
+</html>

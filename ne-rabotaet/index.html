@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){try{var t=localStorage.getItem("theme");
+if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<title>ВПН не работает: что проверить по порядку — VPN Просто</title>
+<meta name="description" content="Впн не работает — разбор по симптомам: не подключается, подключается но сайты не идут, рвётся через раз. Что чинится за минуту, а что не лечится сменой сервиса.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stat.prostokey.com; font-src 'self' data:; connect-src 'self' https://stat.prostokey.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/ne-rabotaet/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="ВПН не работает: что проверить по порядку">
+<meta property="og:description" content="Впн не работает — разбор по симптомам: не подключается, подключается но сайты не идут, рвётся через раз. Что чинится за минуту, а что не лечится сменой сервиса.">
+<meta property="og:url" content="https://prostokey.com/ne-rabotaet/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="VPN Просто — стабильный VPN, банки работают">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/fonts.css?v=1260ba6b">
+<link rel="preload" href="/fonts/onest-800-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=6e72c0ba">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<div class="aurora aurora--soft" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system" hidden>
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<section class="section article">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Главная</a> → ВПН не работает</p>
+    <h1>ВПН не работает: что проверить по порядку</h1>
+    <p class="meta">
+      <span>Обновлено: 11 сентября 2026</span>
+      <span>Команда VPN Просто</span>
+    </p>
+
+    <p class="lead">Когда впн не работает, причина в 2026 году почти
+    всегда одна из трёх: устаревший протокол, локация, которая перестала
+    открываться у вашего оператора, или сервер не выбран в самом клиенте.
+    Первое лечится только сменой сервиса, второе — двумя касаниями,
+    третье — одним. Ниже разбор по симптомам, чтобы не гадать.</p>
+
+    <div class="inline-cta">
+      <p><strong>Проверить на своей сети.</strong> 3 дня
+      полного доступа без карты — видно сразу, дело в сервисе или нет.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Проверить на своём подключении</a>
+    </div>
+
+    <nav class="toc" aria-label="Содержание страницы"><p class="toc__head">На этой странице</p><ul><li><a href="#minuta-na-samoe-chastoe">Минута на самое частое</a></li><li><a href="#simptom-ne-podklyuchaetsya-vovse">Симптом: не подключается вовсе</a></li><li><a href="#simptom-podklyuchaetsya-no-sayty-ne-otkryvayutsya">Симптом: подключается, но сайты не открываются</a></li><li><a href="#simptom-rabotaet-cherez-raz">Симптом: работает через раз</a></li><li><a href="#simptom-rabotaet-no-konkretnyy-servis-ne-otkryvaetsya">Симптом: работает, но конкретный сервис не открывается</a></li><li><a href="#simptom-perestal-rabotat-posle-obnovleniya">Симптом: перестал работать после обновления</a></li><li><a href="#kogda-delo-ne-v-servise">Когда дело не в сервисе</a></li><li><a href="#chto-delaem-my-kogda-perestaet-rabotat">Что делаем мы, когда перестаёт работать</a></li><li><a href="#chastye-voprosy">Частые вопросы</a></li></ul></nav>
+
+    <h2 id="minuta-na-samoe-chastoe">Минута на самое частое</h2>
+
+    <p>Прежде чем разбираться всерьёз, три проверки, которые закрывают
+    большинство случаев.</p>
+
+    <p><strong>Сервер выбран?</strong> Подписка в клиенте появилась,
+    а соединение не включено: нужно нажать на страну в списке, потом
+    на кнопку включения. Это половина обращений в поддержку.</p>
+
+    <p><strong>Локация та же, что вчера?</strong> Сервер, который отлично
+    работал неделю, может замолчать сегодня — у конкретного оператора.
+    Переключение на другую страну занимает два касания и решает больше
+    половины оставшегося.</p>
+
+    <p><strong>Сеть та же?</strong> Дома работает, на мобильном нет —
+    это не поломка сервиса, а разное поведение сетей. Проверьте вторую
+    локацию именно на той сети, где не работает.</p>
+
+    <h2 id="simptom-ne-podklyuchaetsya-vovse">Симптом: не подключается вовсе</h2>
+
+    <p>Клиент пишет об ошибке или бесконечно висит на подключении.
+    Идём от простого.</p>
+
+    <p><strong>Строка ключа обрезана.</strong> Если ключ вставляли
+    вручную, легко потерять хвост. Признак — клиент ругается на формат.
+    Вставлять надёжнее через «из буфера обмена», скопировав нажатием
+    на сообщение. Подробно про это — на странице
+    <a href="/klyuch-vpn/">про ключ</a>.</p>
+
+    <p><strong>Срок подписки кончился.</strong> Доступ останавливается,
+    и клиент ведёт себя так же, как при поломке. Ключ при этом остаётся
+    рабочим и оживает после продления.</p>
+
+    <p><strong>Старая версия клиента.</strong> Протоколы обновляются,
+    сборка годичной давности может не понять новый формат настроек.</p>
+
+    <p><strong>Не выданы права на айфоне.</strong> При первом подключении
+    iOS спрашивает разрешение на добавление конфигурации VPN. Если окно
+    закрыть, клиент останется без прав, и выдать их заново придётся
+    в системных настройках.</p>
+
+    <h2 id="simptom-podklyuchaetsya-no-sayty-ne-otkryvayutsya">Симптом: подключается, но сайты не открываются</h2>
+
+    <p>Соединение поднялось, значок горит, а страницы не идут. Это
+    самый обманчивый случай, потому что выглядит как поломка сервиса,
+    а бывает ей редко.</p>
+
+    <p>Первым делом стоит убедиться, что туннель действительно поднялся,
+    а не только показал значок. Наша <a href="/proverka/">страница
+    проверки</a> показывает адрес и страну, которые видит внешний сайт:
+    если там ваш город и ваш провайдер, соединение не работает,
+    несмотря на значок.</p>
+
+    <p>Если адрес сменился, а сайты всё равно не идут, причин две.
+    Либо выбранная локация фильтруется на пути — тогда помогает смена
+    страны. Либо проблема не в туннеле, а в самом сайте: он может быть
+    недоступен из той страны, через которую вы вышли.</p>
+
+    <h2 id="simptom-rabotaet-cherez-raz">Симптом: работает через раз</h2>
+
+    <p>Соединение рвётся, восстанавливается само, потом снова рвётся.
+    Самый неприятный вариант, потому что чинить наугад тут бесполезно.</p>
+
+    <p>Чаще всего дело в протоколе. Старые протоколы вроде WireGuard
+    и OpenVPN распознаются фильтрами, и соединение на них не блокируется
+    целиком, а деградирует: часть пакетов проходит, часть теряется.
+    Внешне это и выглядит как «то работает, то нет».</p>
+
+    <p>Лечится это сменой протокола на современный. Мы держим
+    VLESS + Reality (XTLS-Vision) и Hysteria2: их трафик внешне неотличим от обычного
+    визита на сайт, а второй ещё и проектировался для сетей с потерями,
+    поэтому на мобильном интернете держится лучше.</p>
+
+    <p>Вторая причина — перегруженный сервер. На бесплатных и дешёвых
+    сервисах вечером на одну машину приходится слишком много людей,
+    и канал рвётся под нагрузкой. Проверяется просто: если днём ровно,
+    а с девяти вечера рвётся, дело в этом.</p>
+
+    <h2 id="simptom-rabotaet-no-konkretnyy-servis-ne-otkryvaetsya">Симптом: работает, но конкретный сервис не открывается</h2>
+
+    <p>Отдельная история, которую часто принимают за поломку туннеля.
+    Если всё остальное идёт, а одно приложение упирается, дело почти
+    наверняка в нём самом: сервисы умеют распознавать подключения
+    из-за границы и ведут себя по-разному.</p>
+
+    <p>Частные случаи разобраны отдельно:</p>
+
+    <ul>
+      <li><a href="/blog/vpn-i-banki/">Банки и Госуслуги</a> — они,
+      наоборот, требуют российский адрес, и туннель им мешает.</li>
+      <li><a href="/blog/tiktok-ne-rabotaet/">Тикток</a> — часть
+      ограничений ввёл сам сервис, и смена адреса их не снимает.</li>
+      <li><a href="/blog/discord-ne-rabotaet/">Дискорд</a> — чаще
+      страдает голос, а не текст.</li>
+      <li><a href="/blog/google-play-ne-rabotaet/">Google Play</a> —
+      привязан к региону аккаунта, а не только к адресу.</li>
+      <li><a href="/blog/twitch-ne-rabotaet/">Твич</a> — упирается
+      в выбранную страну выхода.</li>
+    </ul>
+
+    <p>Общее правило для таких случаев: если через туннель открываются
+    другие сайты, туннель исправен, и чинить надо не его.</p>
+
+    <p>Проверить это можно за полминуты: откройте два-три сайта, которые
+    точно не связаны с проблемным сервисом. Если они грузятся нормально,
+    дальше разбираться нужно с приложением, его аккаунтом и регионом,
+    а не с подпиской. Ошибка обратного порядка обходится дороже всего:
+    люди меняют сервис за сервисом, а причина остаётся на месте.</p>
+
+    <h2 id="simptom-perestal-rabotat-posle-obnovleniya">Симптом: перестал работать после обновления</h2>
+
+    <p>Отдельный случай, который стоит выделить, потому что чинится
+    иначе. Всё шло ровно, потом обновился телефон или сам клиент —
+    и соединение отвалилось.</p>
+
+    <p><strong>Обновилась система.</strong> Крупные обновления iOS
+    и Android иногда сбрасывают разрешения сетевым приложениям. Клиент
+    при этом выглядит настроенным, а прав у него больше нет. Лечится
+    переустановкой разрешения в системных настройках или самого клиента.</p>
+
+    <p><strong>Обновился клиент.</strong> Редко, но случается обратное:
+    новая версия меняет формат хранения настроек и старая подписка
+    в ней не читается. Тогда ключ вставляется заново — он от этого
+    не портится.</p>
+
+    <p><strong>Сменился оператор или тариф.</strong> Переход на другого
+    провайдера, новая симкарта, смена тарифа с изменением маршрутизации —
+    всё это меняет путь до сервера. Локация, которая работала на прошлом
+    операторе, на новом может молчать.</p>
+
+    <p>Признак, по которому этот случай отличается от прочих: до
+    конкретного события всё работало, и работало устойчиво. Если так,
+    начинать нужно не с локаций, а с прав и переустановки.</p>
+
+    <h2 id="kogda-delo-ne-v-servise">Когда дело не в сервисе</h2>
+
+    <p>Три ситуации, в которых смена VPN не поможет, и лучше знать
+    об этом заранее.</p>
+
+    <p><strong>Медленный канал у провайдера.</strong> Туннель не ускоряет
+    интернет, он его слегка нагружает шифрованием. Если дома вечером
+    и без него видео идёт рывками, дело не в сервисе.</p>
+
+    <p><strong>Проблема на самом устройстве.</strong> Переполненный кеш
+    приложения, старая версия системы, конфликт с другим сетевым
+    приложением — всё это выглядит как неработающий туннель. Признак:
+    на втором устройстве тот же ключ работает нормально.</p>
+
+    <p><strong>Массовый сбой.</strong> Иногда перестаёт работать сразу
+    у всех, и это видно по тому, что жалобы появляются одновременно.
+    В такие часы мы пишем в канале
+    «<a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener">Цифровая свобода</a>»,
+    что произошло и что делать, — это быстрее, чем выяснять
+    самостоятельно.</p>
+
+    <p>Есть и четвёртая ситуация, о которой спрашивают реже, но она
+    стоит упоминания: соединение работает, а скорость такая, что
+    пользоваться нельзя. Это не поломка и обычно не вина сервиса.
+    Туннель добавляет к пути лишний участок, и если до выбранной страны
+    у вашего оператора плохой маршрут, скорость просядет при полностью
+    исправном соединении. Проверяется сменой локации на соседнюю:
+    разница между двумя европейскими странами у одного и того же
+    оператора бывает кратной.</p>
+
+    <h2 id="chto-delaem-my-kogda-perestaet-rabotat">Что делаем мы, когда перестаёт работать</h2>
+
+    <p>Раз речь о том, чем один сервис отличается от другого, скажем
+    про свою сторону прямо.</p>
+
+    <p>Локаций 6: Польша, Италия, Индия, США, Финляндия, Россия.
+    Это не витрина, а рабочий инструмент: когда одна страна замолкает
+    у конкретного оператора, вторая обычно продолжает идти, и
+    переключение занимает два касания.</p>
+
+    <p>Протоколы — VLESS + Reality (XTLS-Vision) и Hysteria2, оба современные.
+    Сервисы на старых протоколах отключаются в первые часы очередной
+    волны ограничений, и это не вопрос качества сервиса, а свойство
+    самих протоколов.</p>
+
+    <p>Ключ привязан к вашей переписке с ботом. Поддержке видно, живой
+    он или нет, когда последний раз подключался и через какую локацию, —
+    поэтому разбор занимает минуты, а не переписку на три дня.
+    И отвечает человек, а не ссылка на справку.</p>
+
+    <p>Проверить всё это можно до оплаты: 3 дня полного
+    доступа <a href="/probnyy-period/">без карты</a>, те же серверы,
+    что в подписке. Если у вашего оператора не заработает — вы ничего
+    не потеряли. Дальше 349 ₽ в месяц, подробности —
+    на странице <a href="/kupit/">покупки ключа</a>.</p>
+
+    <h2 id="chastye-voprosy">Частые вопросы</h2>
+    <div class="faq">
+      <div id="vopros-pochemu-vpn-ne-rabotaet-imenno-segodnya" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Почему впн не работает именно сегодня?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1">
+          <div><p>Чаще всего перестала открываться конкретная локация
+          у конкретного оператора — это происходит волнами и не у всех
+          одновременно. Первое действие: переключить страну в списке.</p></div>
+        </div>
+      </div>
+      <div id="vopros-znachok-gorit-a-interneta-net" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>Значок горит, а интернета нет</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2">
+          <div><p>Значок означает, что клиент попытался, а не что
+          соединение поднялось. Проверьте на странице проверки, какой
+          адрес видит внешний сайт: если ваш собственный — туннель
+          не работает.</p></div>
+        </div>
+      </div>
+      <div id="vopros-rabotaet-na-vayfae-ne-rabotaet-na-mobilnom" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>Работает на вайфае, не работает на мобильном</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3">
+          <div><p>Нормальная ситуация: сети ведут себя по-разному.
+          Попробуйте другую локацию именно на мобильной сети, а если
+          не помогло — другой протокол.</p></div>
+        </div>
+      </div>
+      <div id="vopros-pomogaet-li-smena-servisa" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>Помогает ли смена сервиса?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4">
+          <div><p>Только если старый работал на устаревшем протоколе.
+          Если проблема в перегруженном канале провайдера или в самом
+          устройстве, новый сервис покажет ровно то же.</p></div>
+        </div>
+      </div>
+      <div id="vopros-kak-ponyat-chto-delo-ne-vo-mne" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>Как понять, что дело не во мне?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5">
+          <div><p>Вставьте тот же ключ во второе устройство. Работает
+          там — дело в первом устройстве или его сети. Не работает
+          нигде — в локации или подписке.</p></div>
+        </div>
+      </div>
+      <div id="vopros-nichego-ne-pomoglo" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q6" aria-controls="a6">
+            <span>Ничего не помогло</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6">
+          <div><p>Напишите в бот и скажите две вещи: какой оператор
+          и какую локацию пробовали. Этого хватает, чтобы подобрать
+          рабочую настройку за пару минут.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p><strong>Проверьте на своей сети.</strong> 3 дня
+      без карты: если у вашего оператора не заработает — вы ничего
+      не потеряли.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Проверить на своём подключении</a>
+    </div>
+
+    <nav class="related" aria-label="Другие материалы"><p class="toc__head">Читайте также</p><ul><li><a href="/blog/kakoy-vpn-rabotaet/">Бесплатный рабочий VPN: как выбрать в России</a></li><li><a href="/blog/proxy-dlya-telegram/">Прокси для Телеграмм: безопасно ли это</a></li><li><a href="/blog/belye-spiski/">Белые списки интернета: что работает и что делать</a></li><li><a href="/blog/vpn-iphone/">VPN на iPhone без приложений из App Store</a></li></ul></nav>
+
+    <p class="cta-note">Не разобрались — напишите <a href="https://t.me/vpn_prosto_bot?start=5817865251">боту</a>,
+    отвечает живой человек. А в канале
+    «<a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener">Цифровая свобода</a>»
+    пишем, когда что-то массово перестаёт работать и что с этим делать.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <p class="foot-head">Сервис</p>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/#price">Цена</a></li>
+          <li><a href="/o-servise/">О сервисе</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Помощь</p>
+        <ul>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Связь</p>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Канал «Цифровая свобода»</a></li>
+          <li class="foot-alt">Не открывается? <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть
+            в приложении</a> или найдите <b class="mono">@vpn_prosto_bot</b></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Документы</p>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2021—<span data-year>2026</span> VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage",
+"name":"\u0412\u041f\u041d \u043d\u0435 \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442: \u0447\u0442\u043e \u043f\u0440\u043e\u0432\u0435\u0440\u0438\u0442\u044c \u043f\u043e \u043f\u043e\u0440\u044f\u0434\u043a\u0443 \u2014 VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/ne-rabotaet/",
+"inLanguage":"ru-RU","dateModified":"2026-09-11",
+"isPartOf":{"@type":"WebSite","name":"VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/"},
+"author":{"@type":"Organization","name":"\u041a\u043e\u043c\u0430\u043d\u0434\u0430 VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/"},
+"publisher":{"@type":"Organization","name":"VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList",
+"itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://prostokey.com/"},
+{"@type":"ListItem","position":2,"name":"\u0412\u041f\u041d \u043d\u0435 \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442","item":"https://prostokey.com/ne-rabotaet/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "ВПН не работает", "item": "https://prostokey.com/ne-rabotaet/"}]}</script>
+<script src="/app.js?v=9c55c88e" defer></script>
+<img src="https://stat.prostokey.com/watch-api/px.gif?p=/ne-rabotaet/"
+     alt="" width="1" height="1" decoding="async"
+     style="position:absolute;left:-9999px;width:1px;height:1px" aria-hidden="true"></body>
+</html>
