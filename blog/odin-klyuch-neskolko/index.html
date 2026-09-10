@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){try{var t=localStorage.getItem("theme");
+if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<title>Один ключ на несколько устройств — VPN Просто</title>
+<meta name="description" content="Как устроен лимит устройств: что считается устройством, как расширить лимит, что при превышении и почему один ключ подходит для всей семьи.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stat.prostokey.com; font-src 'self' data:; connect-src 'self' https://stat.prostokey.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/blog/odin-klyuch-neskolko/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="Один ключ на несколько устройств">
+<meta property="og:description" content="Как устроен лимит устройств: что считается устройством, как расширить лимит, что при превышении и почему один ключ подходит для всей семьи.">
+<meta property="og:url" content="https://prostokey.com/blog/odin-klyuch-neskolko/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="VPN Просто — стабильный VPN, банки работают">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/fonts.css?v=1260ba6b">
+<link rel="preload" href="/fonts/onest-800-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=6e72c0ba">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<div class="aurora aurora--soft" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/" aria-current="page">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system" hidden>
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<article class="section article">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → Один ключ на несколько устройств</p>
+    <h1>Один ключ на несколько устройств</h1>
+    <p class="meta">
+      <span>Обновлено: 9 сентября 2026</span>
+      <span>Команда VPN Просто</span>
+    </p>
+
+    <p class="lead">Лимит считает одновременные подключения, а не количество мест, куда
+вы когда-либо вставляли ключ. Телефон, планшет, компьютер и телевизор
+считаются отдельными устройствами, но выключенный клиент места
+не занимает. В базовую подписку входит два устройства одновременно,
+расширить можно до шести за отдельную плату по каждому сверх включённых.
+</p>
+
+<nav class="toc" aria-label="Содержание">
+  <p class="toc__head">В этой статье</p>
+  <ol>
+    <li><a href="#chto-schitaetsya">Что считается устройством</a></li>
+    <li><a href="#kak-rabotaet-limit">Как именно работает лимит</a></li>
+    <li><a href="#kak-rasshirit">Как расширить лимит</a></li>
+    <li><a href="#pri-prevyshenii">Что происходит при превышении</a></li>
+    <li><a href="#dlya-semi">Один ключ для семьи</a></li>
+    <li><a href="#kak-proverit-skolko">Как проверить активные подключения</a></li>
+    <li><a href="#chto-ne-schitaetsya">Что не считается отдельным устройством</a></li>
+    <li><a href="#pochemu-tak">Почему лимит устроен именно так</a></li>
+    <li><a href="#korotko">Коротко</a></li>
+  </ol>
+</nav>
+
+
+<h2 id="chto-schitaetsya">Что считается устройством</h2>
+
+<p>Любое устройство, на котором запущен клиент с активным сейчас подключением.
+Телефон, планшет, компьютер, телевизор или приставка — каждое считается
+отдельно, независимо от того, какая на нём операционная система
+и какой клиент используется.</p>
+
+<p>Не важно, сколько разных программ установлено на одном и том же
+устройстве — если на телефоне стоят и Happ, и V2RayTun с одним общим
+ключом, но включена в данный момент только одна из них, это одно
+подключение, а не два. Разбор — в статье
+про несколько VPN одновременно.</p>
+
+<h2 id="kak-rabotaet-limit">Как именно работает лимит</h2>
+
+<p>Считаются именно одновременные подключения, а не общее число
+устройств, на которые вы когда-либо ставили клиент.</p>
+
+<p>Разница принципиальная, и её часто понимают неверно по привычке
+к сервисам с другой схемой лимитов. Там ключ нередко «привязывается»
+к устройству навсегда: поставили клиент на старый телефон, отдали его
+родственнику — и одно место занято, пока не напишешь в поддержку с
+просьбой отвязать. У нас такой привязки нет вовсе, и отдельная
+процедура отвязки просто не нужна.</p>
+
+<ul class="facts">
+  <li><strong>Установлено — не значит подключено</strong><span>клиент
+    на телефоне, который лежит выключенным, лимит не занимает</span></li>
+  <li><strong>Считается момент времени, а не история</strong><span>вчера
+    были подключены три устройства, сегодня одно — лимит считает
+    только сегодняшнее состояние</span></li>
+  <li><strong>Отключить — освободить место мгновенно</strong><span>выключили
+    VPN на одном устройстве — тут же можно подключить другое</span></li>
+</ul>
+
+<h2 id="kak-rasshirit">Как расширить лимит</h2>
+
+<p>В базовую подписку входит 2 устройства
+одновременно. Расширение оформляется в боте и включается сразу —
+по 60 ₽ в месяц за каждое устройство сверх
+включённых, максимум до 6.</p>
+
+<p>Ничего не нужно переустанавливать на уже подключённых устройствах:
+расширение меняет только допустимое число одновременных подключений
+целиком, а не сами настройки уже установленных клиентов.</p>
+
+<h2 id="pri-prevyshenii">Что происходит при превышении</h2>
+
+<p>Если лимит уже занят и вы пытаетесь подключить ещё одно устройство,
+новое подключение просто не поднимется, пока не освободится место —
+отключением на одном из уже подключённых устройств или расширением
+лимита прямо в боте за пару нажатий.</p>
+
+<p>Никакой блокировки аккаунта или какого-либо штрафа за попытку
+превышения нет вовсе. Это просто техническое ограничение, которое
+легко и быстро решается одним из двух способов, описанных выше.</p>
+
+<h2 id="dlya-semi">Один ключ для семьи</h2>
+
+<p>Ключ технически не привязан к конкретному человеку — он одинаково
+работает на любом устройстве, куда его аккуратно вставили, включая
+устройства совершенно разных людей сразу. Для семьи это
+означает, что заводить отдельную подписку каждому не нужно: один ключ,
+разделённый между несколькими устройствами в пределах лимита.</p>
+
+<div class="tablewrap">
+  <table>
+    <thead>
+      <tr><th>Состав семьи</th><th>Что выбрать</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Один человек, несколько устройств</td><td>базового лимита обычно достаточно</td></tr>
+      <tr><td>Пара, у каждого телефон и компьютер</td><td>расширение до 4 устройств</td></tr>
+      <tr><td>Семья с детьми, общий телевизор</td><td>расширение до максимума — 6 устройств</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="kak-proverit-skolko">Как проверить, сколько устройств сейчас активно</h2>
+
+<p>В боте, в разделе «Мой VPN», видно текущее использование лимита —
+не нужно вспоминать или гадать, где остался включённым старый клиент.</p>
+
+<ol class="steps">
+  <li><b>Откройте раздел «Мой VPN»</b><span>Там же, где видна дата
+    оплаты и локации подписки.</span></li>
+  <li><b>Посмотрите текущее число подключений</b><span>Показывает,
+    сколько устройств активно прямо сейчас, а не за всё время.</span></li>
+  <li><b>Если число неожиданно большое</b><span>Скорее всего, забыли
+    выключить клиент на каком-то устройстве, которым давно не
+    пользуетесь и о котором давно уже забыли начисто.</span></li>
+</ol>
+
+<p>Полезно проверять это перед подключением нового устройства, если
+лимит расширен не до максимума и есть риск в него упереться неожиданно.</p>
+
+<h2 id="chto-ne-schitaetsya">Что не считается отдельным устройством</h2>
+
+<ul class="facts">
+  <li><strong>Переустановка клиента на том же устройстве</strong><span>это
+    по-прежнему одно и то же устройство, лимит не меняется</span></li>
+  <li><strong>Смена клиента на устройстве</strong><span>Happ на
+    V2RayTun или обратно — устройство остаётся тем же</span></li>
+  <li><strong>Обновление ключа после переезда на новый сервер</strong><span>устройства
+    остаются теми же, меняются только настройки внутри ключа</span></li>
+</ul>
+
+<section class="unique">
+  <h2 id="pochemu-tak">Почему лимит устроен именно так</h2>
+
+  <p>Схема «одновременные подключения вместо общего числа устройств»
+  выбрана не случайно, и стоит объяснить логику, раз статья именно
+  про устройство лимита.</p>
+
+  <p><strong>Альтернатива — привязка к конкретным устройствам —
+  создавала бы больше проблем, чем решала.</strong> При такой схеме
+  смена телефона потребовала бы обращения в поддержку для отвязки
+  старого устройства и привязки нового: разбор похожей проблемы
+  и почему мы её избегаем — в статье
+  про перенос ключа на новый
+  телефон. Считать одновременные подключения вместо истории
+  устройств снимает эту проблему полностью: старое устройство
+  просто перестаёт быть активным, и его не нужно нигде отвязывать.</p>
+
+  <p><strong>Мы не считаем количество устройств поводом для
+  подозрений.</strong> Некоторые сервисы блокируют подписку при частой
+  смене устройств, считая это признаком передачи ключа посторонним.
+  Мы этого не делаем: человек, который меняет телефоны или пользуется
+  разными компьютерами на работе и дома, — обычное поведение, а не
+  нарушение.</p>
+
+  <p><strong>Максимум в шесть устройств — не случайное число.</strong>
+  Мы ориентировались на реалистичный состав семьи с несколькими
+  устройствами на человека, а не на воображаемый сценарий массовой
+  раздачи одного ключа десяткам людей. Для такого сценария есть
+  естественный барьер: одновременная нагрузка от многих людей на один
+  ключ заметна по объёму трафика, и мы вправе на это отреагировать.</p>
+
+  <p>Отдельно про то, почему расширение платное, а не бесплатное сверх
+  какого-то предела. Каждое дополнительное устройство — это реальная
+  дополнительная нагрузка на серверы, которую мы обслуживаем и за
+  которую платим. Цена за расширение отражает эту нагрузку, а не
+  произвольно назначена ради дополнительного заработка сверх базовой
+  подписки.</p>
+
+  <p>Проверить, как устроен лимит на практике, можно бесплатно:
+  3 дня без карты — этого достаточно, чтобы подключить
+  пару устройств и убедиться, что переключение между ними работает
+  так, как описано выше, ещё до принятия решения о покупке подписки.</p>
+
+  <p>Расширение лимита можно оформить и позже, не обязательно сразу
+  при первом подключении. Начать имеет смысл с базового числа
+  устройств, оценить, действительно ли его не хватает, и добавлять
+  сверх только по мере реальной необходимости — а не про запас,
+  на всякий случай.</p>
+</section>
+
+<h2 id="korotko">Коротко</h2>
+
+<ul class="facts">
+  <li><strong>Считаются одновременные подключения</strong><span>а не
+    общее число устройств, куда вставлялся ключ</span></li>
+  <li><strong>Выключенное устройство места не занимает</strong><span>освобождает
+    лимит мгновенно</span></li>
+  <li><strong>Базовый лимит — два, максимум — шесть</strong><span>расширение
+    по 60 ₽ в месяц за устройство</span></li>
+  <li><strong>Подходит для семьи</strong><span>ключ не привязан
+    к конкретному человеку</span></li>
+  <li><strong>Превышение не наказывается</strong><span>просто новое
+    подключение не поднимется, пока не освободится место</span></li>
+</ul>
+
+
+    <h2 id="chastye-voprosy">Частые вопросы</h2>
+    <div class="faq">
+      <div id="vopros-chto-schitaetsya-ustroystvom-dlya-limita-podpiski" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Что считается устройством для лимита подписки?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1">
+          <div><p>Любое устройство с активным подключённым клиентом: телефон, планшет, компьютер, телевизор — каждое отдельно. Считаются одновременные подключения, а не общее число устройств, куда когда-либо вставлялся ключ.</p></div>
+        </div>
+      </div>
+      <div id="vopros-vyklyuchennyy-klient-zanimaet-mesto-v-limite" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>Выключенный клиент занимает место в лимите?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2">
+          <div><p>Нет. Установленная, но не подключённая программа лимит не занимает. Отключили VPN на одном устройстве — тут же можно подключить другое.</p></div>
+        </div>
+      </div>
+      <div id="vopros-skolko-ustroystv-vhodit-v-podpisku-i-kak-rasshirit" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>Сколько устройств входит в подписку и как расширить?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3">
+          <div><p>Базово два устройства одновременно, расширение до шести оформляется в боте и включается сразу — по 60 ₽ в месяц за каждое устройство сверх включённых.</p></div>
+        </div>
+      </div>
+      <div id="vopros-mozhno-li-ispolzovat-odin-klyuch-na-vsyu-semyu" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>Можно ли использовать один ключ на всю семью?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4">
+          <div><p>Да, ключ не привязан к конкретному человеку — он работает на любом устройстве в пределах лимита, включая устройства разных людей.</p></div>
+        </div>
+      </div>
+      <div id="vopros-chto-budet-esli-popytatsya-prevysit-limit" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>Что будет, если попытаться превысить лимит?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5">
+          <div><p>Новое подключение просто не поднимется, пока не освободится место — отключением одного из уже подключённых устройств или расширением лимита. Блокировки или штрафа нет.</p></div>
+        </div>
+      </div>
+      <div id="vopros-blokiruete-li-vy-podpisku-pri-chastoy-smene-ustroystv" class="faq__item" data-open="false">
+        <h3 style="font-size:inherit">
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q6" aria-controls="a6">
+            <span>Блокируете ли вы подписку при частой смене устройств?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6">
+          <div><p>Нет. Смена телефонов или использование разных компьютеров на работе и дома — обычное поведение, а не признак нарушения, и мы не считаем это поводом для подозрений.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p><strong>Проверить на своей сети.</strong> 3 дня
+      бесплатно, карта не нужна: если у вас не заработает — вы ничего
+      не потеряли.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Проверить бесплатно</a>
+    </div>
+
+    <h2 id="chitat-dalshe">Читать дальше</h2>
+    <ul class="facts">
+      <li><a href="/blog/vybor-klienta/">Happ или V2RayTun: какой клиент выбрать</a></li>
+      <li><a href="/blog/vpn-router/">VPN на роутере: интернет для всего дома</a></li>
+      <li><a href="/blog/spisok-serverov/">Как устроен список серверов в подписке</a></li>
+    </ul>
+  </div>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <p class="foot-head">Сервис</p>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/#price">Цена</a></li>
+          <li><a href="/o-servise/">О сервисе</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Помощь</p>
+        <ul>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Связь</p>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></svg>Канал «Цифровая свобода»</a></li>
+          <li class="foot-alt">Не открывается? <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть
+            в приложении</a> или найдите <b class="mono">@vpn_prosto_bot</b></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Документы</p>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2021—<span data-year>2026</span> VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Один ключ на несколько устройств", "description": "Как устроен лимит устройств в подписке: что считается устройством, как расширить лимит и почему один ключ подходит для всей семьи.", "datePublished": "2026-09-09", "dateModified": "2026-09-09", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/odin-klyuch-neskolko/", "name": "Один ключ на несколько устройств"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@type": "Organization", "name": "Команда VPN Просто", "url": "https://prostokey.com/"}, "publisher": {"@type": "Organization", "name": "VPN Просто", "url": "https://prostokey.com/", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Один ключ на несколько устройств", "item": "https://prostokey.com/blog/odin-klyuch-neskolko/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Что считается устройством для лимита подписки?", "acceptedAnswer": {"@type": "Answer", "text": "Любое устройство с активным подключённым клиентом: телефон, планшет, компьютер, телевизор — каждое отдельно. Считаются одновременные подключения, а не общее число устройств, куда когда-либо вставлялся ключ."}}, {"@type": "Question", "name": "Выключенный клиент занимает место в лимите?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Установленная, но не подключённая программа лимит не занимает. Отключили VPN на одном устройстве — тут же можно подключить другое."}}, {"@type": "Question", "name": "Сколько устройств входит в подписку и как расширить?", "acceptedAnswer": {"@type": "Answer", "text": "Базово два устройства одновременно, расширение до шести оформляется в боте и включается сразу — по 60 ₽ в месяц за каждое устройство сверх включённых."}}, {"@type": "Question", "name": "Можно ли использовать один ключ на всю семью?", "acceptedAnswer": {"@type": "Answer", "text": "Да, ключ не привязан к конкретному человеку — он работает на любом устройстве в пределах лимита, включая устройства разных людей."}}, {"@type": "Question", "name": "Что будет, если попытаться превысить лимит?", "acceptedAnswer": {"@type": "Answer", "text": "Новое подключение просто не поднимется, пока не освободится место — отключением одного из уже подключённых устройств или расширением лимита. Блокировки или штрафа нет."}}, {"@type": "Question", "name": "Блокируете ли вы подписку при частой смене устройств?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Смена телефонов или использование разных компьютеров на работе и дома — обычное поведение, а не признак нарушения, и мы не считаем это поводом для подозрений."}}]}</script>
+<script src="/app.js?v=9c55c88e" defer></script>
+<img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/odin-klyuch-neskolko/"
+     alt="" width="1" height="1" decoding="async"
+     style="position:absolute;left:-9999px;width:1px;height:1px" aria-hidden="true"></body>
+</html>

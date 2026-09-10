@@ -39,6 +39,7 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [Один ключ на несколько устройств](https://prostokey.com/blog/odin-klyuch-neskolko/)
 - [Тикток не работает с VPN: почему и что делать](https://prostokey.com/blog/tiktok-ne-rabotaet/)
 - [Твич не работает: где ломается и что делать](https://prostokey.com/blog/twitch-ne-rabotaet/)
 - [VPN на роутере: интернет для всего дома](https://prostokey.com/blog/vpn-router/)
