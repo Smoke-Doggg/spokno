@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opening Telegram…</title>
+<meta http-equiv="refresh" content="0;url=https://t.me/vpn_prosto_bot">
+</head>
+<body style="font:16px/1.5 system-ui,sans-serif;text-align:center;padding:40px">
+<p><a id="go" href="https://t.me/vpn_prosto_bot">Open the bot in Telegram</a></p>
+<script>
+(function () {
+  var ALLOWED = ["digitalfreedom", "aieasy", "svoizagranicey", "saverbot", "vidkeep"];
+  var src = new URLSearchParams(location.search).get("src");
+  if (src && ALLOWED.indexOf(src) !== -1) {
+    try {
+      fetch("https://stat.prostokey.com/watch-api/ref?src=" + encodeURIComponent(src) + "&evt=land",
+            {mode: "no-cors", keepalive: true});
+    } catch (e) {}
+  }
+  location.replace("https://t.me/vpn_prosto_bot");
+})();
+</script>
+</body>
+</html>
