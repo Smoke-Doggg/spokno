@@ -168,6 +168,7 @@ strong { font-weight: 600; color: var(--ink); }
   color: var(--graphite);
   max-width: 54ch;
 }
+h1.lead { font-size: inherit; }
 .small, .cta-note { font-size: 14px; line-height: 1.5; font-weight: 500; color: var(--muted); }
 .mono, code {
   font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -524,6 +525,7 @@ h1{ min-height: 3.15em; }
 }
 .faq { display: grid; max-width: 620px; }
 .faq__item { border-bottom: 1px solid var(--line); }
+.faq__item > h2, .faq__item > h3 { font-size: inherit; margin: 0; }
 .faq__q {
   width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px;
   padding: 18px 20px; margin: 0;
@@ -1349,3 +1351,4 @@ main, .foot { position: relative; z-index: 1; }
   .why-pair { grid-template-columns: 1fr; gap: 10px; }
   .why-pair--head { display: none; }
 }
+.px { position: absolute; left: -9999px; width: 1px; height: 1px; }

@@ -1,0 +1,13 @@
+{
+  "name": "VPN Просто",
+  "short_name": "VPN Просто",
+  "description": "Спокойный интернет без лишней драмы",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0B7A4B",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
