@@ -1078,7 +1078,7 @@ td strong { color: var(--ink); }
 }
 .reviews-cta { justify-content: center; margin-top: 36px; }
 .theme-sw {
-  display: inline-flex; align-items: center; gap: 7px;
+  display: none; align-items: center; gap: 7px;
   height: 40px; padding: 0 13px;
   background: var(--surface-alt);
   border: 1px solid var(--line);
@@ -1087,7 +1087,7 @@ td strong { color: var(--ink); }
   font: inherit; font-size: 13.5px; font-weight: 500;
   white-space: nowrap;
 }
-.theme-sw[hidden] { display: none; }
+.js .theme-sw { display: inline-flex; }
 @media (hover: hover) {
   .theme-sw:hover { color: var(--ink); border-color: var(--line-strong); }
 }

@@ -34,7 +34,7 @@
       type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
       type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=878d4d00">
+<link rel="stylesheet" href="/style.css?v=837cc8ed">
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" focusable="false">
@@ -116,7 +116,7 @@
       <a href="/kak-podklyuchit/">Как подключить</a>
       <a href="/blog/" aria-current="page">Блог</a>
       <a href="/partnerskaya/">Партнёрам</a>
-      <button class="theme-sw" type="button" data-theme-switch data-mode="system" hidden>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system">
         <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
      stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-monitor-cog"/></svg></span>
@@ -161,13 +161,12 @@
   <p class="toc__head">В этой статье</p>
   <ol>
     <li><a href="#kak-ustroeno">Что происходит, когда вы открываете сайт</a></li>
-    <li><a href="#bez-vpn">Что видит провайдер без VPN</a></li>
-    <li><a href="#s-vpn">Что меняется с включённым VPN</a></li>
+    <li><a href="#bez-vpn">Видит ли провайдер, какие сайты вы посещаете?</a></li>
+    <li><a href="#s-vpn">Что провайдер видит, когда VPN включён?</a></li>
     <li><a href="#tablica">Кто что видит: сравнение</a></li>
     <li><a href="#nikto">Чего не видит никто</a></li>
     <li><a href="#chto-hranim">Что хранит наш сервис</a></li>
     <li><a href="#proverit">Как проверить самому</a></li>
-    <li><a href="#korotko">Коротко</a></li>
   </ol>
 </nav>
 
@@ -196,7 +195,7 @@
 надёжно, а вот <em>факт обращения</em> к конкретному сайту виден тому,
 через кого проходит соединение.</p>
 
-<h2 id="bez-vpn">Что видит провайдер без VPN</h2>
+<h2 id="bez-vpn">Видит ли провайдер, какие сайты вы посещаете?</h2>
 
 <ul class="facts">
   <li><strong>Имена сайтов</strong><span>из запросов к службе имён и из
@@ -217,7 +216,7 @@
 передачи данных — она установлена законом и от вашего выбора не зависит.
 Речь именно о фактах соединений, а не о содержимом.</p>
 
-<h2 id="s-vpn">Что меняется с включённым VPN</h2>
+<h2 id="s-vpn">Что провайдер видит, когда VPN включён?</h2>
 
 <p>Соединение уходит в зашифрованный туннель. Для провайдера видимая
 картина меняется так:</p>
@@ -350,22 +349,6 @@ VLESS + Reality и Hysteria2, устроены так, чтобы соедине
     правильной настройке открываются напрямую, минуя туннель. Как это
     устроено — в статье <a href="/blog/vpn-i-banki/">про банки и VPN</a>.</span></li>
 </ol>
-
-<h2 id="korotko">Коротко</h2>
-
-<ul class="facts">
-  <li><strong>Содержимое закрыто всегда</strong><span>шифрованием, а не
-    посредником</span></li>
-  <li><strong>Без VPN провайдер видит имена сайтов</strong><span>время,
-    объём и частоту — тоже</span></li>
-  <li><strong>С VPN он видит один адрес</strong><span>имена сайтов
-    наружу не выходят</span></li>
-  <li><strong>VPN переносит доверие</strong><span>с провайдера на сервис,
-    который вы выбрали сами</span></li>
-  <li><strong>Спрашивайте, что сервис хранит</strong><span>у нас список
-    открыт: 3 дня бесплатно, чтобы проверить всё
-    самостоятельно</span></li>
-</ul>
 
 
     <h2 id="chastye-voprosy">Частые вопросы</h2>
@@ -566,7 +549,7 @@ VLESS + Reality и Hysteria2, устроены так, чтобы соедине
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://prostokey.com/#organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Что видит провайдер, а что — VPN-сервис", "description": "Что провайдер знает о вашем интернете без VPN, что меняется с включённым и что при этом видит сам сервис. Со списком того, что храним мы.", "datePublished": "2026-08-20", "dateModified": "2026-09-12", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/chto-vidit-provayder/", "name": "Что видит провайдер, а что — VPN-сервис"}, "image": ["https://prostokey.com/og/chto-vidit-provayder.png"], "author": {"@id": "https://prostokey.com/#organization"}, "publisher": {"@id": "https://prostokey.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Что видит провайдер, а что — VPN-сервис", "item": "https://prostokey.com/blog/chto-vidit-provayder/"}]}]</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Провайдер видит, что я пользуюсь VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Он видит зашифрованное соединение с одним адресом. Современные протоколы вроде VLESS + Reality выглядят как обращение к обычному защищённому сайту, поэтому отличить их от рядового трафика сложно — но сам факт постоянного обмена данными с одним сервером скрыть нельзя."}}, {"@type": "Question", "name": "Может ли провайдер прочитать мою переписку?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Содержимое защищённых соединений шифруется на вашем устройстве и расшифровывается у получателя — это работает и без VPN. Провайдер видит, к какому сервису вы обратились, но не то, что вы там написали."}}, {"@type": "Question", "name": "Значит, VPN-сервису я доверяю больше, чем провайдеру?", "acceptedAnswer": {"@type": "Answer", "text": "По сути да, и в этом смысл выбора. Провайдера вы обычно не выбирали, а сервис выбираете сами и можете сменить. Поэтому важно, чтобы он прямо называл, что хранит."}}, {"@type": "Question", "name": "Вы храните историю моих посещений?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Мы храним идентификатор в мессенджере, факт и дату оплаты, реферальные связи, число подключённых устройств и объём трафика по подписке. Адреса посещаемых сайтов и содержимое трафика в этот список не входят."}}, {"@type": "Question", "name": "Зачем тогда вы считаете трафик?", "acceptedAnswer": {"@type": "Answer", "text": "Чтобы соблюдать условия подписки и замечать злоупотребления — например, когда один ключ раздали сотне посторонних. Объём и число устройств не говорят о том, что вы открывали."}}, {"@type": "Question", "name": "Скрывает ли VPN мой адрес полностью?", "acceptedAnswer": {"@type": "Answer", "text": "От сайтов — да, они видят адрес сервера. От провайдера и от сервиса — нет: подключение идёт с вашего домашнего адреса, иначе оно невозможно."}}, {"@type": "Question", "name": "Нужно ли что-то настраивать, чтобы запросы к службе имён не утекали?", "acceptedAnswer": {"@type": "Answer", "text": "В нашей подписке это уже настроено: запросы уходят внутри туннеля. Проверить можно на любом сервисе определения адреса — там обычно показано, через чью службу имён идёт запрос."}}]}</script>
-<script src="/app.js?v=9c55c88e" defer></script>
+<script src="/app.js?v=3784be34" defer></script>
 <img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/chto-vidit-provayder/"
      alt="" width="1" height="1" decoding="async"
      class="px" aria-hidden="true"></body>

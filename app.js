@@ -61,7 +61,6 @@
   if (sw) {
     var NEXT = { system: 'light', light: 'dark', dark: 'system' };
     var LABELS = { system: 'Как в системе', light: 'Светлая', dark: 'Тёмная' };
-    sw.hidden = false;
     var metaL = document.querySelector('meta[name="theme-color"][media*="light"]');
     var metaD = document.querySelector('meta[name="theme-color"][media*="dark"]');
     var apply = function (mode, save) {

@@ -34,7 +34,7 @@
       type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
       type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=878d4d00">
+<link rel="stylesheet" href="/style.css?v=837cc8ed">
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" focusable="false">
@@ -116,7 +116,7 @@
       <a href="/kak-podklyuchit/">Как подключить</a>
       <a href="/blog/" aria-current="page">Блог</a>
       <a href="/partnerskaya/">Партнёрам</a>
-      <button class="theme-sw" type="button" data-theme-switch data-mode="system" hidden>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system">
         <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
      stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-monitor-cog"/></svg></span>
@@ -162,8 +162,8 @@
   <ol>
     <li><a href="#pochemu-slozhno">Почему это стало проблемой</a></li>
     <li><a href="#sposoby">Три рабочих способа</a></li>
-    <li><a href="#ne-prohodit">Почему платёж не проходит</a></li>
-    <li><a href="#kak-u-nas">Как это устроено у нас</a></li>
+    <li><a href="#ne-prohodit">Деньги есть, а платёж не проходит: три причины</a></li>
+    <li><a href="#kak-u-nas">Как платёж устроен у нас: в рублях, без крипты и посредников</a></li>
     <li><a href="#kripta">Если всё-таки криптовалюта</a></li>
     <li><a href="#na-chto-smotret">На что обратить внимание</a></li>
   </ol>
@@ -222,13 +222,19 @@ VPN-сервисов в какой-то момент теряла возможн
 без ввода реквизитов карты — подробно объясняет оператор системы
 в открытом <a href="https://sbp.nspk.ru/faq/" rel="noopener">FAQ Национальной системы платёжных карт</a>.</p>
 
-<p>Встречается и четвёртый вариант — оплата через посредников, которые
-покупают подписку за вас за комиссию. Способ рабочий, но добавляет
-третью сторону, которой приходится доверять деньги и данные учётной
-записи. Прибегать к нему стоит, только когда других вариантов
-не осталось.</p>
+<div class="callout">
+  <p><strong>Осторожно с посредниками, которые «оплатят подписку за вас».</strong>
+  Четвёртый вариант — сервисы, покупающие подписку от своего имени за
+  комиссию. Схема рабочая, но добавляет третью сторону: вы передаёте ей
+  деньги и данные учётной записи, а не выбираете сервис, которому доверяете
+  напрямую. Комиссия у посредника обычно выше, чем потери на курсе при
+  прямой оплате криптовалютой, а если платёж потеряется — разбирательство
+  идёт не с VPN-сервисом, а с посредником, у которого нет обязательств
+  перед вами по закону. Прибегать к этому способу стоит, только когда
+  три способа выше не сработали.</p>
+</div>
 
-<h2 id="ne-prohodit">Почему платёж не проходит</h2>
+<h2 id="ne-prohodit">Деньги есть, а платёж не проходит: три причины</h2>
 
 <p>Частая и неочевидная ситуация: способ оплаты правильный, деньги на
 счету есть, а операция отклоняется.</p>
@@ -249,7 +255,7 @@ VPN на время платежа, либо пользоваться серви
 Здесь остаётся только написать в поддержку и подождать.</p>
 
 <section class="unique">
-  <h2 id="kak-u-nas">Как это устроено у нас</h2>
+  <h2 id="kak-u-nas">Как платёж устроен у нас: в рублях, без крипты и посредников</h2>
 
   <p>Мы принимаем оплату через СБП и банковские карты —
   то есть самым привычным способом, без криптокошельков, обменников и
@@ -537,7 +543,7 @@ VPN на время платежа, либо пользоваться серви
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://prostokey.com/#organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Как оплатить VPN из России в 2026 году", "description": "Зарубежные сервисы не принимают российские карты, а местные платёжные системы отказываются работать с этой тематикой. Разбираем рабочие способы и их подводные камни.", "datePublished": "2026-08-14", "dateModified": "2026-09-12", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/kak-oplatit-vpn/", "name": "Как оплатить VPN из России в 2026 году"}, "image": ["https://prostokey.com/og/kak-oplatit-vpn.png"], "author": {"@id": "https://prostokey.com/#organization"}, "publisher": {"@id": "https://prostokey.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Как оплатить VPN из России в 2026 году", "item": "https://prostokey.com/blog/kak-oplatit-vpn/"}]}]</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему нельзя заплатить российской картой за зарубежный VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Международные платежи с карт российских банков не проходят с 2022 года. Крупные зарубежные сервисы принимают оплату только зарубежными картами или криптовалютой."}}, {"@type": "Question", "name": "Можно ли оплатить VPN через СБП?", "acceptedAnswer": {"@type": "Answer", "text": "Да, если сервис работает внутри страны и у него подключён приём платежей. Это самый удобный способ: перевод проходит мгновенно, ничего дополнительно оформлять не нужно."}}, {"@type": "Question", "name": "Безопасно ли платить криптовалютой?", "acceptedAnswer": {"@type": "Answer", "text": "Технически да, но для обычного человека это лишние шаги: нужен кошелёк, обмен рублей и понимание комиссий. Ошибка при переводе необратима — деньги вернуть не получится."}}, {"@type": "Question", "name": "Почему платёж не проходит при включённом VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Платёжный шлюз видит зарубежный адрес и повышает оценку риска. Помогает настройка, при которой платёжные системы идут напрямую, мимо туннеля."}}, {"@type": "Question", "name": "Стоит ли платить сразу за год ради скидки?", "acceptedAnswer": {"@type": "Answer", "text": "В нынешних условиях — рискованно. Сервисы закрываются и перестают работать после волн блокировок, а вернуть деньги за неиспользованные месяцы обычно невозможно."}}, {"@type": "Question", "name": "Что делать, если оплата не проходит?", "acceptedAnswer": {"@type": "Answer", "text": "Попробуйте другой способ — например, СБП вместо карты, — и обязательно напишите в поддержку сервиса: часто проблема решается за минуту на их стороне."}}]}</script>
-<script src="/app.js?v=9c55c88e" defer></script>
+<script src="/app.js?v=3784be34" defer></script>
 <img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/kak-oplatit-vpn/"
      alt="" width="1" height="1" decoding="async"
      class="px" aria-hidden="true"></body>

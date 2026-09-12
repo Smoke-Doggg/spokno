@@ -34,7 +34,7 @@
       type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
       type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=878d4d00">
+<link rel="stylesheet" href="/style.css?v=837cc8ed">
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" focusable="false">
@@ -116,7 +116,7 @@
       <a href="/kak-podklyuchit/">Как подключить</a>
       <a href="/blog/">Блог</a>
       <a href="/partnerskaya/">Партнёрам</a>
-      <button class="theme-sw" type="button" data-theme-switch data-mode="system" hidden>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system">
         <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2" stroke-linecap="round"
      stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-monitor-cog"/></svg></span>
@@ -246,11 +246,12 @@
     <h2 id="skolko-eto-stoit">Сколько это стоит</h2>
 
     <p>Тариф один: 349 ₽ в месяц, в него входит всё — оба
-    протокола, все страны, 2 устройства
-    одновременно. Есть периоды на 3, 6 и 12 месяцев, там месяц
-    выходит дешевле. Никаких «премиум-серверов» за доплату
-    и никакого автопродления: подписка не списывает деньги сама,
-    продление — всегда ваше действие.</p>
+    протокола (<a href="/vless-reality/">VLESS и Reality</a>, клиент
+    сам выбирает, что лучше держится на вашей сети), все страны,
+    2 устройства одновременно. Есть периоды на
+    3, 6 и 12 месяцев, там месяц выходит дешевле. Никаких
+    «премиум-серверов» за доплату и никакого автопродления: подписка
+    не списывает деньги сама, продление — всегда ваше действие.</p>
 
     <p>Первые 3 дня — бесплатно и без карты. Это
     полноценный доступ, а не урезанная версия: те же серверы, те же
@@ -498,7 +499,7 @@
 "publisher":{"@id":"https://prostokey.com/#organization"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Что такое VPN-бот в Telegram?", "acceptedAnswer": {"@type": "Answer", "text": "Обычный чат-бот, который выдаёт ключ для подключения. Вы нажимаете «старт» — бот присылает ключ и первые 3 дня бесплатного доступа. Сам бот ничего не подключает: ключ вставляется в бесплатную программу-клиент, и уже она поднимает защищённое соединение."}}, {"@type": "Question", "name": "VPN через Telegram-бота — это бесплатно?", "acceptedAnswer": {"@type": "Answer", "text": "Первые 3 дня — да, полностью и без привязки карты. Дальше подписка 349 ₽ в месяц. Бесплатных VPN-ботов в Telegram много, но у бесплатного сервиса всегда есть скрытая цена: реклама, продажа данных о посещениях или чужой трафик через ваше устройство."}}, {"@type": "Question", "name": "Нужно ли скачивать приложение?", "acceptedAnswer": {"@type": "Answer", "text": "Своего приложения у сервиса нет — и это сознательно: приложения VPN-сервисов удаляют из магазинов, а ключ работает в любом подходящем клиенте. Бесплатный клиент поставить придётся — бот подскажет, какой под ваше устройство."}}, {"@type": "Question", "name": "Это безопасно — покупать VPN в Telegram-боте?", "acceptedAnswer": {"@type": "Answer", "text": "Смотрите не на формат, а на сервис. Бот видит только то, что видит любой бот в Telegram: имя профиля и идентификатор — номер телефона ему не передаётся. Пробный период вовсе не требует платёжных данных. Опасаться стоит ботов-однодневок без сайта, без условий и без истории."}}, {"@type": "Question", "name": "Как получить ключ, если Telegram сам не открывается?", "acceptedAnswer": {"@type": "Answer", "text": "Частая ситуация: VPN нужен в том числе для Telegram. Выход — прокси внутри самого мессенджера: он настраивается без дополнительных программ и возвращает доступ к чатам, после чего можно получить ключ у бота и поднять полноценное соединение."}}, {"@type": "Question", "name": "На скольких устройствах будет работать ключ?", "acceptedAnswer": {"@type": "Answer", "text": "В подписку входит 2 устройства одновременно, всего к ключу можно подключить до 6. Один и тот же ключ вставляется в клиент на телефоне, компьютере и телевизоре — отдельный для каждого устройства не нужен."}}, {"@type": "Question", "name": "Чем VPN-бот отличается от прокси для Telegram?", "acceptedAnswer": {"@type": "Answer", "text": "Прокси настраивается внутри мессенджера и чинит только его: остальные приложения и сайты идут как раньше. Ключ от бота поднимает соединение для всего устройства. Прокси — быстрая помощь, когда не открывается именно Telegram; VPN — постоянное решение."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "VPN через Телеграм-бота", "item": "https://prostokey.com/telegram-bot/"}]}</script>
-<script src="/app.js?v=9c55c88e" defer></script>
+<script src="/app.js?v=3784be34" defer></script>
 <img src="https://stat.prostokey.com/watch-api/px.gif?p=/telegram-bot/"
      alt="" width="1" height="1" decoding="async"
      class="px" aria-hidden="true"></body>
