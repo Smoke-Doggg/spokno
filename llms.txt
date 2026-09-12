@@ -55,7 +55,7 @@
 - [Дискорд не работает: почему молчит голос и что делать](https://prostokey.com/blog/discord-ne-rabotaet/)
 - [Hiddify: как подключить и стоит ли выбирать](https://prostokey.com/blog/hiddify/)
 - [Happ на андроид: как установить](https://prostokey.com/blog/happ-android/)
-- [VPN-ключ на 3 дня: что входит и как получить](https://prostokey.com/blog/klyuch-na-3-dnya/)
+- [VPN на 3 дня бесплатно: что входит и как получить ключ](https://prostokey.com/blog/klyuch-na-3-dnya/)
 - [Happ на айфон: как установить](https://prostokey.com/blog/happ-iphone/)
 - [Что видит провайдер, а что — VPN-сервис](https://prostokey.com/blog/chto-vidit-provayder/)
 - [Happ или V2RayTun: какой клиент выбрать](https://prostokey.com/blog/vybor-klienta/)
