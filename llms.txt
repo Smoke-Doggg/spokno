@@ -43,6 +43,7 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [ВПН для телеграмма: не грузятся фото и голосовые](https://prostokey.com/blog/telegram-media/)
 - [ВПН для ютуба: почему тормозит и что помогает](https://prostokey.com/blog/youtube-tormozit/)
 - [Ватсап не работает с VPN: почему и что делать](https://prostokey.com/blog/whatsapp-ne-rabotaet/)
 - [Один ключ на несколько устройств](https://prostokey.com/blog/odin-klyuch-neskolko/)
