@@ -44,8 +44,8 @@
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
 - [ВПН для ютуба бесплатно: что скачать и почему тормозит](https://prostokey.com/blog/vpn-dlya-yutuba/)
-- [ВПН для телеграмма: не грузятся фото и голосовые](https://prostokey.com/blog/telegram-media/)
-- [ВПН для ютуба: почему тормозит и что помогает](https://prostokey.com/blog/youtube-tormozit/)
+- [ВПН для телеграмма: не грузятся фото](https://prostokey.com/blog/telegram-media/)
+- [ВПН для ютуба: почему тормозит](https://prostokey.com/blog/youtube-tormozit/)
 - [Ватсап не работает с VPN: почему и что делать](https://prostokey.com/blog/whatsapp-ne-rabotaet/)
 - [Один ключ на несколько устройств](https://prostokey.com/blog/odin-klyuch-neskolko/)
 - [Тикток не работает с VPN: почему и что делать](https://prostokey.com/blog/tiktok-ne-rabotaet/)
@@ -61,7 +61,7 @@
 - [Happ на айфон: как установить](https://prostokey.com/blog/happ-iphone/)
 - [Что видит провайдер, а что — VPN-сервис](https://prostokey.com/blog/chto-vidit-provayder/)
 - [Happ или V2RayTun: какой клиент выбрать](https://prostokey.com/blog/vybor-klienta/)
-- [Бесплатный рабочий VPN: как выбрать в России](https://prostokey.com/blog/kakoy-vpn-rabotaet/)
+- [Бесплатный рабочий VPN: выбор в России](https://prostokey.com/blog/kakoy-vpn-rabotaet/)
 - [Сбербанк не работает с VPN: что делать](https://prostokey.com/blog/vpn-i-banki/)
 - [Прокси для Телеграмм: безопасно ли это](https://prostokey.com/blog/proxy-dlya-telegram/)
 - [Белые списки интернета: что работает и что делать](https://prostokey.com/blog/belye-spiski/)
