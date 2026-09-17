@@ -626,6 +626,10 @@ td strong { color: var(--ink); }
 .article ul, .article ol { padding-left: 22px; margin: 16px 0; }
 .article li { margin: 8px 0; }
 .article .lead { font-size: 19px; color: var(--ink); font-weight: 500; max-width: none; }
+.content-img { margin: 28px 0; }
+.content-img img { width: 100%; height: auto; display: block;
+  border-radius: var(--r-card); border: 1px solid var(--line); }
+.content-img figcaption { margin-top: 10px; font-size: 13px; color: var(--muted); text-align: center; }
 .meta {
   display: flex; flex-wrap: wrap; gap: 8px 20px;
   font-size: 14px; font-weight: 500; color: var(--muted); margin: 12px 0 28px;

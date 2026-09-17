@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" role="img" aria-labelledby="title desc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+<title id="title">Схема: как VLESS + Reality маскирует VPN-соединение</title>
+<desc id="desc">Провайдер видит обычное HTTPS-соединение с настоящим сайтом. На самом деле поверх того же TLS-рукопожатия идёт зашифрованный VPN-тоннель к серверу и дальше в интернет.</desc>
+
+<rect width="920" height="440" fill="#F5F6F8" rx="0"/>
+
+<!-- заголовок -->
+<text x="40" y="42" font-size="20" font-weight="700" fill="#0B0D10">Что провайдер видит — и что происходит на самом деле</text>
+
+<!-- ряд 1: что видит провайдер -->
+<g>
+  <rect x="40" y="72" width="840" height="130" rx="16" fill="#FFFFFF" stroke="#E6E8EB" stroke-width="1.5"/>
+  <text x="64" y="102" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#656F7B">ПРОВАЙДЕР ВИДИТ</text>
+
+  <!-- устройство -->
+  <g transform="translate(64,120)">
+    <rect width="70" height="70" rx="12" fill="#F5F6F8" stroke="#CFCEC5"/>
+    <rect x="18" y="14" width="34" height="48" rx="4" fill="none" stroke="#3A4149" stroke-width="2.5"/>
+    <line x1="28" y1="54" x2="42" y2="54" stroke="#3A4149" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="35" y="90" font-size="12" fill="#3A4149" text-anchor="middle">Устройство</text>
+  </g>
+
+  <!-- стрелка с подписью TLS -->
+  <line x1="150" y1="150" x2="360" y2="150" stroke="#3A4149" stroke-width="2"/>
+  <polygon points="360,150 350,145 350,155" fill="#3A4149"/>
+  <text x="255" y="138" font-size="12.5" fill="#3A4149" text-anchor="middle">обычное TLS-рукопожатие</text>
+
+  <!-- "настоящий сайт" -->
+  <g transform="translate(380,120)">
+    <rect width="140" height="70" rx="12" fill="#F5F6F8" stroke="#CFCEC5"/>
+    <circle cx="70" cy="28" r="12" fill="none" stroke="#3A4149" stroke-width="1.8"/>
+    <line x1="58" y1="28" x2="82" y2="28" stroke="#3A4149" stroke-width="1.3"/>
+    <path d="M70 16 a12 12 0 0 1 0 24 a12 12 0 0 1 0 -24" fill="none" stroke="#3A4149" stroke-width="1.3"/>
+    <text x="70" y="56" font-size="12" fill="#3A4149" text-anchor="middle">настоящий сайт</text>
+  </g>
+
+  <!-- вывод -->
+  <line x1="150" y1="150" x2="150" y2="150"/>
+  <g transform="translate(560,120)">
+    <rect width="300" height="70" rx="12" fill="#E6F9F1" stroke="#16C784"/>
+    <text x="20" y="30" font-size="13" font-weight="600" fill="#097A4A">Вывод провайдера:</text>
+    <text x="20" y="52" font-size="13" fill="#097A4A">«обычный HTTPS, ничего необычного»</text>
+  </g>
+  <line x1="520" y1="150" x2="555" y2="150" stroke="#16C784" stroke-width="2"/>
+  <polygon points="555,150 545,145 545,155" fill="#16C784"/>
+</g>
+
+<!-- ряд 2: что происходит на самом деле -->
+<g>
+  <rect x="40" y="222" width="840" height="150" rx="16" fill="#FFFFFF" stroke="#16C784" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="64" y="252" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#097A4A">ПРОИСХОДИТ НА САМОМ ДЕЛЕ</text>
+
+  <g transform="translate(64,270)">
+    <rect width="70" height="70" rx="12" fill="#F5F6F8" stroke="#CFCEC5"/>
+    <rect x="18" y="14" width="34" height="48" rx="4" fill="none" stroke="#3A4149" stroke-width="2.5"/>
+    <line x1="28" y1="54" x2="42" y2="54" stroke="#3A4149" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="35" y="90" font-size="12" fill="#3A4149" text-anchor="middle">Устройство</text>
+  </g>
+
+  <line x1="150" y1="300" x2="330" y2="300" stroke="#16C784" stroke-width="2.5"/>
+  <polygon points="330,300 320,295 320,305" fill="#16C784"/>
+  <text x="240" y="288" font-size="12.5" fill="#097A4A" text-anchor="middle">тот же TLS снаружи,</text>
+  <text x="240" y="322" font-size="12.5" fill="#097A4A" text-anchor="middle">VLESS+Reality внутри</text>
+
+  <g transform="translate(350,268)">
+    <rect width="150" height="74" rx="12" fill="#E6F9F1" stroke="#16C784" stroke-width="1.5"/>
+    <rect x="16" y="16" width="20" height="42" rx="3" fill="none" stroke="#097A4A" stroke-width="1.8"/>
+    <line x1="20" y1="26" x2="32" y2="26" stroke="#097A4A" stroke-width="1.6"/>
+    <line x1="20" y1="48" x2="32" y2="48" stroke="#097A4A" stroke-width="1.6"/>
+    <text x="93" y="32" font-size="12.5" fill="#097A4A" text-anchor="middle" font-weight="600">Сервер VPN</text>
+    <text x="93" y="48" font-size="11" fill="#097A4A" text-anchor="middle">(VLESS + Reality)</text>
+  </g>
+
+  <line x1="500" y1="300" x2="680" y2="300" stroke="#16C784" stroke-width="2.5"/>
+  <polygon points="680,300 670,295 670,305" fill="#16C784"/>
+
+  <g transform="translate(700,268)">
+    <rect width="160" height="74" rx="12" fill="#F5F6F8" stroke="#CFCEC5"/>
+    <circle cx="80" cy="24" r="12" fill="none" stroke="#3A4149" stroke-width="1.6"/>
+    <line x1="68" y1="24" x2="92" y2="24" stroke="#3A4149" stroke-width="1.2"/>
+    <path d="M80 12 a12 12 0 0 1 0 24 a12 12 0 0 1 0 -24" fill="none" stroke="#3A4149" stroke-width="1.2"/>
+    <text x="80" y="52" font-size="12" fill="#3A4149" text-anchor="middle">Интернет</text>
+    <text x="80" y="66" font-size="11" fill="#3A4149" text-anchor="middle">без блокировок</text>
+  </g>
+</g>
+
+<text x="40" y="400" font-size="12" fill="#656F7B">Провайдер судит по виду TLS-рукопожатия, а не по конечному адресу —</text>
+<text x="40" y="418" font-size="12" fill="#656F7B">Reality делает рукопожатие неотличимым от настоящего сайта.</text>
+</svg>

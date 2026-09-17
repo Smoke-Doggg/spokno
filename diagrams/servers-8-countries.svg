@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 300" role="img" aria-labelledby="title desc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+<title id="title">Схема: 8 стран подключения VPN Просто</title>
+<desc id="desc">Одна учётная запись даёт выбор из восьми серверов: Польша, Швеция, Франция, Италия, Индия, Гонконг, США, Россия.</desc>
+
+<rect width="920" height="300" fill="#F5F6F8"/>
+
+<text x="40" y="40" font-size="20" font-weight="700" fill="#0B0D10">Один ключ — восемь стран на выбор</text>
+
+<!-- узел устройства -->
+<g transform="translate(430,64)">
+  <rect width="60" height="44" rx="10" fill="#0B0D10"/>
+  <text x="30" y="27" font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="600">ключ</text>
+</g>
+
+<!-- линии от устройства к 8 карточкам двумя рядами -->
+<g stroke="#CFCEC5" stroke-width="1.5" fill="none">
+<line x1="460" y1="108" x2="105" y2="150"/>
+<line x1="460" y1="108" x2="207" y2="150"/>
+<line x1="460" y1="108" x2="309" y2="150"/>
+<line x1="460" y1="108" x2="411" y2="150"/>
+<line x1="460" y1="108" x2="513" y2="150"/>
+<line x1="460" y1="108" x2="615" y2="150"/>
+<line x1="460" y1="108" x2="717" y2="150"/>
+<line x1="460" y1="108" x2="819" y2="150"/>
+</g>
+
+<!-- symbols флагов, взяты из общего спрайта сайта (partials/sprite.html) -->
+<defs>
+<symbol id="flag-pl" viewBox="0 0 16 12"><rect width="16" height="6" fill="#fff"/><rect y="6" width="16" height="6" fill="#DC143C"/></symbol>
+<symbol id="flag-se" viewBox="0 0 16 12"><rect width="16" height="12" fill="#006AA7"/><rect x="4" width="2.5" height="12" fill="#FECC00"/><rect y="4.75" width="16" height="2.5" fill="#FECC00"/></symbol>
+<symbol id="flag-fr" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#0055A4"/><rect x="5.33" width="5.34" height="12" fill="#fff"/><rect x="10.67" width="5.33" height="12" fill="#EF4135"/></symbol>
+<symbol id="flag-it" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#009246"/><rect x="5.33" width="5.34" height="12" fill="#fff"/><rect x="10.67" width="5.33" height="12" fill="#CE2B37"/></symbol>
+<symbol id="flag-in" viewBox="0 0 16 12"><rect width="16" height="4" fill="#FF9933"/><rect y="4" width="16" height="4" fill="#fff"/><rect y="8" width="16" height="4" fill="#138808"/><circle cx="8" cy="6" r="1.5" fill="none" stroke="#000080" stroke-width=".7"/></symbol>
+<symbol id="flag-hk" viewBox="0 0 16 12"><rect width="16" height="12" fill="#DE2910"/><circle cx="8" cy="6" r="3.4" fill="#fff"/></symbol>
+<symbol id="flag-us" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/><rect y="0" width="16" height="1" fill="#B22234"/><rect y="2" width="16" height="1" fill="#B22234"/><rect y="4" width="16" height="1" fill="#B22234"/><rect y="6" width="16" height="1" fill="#B22234"/><rect y="8" width="16" height="1" fill="#B22234"/><rect y="10" width="16" height="1" fill="#B22234"/><rect width="7" height="7" fill="#3C3B6E"/></symbol>
+<symbol id="flag-ru" viewBox="0 0 16 12"><rect width="16" height="4" fill="#fff"/><rect y="4" width="16" height="4" fill="#0039A6"/><rect y="8" width="16" height="4" fill="#D52B1E"/></symbol>
+</defs>
+
+<!-- 8 карточек -->
+<g font-size="13" fill="#3A4149" text-anchor="middle">
+<g transform="translate(65,150)">
+  <rect width="80" height="80" rx="12" fill="#FFFFFF" stroke="#E6E8EB"/>
+  <use href="#flag-pl" x="20" y="18" width="40" height="30"/>
+  <text x="40" y="66">Польша</text>
+</g>
+<g transform="translate(167,150)">
+  <rect width="80" height="80" rx="12" fill="#FFFFFF" stroke="#E6E8EB"/>
+  <use href="#flag-se" x="20" y="18" width="40" height="30"/>
+  <text x="40" y="66">Швеция</text>
+</g>
+<g transform="translate(269,150)">
+  <rect width="80" height="80" rx="12" fill="#FFFFFF" stroke="#E6E8EB"/>
+  <use href="#flag-fr" x="20" y="18" width="40" height="30"/>
+  <text x="40" y="66">Франция</text>
+</g>
+<g transform="translate(371,150)">
+  <rect width="80" height="80" rx="12" fill="#FFFFFF" stroke="#E6E8EB"/>
+  <use href="#flag-it" x="20" y="18" width="40" height="30"/>
+  <text x="40" y="66">Италия</text>
+</g>
+<g transform="translate(473,150)">
+  <rect width="80" height="80" rx="12" fill="#FFFFFF" stroke="#E6E8EB"/>
+  <use href="#flag-in" x="20" y="18" width="40" height="30"/>
+  <text x="40" y="66">Индия</text>
+</g>
+<g transform="translate(575,150)">
+  <rect width="80" height="80" rx="12" fill="#FFFFFF" stroke="#E6E8EB"/>
+  <use href="#flag-hk" x="20" y="18" width="40" height="30"/>
+  <text x="40" y="66">Гонконг</text>
+</g>
+<g transform="translate(677,150)">
+  <rect width="80" height="80" rx="12" fill="#FFFFFF" stroke="#E6E8EB"/>
+  <use href="#flag-us" x="20" y="18" width="40" height="30"/>
+  <text x="40" y="66">США</text>
+</g>
+<g transform="translate(779,150)">
+  <rect width="80" height="80" rx="12" fill="#FFFFFF" stroke="#E6E8EB"/>
+  <use href="#flag-ru" x="20" y="18" width="40" height="30"/>
+  <text x="40" y="66">Россия</text>
+</g>
+</g>
+
+<text x="40" y="270" font-size="12" fill="#656F7B">Переключение между странами — в приложении, без нового ключа и без доплаты.</text>
+</svg>
