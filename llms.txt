@@ -43,6 +43,7 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [Запрещён ли ВПН в России: что можно, а что нет](https://prostokey.com/blog/zakonno-li/)
 - [Безопасный ВПН: чем платят за бесплатный](https://prostokey.com/blog/besplatnyy-vpn/)
 - [ВПН не работает на мобильном интернете: что перебрать](https://prostokey.com/blog/vpn-mobilnyy-internet/)
 - [ВПН приложение на айфон: чем заменить Happ](https://prostokey.com/blog/analog-happ-iphone/)
