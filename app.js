@@ -23,6 +23,13 @@
       }
     });
   }
+  var setFaqOpen = function (item, open) {
+    item.setAttribute('data-open', String(open));
+    var q = item.querySelector('.faq__q');
+    var a = item.querySelector('.faq__a');
+    if (q) q.setAttribute('aria-expanded', String(open));
+    if (a) a.setAttribute('aria-hidden', String(!open));
+  };
   document.querySelectorAll('.faq__q').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var item = btn.closest('.faq__item');
@@ -31,12 +38,10 @@
       var group = item.closest('.faq');
       if (group) {
         group.querySelectorAll('.faq__item[data-open="true"]').forEach(function (other) {
-          other.setAttribute('data-open', 'false');
-          other.querySelector('.faq__q').setAttribute('aria-expanded', 'false');
+          setFaqOpen(other, false);
         });
       }
-      item.setAttribute('data-open', String(!open));
-      btn.setAttribute('aria-expanded', String(!open));
+      setFaqOpen(item, !open);
     });
   });
   var openByHash = function () {
@@ -47,12 +52,10 @@
     var group = item.closest('.faq');
     if (group) {
       group.querySelectorAll('.faq__item[data-open="true"]').forEach(function (o) {
-        o.setAttribute('data-open', 'false');
-        o.querySelector('.faq__q').setAttribute('aria-expanded', 'false');
+        setFaqOpen(o, false);
       });
     }
-    item.setAttribute('data-open', 'true');
-    item.querySelector('.faq__q').setAttribute('aria-expanded', 'true');
+    setFaqOpen(item, true);
     item.scrollIntoView({ block: 'start' });
   };
   openByHash();
@@ -369,7 +372,8 @@
         body: JSON.stringify({
           nick: rform.nick.value,
           text: rform.text.value,
-          website: rform.website.value
+          website: rform.website.value,
+          consent: rform.consent.checked ? '1' : ''
         })
       }).then(function (r) { return r.json(); }).then(function (d) {
         if (d.ok) {
@@ -509,7 +513,7 @@
     });
   }
   var REF_MAX_AGE_MS = 2 * 60 * 60 * 1000; // 2 часа — дольше сессии в браузере не считаем
-  var BOT_HREF_RE = /^https:\/\/t\.me\/vpn_prosto_bot\b/;
+  var BOT_HREF_RE = /^(https:\/\/t\.me\/vpn_prosto_bot\b|tg:\/\/resolve\?domain=vpn_prosto_bot\b)/;
   document.addEventListener('click', function (e) {
     var link = e.target.closest && e.target.closest('a[href]');
     if (!link || !BOT_HREF_RE.test(link.href)) return;
@@ -573,6 +577,7 @@
     if (/(^|\.)mail\./.test(host)) return 'mail';
     if (/rambler/.test(host)) return 'rambler';
     if (/(^|\.)(t|telegram)\./.test(host)) return 'telegram';
+    if (/(^|\.)(chatgpt\.com|perplexity\.ai|copilot\.microsoft\.com|claude\.ai|grok\.com|x\.ai|deepseek\.com)$/.test(host)) return 'ИИ';
     return 'иное';
   };
   var device = function () {
@@ -624,7 +629,7 @@
       a.closest('.toc') ? 'toc' :
       a.classList.contains('faq__q') ? 'faq' :
       a.closest('.foot') ? 'foot' : null;
-    if (kind) send({ e: 'click', k: kind });
+    if (kind) send({ e: 'click', k: kind, p: page });
   }, true);
   window.addEventListener('error', function (ev) {
     send({ e: 'error', m: String((ev && ev.message) || 'unknown').slice(0, 80) });

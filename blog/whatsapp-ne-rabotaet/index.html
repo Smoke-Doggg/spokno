@@ -34,7 +34,7 @@
       type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
       type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=76707cf1">
+<link rel="stylesheet" href="/style.css?v=70acbc77">
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" focusable="false">
@@ -155,12 +155,12 @@
       <span>Команда VPN Просто</span>
     </p>
 
-    <p class="lead">Если ватсап не работает с впн, дело почти всегда в одной из двух вещей,
-и обе — про то, каким именно каналом идёт трафик. Мессенджер ограничивают
-не так, как обычный сайт: у него отдельно перекрыты звонки, отдельно
-убран домен из российской системы адресов, и отдельно ограничена отправка
-сообщений с российских адресов. Из-за последнего многие настройки,
-которые обычно выручают, здесь дают обратный результат.
+    <p class="lead">Если ватсап не работает с впн, чаще всего дело в одном: выбран российский
+сервер, а мессенджер как раз блокирует отправку сообщений именно с
+российских адресов — соединение поднято честно, значок горит, а сообщения
+всё равно не уходят. Разбираем по порядку: как появилось это ограничение,
+почему привычный совет «сервер поближе» здесь вредит вместо того, чтобы
+помочь, и что проверить, если дело не в локации.
 </p>
 
 <nav class="toc" aria-label="Содержание">
@@ -396,7 +396,7 @@
      stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
           </button>
         </h3>
-        <div class="faq__a" id="a1" role="region" aria-labelledby="q1">
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1" aria-hidden="true">
           <div><p>Чаще всего выбрана российская локация. Отправка сообщений ограничена именно с российских адресов, поэтому туннель через сервер в России приводит туда же, откуда вы начали. Смените страну на любую другую.</p></div>
         </div>
       </div>
@@ -410,7 +410,7 @@
      stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
           </button>
         </h3>
-        <div class="faq__a" id="a2" role="region" aria-labelledby="q2">
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2" aria-hidden="true">
           <div><p>Для мессенджера нет. Такой режим ищет самый быстрый отклик, а быстрее всего отвечает сервер поближе — то есть российский, если он в списке. Отправка с него как раз и заблокирована, так что страну здесь нужно задавать руками.</p></div>
         </div>
       </div>
@@ -424,7 +424,7 @@
      stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
           </button>
         </h3>
-        <div class="faq__a" id="a3" role="region" aria-labelledby="q3">
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3" aria-hidden="true">
           <div><p>Проверьте, какая именно страна отображается. Если российская — причина в ней. Если нет, дело обычно в разрешении адресов: домен мессенджера убран из российской адресной системы, и если клиент спрашивает адрес в обход туннеля, ответа он не получит.</p></div>
         </div>
       </div>
@@ -438,7 +438,7 @@
      stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
           </button>
         </h3>
-        <div class="faq__a" id="a4" role="region" aria-labelledby="q4">
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4" aria-hidden="true">
           <div><p>Звонки перекрыли раньше переписки и другим способом. Голосовой трафик заметнее и режется охотнее, поэтому он может не проходить даже там, где сообщения ходят нормально. Видеозвонки требовательнее голосовых ещё сильнее — если обычный звонок проходит, а видео срывается или не начинается вовсе, дело именно в объёме трафика, а не в отдельном ограничении. Гарантий по звонкам, тем более видео, не даёт никто.</p></div>
         </div>
       </div>
@@ -452,7 +452,7 @@
      stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
           </button>
         </h3>
-        <div class="faq__a" id="a5" role="region" aria-labelledby="q5">
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5" aria-hidden="true">
           <div><p>Наши клиенты так не умеют — они не отслеживают, какое приложение вы открыли, и не включаются по этому событию. Рабочий вариант другой: держать VPN включённым постоянно, а не переключать его под конкретное приложение. Если нужно, чтобы часть других программ шла мимо туннеля, — это делается через настройку маршрутизации в клиенте, а не автозапуском по WhatsApp.</p></div>
         </div>
       </div>
@@ -466,7 +466,7 @@
      stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
           </button>
         </h3>
-        <div class="faq__a" id="a6" role="region" aria-labelledby="q6">
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6" aria-hidden="true">
           <div><p>Часто да, особенно на мобильном интернете: у операторов фильтрация настроена строже, чем на домашних сетях. Если в клиенте есть выбор протокола, переключение — второе, что стоит попробовать после смены страны.</p></div>
         </div>
       </div>
@@ -480,7 +480,7 @@
      stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
           </button>
         </h3>
-        <div class="faq__a" id="a7" role="region" aria-labelledby="q7">
+        <div class="faq__a" id="a7" role="region" aria-labelledby="q7" aria-hidden="true">
           <div><p>Настольная версия мессенджера привязана к телефону и требует своего соединения. Убедитесь, что туннель включён на обоих устройствах: в подписку у нас входят два, так что отдельный ключ для этого не нужен.</p></div>
         </div>
       </div>
@@ -585,7 +585,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://prostokey.com/#organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Ватсап не работает с VPN: почему и что делать", "description": "Мессенджер не открывается даже с включённым туннелем. Почему российский сервер тут не подходит, при чём здесь адресная система и что проверить по порядку.", "datePublished": "2026-09-11", "dateModified": "2026-09-18", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/whatsapp-ne-rabotaet/", "name": "Ватсап не работает с VPN: почему и что делать"}, "image": ["https://prostokey.com/og/whatsapp-ne-rabotaet.png"], "author": {"@id": "https://prostokey.com/#organization"}, "publisher": {"@id": "https://prostokey.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Ватсап не работает с VPN: почему и что делать", "item": "https://prostokey.com/blog/whatsapp-ne-rabotaet/"}]}]</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему ватсап не работает, хотя VPN включён?", "acceptedAnswer": {"@type": "Answer", "text": "Чаще всего выбрана российская локация. Отправка сообщений ограничена именно с российских адресов, поэтому туннель через сервер в России приводит туда же, откуда вы начали. Смените страну на любую другую."}}, {"@type": "Question", "name": "Автовыбор сервера — это удобно?", "acceptedAnswer": {"@type": "Answer", "text": "Для мессенджера нет. Такой режим ищет самый быстрый отклик, а быстрее всего отвечает сервер поближе — то есть российский, если он в списке. Отправка с него как раз и заблокирована, так что страну здесь нужно задавать руками."}}, {"@type": "Question", "name": "Соединение поднялось, адрес сменился, а сообщения не уходят.", "acceptedAnswer": {"@type": "Answer", "text": "Проверьте, какая именно страна отображается. Если российская — причина в ней. Если нет, дело обычно в разрешении адресов: домен мессенджера убран из российской адресной системы, и если клиент спрашивает адрес в обход туннеля, ответа он не получит."}}, {"@type": "Question", "name": "Почему не проходят звонки, хотя переписка работает?", "acceptedAnswer": {"@type": "Answer", "text": "Звонки перекрыли раньше переписки и другим способом. Голосовой трафик заметнее и режется охотнее, поэтому он может не проходить даже там, где сообщения ходят нормально. Видеозвонки требовательнее голосовых ещё сильнее — если обычный звонок проходит, а видео срывается или не начинается вовсе, дело именно в объёме трафика, а не в отдельном ограничении. Гарантий по звонкам, тем более видео, не даёт никто."}}, {"@type": "Question", "name": "Можно ли сделать так, чтобы VPN включался сам при открытии WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "Наши клиенты так не умеют — они не отслеживают, какое приложение вы открыли, и не включаются по этому событию. Рабочий вариант другой: держать VPN включённым постоянно, а не переключать его под конкретное приложение. Если нужно, чтобы часть других программ шла мимо туннеля, — это делается через настройку маршрутизации в клиенте, а не автозапуском по WhatsApp."}}, {"@type": "Question", "name": "Помогает ли смена протокола?", "acceptedAnswer": {"@type": "Answer", "text": "Часто да, особенно на мобильном интернете: у операторов фильтрация настроена строже, чем на домашних сетях. Если в клиенте есть выбор протокола, переключение — второе, что стоит попробовать после смены страны."}}, {"@type": "Question", "name": "На телефоне работает, на компьютере нет.", "acceptedAnswer": {"@type": "Answer", "text": "Настольная версия мессенджера привязана к телефону и требует своего соединения. Убедитесь, что туннель включён на обоих устройствах: в подписку у нас входят два, так что отдельный ключ для этого не нужен."}}]}</script>
-<script src="/app.js?v=3784be34" defer></script>
+<script src="/app.js?v=807b2b71" defer></script>
 <img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/whatsapp-ne-rabotaet/"
      alt="" width="1" height="1" decoding="async"
      class="px" aria-hidden="true"></body>

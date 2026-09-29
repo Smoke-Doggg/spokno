@@ -1,5 +1,5 @@
 (function () {
-  var ALLOWED = ["digitalfreedom", "aieasy", "svoizagranicey", "saverbot"];
+  var ALLOWED = ["digitalfreedom", "aieasy", "svoizagranicey", "saverbot", "vidkeep"];
   var params = new URLSearchParams(location.search);
   var src = params.get("src");
   if (src && ALLOWED.indexOf(src) !== -1) {

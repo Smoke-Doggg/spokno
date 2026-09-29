@@ -161,7 +161,7 @@ p:last-child { margin-bottom: 0; }
 a { color: var(--accent-text); text-underline-offset: 3px; }
 a:hover { text-decoration-thickness: 2px; }
 strong { font-weight: 600; color: var(--ink); }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 4px; }
 .lead {
   font-size: clamp(17px, 1.5vw, 19px);
   line-height: 1.6;
@@ -281,7 +281,7 @@ h1.lead { font-size: inherit; }
   transition-duration: 100ms;
   box-shadow: none;
 }
-.btn:focus-visible { outline: 2px solid #0B0D10; outline-offset: 2px; }
+.btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .btn--ghost { border-color: var(--line-strong); color: var(--ink); background: transparent; }
 @media (hover: hover) {
   .btn--ghost:hover { background: var(--surface-alt); border-color: var(--accent); }
@@ -1301,6 +1301,11 @@ main, .foot { position: relative; z-index: 1; }
 }
 .review-form textarea { resize: vertical; }
 .review-form .btn { margin-top: 16px; }
+.review-form label.review-form__consent {
+  display: flex; align-items: flex-start; gap: 8px;
+  margin-top: 14px; font-weight: 400; cursor: pointer;
+}
+.review-form__consent input { width: auto; margin-top: 2px; flex-shrink: 0; }
 .review-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .review-form__note { margin-top: 12px; font-size: 14.5px; }
 .review-form__note.is-ok { color: var(--accent-deep, #0b8a57); font-weight: 600; }
