@@ -43,11 +43,17 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [VPN на Steam Deck: как установить и для чего нужен](https://prostokey.com/blog/kak-ustanovit-vpn-na-steam/)
+- [VPN не работает в России: это временно или системно](https://prostokey.com/blog/vpn-ne-rabotaet-v-rossii/)
+- [Бесплатный VPN для TikTok на iPhone: что реально доступно](https://prostokey.com/blog/luchshiy-besplatnyy-vpn-dlya-tiktok/)
+- [Outline VPN: бесплатные ключи — риски](https://prostokey.com/blog/outline-vpn-keys-free/)
+- [VLESS, Reality и JSON-конфиг: как это устроено](https://prostokey.com/blog/vless-tcp-reality-json-chto/)
+- [Streisand VPN: что это и почему бесплатных ключей нет](https://prostokey.com/blog/streisand-vpn-klyuchi-besplatno/)
 - [Можно ли заставить YouTube работать без VPN](https://prostokey.com/blog/kak-zastavit-yutub-rabotat-bez/)
 - [МТС и Билайн блокируют VPN: что делать](https://prostokey.com/blog/operator-blokiruet-vpn/)
 - [VPN на MacBook: настройка без App Store](https://prostokey.com/blog/vpn-macbook/)
 - [VPN для игр: когда помогает, а когда мешает](https://prostokey.com/blog/vpn-dlya-igr/)
-- [Запрещён ли ВПН в России: что можно, а что нет](https://prostokey.com/blog/zakonno-li/)
+- [Запрещён ли VPN в России?](https://prostokey.com/blog/zakonno-li/)
 - [Безопасный ВПН: чем платят за бесплатный](https://prostokey.com/blog/besplatnyy-vpn/)
 - [ВПН не работает на мобильном интернете: что перебрать](https://prostokey.com/blog/vpn-mobilnyy-internet/)
 - [ВПН приложение на айфон: чем заменить Happ](https://prostokey.com/blog/analog-happ-iphone/)
