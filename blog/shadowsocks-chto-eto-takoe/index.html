@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/head-init.js?v=c3c31878"></script>
+<title>Shadowsocks: что это такое — VPN Просто</title>
+<meta name="description" content="Shadowsocks — один из первых протоколов-прокси, придуманный в Китае. Как он работает и почему в 2026 году держится хуже, чем наши протоколы.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stat.prostokey.com; font-src 'self' data:; connect-src 'self' https://stat.prostokey.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/blog/shadowsocks-chto-eto-takoe/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="Shadowsocks: что это такое">
+<meta property="og:description" content="Shadowsocks — один из первых протоколов-прокси, придуманный в Китае. Как он работает и почему в 2026 году держится хуже, чем наши протоколы.">
+<meta property="og:url" content="https://prostokey.com/blog/shadowsocks-chto-eto-takoe/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shadowsocks: что это такое — VPN Просто">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="/fonts.css?v=1260ba6b">
+<link rel="preload" href="/fonts/onest-800-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=70acbc77">
+</head>
+<body>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" focusable="false">
+<defs>
+
+<clipPath id="flag-clip"><rect width="16" height="12" rx="2"/></clipPath>
+
+<symbol id="ic-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="ic-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="ic-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="ic-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+<symbol id="ic-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="ic-unplug" viewBox="0 0 24 24"><path d="m19 5 3-3"/><path d="m2 22 3-3"/>
+<path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/>
+<path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/>
+<path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z"/></symbol>
+<symbol id="ic-credit-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+<symbol id="ic-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+<path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></symbol>
+<symbol id="ic-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+<symbol id="ic-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+<symbol id="ic-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.7 8.9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.5 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/>
+<path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="ic-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.8-1.6l7.9-10.7A1 1 0 0 1 13 2.3V10a1 1 0 0 0 1 1h6a1 1 0 0 1 .8 1.6l-7.9 10.7A1 1 0 0 1 11 21.7V14a1 1 0 0 0-1-1z"/></symbol>
+<symbol id="ic-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+<path d="M2 12h20"/></symbol>
+<symbol id="ic-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
+<circle cx="18" cy="5" r="3"/></symbol>
+<symbol id="ic-sparkles" viewBox="0 0 24 24"><path d="M9.9 2.5 12 8l5.5 2.1L12 12.2 9.9 17.7 7.8 12.2 2.3 10.1 7.8 8z"/>
+<path d="M18 5h.01"/><path d="M20 15h.01"/></symbol>
+<symbol id="ic-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="ic-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+<symbol id="ic-laptop" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.3 2.6a1 1 0 0 1-.9 1.4H3.6a1 1 0 0 1-.9-1.4L4 16"/></symbol>
+<symbol id="ic-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></symbol>
+<symbol id="ic-tv" viewBox="0 0 24 24"><rect width="20" height="15" x="2" y="7" rx="2"/><path d="m17 2-5 5-5-5"/></symbol>
+<symbol id="ic-router" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6.01 18H6"/><path d="M10.01 18H10"/>
+<path d="M15 10v4"/><path d="M17.84 7.17a4 4 0 0 0-5.66 0"/><path d="M20.66 4.34a8 8 0 0 0-11.31 0"/></symbol>
+<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></symbol>
+<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+<symbol id="ic-monitor-cog" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+<symbol id="ic-telegram" viewBox="0 0 24 24"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="ic-send" viewBox="0 0 24 24"><path d="M14.5 9.5 3 21"/><path d="M20.7 3.3a1 1 0 0 0-1.1-.2L3.4 9.6a1 1 0 0 0 .1 1.9l6.4 1.9a1 1 0 0 1 .7.7l1.9 6.4a1 1 0 0 0 1.9.1l6.5-16.2a1 1 0 0 0-.2-1.1Z"/></symbol>
+<symbol id="ic-megaphone-off" viewBox="0 0 24 24"><path d="M11.636 6A13 13 0 0 0 19.4 3.2 1 1 0 0 1 21 4v11.344"/><path d="M14.378 14.357A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1"/><path d="m2 2 20 20"/><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"/><path d="M8 8v6"/></symbol>
+<symbol id="ic-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></symbol>
+<symbol id="ic-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
+<symbol id="ic-id-card" viewBox="0 0 24 24"><path d="M16 10h2"/><path d="M16 14h2"/><path d="M6.17 15a3 3 0 0 1 5.66 0"/><circle cx="9" cy="11" r="2"/><rect x="2" y="5" width="20" height="14" rx="2"/></symbol>
+<symbol id="ic-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+
+<symbol id="flag-pl" viewBox="0 0 16 12"><rect width="16" height="6" fill="#fff"/><rect y="6" width="16" height="6" fill="#DC143C"/></symbol>
+<symbol id="flag-it" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#009246"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#CE2B37"/></symbol>
+<symbol id="flag-in" viewBox="0 0 16 12"><rect width="16" height="4" fill="#FF9933"/><rect y="4" width="16" height="4" fill="#fff"/>
+<rect y="8" width="16" height="4" fill="#138808"/><circle cx="8" cy="6" r="1.5" fill="none" stroke="#000080" stroke-width=".7"/></symbol>
+<symbol id="flag-us" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/>
+<rect y="0" width="16" height="1" fill="#B22234"/><rect y="2" width="16" height="1" fill="#B22234"/>
+<rect y="4" width="16" height="1" fill="#B22234"/><rect y="6" width="16" height="1" fill="#B22234"/>
+<rect y="8" width="16" height="1" fill="#B22234"/><rect y="10" width="16" height="1" fill="#B22234"/>
+<rect width="7" height="7" fill="#3C3B6E"/></symbol>
+<symbol id="flag-fi" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/><rect x="4" width="2.5" height="12" fill="#003580"/>
+<rect y="4.75" width="16" height="2.5" fill="#003580"/></symbol>
+<symbol id="flag-ru" viewBox="0 0 16 12"><rect width="16" height="4" fill="#fff"/><rect y="4" width="16" height="4" fill="#0039A6"/>
+<rect y="8" width="16" height="4" fill="#D52B1E"/></symbol>
+<symbol id="flag-se" viewBox="0 0 16 12"><rect width="16" height="12" fill="#006AA7"/><rect x="4" width="2.5" height="12" fill="#FECC00"/>
+<rect y="4.75" width="16" height="2.5" fill="#FECC00"/></symbol>
+<symbol id="flag-fr" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#0055A4"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#EF4135"/></symbol>
+<symbol id="flag-hk" viewBox="0 0 16 12"><rect width="16" height="12" fill="#DE2910"/><circle cx="8" cy="6" r="3.4" fill="#fff"/></symbol>
+
+</defs>
+</svg><div class="aurora aurora--soft" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/" aria-current="page">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system">
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-monitor-cog"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-sun"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-moon"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-menu"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<article class="section article">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → Shadowsocks: что это за протокол и чем отличается от нашего</p>
+    <h1>Shadowsocks: что это за протокол и чем отличается от нашего</h1>
+    <p class="meta">
+      <span>Опубликовано: 6 октября 2026</span>
+      <span>Обновлено: 6 октября 2026</span>
+      <span>Команда VPN Просто</span>
+    </p>
+
+    <p class="lead">Shadowsocks — рабочий протокол-прокси, но его паттерн трафика изучен
+уже много лет, и системы глубокого анализа пакетов научились его
+находить. Наши протоколы новее и маскируются под обычный HTTPS и QUIC.
+</p>
+
+<nav class="toc" aria-label="Содержание">
+  <p class="toc__head">В этой статье</p>
+  <ol>
+    <li><a href="#chto-eto">Что такое Shadowsocks</a></li>
+    <li><a href="#otkuda-vzyalsya">Откуда он взялся и зачем создавался</a></li>
+    <li><a href="#kak-rabotaet">Как он работает технически</a></li>
+    <li><a href="#pochemu-raspoznayut">Почему его всё чаще распознают</a></li>
+    <li><a href="#chem-otlichayutsya-nashi">Чем отличаются VLESS + Reality и Hysteria2</a></li>
+    <li><a href="#kak-u-nas">Как это устроено у нас</a></li>
+  </ol>
+</nav>
+
+
+<h2 id="chto-eto">Что такое Shadowsocks</h2>
+
+<p>Shadowsocks — протокол-прокси, который шифрует трафик между
+устройством пользователя и сервером и передаёт его в обход прямого
+соединения. Формально это не VPN в классическом смысле: он не
+поднимает отдельный виртуальный сетевой интерфейс на всё устройство,
+а работает ближе к точечному прокси. На практике для обычного
+пользователя разница почти не ощущается — клиентские приложения
+оборачивают его так же, как оборачивают полноценные VPN-протоколы, и
+с точки зрения интерфейса это выглядит как обычное включение
+защищённого соединения.</p>
+
+<p>Название протокола иногда путают с названием конкретного
+приложения — но Shadowsocks это в первую очередь открытая
+спецификация, реализованная десятками разных программ на разных
+платформах, а не одна фирменная программа. Это важное отличие от
+многих коммерческих VPN-сервисов, у которых протокол и приложение —
+одно и то же: клиент под Shadowsocks можно выбирать отдельно от
+того, кто предоставляет сам сервер, поскольку спецификация
+общедоступна и открыта.</p>
+
+<p>Именно открытость спецификации в своё время была её сильной
+стороной: любой разработчик мог реализовать собственный клиент, не
+спрашивая ни у кого разрешения и не завися от одной компании. Это
+ускорило распространение протокола в первые годы после появления —
+пользователю не приходилось ждать, пока нужный клиент выпустит
+конкретный производитель, достаточно было любой совместимой
+реализации.</p>
+
+<h2 id="otkuda-vzyalsya">Откуда он взялся и зачем создавался</h2>
+
+<p>Протокол появился как ответ на государственную систему фильтрации
+интернета в Китае, известную как Great Firewall. Задача была
+конкретной: дать пользователям способ обходить блокировку конкретных
+сайтов и сервисов там, где обычные прокси и ранние VPN-протоколы
+довольно быстро находили и закрывали.</p>
+
+<p>В течение нескольких лет после появления Shadowsocks оставался
+одним из самых надёжных инструментов именно для этой задачи — он был
+проще многих альтернатив в настройке, требовал меньше ресурсов от
+сервера и на тот момент плохо поддавался автоматическому
+распознаванию. Это и объясняет его популярность: простой, лёгкий,
+эффективный протокол, решающий конкретную проблему конкретного
+времени.</p>
+
+<p>Со временем задача, ради которой Shadowsocks создавался,
+распространилась далеко за пределы одной страны: похожие системы
+фильтрации трафика по сигнатурам протоколов появились и в других
+регионах, и протокол стал использоваться там же по тем же причинам.
+Его репутация надёжного инструмента для обхода блокировок закрепилась
+именно в те годы и во многом сохраняется по инерции до сих пор — хотя
+условия, в которых он изначально доказал свою эффективность, за
+прошедшее время заметно изменились.</p>
+
+<h2 id="kak-rabotaet">Как он работает технически</h2>
+
+<p>Идея Shadowsocks в общих чертах простая: между клиентом и сервером
+устанавливается зашифрованное соединение, и весь трафик, который
+клиент должен был бы отправить напрямую, вместо этого заворачивается
+через сервер. Со стороны наблюдателя, который видит только зашифрованные
+пакеты, невозможно напрямую прочитать содержимое — куда именно
+обращается пользователь и что именно передаёт.</p>
+
+<p>Ключевое отличие от полноценных VPN-протоколов — Shadowsocks не
+пытается имитировать какой-либо другой, «обычный» тип трафика. Он
+просто шифрует данные и передаёт их своим собственным способом. Долгое
+время этого было достаточно: системы анализа трафика умели ловить
+неприкрытые, незашифрованные соединения, но плохо справлялись с тем,
+чтобы отличить один вид зашифрованного трафика от другого.</p>
+
+<p>С точки зрения пользователя весь этот процесс скрыт внутри
+клиентского приложения: указывается адрес сервера и пароль для
+шифрования, а дальше программа сама заворачивает и разворачивает
+трафик на лету. Настройка в этом смысле проще, чем у некоторых более
+новых протоколов, — именно поэтому Shadowsocks долго оставался
+удобным выбором для тех, кто хотел разобраться в защищённом
+подключении без глубокого погружения в технические детали.</p>
+
+<p>За годы существования у протокола появлялись дополнительные
+варианты и надстройки, призванные усложнить его распознавание, —
+но по своей базовой конструкции он остаётся тем же самым: шифрованием
+без попытки притвориться каким-то другим, широко распространённым
+видом трафика. Это и есть та развилка, где пути Shadowsocks и более
+новых протоколов расходятся.</p>
+
+<h2 id="pochemu-raspoznayut">Почему его всё чаще распознают</h2>
+
+<p>Ситуация изменилась не потому, что в самом Shadowsocks нашли
+уязвимость, а потому, что инструменты анализа трафика стали заметно
+умнее. Системы глубокого анализа пакетов, известные под аббревиатурой
+DPI, за прошедшие годы накопили статистику о том, как именно выглядит
+трафик разных протоколов — не по содержимому (оно по-прежнему
+зашифровано), а по характерным признакам: длине пакетов, интервалам
+между ними, особенностям начального рукопожатия.</p>
+
+<p>Shadowsocks — один из самых изученных протоколов такого рода просто
+в силу возраста и популярности: чем дольше протокол существует и чем
+шире используется, тем больше данных накапливается у тех, кто
+занимается его распознаванием, и тем точнее становятся модели,
+которые его находят. Это общая закономерность, а не специфическая
+слабость конкретной реализации.</p>
+
+<p>Похожая судьба со временем настигает почти любой протокол,
+который делает ставку только на шифрование содержимого, но не на
+маскировку самого факта подключения. Пока протокол новый и
+малораспространённый, у систем анализа трафика просто нет
+статистики, чтобы его выделить среди прочего шифрованного трафика.
+По мере роста популярности этот запас времени сокращается —
+и рано или поздно наступает момент, когда сигнатуру протокола
+начинают включать в списки распознавания наравне с давно известными.</p>
+
+<div class="callout">
+  <p><strong>Речь не о взломе шифрования.</strong> Содержимое
+  трафика Shadowsocks по-прежнему защищено. Речь о другом: сам факт
+  использования именно этого протокола становится заметен по внешним
+  признакам соединения, даже когда его содержимое прочитать
+  нельзя, — а дальше решение о блокировке принимается уже по этому
+  факту.</p>
+</div>
+
+<h2 id="chem-otlichayutsya-nashi">Чем отличаются VLESS + Reality и Hysteria2</h2>
+
+<p>Оба протокола, которые мы используем, спроектированы позже
+Shadowsocks и с учётом именно этой проблемы — распознавания по
+внешним признакам, а не только по содержимому.</p>
+
+<p>VLESS + Reality (в нашей реализации — с XTLS-Vision) устроен так,
+что соединение на техническом уровне выглядит как обычное обращение
+к настоящему стороннему сайту: рукопожатие имитирует TLS-соединение
+с этим сайтом настолько точно, что фильтрующее оборудование не может
+отличить его без активного вмешательства в сам процесс. Это не
+дополнительное шифрование поверх старого механизма, а другой принцип
+маскировки — и по этому принципу он принципиально отличается от
+Shadowsocks, где такой имитации нет вовсе.</p>
+
+<p>Разница на практике ощущается не в скорости и не в удобстве
+подключения — оба класса протоколов в спокойной сети работают
+одинаково гладко. Разница проявляется именно в моменты усиления
+фильтрации: протокол без имитации чужого трафика замечают и блокируют
+быстрее, а протокол, выдающий себя за обычный HTTPS или QUIC,
+оказывается в том же списке, что и весь остальной легитимный трафик
+интернета, который блокировать целиком никто не станет.</p>
+
+<p>Hysteria2 работает поверх QUIC — того же транспортного протокола,
+на котором построена значительная часть современного веб-трафика,
+включая часть обращений браузеров и мобильных приложений. Он не
+останавливает передачу при потере отдельных пакетов, а продолжает
+поток и восстанавливает целостность на лету, из-за чего на нестабильном
+мобильном соединении ощущается меньше рывков, особенно на голосе и
+видео.</p>
+
+<p>Оба протокола не просто шифруют трафик, как делает Shadowsocks, —
+они делают его похожим на другой, массовый и легитимный вид трафика,
+который в общем случае никто не блокирует.</p>
+
+<p>Практическое следствие для тех, кто выбирает между протоколами
+сейчас: возраст и былая репутация протокола — плохой ориентир сами по
+себе. Правильный вопрос не «какой протокол был надёжным несколько лет
+назад», а «какой принцип маскировки актуален прямо сейчас, в
+конкретной сети». Ответ на него меняется со временем вместе с тем, как
+меняются инструменты фильтрации, — и то, что казалось незыблемым
+стандартом ещё недавно, может через год-два перестать быть лучшим
+выбором именно по этой причине.</p>
+
+<section class="unique">
+  <h2 id="kak-u-nas">Как это устроено у нас</h2>
+
+  <p><strong>Shadowsocks в списке протоколов мы сознательно не
+  используем.</strong> У нас два протокола — VLESS + Reality
+  (XTLS-Vision) и Hysteria2, — и оба выбраны именно потому, что лучше
+  держатся против актуальной фильтрации в российских сетях, чем более
+  старые варианты вроде Shadowsocks, WireGuard или OpenVPN.</p>
+
+  <p><strong>Два протокола — не один.</strong> Если бы мы держали
+  единственный протокол, усиление фильтрации против конкретного
+  метода маскировки могло бы отключить весь сервис разом. Два
+  независимых протокола снижают этот риск: если один перестанет
+  держаться на конкретной сети, второй уже есть в списке подключений
+  того же ключа, без ожидания и доплат.</p>
+
+  <p><strong>Переключение — без переустановки и нового ключа.</strong>
+  Оба протокола входят в одну и ту же подписку и доступны в одном и
+  том же клиенте — разбираться, какой выбрать, не нужно: если один
+  работает нестабильно, второй переключается парой касаний, а часть
+  клиентов умеет выбирать автоматически по скорости отклика.</p>
+
+  <p><strong>дня на проверку без карты.</strong>
+  Насколько конкретный протокол держится именно на вашей сети —
+  вопрос, на который нет универсального ответа: фильтрация в разных
+  регионах и у разных операторов настроена по-разному и меняется со
+  временем. Пробный период существует ровно для того, чтобы проверить
+  это на практике, а не гадать по чужому опыту.</p>
+
+  <p><strong>Список протоколов мы не расширяем ради расширения.</strong>
+  Добавление ещё одного варианта имеет смысл только тогда, когда он
+  реально повышает устойчивость, а не когда это просто ещё одна
+  строчка в списке. Пока два действующих протокола справляются лучше
+  альтернатив вроде Shadowsocks, третий не добавляется — это
+  осознанный выбор, а не недоработка.</p>
+
+  <p><strong>Мы проверяем протоколы не по репутации, а по
+  результату.</strong> Решение использовать именно VLESS + Reality и
+  Hysteria2, а не более раскрученные по названию варианты, основано
+  на том, как они ведут себя в реальных российских сетях сейчас, а не
+  на том, какой протокол был надёжным несколько лет назад. Если бы
+  ситуация с фильтрацией изменилась и Shadowsocks снова стал работать
+  устойчивее конкурентов, это было бы поводом пересмотреть список —
+  но пока данные говорят об обратном.</p>
+
+  <p><strong>Раздельная маршрутизация работает одинаково для обоих
+  протоколов.</strong> Российские сайты, банки, СБП и Госуслуги идут
+  мимо туннеля напрямую вне зависимости от того, какой из двух
+  протоколов включён в конкретный момент, — переключение между
+  VLESS + Reality и Hysteria2 не требует ничего перенастраивать
+  отдельно для этой части трафика.</p>
+</section>
+
+<p>Что почитать дальше: <a href="/blog/kakoy-vpn-rabotaet/">какой VPN
+сейчас работает в России</a> — общий разбор протоколов и признаков
+живого сервиса, и <a href="/blog/chto-vidit-provayder/">что видит
+провайдер</a> — как выглядит замаскированный трафик со стороны сети.</p>
+
+
+    <h2 id="chastye-voprosy">Частые вопросы</h2>
+    <div class="faq">
+      <div id="vopros-shadowsocks-eto-vpn" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Shadowsocks — это VPN?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1" aria-hidden="true">
+          <div><p>Формально нет — это протокол-прокси: он шифрует и маскирует трафик между вами и сервером, но не поднимает полноценный виртуальный сетевой интерфейс, как классический VPN. Для пользователя разница на практике почти не заметна — приложение работает похожим образом.</p></div>
+        </div>
+      </div>
+      <div id="vopros-otkuda-vzyalsya-shadowsocks" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>Откуда взялся Shadowsocks?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2" aria-hidden="true">
+          <div><p>Его создали в Китае как способ обходить государственную систему фильтрации интернета, известную как Great Firewall. Долгое время он оставался одним из самых надёжных инструментов именно для этой задачи.</p></div>
+        </div>
+      </div>
+      <div id="vopros-pochemu-govoryat-chto-shadowsocks-stali-huzhe-derzhatsya-pro" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>Почему говорят, что Shadowsocks стали хуже держаться против блокировок?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3" aria-hidden="true">
+          <div><p>Его паттерн трафика изучен уже много лет: системы глубокого анализа пакетов (DPI) научились находить характерные признаки соединения даже там, где содержимое зашифровано. Чем протокол старше и популярнее, тем больше времени было на его изучение фильтрующим оборудованием.</p></div>
+        </div>
+      </div>
+      <div id="vopros-chem-vless-reality-i-hysteria2-otlichayutsya-v-etom-smysle" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>Чем VLESS + Reality и Hysteria2 отличаются в этом смысле?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4" aria-hidden="true">
+          <div><p>Они новее и спроектированы так, чтобы соединение выглядело как обычный HTTPS-трафик (Reality) или QUIC-трафик (Hysteria2), — то есть не просто шифруют данные, а маскируются под трафик, который массово используется повсеместно и потому не блокируется по умолчанию.</p></div>
+        </div>
+      </div>
+      <div id="vopros-znachit-shadowsocks-plohoy-protokol" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>Значит Shadowsocks — плохой протокол?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5" aria-hidden="true">
+          <div><p>Нет, рабочий, и во многих сетях до сих пор проходит без проблем. Разница не в качестве, а в устойчивости к продвинутой фильтрации: для рядового обхода блокировок он годится, но против целенаправленного анализа трафика в российских сетях держится хуже протоколов, которые мы используем.</p></div>
+        </div>
+      </div>
+      <div id="vopros-mozhno-li-poluchit-shadowsocks-v-vashem-servise" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q6" aria-controls="a6">
+            <span>Можно ли получить Shadowsocks в вашем сервисе?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6" aria-hidden="true">
+          <div><p>Нет, мы сознательно используем только VLESS + Reality и Hysteria2 — оба новее и лучше держатся именно в актуальных условиях фильтрации в России. Ключ в боте @vpn_prosto_bot приходит сразу для обоих протоколов, переключение между ними — пара касаний в клиенте.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p><strong>Проверить на своей сети.</strong> 3 дня
+      бесплатно, карта не нужна: если у вас не заработает — вы ничего
+      не потеряли.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Попробовать 3 дня бесплатно</a>
+    </div>
+
+    <aside aria-label="Другие статьи по теме">
+    <h2 id="chitat-dalshe">Читать дальше</h2>
+    <ul class="facts">
+      <li><a href="/blog/kakoy-vpn-rabotaet/">Бесплатный рабочий VPN: выбор в России</a></li>
+      <li><a href="/blog/chto-vidit-provayder/">Что видит провайдер, а что — VPN-сервис</a></li>
+      <li><a href="/blog/vybor-klienta/">Happ или V2RayTun: какой клиент выбрать</a></li>
+    </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <p class="foot-head">Сервис</p>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/#price">Цена</a></li>
+          <li><a href="/o-servise/">О сервисе</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Доступ и цена</p>
+        <ul>
+          <li><a href="/skachat-besplatno/">Попробовать бесплатно</a></li>
+          <li><a href="/probnyy-period/">Пробный период</a></li>
+          <li><a href="/telegram-bot/">Ключ через Telegram-бота</a></li>
+          <li><a href="/kupit/">Купить ключ</a></li>
+          <li><a href="/platnyy-vpn/">Сколько стоит платный VPN</a></li>
+          <li><a href="/klyuch-vpn/">Что такое ключ VPN</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Устройства</p>
+        <ul>
+          <li><a href="/android/">Android</a></li>
+          <li><a href="/iphone/">iPhone и iPad</a></li>
+          <li><a href="/windows/">Компьютер с Windows</a></li>
+          <li><a href="/tv/">Телевизор</a></li>
+          <li><a href="/router/">Роутер</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Помощь</p>
+        <ul>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/ne-rabotaet/">Не работает — что делать</a></li>
+          <li><a href="/proverka/">Проверить, работает ли VPN</a></li>
+          <li><a href="/rossiyskiy-ip/">Российский IP: банки и Госуслуги</a></li>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/whatsapp-ne-rabotaet/">Ватсап не работает с VPN</a></li>
+          <li><a href="/blog/operator-blokiruet-vpn/">Оператор блокирует VPN</a></li>
+          <li><a href="/blog/vpn-dlya-igr/">VPN для игр</a></li>
+          <li><a href="/blog/brawl-stars-ne-rabotaet/">Бравл Старс не работает с VPN</a></li>
+          <li><a href="/blog/viber-ne-rabotaet/">Вайбер не работает в России</a></li>
+          <li><a href="/blog/gemini-ne-rabotaet/">Gemini не работает с VPN</a></li>
+          <li><a href="/blog/pinterest-ne-rabotaet/">Pinterest не работает</a></li>
+          <li><a href="/blog/kakoy-vpn-rabotaet/">Какой VPN работает сейчас</a></li>
+          <li><a href="/blog/vpn-dlya-yutuba/">VPN для YouTube</a></li>
+          <li><a href="/blog/rasshirenie-brauzera/">VPN-расширение для браузера</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/blog/">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Связь</p>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Канал «Цифровая свобода»</a></li>
+          <li class="foot-alt">Не открывается? <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть
+            в приложении</a> или найдите <b class="mono">@vpn_prosto_bot</b></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Документы</p>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2021—<span data-year>2026</span> VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://prostokey.com/#organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Shadowsocks: что это за протокол и чем отличается от нашего", "description": "Shadowsocks — один из первых массовых протоколов-прокси для обхода блокировок, изначально созданный для Great Firewall в Китае. Разбираем, как он работает и почему в 2026 году его всё чаще заменяют более новыми протоколами.", "datePublished": "2026-10-06", "dateModified": "2026-10-06", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/shadowsocks-chto-eto-takoe/", "name": "Shadowsocks: что это за протокол и чем отличается от нашего"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@id": "https://prostokey.com/#organization"}, "publisher": {"@id": "https://prostokey.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Shadowsocks: что это за протокол и чем отличается от нашего", "item": "https://prostokey.com/blog/shadowsocks-chto-eto-takoe/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Shadowsocks — это VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Формально нет — это протокол-прокси: он шифрует и маскирует трафик между вами и сервером, но не поднимает полноценный виртуальный сетевой интерфейс, как классический VPN. Для пользователя разница на практике почти не заметна — приложение работает похожим образом."}}, {"@type": "Question", "name": "Откуда взялся Shadowsocks?", "acceptedAnswer": {"@type": "Answer", "text": "Его создали в Китае как способ обходить государственную систему фильтрации интернета, известную как Great Firewall. Долгое время он оставался одним из самых надёжных инструментов именно для этой задачи."}}, {"@type": "Question", "name": "Почему говорят, что Shadowsocks стали хуже держаться против блокировок?", "acceptedAnswer": {"@type": "Answer", "text": "Его паттерн трафика изучен уже много лет: системы глубокого анализа пакетов (DPI) научились находить характерные признаки соединения даже там, где содержимое зашифровано. Чем протокол старше и популярнее, тем больше времени было на его изучение фильтрующим оборудованием."}}, {"@type": "Question", "name": "Чем VLESS + Reality и Hysteria2 отличаются в этом смысле?", "acceptedAnswer": {"@type": "Answer", "text": "Они новее и спроектированы так, чтобы соединение выглядело как обычный HTTPS-трафик (Reality) или QUIC-трафик (Hysteria2), — то есть не просто шифруют данные, а маскируются под трафик, который массово используется повсеместно и потому не блокируется по умолчанию."}}, {"@type": "Question", "name": "Значит Shadowsocks — плохой протокол?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, рабочий, и во многих сетях до сих пор проходит без проблем. Разница не в качестве, а в устойчивости к продвинутой фильтрации: для рядового обхода блокировок он годится, но против целенаправленного анализа трафика в российских сетях держится хуже протоколов, которые мы используем."}}, {"@type": "Question", "name": "Можно ли получить Shadowsocks в вашем сервисе?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, мы сознательно используем только VLESS + Reality и Hysteria2 — оба новее и лучше держатся именно в актуальных условиях фильтрации в России. Ключ в боте @vpn_prosto_bot приходит сразу для обоих протоколов, переключение между ними — пара касаний в клиенте."}}]}</script>
+<script src="/app.js?v=807b2b71" defer></script>
+<img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/shadowsocks-chto-eto-takoe/"
+     alt="" width="1" height="1" decoding="async"
+     class="px" aria-hidden="true"></body>
+</html>
