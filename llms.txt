@@ -44,6 +44,10 @@
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
 - [VPN на Steam Deck: как установить и для чего нужен](https://prostokey.com/blog/kak-ustanovit-vpn-na-steam/)
+- [Бравл Старс не работает с VPN: в чём дело](https://prostokey.com/blog/brawl-stars-ne-rabotaet/)
+- [Вайбер не работает в России: что делать](https://prostokey.com/blog/viber-ne-rabotaet/)
+- [Gemini не работает с VPN: в чём причина](https://prostokey.com/blog/gemini-ne-rabotaet/)
+- [Pinterest не работает в России: что делать](https://prostokey.com/blog/pinterest-ne-rabotaet/)
 - [VPN не работает в России: это временно или системно](https://prostokey.com/blog/vpn-ne-rabotaet-v-rossii/)
 - [Бесплатный VPN для TikTok на iPhone: что реально доступно](https://prostokey.com/blog/luchshiy-besplatnyy-vpn-dlya-tiktok/)
 - [Outline VPN: бесплатные ключи — риски](https://prostokey.com/blog/outline-vpn-keys-free/)

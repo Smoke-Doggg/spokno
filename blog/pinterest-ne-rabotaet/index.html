@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/head-init.js?v=c3c31878"></script>
+<title>Pinterest не работает в России — VPN Просто</title>
+<meta name="description" content="Pinterest в России открывается через раз, а картинки не грузятся. Сервис не заблокирован — где он ломается, когда помогает VPN и что проверить.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stat.prostokey.com; font-src 'self' data:; connect-src 'self' https://stat.prostokey.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/blog/pinterest-ne-rabotaet/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="Pinterest не работает в России">
+<meta property="og:description" content="Pinterest в России открывается через раз, а картинки не грузятся. Сервис не заблокирован — где он ломается, когда помогает VPN и что проверить.">
+<meta property="og:url" content="https://prostokey.com/blog/pinterest-ne-rabotaet/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pinterest не работает в России — VPN Просто">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="/fonts.css?v=1260ba6b">
+<link rel="preload" href="/fonts/onest-800-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=70acbc77">
+</head>
+<body>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" focusable="false">
+<defs>
+
+<clipPath id="flag-clip"><rect width="16" height="12" rx="2"/></clipPath>
+
+<symbol id="ic-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="ic-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="ic-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="ic-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+<symbol id="ic-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="ic-unplug" viewBox="0 0 24 24"><path d="m19 5 3-3"/><path d="m2 22 3-3"/>
+<path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/>
+<path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/>
+<path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z"/></symbol>
+<symbol id="ic-credit-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+<symbol id="ic-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+<path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></symbol>
+<symbol id="ic-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+<symbol id="ic-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+<symbol id="ic-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.7 8.9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.5 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/>
+<path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="ic-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.8-1.6l7.9-10.7A1 1 0 0 1 13 2.3V10a1 1 0 0 0 1 1h6a1 1 0 0 1 .8 1.6l-7.9 10.7A1 1 0 0 1 11 21.7V14a1 1 0 0 0-1-1z"/></symbol>
+<symbol id="ic-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+<path d="M2 12h20"/></symbol>
+<symbol id="ic-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
+<circle cx="18" cy="5" r="3"/></symbol>
+<symbol id="ic-sparkles" viewBox="0 0 24 24"><path d="M9.9 2.5 12 8l5.5 2.1L12 12.2 9.9 17.7 7.8 12.2 2.3 10.1 7.8 8z"/>
+<path d="M18 5h.01"/><path d="M20 15h.01"/></symbol>
+<symbol id="ic-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="ic-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+<symbol id="ic-laptop" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.3 2.6a1 1 0 0 1-.9 1.4H3.6a1 1 0 0 1-.9-1.4L4 16"/></symbol>
+<symbol id="ic-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></symbol>
+<symbol id="ic-tv" viewBox="0 0 24 24"><rect width="20" height="15" x="2" y="7" rx="2"/><path d="m17 2-5 5-5-5"/></symbol>
+<symbol id="ic-router" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6.01 18H6"/><path d="M10.01 18H10"/>
+<path d="M15 10v4"/><path d="M17.84 7.17a4 4 0 0 0-5.66 0"/><path d="M20.66 4.34a8 8 0 0 0-11.31 0"/></symbol>
+<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></symbol>
+<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+<symbol id="ic-monitor-cog" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+<symbol id="ic-telegram" viewBox="0 0 24 24"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="ic-send" viewBox="0 0 24 24"><path d="M14.5 9.5 3 21"/><path d="M20.7 3.3a1 1 0 0 0-1.1-.2L3.4 9.6a1 1 0 0 0 .1 1.9l6.4 1.9a1 1 0 0 1 .7.7l1.9 6.4a1 1 0 0 0 1.9.1l6.5-16.2a1 1 0 0 0-.2-1.1Z"/></symbol>
+<symbol id="ic-megaphone-off" viewBox="0 0 24 24"><path d="M11.636 6A13 13 0 0 0 19.4 3.2 1 1 0 0 1 21 4v11.344"/><path d="M14.378 14.357A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1"/><path d="m2 2 20 20"/><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"/><path d="M8 8v6"/></symbol>
+<symbol id="ic-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></symbol>
+<symbol id="ic-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
+<symbol id="ic-id-card" viewBox="0 0 24 24"><path d="M16 10h2"/><path d="M16 14h2"/><path d="M6.17 15a3 3 0 0 1 5.66 0"/><circle cx="9" cy="11" r="2"/><rect x="2" y="5" width="20" height="14" rx="2"/></symbol>
+<symbol id="ic-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+
+<symbol id="flag-pl" viewBox="0 0 16 12"><rect width="16" height="6" fill="#fff"/><rect y="6" width="16" height="6" fill="#DC143C"/></symbol>
+<symbol id="flag-it" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#009246"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#CE2B37"/></symbol>
+<symbol id="flag-in" viewBox="0 0 16 12"><rect width="16" height="4" fill="#FF9933"/><rect y="4" width="16" height="4" fill="#fff"/>
+<rect y="8" width="16" height="4" fill="#138808"/><circle cx="8" cy="6" r="1.5" fill="none" stroke="#000080" stroke-width=".7"/></symbol>
+<symbol id="flag-us" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/>
+<rect y="0" width="16" height="1" fill="#B22234"/><rect y="2" width="16" height="1" fill="#B22234"/>
+<rect y="4" width="16" height="1" fill="#B22234"/><rect y="6" width="16" height="1" fill="#B22234"/>
+<rect y="8" width="16" height="1" fill="#B22234"/><rect y="10" width="16" height="1" fill="#B22234"/>
+<rect width="7" height="7" fill="#3C3B6E"/></symbol>
+<symbol id="flag-fi" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/><rect x="4" width="2.5" height="12" fill="#003580"/>
+<rect y="4.75" width="16" height="2.5" fill="#003580"/></symbol>
+<symbol id="flag-ru" viewBox="0 0 16 12"><rect width="16" height="4" fill="#fff"/><rect y="4" width="16" height="4" fill="#0039A6"/>
+<rect y="8" width="16" height="4" fill="#D52B1E"/></symbol>
+<symbol id="flag-se" viewBox="0 0 16 12"><rect width="16" height="12" fill="#006AA7"/><rect x="4" width="2.5" height="12" fill="#FECC00"/>
+<rect y="4.75" width="16" height="2.5" fill="#FECC00"/></symbol>
+<symbol id="flag-fr" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#0055A4"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#EF4135"/></symbol>
+<symbol id="flag-hk" viewBox="0 0 16 12"><rect width="16" height="12" fill="#DE2910"/><circle cx="8" cy="6" r="3.4" fill="#fff"/></symbol>
+
+</defs>
+</svg><div class="aurora aurora--soft" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/" aria-current="page">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system">
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-monitor-cog"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-sun"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-moon"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-menu"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<article class="section article">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → Pinterest не работает в России: что делать</p>
+    <h1>Pinterest не работает в России: что делать</h1>
+    <p class="meta">
+      <span>Опубликовано: 5 октября 2026</span>
+      <span>Обновлено: 5 октября 2026</span>
+      <span>Команда VPN Просто</span>
+    </p>
+
+    <p class="lead">Pinterest не работает в России не из-за блокировки: официально сервис
+не заблокирован, и Роскомнадзор не вносил его в реестр. Ломается он
+иначе — сайт открывается через раз, а картинки висят серыми квадратами,
+потому что страница и изображения приходят с разных адресов. Разбираем,
+где именно рвётся, когда помогает VPN и что проверить по порядку.
+</p>
+
+<nav class="toc" aria-label="Содержание">
+  <p class="toc__head">В этой статье</p>
+  <ol>
+    <li><a href="#status">Pinterest не заблокирован — и это меняет дело</a></li>
+    <li><a href="#hronika">Хроника: штрафы вместо блокировки</a></li>
+    <li><a href="#dva-adresa">Страница и картинки приходят с разных адресов</a></li>
+    <li><a href="#kogda-pomogaet">Когда VPN помогает, а когда нет</a></li>
+    <li><a href="#po-poryadku">Порядок действий: с чего начать</a></li>
+    <li><a href="#prilozhenie">Приложение и браузер: где проверять сначала</a></li>
+    <li><a href="#kak-u-nas">Что у нас устроено под эту задачу</a></li>
+    <li><a href="#ne-obeshchaem">Что мы не обещаем</a></li>
+  </ol>
+</nav>
+
+
+<h2 id="status">Pinterest не заблокирован — и это меняет дело</h2>
+
+<p>Начнём с того, что часто путают. Pinterest в России официально
+не заблокирован: по данным
+<a href="https://ria.ru/20260426/pinterest-2089020564.html" rel="noopener">РИА Новости</a>
+на апрель 2026 года, Роскомнадзор не вносил его в реестр запрещённых
+ресурсов. Этим он отличается от
+<a href="/blog/whatsapp-ne-rabotaet/">мессенджера</a>, у которого убрали
+домен из адресной системы, и от сервисов вроде Gemini, которые сами
+закрылись для России.</p>
+
+<p>Отсюда два вывода, и оба важны для того, что делать дальше.
+Первый: регионального запрета со стороны самого Pinterest нет, сервис
+не отказывает вам из-за страны, поэтому выбор конкретной страны
+в VPN тут почти не играет роли. Второй: раз официальной блокировки
+нет, проблемы возникают не по единому сценарию, а там, где трафик
+идёт по российским сетям, — и у разных людей ломается разное.</p>
+
+<h2 id="hronika">Хроника: штрафы вместо блокировки</h2>
+
+<ul class="facts">
+  <li><strong>Август 2022 — «меры принуждения»</strong><span>Роскомнадзор
+    объявил о них против Pinterest, TikTok, Telegram, Zoom и Discord
+    <a href="https://www.rferl.org/a/russia-coercion-tiktok-telegram-zoom-discord-pinterest/31996127.html" rel="noopener">за неудаление запрещённого контента</a></span></li>
+  <li><strong>2025 — жалобы на доступность</strong><span>российские
+    пользователи массово жаловались, что платформа работает плохо,
+    пишет РИА Новости</span></li>
+  <li><strong>Февраль–март 2026 — просадка</strong><span>по оценке
+    эксперта, которого цитирует РИА, показы в России снизились
+    на 20–27%, сохранения — на 23–29%</span></li>
+  <li><strong>Июнь 2026 — приставы</strong><span>с Pinterest
+    <a href="https://ria.ru/20260626/pinterest-2101203725.html" rel="noopener">принудительно взыскивают 6,7 млн рублей</a>
+    штрафов, всего с сентября 2025 года заведено восемь
+    исполнительных производств</span></li>
+  <li><strong>Сентябрь 2026 — новый штраф</strong><span>суд
+    <a href="https://www.m24.ru/news/08092026/938843" rel="noopener">оштрафовал сервис ещё на 3,5 млн рублей</a></span></li>
+</ul>
+
+<p>Картина последовательная: давление растёт, но идёт через суды
+и штрафы, а не через блокировку. Предсказывать, сменится ли
+это блокировкой, мы не будем: такие решения не объявляют заранее.</p>
+
+<h2 id="dva-adresa">Страница и картинки приходят с разных адресов</h2>
+
+<p>Самая частая жалоба звучит так: сайт открылся, лента есть, а вместо
+картинок серые квадраты. У этого есть простое техническое объяснение.</p>
+
+<p>Страница и картинки Pinterest живут на разных доменах. Сама лента
+приходит с pinterest.com, картинки — с i.pinimg.com, видео —
+с v1.pinimg.com, оформление — с s.pinimg.com. Все эти адреса
+обслуживает сеть доставки контента Akamai — мы проверили это
+по ответам адресной системы 5 октября 2026 года. Для браузера
+это разные соединения к разным серверам, и каждое может пройти
+или не пройти отдельно.</p>
+
+<p>Почему именно картинки страдают чаще, официально никто
+не объяснял. Распространённая версия — при блокировке других
+ресурсов под ограничения попадают целые диапазоны адресов сетей
+доставки контента и хостингов, а вместе с ними и серверы,
+с которых грузятся изображения. Подтверждения от Роскомнадзора
+или от самого Pinterest нет, поэтому мы приводим это как версию.
+Но сам механизм «страница прошла, картинки нет» от этой версии
+не зависит: он следует из того, что адреса разные.</p>
+
+<h2 id="kogda-pomogaet">Когда VPN помогает, а когда нет</h2>
+
+<p>Раз сервис не отказывает по стране, туннель здесь работает
+как обход сетевой проблемы, а не как смена региона. Это задаёт
+границы того, что он может.</p>
+
+<ul class="facts">
+  <li><strong>Помогает: маршрут внутри российской сети</strong><span>если
+    страница или картинки не проходят по пути через российские сети,
+    через туннель они идут с зарубежного сервера и обычно
+    открываются</span></li>
+  <li><strong>Помогает частично: туннель не на всё</strong><span>если
+    pinimg.com уходит мимо туннеля, страница откроется, а картинки
+    так и останутся серыми</span></li>
+  <li><strong>Не помогает: сбой самого сервиса</strong><span>если упал
+    Pinterest, с туннелем и без он не работает одинаково</span></li>
+  <li><strong>Не помогает: устройство и браузер</strong><span>забитый кэш,
+    блокировщик рекламы или режим экономии трафика ломают картинки
+    при любом канале</span></li>
+</ul>
+
+<p>Бывает и обратное — с включённым VPN картинки не грузятся, а без него
+грузятся. Такие случаи
+<a href="https://discussions.apple.com/thread/255945618" rel="noopener">описывают и за пределами России</a>:
+там помогло переключить режим в настройках самого VPN-приложения.
+Как Pinterest относится к адресам VPN-серверов, он не публикует.
+Если на одной стране картинки не грузятся, а на другой грузятся, —
+это признак проблемы конкретного адреса, а не вашего устройства.</p>
+
+<h2 id="po-poryadku">Порядок действий: с чего начать</h2>
+
+<ol class="steps">
+  <li><b>Проверьте, не сбой ли это</b><span>Откройте Pinterest с другой
+  сети или спросите знакомых. Если не работает у всех и везде,
+  ждать — единственное, что поможет.</span></li>
+  <li><b>Включите туннель и выберите нероссийскую страну</b><span>Российский
+  сервер выведет вас обратно в те же российские сети, откуда и шла
+  проблема.</span></li>
+  <li><b>Проверьте адрес</b><span>На
+  <a href="/proverka/">странице проверки</a> должна быть нероссийская
+  страна. Если российская — туннель не поднялся или выбрана
+  не та локация.</span></li>
+  <li><b>Обновите страницу без кэша</b><span>В браузере на компьютере —
+  Ctrl+F5, в приложении — полностью закройте его из списка
+  запущенных и откройте снова. Картинки, которые не догрузились
+  раньше, браузер может показывать пустыми из кэша.</span></li>
+  <li><b>Отключите блокировщик рекламы на pinterest.com</b><span>Расширения
+  и фильтрующие DNS-сервисы иногда режут домены картинок вместе
+  с рекламой. Быстрая проверка — открыть сайт в приватном окне,
+  где расширения обычно выключены.</span></li>
+  <li><b>Проверьте, что pinimg.com идёт через туннель</b><span>Если
+  в клиенте настроены собственные правила маршрутизации, домен
+  картинок может уходить напрямую. Тогда страница работает,
+  а картинки нет.</span></li>
+  <li><b>Смените страну</b><span>Если всё выше в порядке, а картинки
+  не грузятся, попробуйте другую локацию: так видно, в адресе ли
+  дело.</span></li>
+</ol>
+
+<h2 id="prilozhenie">Приложение и браузер: где проверять сначала</h2>
+
+<p>Приложение хранит больше, чем браузер: кэш картинок, состояние
+ленты, данные входа. После включения туннеля оно иногда продолжает
+показывать то, что загрузило раньше, — в том числе пустые
+квадраты. Поэтому проверять удобнее в браузере: если там с туннелем
+всё грузится, канал в порядке, и дело в приложении. Тогда помогает
+полный перезапуск, а если нет — очистка кэша в настройках
+приложения.</p>
+
+<p>Режим экономии трафика в приложении и в системе телефона тоже
+влияет: он уменьшает или откладывает загрузку изображений. На сервисе,
+где картинки — всё содержание, это выглядит как поломка, хотя
+всё работает как задумано.</p>
+
+<section class="unique">
+  <h2 id="kak-u-nas">Что у нас устроено под эту задачу</h2>
+
+  <p>Главное для Pinterest — чтобы страница и картинки шли одним
+  путём. У нас домены pinterest.com и pinimg.com в зоне .com и идут
+  через туннель вместе. Мимо туннеля уходит только узкий перечень
+  российских сервисов, <a href="/blog/vpn-i-banki/">разобранный
+  отдельно</a>: банки и СБП, Госуслуги, VK, Яндекс, сайты в зонах
+  .ru и .рф, Apple и iCloud. Pinterest в него не входит, и ситуация
+  «страница через туннель, картинки напрямую» у нас при настройках
+  по умолчанию не возникает.</p>
+
+  <p>Это же значит, что VPN можно не выключать, когда переходите
+  в банк или на Госуслуги: российские сервисы и так идут напрямую,
+  а Pinterest — через туннель. Переключать туда-обратно не нужно.</p>
+
+  <p>Стран восемь: Польша, Швеция, Франция, Италия, Индия, Гонконг,
+  США и Россия. Для Pinterest подходит любая, кроме российской. Она
+  в подписке для обратной задачи — доступа к российским сервисам
+  из-за границы — и здесь вернула бы вас в ту же сеть. Ближние
+  европейские страны грузят ленту быстрее: картинок много, и задержка
+  на каждой складывается.</p>
+
+  <p>Видео в ленте приходит с отдельного адреса, v1.pinimg.com, и весит
+  заметно больше картинок. Это отдельное соединение, и проверять его
+  стоит отдельно: если картинки есть, а роликов нет, сначала попробуйте
+  ближнюю страну и второй протокол — ролику нужна большая скорость,
+  чем картинке.</p>
+
+  <p>Смена страны бесплатна и делается в клиенте за пару секунд.
+  Если на одной локации картинки не грузятся, а на другой грузятся,
+  это и есть ответ, и платить за такой перебор было бы странно.</p>
+
+  <p>Протоколов два, оба маскируются под обычный защищённый трафик.
+  Если на мобильном интернете лента обрывается, а дома работает,
+  попробуйте второй: у операторов фильтрация настроена по-разному.</p>
+
+  <p>В подписку входит 2 устройства одновременно,
+  к одному ключу можно подключить до 6 — телефон
+  и компьютер закрываются одной подпиской. Если перебрали страны
+  и протоколы, а картинок нет, напишите в бота: там отвечает человек.
+  Первые 3 дня бесплатны, карта не нужна, автосписаний
+  нет — проверить на своей сети можно до оплаты.</p>
+</section>
+
+<h2 id="ne-obeshchaem">Что мы не обещаем</h2>
+
+<p>Мы не обещаем, что Pinterest будет работать всегда. Статус сервиса
+в России может измениться, и если его заблокируют, обход придётся
+настраивать заново — как это было с другими сервисами.</p>
+
+<p>Не обещаем, что туннель вылечит сбой на стороне Pinterest или
+настройки вашего устройства. Он решает одну задачу — доставить
+страницу и картинки в обход российских сетей. Если причина в другом,
+мы честно скажем об этом в поддержке, а не предложим купить
+ещё что-нибудь.</p>
+
+<p>И не обещаем, что эта статья не устареет. Факты сверены
+5 октября 2026 года, и на каждый мы даём ссылку, чтобы вы могли
+проверить их сами.</p>
+
+
+    <h2 id="chastye-voprosy">Частые вопросы</h2>
+    <div class="faq">
+      <div id="vopros-pinterest-zablokirovan-v-rossii" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Pinterest заблокирован в России?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1" aria-hidden="true">
+          <div><p>Нет. На апрель 2026 года Роскомнадзор не вносил его в реестр запрещённых ресурсов. Давление идёт через суды: штрафы за неудаление контента, исполнительные производства. Статус может измениться, но пока сервис не заблокирован.</p></div>
+        </div>
+      </div>
+      <div id="vopros-pochemu-sayt-otkrylsya-a-kartinok-net" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>Почему сайт открылся, а картинок нет?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2" aria-hidden="true">
+          <div><p>Страница и картинки приходят с разных доменов: лента с pinterest.com, изображения с i.pinimg.com. Это разные соединения, и одно может пройти, а другое нет. Отсюда серые квадраты на месте пинов.</p></div>
+        </div>
+      </div>
+      <div id="vopros-pomozhet-li-vpn" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>Поможет ли VPN?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3" aria-hidden="true">
+          <div><p>Если проблема в маршруте через российские сети — обычно да: через туннель и страница, и картинки идут с зарубежного сервера. Если упал сам сервис или мешают настройки устройства, туннель не поможет.</p></div>
+        </div>
+      </div>
+      <div id="vopros-s-vpn-kartinki-vse-ravno-ne-gruzyatsya" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>С VPN картинки всё равно не грузятся.</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4" aria-hidden="true">
+          <div><p>Проверьте три вещи: что домен pinimg.com не уходит мимо туннеля, что блокировщик рекламы не режет картинки и что кэш не показывает старые пустые изображения. Если всё в порядке — смените страну.</p></div>
+        </div>
+      </div>
+      <div id="vopros-kakuyu-stranu-vybrat" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>Какую страну выбрать?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5" aria-hidden="true">
+          <div><p>Любую, кроме российской. Региональных ограничений у Pinterest для России нет: страна нужна не ради региона, а чтобы обойти российские сети. Ближние европейские грузят ленту быстрее.</p></div>
+        </div>
+      </div>
+      <div id="vopros-nuzhno-li-vyklyuchat-vpn-chtoby-zayti-v-bank" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q6" aria-controls="a6">
+            <span>Нужно ли выключать VPN, чтобы зайти в банк?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6" aria-hidden="true">
+          <div><p>У нас нет: банки, Госуслуги и другие российские сервисы идут мимо туннеля сами, а Pinterest — через него. Переключать туда-обратно не нужно.</p></div>
+        </div>
+      </div>
+      <div id="vopros-v-prilozhenii-ne-gruzitsya-v-brauzere-gruzitsya" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q7" aria-controls="a7">
+            <span>В приложении не грузится, в браузере грузится.</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a7" role="region" aria-labelledby="q7" aria-hidden="true">
+          <div><p>Значит, канал в порядке, а дело в приложении: оно держит кэш и старое состояние. Закройте его полностью из списка запущенных, а если не поможет — очистите кэш в настройках.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p><strong>Проверить на своей сети.</strong> 3 дня
+      бесплатно, карта не нужна: если у вас не заработает — вы ничего
+      не потеряли.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Проверить на своём подключении</a>
+    </div>
+
+    <aside aria-label="Другие статьи по теме">
+    <h2 id="chitat-dalshe">Читать дальше</h2>
+    <ul class="facts">
+      <li><a href="/blog/telegram-media/">ВПН для телеграмма: не грузятся фото</a></li>
+      <li><a href="/blog/vpn-i-banki/">Сбербанк не работает с VPN: что делать</a></li>
+      <li><a href="/blog/kak-ustanovit-vpn-na-steam/">VPN на Steam Deck: как установить и для чего нужен</a></li>
+    </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <p class="foot-head">Сервис</p>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/#price">Цена</a></li>
+          <li><a href="/o-servise/">О сервисе</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Доступ и цена</p>
+        <ul>
+          <li><a href="/skachat-besplatno/">Попробовать бесплатно</a></li>
+          <li><a href="/probnyy-period/">Пробный период</a></li>
+          <li><a href="/telegram-bot/">Ключ через Telegram-бота</a></li>
+          <li><a href="/kupit/">Купить ключ</a></li>
+          <li><a href="/platnyy-vpn/">Сколько стоит платный VPN</a></li>
+          <li><a href="/klyuch-vpn/">Что такое ключ VPN</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Устройства</p>
+        <ul>
+          <li><a href="/android/">Android</a></li>
+          <li><a href="/iphone/">iPhone и iPad</a></li>
+          <li><a href="/windows/">Компьютер с Windows</a></li>
+          <li><a href="/tv/">Телевизор</a></li>
+          <li><a href="/router/">Роутер</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Помощь</p>
+        <ul>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/ne-rabotaet/">Не работает — что делать</a></li>
+          <li><a href="/proverka/">Проверить, работает ли VPN</a></li>
+          <li><a href="/rossiyskiy-ip/">Российский IP: банки и Госуслуги</a></li>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/whatsapp-ne-rabotaet/">Ватсап не работает с VPN</a></li>
+          <li><a href="/blog/operator-blokiruet-vpn/">Оператор блокирует VPN</a></li>
+          <li><a href="/blog/vpn-dlya-igr/">VPN для игр</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/blog/">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Связь</p>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Канал «Цифровая свобода»</a></li>
+          <li class="foot-alt">Не открывается? <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть
+            в приложении</a> или найдите <b class="mono">@vpn_prosto_bot</b></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Документы</p>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2021—<span data-year>2026</span> VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://prostokey.com/#organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Pinterest не работает в России: что делать", "description": "Сайт открывается через раз, а картинки висят серыми квадратами. Сервис не заблокирован — почему он всё равно ломается и когда помогает VPN.", "datePublished": "2026-10-05", "dateModified": "2026-10-05", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/pinterest-ne-rabotaet/", "name": "Pinterest не работает в России: что делать"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@id": "https://prostokey.com/#organization"}, "publisher": {"@id": "https://prostokey.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Pinterest не работает в России: что делать", "item": "https://prostokey.com/blog/pinterest-ne-rabotaet/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Pinterest заблокирован в России?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. На апрель 2026 года Роскомнадзор не вносил его в реестр запрещённых ресурсов. Давление идёт через суды: штрафы за неудаление контента, исполнительные производства. Статус может измениться, но пока сервис не заблокирован."}}, {"@type": "Question", "name": "Почему сайт открылся, а картинок нет?", "acceptedAnswer": {"@type": "Answer", "text": "Страница и картинки приходят с разных доменов: лента с pinterest.com, изображения с i.pinimg.com. Это разные соединения, и одно может пройти, а другое нет. Отсюда серые квадраты на месте пинов."}}, {"@type": "Question", "name": "Поможет ли VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Если проблема в маршруте через российские сети — обычно да: через туннель и страница, и картинки идут с зарубежного сервера. Если упал сам сервис или мешают настройки устройства, туннель не поможет."}}, {"@type": "Question", "name": "С VPN картинки всё равно не грузятся.", "acceptedAnswer": {"@type": "Answer", "text": "Проверьте три вещи: что домен pinimg.com не уходит мимо туннеля, что блокировщик рекламы не режет картинки и что кэш не показывает старые пустые изображения. Если всё в порядке — смените страну."}}, {"@type": "Question", "name": "Какую страну выбрать?", "acceptedAnswer": {"@type": "Answer", "text": "Любую, кроме российской. Региональных ограничений у Pinterest для России нет: страна нужна не ради региона, а чтобы обойти российские сети. Ближние европейские грузят ленту быстрее."}}, {"@type": "Question", "name": "Нужно ли выключать VPN, чтобы зайти в банк?", "acceptedAnswer": {"@type": "Answer", "text": "У нас нет: банки, Госуслуги и другие российские сервисы идут мимо туннеля сами, а Pinterest — через него. Переключать туда-обратно не нужно."}}, {"@type": "Question", "name": "В приложении не грузится, в браузере грузится.", "acceptedAnswer": {"@type": "Answer", "text": "Значит, канал в порядке, а дело в приложении: оно держит кэш и старое состояние. Закройте его полностью из списка запущенных, а если не поможет — очистите кэш в настройках."}}]}</script>
+<script src="/app.js?v=807b2b71" defer></script>
+<img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/pinterest-ne-rabotaet/"
+     alt="" width="1" height="1" decoding="async"
+     class="px" aria-hidden="true"></body>
+</html>
