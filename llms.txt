@@ -43,6 +43,7 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [Телеграм не работает с VPN: что проверить](https://prostokey.com/blog/telegram-ne-rabotaet-s-vpn/)
 - [Shadowsocks: что это за протокол и чем отличается от нашего](https://prostokey.com/blog/shadowsocks-chto-eto-takoe/)
 - [VPN на Steam Deck: как установить и для чего нужен](https://prostokey.com/blog/kak-ustanovit-vpn-na-steam/)
 - [Бравл Старс не работает с VPN: в чём дело](https://prostokey.com/blog/brawl-stars-ne-rabotaet/)
