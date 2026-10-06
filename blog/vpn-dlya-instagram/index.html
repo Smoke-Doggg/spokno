@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/head-init.js?v=c3c31878"></script>
+<title>Инстаграм не работает с VPN — VPN Просто</title>
+<meta name="description" content="Инстаграм не открывается или не грузит фото даже с включённым VPN. Шесть причин — от домена мимо туннеля до проверки входа — и порядок проверки.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stat.prostokey.com; font-src 'self' data:; connect-src 'self' https://stat.prostokey.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/blog/vpn-dlya-instagram/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="Инстаграм не работает с VPN">
+<meta property="og:description" content="Инстаграм не открывается или не грузит фото даже с включённым VPN. Шесть причин — от домена мимо туннеля до проверки входа — и порядок проверки.">
+<meta property="og:url" content="https://prostokey.com/blog/vpn-dlya-instagram/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Инстаграм не работает с VPN — VPN Просто">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="/fonts.css?v=1260ba6b">
+<link rel="preload" href="/fonts/onest-800-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=70acbc77">
+</head>
+<body>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" focusable="false">
+<defs>
+
+<clipPath id="flag-clip"><rect width="16" height="12" rx="2"/></clipPath>
+
+<symbol id="ic-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="ic-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="ic-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="ic-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+<symbol id="ic-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="ic-unplug" viewBox="0 0 24 24"><path d="m19 5 3-3"/><path d="m2 22 3-3"/>
+<path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/>
+<path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/>
+<path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z"/></symbol>
+<symbol id="ic-credit-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+<symbol id="ic-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+<path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></symbol>
+<symbol id="ic-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+<symbol id="ic-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+<symbol id="ic-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.7 8.9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.5 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/>
+<path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="ic-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.8-1.6l7.9-10.7A1 1 0 0 1 13 2.3V10a1 1 0 0 0 1 1h6a1 1 0 0 1 .8 1.6l-7.9 10.7A1 1 0 0 1 11 21.7V14a1 1 0 0 0-1-1z"/></symbol>
+<symbol id="ic-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+<path d="M2 12h20"/></symbol>
+<symbol id="ic-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
+<circle cx="18" cy="5" r="3"/></symbol>
+<symbol id="ic-sparkles" viewBox="0 0 24 24"><path d="M9.9 2.5 12 8l5.5 2.1L12 12.2 9.9 17.7 7.8 12.2 2.3 10.1 7.8 8z"/>
+<path d="M18 5h.01"/><path d="M20 15h.01"/></symbol>
+<symbol id="ic-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="ic-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+<symbol id="ic-laptop" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.3 2.6a1 1 0 0 1-.9 1.4H3.6a1 1 0 0 1-.9-1.4L4 16"/></symbol>
+<symbol id="ic-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></symbol>
+<symbol id="ic-tv" viewBox="0 0 24 24"><rect width="20" height="15" x="2" y="7" rx="2"/><path d="m17 2-5 5-5-5"/></symbol>
+<symbol id="ic-router" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6.01 18H6"/><path d="M10.01 18H10"/>
+<path d="M15 10v4"/><path d="M17.84 7.17a4 4 0 0 0-5.66 0"/><path d="M20.66 4.34a8 8 0 0 0-11.31 0"/></symbol>
+<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></symbol>
+<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+<symbol id="ic-monitor-cog" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+<symbol id="ic-telegram" viewBox="0 0 24 24"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="ic-send" viewBox="0 0 24 24"><path d="M14.5 9.5 3 21"/><path d="M20.7 3.3a1 1 0 0 0-1.1-.2L3.4 9.6a1 1 0 0 0 .1 1.9l6.4 1.9a1 1 0 0 1 .7.7l1.9 6.4a1 1 0 0 0 1.9.1l6.5-16.2a1 1 0 0 0-.2-1.1Z"/></symbol>
+<symbol id="ic-megaphone-off" viewBox="0 0 24 24"><path d="M11.636 6A13 13 0 0 0 19.4 3.2 1 1 0 0 1 21 4v11.344"/><path d="M14.378 14.357A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1"/><path d="m2 2 20 20"/><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"/><path d="M8 8v6"/></symbol>
+<symbol id="ic-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></symbol>
+<symbol id="ic-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
+<symbol id="ic-id-card" viewBox="0 0 24 24"><path d="M16 10h2"/><path d="M16 14h2"/><path d="M6.17 15a3 3 0 0 1 5.66 0"/><circle cx="9" cy="11" r="2"/><rect x="2" y="5" width="20" height="14" rx="2"/></symbol>
+<symbol id="ic-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+
+<symbol id="flag-pl" viewBox="0 0 16 12"><rect width="16" height="6" fill="#fff"/><rect y="6" width="16" height="6" fill="#DC143C"/></symbol>
+<symbol id="flag-it" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#009246"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#CE2B37"/></symbol>
+<symbol id="flag-in" viewBox="0 0 16 12"><rect width="16" height="4" fill="#FF9933"/><rect y="4" width="16" height="4" fill="#fff"/>
+<rect y="8" width="16" height="4" fill="#138808"/><circle cx="8" cy="6" r="1.5" fill="none" stroke="#000080" stroke-width=".7"/></symbol>
+<symbol id="flag-us" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/>
+<rect y="0" width="16" height="1" fill="#B22234"/><rect y="2" width="16" height="1" fill="#B22234"/>
+<rect y="4" width="16" height="1" fill="#B22234"/><rect y="6" width="16" height="1" fill="#B22234"/>
+<rect y="8" width="16" height="1" fill="#B22234"/><rect y="10" width="16" height="1" fill="#B22234"/>
+<rect width="7" height="7" fill="#3C3B6E"/></symbol>
+<symbol id="flag-fi" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/><rect x="4" width="2.5" height="12" fill="#003580"/>
+<rect y="4.75" width="16" height="2.5" fill="#003580"/></symbol>
+<symbol id="flag-ru" viewBox="0 0 16 12"><rect width="16" height="4" fill="#fff"/><rect y="4" width="16" height="4" fill="#0039A6"/>
+<rect y="8" width="16" height="4" fill="#D52B1E"/></symbol>
+<symbol id="flag-se" viewBox="0 0 16 12"><rect width="16" height="12" fill="#006AA7"/><rect x="4" width="2.5" height="12" fill="#FECC00"/>
+<rect y="4.75" width="16" height="2.5" fill="#FECC00"/></symbol>
+<symbol id="flag-fr" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#0055A4"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#EF4135"/></symbol>
+<symbol id="flag-hk" viewBox="0 0 16 12"><rect width="16" height="12" fill="#DE2910"/><circle cx="8" cy="6" r="3.4" fill="#fff"/></symbol>
+
+</defs>
+</svg><div class="aurora aurora--soft" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/" aria-current="page">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system">
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-monitor-cog"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-sun"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-moon"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-menu"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<article class="section article">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → Инстаграм не работает с VPN: что проверить</p>
+    <h1>Инстаграм не работает с VPN: что проверить</h1>
+    <p class="meta">
+      <span>Опубликовано: 6 октября 2026</span>
+      <span>Обновлено: 6 октября 2026</span>
+      <span>Команда VPN Просто</span>
+    </p>
+
+    <p class="lead">Если инстаграм не работает с впн, причина почти никогда не в самом
+значке «подключено». Блокировок за четыре года накопилось несколько
+слоёв: домен убран из российской адресной системы, старые протоколы
+распознаются, а фото и видео идут с других адресов, чем лента.
+Разбираем по симптому — не открывается вовсе, нет картинок или просит
+подтвердить вход — и по порядку, что проверить.
+</p>
+
+<nav class="toc" aria-label="Содержание">
+  <p class="toc__head">В этой статье</p>
+  <ol>
+    <li><a href="#chto-slomano">Хроника: какие слои блокировки лежат друг на друге</a></li>
+    <li><a href="#po-simptomu">Узнать свою причину по симптому</a></li>
+    <li><a href="#prichiny">Шесть причин, из-за которых туннель не спасает</a></li>
+    <li><a href="#foto-i-video">Почему лента есть, а фото и видео нет</a></li>
+    <li><a href="#po-poryadku">Порядок действий: с чего начать</a></li>
+    <li><a href="#kak-u-nas">Что у нас настроено под эту блокировку</a></li>
+    <li><a href="#ne-obeshchaem">Что остаётся вне наших обещаний</a></li>
+  </ol>
+</nav>
+
+
+<h2 id="chto-slomano">Хроника: какие слои блокировки лежат друг на друге</h2>
+
+<p>Инстаграм закрыли не одним решением, а несколькими, и каждое ломает
+доступ по-своему. Поэтому один и тот же симптом «не работает с VPN»
+у двух людей может иметь разные причины.</p>
+
+<ul class="facts">
+  <li><strong>Март 2022 — блокировка сервиса</strong><span>с 14 марта
+    инстаграм
+    <a href="https://ria.ru/20220314/instagram-1777998761.html" rel="noopener">внесён в реестр
+    ресурсов с ограниченным доступом</a>. Позже компания-владелец Meta
+    признана в России экстремистской организацией и запрещена</span></li>
+  <li><strong>Конец 2025 — начало 2026 — протоколы</strong><span>фильтрация
+    научилась узнавать распространённые протоколы VPN: регулятор
+    <a href="https://www.kommersant.ru/doc/8586949" rel="noopener">последовательно
+    ограничивает OpenVPN, WireGuard и ряд других</a>. Сервис на таком
+    протоколе подключается, но трафик не идёт</span></li>
+  <li><strong>11 февраля 2026 — домен убран из адресной системы</strong><span>домены
+    инстаграма
+    <a href="https://cybersport.metaratings.ru/news/domeny-instagram-i-facebook-ischezli-iz-dns-serverov-roskomnadzora-581222/" rel="noopener">исчезли
+    из национальной системы доменных имён</a>. Российские серверы
+    имён теперь отвечают, что такого адреса нет вовсе</span></li>
+</ul>
+
+<p>Первый слой и есть причина, по которой вообще нужен VPN. Два других
+объясняют, почему VPN иногда не помогает: соединение может быть поднято
+протоколом, который уже распознаётся, или устройство может спрашивать
+дорогу к сервису у системы, которая её больше не знает.</p>
+
+<h2 id="po-simptomu">Узнать свою причину по симптому</h2>
+
+<p>Прежде чем перебирать настройки, посмотрите, как именно выглядит
+поломка. Симптом почти однозначно указывает на слой.</p>
+
+<ul class="facts">
+  <li><strong>Не открывается совсем, «нет подключения»</strong><span>туннель
+    не пропускает трафик или адрес запрашивается мимо него. Начните
+    с протокола и разрешения адресов</span></li>
+  <li><strong>Лента с подписями есть, фото и видео серые</strong><span>медиа
+    идёт с отдельных доменов, и они не попадают в обход. Подробно —
+    в разделе ниже</span></li>
+  <li><strong>Открывается и просит подтвердить вход</strong><span>это не
+    блокировка, а проверка самого сервиса: вход с нового адреса
+    в другой стране</span></li>
+  <li><strong>Вчера работало, сегодня нет</strong><span>чаще всего новая
+    волна фильтрации задела ваш протокол. Реже — сбой у самого
+    сервиса</span></li>
+  <li><strong>В браузере работает, в приложении нет</strong><span>туннель
+    есть только у одного из них: расширение браузера или исключение
+    в раздельном доступе</span></li>
+</ul>
+
+<h2 id="prichiny">Шесть причин, из-за которых туннель не спасает</h2>
+
+<h3>Протокол уже распознаётся</h3>
+
+<p>Клиент показывает «подключено», время соединения идёт, а данные
+не ходят или обрываются через несколько секунд. Так выглядит протокол,
+который фильтрация научилась узнавать: рукопожатие проходит, дальше
+соединение глушится. Особенно часто это происходит на мобильном
+интернете, где фильтрация строже, чем на домашнем. Лечится только
+сменой протокола на тот, что маскируется под обычный защищённый
+трафик сайтов. Если в вашем сервисе выбора нет — это вопрос
+к сервису, а не к настройкам телефона.</p>
+
+<h3>Адрес запрашивается мимо туннеля</h3>
+
+<p>С февраля 2026 года домен убран из российской адресной системы.
+Обычно запрос «где находится instagram.com» уходит внутри туннеля
+и проблемы нет. Но если клиент настроен разрешать адреса средствами
+устройства или провайдера, ответ придёт «такого нет» — и приложение
+покажет ошибку сети при работающем VPN. Это та же история, что
+<a href="/blog/whatsapp-ne-rabotaet/">с ватсапом</a>, и лечится тем же:
+в настройках клиента адреса должны разрешаться через туннель.</p>
+
+<h3>Инстаграм не попадает в туннель</h3>
+
+<p>Раздельный доступ — полезная вещь, но настроить его можно двумя
+противоположными способами. Первый: всё идёт через VPN, кроме короткого
+списка российских сервисов. Второй: напрямую идёт всё, а через VPN —
+только список заблокированного. Во втором случае всё зависит от того,
+насколько полон список. Если в нём нет инстаграма или его служебных
+доменов, приложение идёт напрямую и упирается в блокировку. Проверьте
+настройки маршрутизации в клиенте и список приложений-исключений.</p>
+
+<h3>Фото и видео идут с других доменов</h3>
+
+<p>Это причина симптома «лента есть, картинок нет», и о ней — отдельный
+раздел ниже. Коротко: инстаграм — это не один адрес, а несколько,
+и блокировка касается всех.</p>
+
+<h3>Сервис проверяет вход с нового адреса</h3>
+
+<p>Как и любая крупная соцсеть, инстаграм следит, откуда в аккаунт
+входят. Вчера вы заходили из одной страны, сегодня из другой, а адрес
+сервера — дата-центр, через который ходят сотни людей: для системы
+защиты это повод попросить код подтверждения. По каким именно признакам
+срабатывает проверка, Meta не публикует, поэтому обещать, что её
+не будет, не может никто. Что реально помогает — подтвердить вход
+и не менять страну каждый день: постоянная локация вызывает меньше
+вопросов, чем ежедневные перелёты аккаунта по карте.</p>
+
+<h3>Выбрана российская локация</h3>
+
+<p>Если в подписке есть российский сервер и клиент выбирает его
+автоматически как ближайший, вы выходите в сеть из той же страны, где
+сервис заблокирован. Российский адрес нужен для обратной задачи —
+<a href="/rossiyskiy-ip/">банки и госсервисы из-за границы</a>. Для
+инстаграма выбирайте любую другую страну и задавайте её вручную.</p>
+
+<h2 id="foto-i-video">Почему лента есть, а фото и видео нет</h2>
+
+<p>Самый странный на вид симптом объясняется устройством сервиса.
+Страница и лента с подписями приходят с instagram.com, а сами фото,
+сторис и ролики — с отдельных доменов доставки контента:
+cdninstagram.com и fbcdn.net. Блокировка распространяется на все
+эти адреса, и обход должен покрывать их все.</p>
+
+<p>Это не теория: в обсуждениях программ обхода, которые работают
+по списку доменов, симптом описан ровно так —
+<a href="https://github.com/Flowseal/zapret-discord-youtube/discussions/8778" rel="noopener">«инстаграм
+зашёл, но изображения не грузятся»</a>, и лечится он добавлением
+доменов доставки контента в список. С VPN картина та же, если через
+туннель идёт не всё, а только перечень сайтов: расширение браузера,
+прокси для одного приложения, раздельный доступ в режиме «через VPN
+только заблокированное».</p>
+
+<p>Отсюда простая проверка. Если подписи видны, а картинки нет —
+переключите клиент в режим, где через туннель идёт весь трафик, и
+откройте ту же ленту снова. Появились картинки — причина найдена,
+дальше уже можно аккуратно вернуть исключения для российских сервисов.</p>
+
+<p>Второй, более мягкий вариант того же симптома — картинки грузятся,
+а видео и сторис подвисают на середине. Это уже не блокировка, а
+пропускная способность: медленный или перегруженный сервер тянет
+текст и фото, но не поток. Помогает другая страна или другой протокол,
+а на бесплатных сервисах — чаще всего ничего: скорость там делят
+на всех. <a href="/blog/telegram-media/">С фото в телеграме</a>
+история похожая, хотя механизм другой.</p>
+
+<h2 id="po-poryadku">Порядок действий: с чего начать</h2>
+
+<ol class="steps">
+  <li><b>Проверьте, что адрес сменился</b><span>Откройте
+  <a href="/proverka/">страницу проверки</a> при включённом VPN. Она
+  покажет видимый адрес и страну. Если страна российская или адрес
+  ваш домашний — туннель не работает или выбрана российская локация.</span></li>
+  <li><b>Задайте страну вручную</b><span>Выключите автовыбор сервера
+  и укажите любую нероссийскую локацию.</span></li>
+  <li><b>Переключите протокол</b><span>Если в клиенте их несколько,
+  попробуйте второй. Особенно если на домашнем интернете всё работает,
+  а на мобильном нет.</span></li>
+  <li><b>Пустите через туннель весь трафик</b><span>Временно отключите
+  раздельный доступ или исключения. Если инстаграм заработал целиком,
+  с фото и видео, — дело было в списке.</span></li>
+  <li><b>Проверьте разрешение адресов</b><span>В настройках клиента
+  адреса должны разрешаться через туннель, а не средствами устройства.</span></li>
+  <li><b>Перезапустите приложение полностью</b><span>Закройте его
+  из списка запущенных, а не сверните: иначе оно держится за старое
+  соединение.</span></li>
+  <li><b>Подтвердите вход, если просит</b><span>Код подтверждения после
+  смены страны — обычная проверка, а не блокировка аккаунта.</span></li>
+</ol>
+
+<p>Если ни один шаг не совпал с вашим случаем, возможно, дело
+не в инстаграме, а в VPN как таковом. Общий разбор по симптомам —
+на странице «<a href="/ne-rabotaet/">VPN не работает</a>».</p>
+
+<section class="unique">
+  <h2 id="kak-u-nas">Что у нас настроено под эту блокировку</h2>
+
+  <p>Раздельный доступ у нас устроен первым из двух способов: через
+  туннель идёт всё, кроме узкого списка российских сервисов —
+  <a href="/blog/vpn-i-banki/">банков, платёжных систем и госсервисов</a>.
+  Инстаграма в этом списке нет, и его доменов доставки контента тоже.
+  Значит, ситуации «лента есть, картинок нет» из-за неполного списка
+  у нас не возникает: мы не перечисляем, что пустить через VPN, мы
+  перечисляем, что пустить мимо. Всё остальное — включая
+  cdninstagram.com и fbcdn.net — идёт через туннель.</p>
+
+  <p>Протоколов в подписке два, VLESS + Reality и Hysteria2, и оба
+  маскируются под обычный защищённый трафик. Тех протоколов, которые
+  фильтрация уже узнаёт, у нас нет. Переключаются они в клиенте
+  вручную: универсального ответа, какой лучше, не существует, потому
+  что операторы фильтруют по-разному. Если на мобильном интернете
+  инстаграм молчит, а дома работает, первым делом стоит попробовать
+  второй протокол. Hysteria2 работает поверх UDP и на видео часто
+  ведёт себя ровнее, но не на каждой сети.</p>
+
+  <p>Локаций восемь стран, доплат за смену нет. Российская среди них
+  тоже есть, но для инстаграма её выбирать не нужно: она существует
+  для тех, кто уехал и хочет открыть свой банк. Для проверки входа
+  полезно другое — выбрать одну страну и держаться её, а не менять
+  каждый день.</p>
+
+  <p>Своего приложения у нас нет намеренно. Ключ работает в любом
+  подходящем клиенте, и если ваш прячет настройку разрешения адресов
+  или маршрутизации слишком глубоко, тот же ключ переносится в другую
+  программу за минуту. Устройств в подписке два одновременно, всего
+  на один ключ можно подключить до шести — телефон и компьютер не
+  требуют отдельной подписки.</p>
+
+  <p>Если перебрали локации и протоколы, а инстаграм не открывается,
+  напишите в бота: там отвечает живой человек. Волны фильтрации
+  приходят неравномерно, и нередко мы уже знаем, какая настройка
+  работает сегодня у вашего оператора.</p>
+
+  <p>Проверять стоит на своей сети и своём устройстве: чужой отзыв
+  здесь ничего не доказывает. Первые 3 дня бесплатны
+  и карта не нужна — именно чтобы проверка сторис и рилсов на вашем
+  операторе ничего не стоила. Автосписаний нет: подписка не
+  продлевается сама.</p>
+</section>
+
+<h2 id="ne-obeshchaem">Что остаётся вне наших обещаний</h2>
+
+<p>Мы не обещаем, что инстаграм никогда не попросит подтвердить вход.
+Эту проверку проводит сам сервис по своим правилам, и с адресами
+дата-центров, через которые работает любой VPN, она случается. Мы
+можем только посоветовать держаться одной страны.</p>
+
+<p>Не обещаем, что работающий сегодня протокол будет работать всегда.
+Фильтрация меняется волнами, и то, что проходило на прошлой неделе,
+может перестать проходить завтра — у любого сервиса, не только у нас.
+Обещать можно одно: после каждой волны мы выдаём настройки, которые
+снова поднимают соединение.</p>
+
+<p>И не обещаем одинаковой скорости видео на любой сети. Как быстро
+грузятся сторис и рилсы, зависит от вашего оператора и от его
+фильтрации. Поэтому мы и предлагаем проверить это до оплаты, а
+не верить на слово.</p>
+
+
+    <h2 id="chastye-voprosy">Частые вопросы</h2>
+    <div class="faq">
+      <div id="vopros-pochemu-instagram-ne-rabotaet-hotya-vpn-vklyuchen" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Почему инстаграм не работает, хотя VPN включён?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1" aria-hidden="true">
+          <div><p>Чаще всего по одной из трёх причин: протокол уже распознаётся фильтрацией и соединение фактически не идёт, адрес сервиса запрашивается мимо туннеля, или инстаграм вообще не попадает в туннель из-за настроек раздельного доступа. Все три проверяются за несколько минут, порядок — в статье.</p></div>
+        </div>
+      </div>
+      <div id="vopros-lenta-otkryvaetsya-a-foto-i-video-net-pochemu" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>Лента открывается, а фото и видео нет. Почему?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2" aria-hidden="true">
+          <div><p>Картинки и ролики приходят не с instagram.com, а с отдельных доменов доставки контента. Если через обход идёт только список адресов и этих доменов в нём нет, текст ленты проходит, а медиа упирается в блокировку. Помогает пустить через туннель весь трафик приложения, а не список сайтов.</p></div>
+        </div>
+      </div>
+      <div id="vopros-ranshe-rabotalo-a-segodnya-perestalo-chto-sluchilos" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>Раньше работало, а сегодня перестало. Что случилось?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3" aria-hidden="true">
+          <div><p>Обычно сменилась волна фильтрации: протокол, который вчера проходил, сегодня распознаётся. Попробуйте второй протокол и другую страну. Если не помогло ни то, ни другое, проверьте по сайтам сбоев, не лежит ли сам сервис: такое тоже бывает.</p></div>
+        </div>
+      </div>
+      <div id="vopros-instagram-prosit-podtverdit-vhod-posle-vklyucheniya-vpn-eto-" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>Инстаграм просит подтвердить вход после включения VPN. Это блокировка?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4" aria-hidden="true">
+          <div><p>Нет, это проверка самого сервиса: вход с нового адреса в другой стране выглядит для него подозрительно. Подтвердите вход кодом и не меняйте страну каждый день — постоянная локация вызывает меньше вопросов.</p></div>
+        </div>
+      </div>
+      <div id="vopros-v-brauzere-rabotaet-a-v-prilozhenii-net-ili-naoborot" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>В браузере работает, а в приложении нет (или наоборот).</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5" aria-hidden="true">
+          <div><p>Значит, туннель есть только у одного из них. Расширения для браузера закрывают только браузер, а раздельный доступ в клиенте может обходить конкретное приложение. Проверьте, что VPN включён для всего устройства.</p></div>
+        </div>
+      </div>
+      <div id="vopros-kakuyu-stranu-vybrat-dlya-instagrama" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q6" aria-controls="a6">
+            <span>Какую страну выбрать для инстаграма?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6" aria-hidden="true">
+          <div><p>Любую, кроме российской. Российский сервер нужен для обратной задачи — доступа к банкам и госсервисам из-за границы, а для инстаграма через него вы выходите в сеть из той же страны, где сервис заблокирован.</p></div>
+        </div>
+      </div>
+      <div id="vopros-mozhno-proverit-do-oplaty" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q7" aria-controls="a7">
+            <span>Можно проверить до оплаты?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a7" role="region" aria-labelledby="q7" aria-hidden="true">
+          <div><p>Да, первые три дня бесплатны и карта не нужна. Именно на своей сети и своём операторе и стоит проверить, грузятся ли сторис и рилсы: фильтрация у операторов разная.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p><strong>Проверить на своей сети.</strong> 3 дня
+      бесплатно, карта не нужна: если у вас не заработает — вы ничего
+      не потеряли.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Проверить на своём подключении</a>
+    </div>
+
+    <aside aria-label="Другие статьи по теме">
+    <h2 id="chitat-dalshe">Читать дальше</h2>
+    <ul class="facts">
+      <li><a href="/blog/whatsapp-ne-rabotaet/">Ватсап не работает с VPN: почему и что делать</a></li>
+      <li><a href="/blog/telegram-media/">ВПН для телеграмма: не грузятся фото</a></li>
+      <li><a href="/blog/tiktok-ne-rabotaet/">Тикток не работает с VPN: почему и что делать</a></li>
+    </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <p class="foot-head">Сервис</p>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/#price">Цена</a></li>
+          <li><a href="/o-servise/">О сервисе</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Доступ и цена</p>
+        <ul>
+          <li><a href="/skachat-besplatno/">Попробовать бесплатно</a></li>
+          <li><a href="/probnyy-period/">Пробный период</a></li>
+          <li><a href="/telegram-bot/">Ключ через Telegram-бота</a></li>
+          <li><a href="/kupit/">Купить ключ</a></li>
+          <li><a href="/platnyy-vpn/">Сколько стоит платный VPN</a></li>
+          <li><a href="/klyuch-vpn/">Что такое ключ VPN</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Устройства</p>
+        <ul>
+          <li><a href="/android/">Android</a></li>
+          <li><a href="/iphone/">iPhone и iPad</a></li>
+          <li><a href="/windows/">Компьютер с Windows</a></li>
+          <li><a href="/tv/">Телевизор</a></li>
+          <li><a href="/router/">Роутер</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Помощь</p>
+        <ul>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/ne-rabotaet/">Не работает — что делать</a></li>
+          <li><a href="/proverka/">Проверить, работает ли VPN</a></li>
+          <li><a href="/rossiyskiy-ip/">Российский IP: банки и Госуслуги</a></li>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/whatsapp-ne-rabotaet/">Ватсап не работает с VPN</a></li>
+          <li><a href="/blog/operator-blokiruet-vpn/">Оператор блокирует VPN</a></li>
+          <li><a href="/blog/vpn-dlya-igr/">VPN для игр</a></li>
+          <li><a href="/blog/brawl-stars-ne-rabotaet/">Бравл Старс не работает с VPN</a></li>
+          <li><a href="/blog/viber-ne-rabotaet/">Вайбер не работает в России</a></li>
+          <li><a href="/blog/gemini-ne-rabotaet/">Gemini не работает с VPN</a></li>
+          <li><a href="/blog/pinterest-ne-rabotaet/">Pinterest не работает</a></li>
+          <li><a href="/blog/kakoy-vpn-rabotaet/">Какой VPN работает сейчас</a></li>
+          <li><a href="/blog/vpn-dlya-yutuba/">VPN для YouTube</a></li>
+          <li><a href="/blog/rasshirenie-brauzera/">VPN-расширение для браузера</a></li>
+          <li><a href="/blog/telegram-ne-rabotaet-s-vpn/">Телеграм не работает с VPN</a></li>
+          <li><a href="/blog/yandex-ne-rabotaet-s-vpn/">Яндекс не работает с VPN</a></li>
+          <li><a href="/blog/avito-ne-rabotaet-s-vpn/">Авито не работает с VPN</a></li>
+          <li><a href="/blog/netflix-ne-rabotaet/">Netflix не работает в России</a></li>
+          <li><a href="/blog/max-ne-rabotaet-za-granicey/">MAX не работает за границей</a></li>
+          <li><a href="/blog/facebook-ne-rabotaet/">Фейсбук не работает в России</a></li>
+          <li><a href="/blog/vpn-dlya-instagram/">Инстаграм не работает с VPN</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/blog/">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Связь</p>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Канал «Цифровая свобода»</a></li>
+          <li class="foot-alt">Не открывается? <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть
+            в приложении</a> или найдите <b class="mono">@vpn_prosto_bot</b></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Документы</p>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2021—<span data-year>2026</span> VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://prostokey.com/#organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Инстаграм не работает с VPN: что проверить", "description": "Значок горит, а лента не грузится, фото серые или приложение просит подтвердить вход. Какой слой блокировки за этим стоит и что проверить по порядку.", "datePublished": "2026-10-06", "dateModified": "2026-10-06", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/vpn-dlya-instagram/", "name": "Инстаграм не работает с VPN: что проверить"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@id": "https://prostokey.com/#organization"}, "publisher": {"@id": "https://prostokey.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Инстаграм не работает с VPN: что проверить", "item": "https://prostokey.com/blog/vpn-dlya-instagram/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему инстаграм не работает, хотя VPN включён?", "acceptedAnswer": {"@type": "Answer", "text": "Чаще всего по одной из трёх причин: протокол уже распознаётся фильтрацией и соединение фактически не идёт, адрес сервиса запрашивается мимо туннеля, или инстаграм вообще не попадает в туннель из-за настроек раздельного доступа. Все три проверяются за несколько минут, порядок — в статье."}}, {"@type": "Question", "name": "Лента открывается, а фото и видео нет. Почему?", "acceptedAnswer": {"@type": "Answer", "text": "Картинки и ролики приходят не с instagram.com, а с отдельных доменов доставки контента. Если через обход идёт только список адресов и этих доменов в нём нет, текст ленты проходит, а медиа упирается в блокировку. Помогает пустить через туннель весь трафик приложения, а не список сайтов."}}, {"@type": "Question", "name": "Раньше работало, а сегодня перестало. Что случилось?", "acceptedAnswer": {"@type": "Answer", "text": "Обычно сменилась волна фильтрации: протокол, который вчера проходил, сегодня распознаётся. Попробуйте второй протокол и другую страну. Если не помогло ни то, ни другое, проверьте по сайтам сбоев, не лежит ли сам сервис: такое тоже бывает."}}, {"@type": "Question", "name": "Инстаграм просит подтвердить вход после включения VPN. Это блокировка?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, это проверка самого сервиса: вход с нового адреса в другой стране выглядит для него подозрительно. Подтвердите вход кодом и не меняйте страну каждый день — постоянная локация вызывает меньше вопросов."}}, {"@type": "Question", "name": "В браузере работает, а в приложении нет (или наоборот).", "acceptedAnswer": {"@type": "Answer", "text": "Значит, туннель есть только у одного из них. Расширения для браузера закрывают только браузер, а раздельный доступ в клиенте может обходить конкретное приложение. Проверьте, что VPN включён для всего устройства."}}, {"@type": "Question", "name": "Какую страну выбрать для инстаграма?", "acceptedAnswer": {"@type": "Answer", "text": "Любую, кроме российской. Российский сервер нужен для обратной задачи — доступа к банкам и госсервисам из-за границы, а для инстаграма через него вы выходите в сеть из той же страны, где сервис заблокирован."}}, {"@type": "Question", "name": "Можно проверить до оплаты?", "acceptedAnswer": {"@type": "Answer", "text": "Да, первые три дня бесплатны и карта не нужна. Именно на своей сети и своём операторе и стоит проверить, грузятся ли сторис и рилсы: фильтрация у операторов разная."}}]}</script>
+<script src="/app.js?v=807b2b71" defer></script>
+<img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/vpn-dlya-instagram/"
+     alt="" width="1" height="1" decoding="async"
+     class="px" aria-hidden="true"></body>
+</html>

@@ -45,6 +45,7 @@
 
 - [Телеграм не работает с VPN: что проверить](https://prostokey.com/blog/telegram-ne-rabotaet-s-vpn/)
 - [Shadowsocks: что это за протокол и чем отличается от нашего](https://prostokey.com/blog/shadowsocks-chto-eto-takoe/)
+- [Инстаграм не работает с VPN: что проверить](https://prostokey.com/blog/vpn-dlya-instagram/)
 - [Яндекс не работает с VPN: почему и что делать](https://prostokey.com/blog/yandex-ne-rabotaet-s-vpn/)
 - [Авито не работает с VPN: почему и что делать](https://prostokey.com/blog/avito-ne-rabotaet-s-vpn/)
 - [Netflix не работает в России: что можно сделать](https://prostokey.com/blog/netflix-ne-rabotaet/)
