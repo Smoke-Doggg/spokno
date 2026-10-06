@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/head-init.js?v=c3c31878"></script>
+<title>MAX не работает за границей — VPN Просто</title>
+<meta name="description" content="MAX за границей работает без российского адреса. Что ломается на самом деле — код по СМС, магазины приложений, плашка «Отключите VPN» — и что делать.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stat.prostokey.com; font-src 'self' data:; connect-src 'self' https://stat.prostokey.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/blog/max-ne-rabotaet-za-granicey/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="MAX не работает за границей">
+<meta property="og:description" content="MAX за границей работает без российского адреса. Что ломается на самом деле — код по СМС, магазины приложений, плашка «Отключите VPN» — и что делать.">
+<meta property="og:url" content="https://prostokey.com/blog/max-ne-rabotaet-za-granicey/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MAX не работает за границей — VPN Просто">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="/fonts.css?v=1260ba6b">
+<link rel="preload" href="/fonts/onest-800-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=70acbc77">
+</head>
+<body>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" focusable="false">
+<defs>
+
+<clipPath id="flag-clip"><rect width="16" height="12" rx="2"/></clipPath>
+
+<symbol id="ic-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="ic-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="ic-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="ic-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+<symbol id="ic-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="ic-unplug" viewBox="0 0 24 24"><path d="m19 5 3-3"/><path d="m2 22 3-3"/>
+<path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/>
+<path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/>
+<path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z"/></symbol>
+<symbol id="ic-credit-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+<symbol id="ic-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+<path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></symbol>
+<symbol id="ic-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+<symbol id="ic-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+<symbol id="ic-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.7 8.9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.5 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/>
+<path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="ic-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.8-1.6l7.9-10.7A1 1 0 0 1 13 2.3V10a1 1 0 0 0 1 1h6a1 1 0 0 1 .8 1.6l-7.9 10.7A1 1 0 0 1 11 21.7V14a1 1 0 0 0-1-1z"/></symbol>
+<symbol id="ic-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+<path d="M2 12h20"/></symbol>
+<symbol id="ic-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
+<circle cx="18" cy="5" r="3"/></symbol>
+<symbol id="ic-sparkles" viewBox="0 0 24 24"><path d="M9.9 2.5 12 8l5.5 2.1L12 12.2 9.9 17.7 7.8 12.2 2.3 10.1 7.8 8z"/>
+<path d="M18 5h.01"/><path d="M20 15h.01"/></symbol>
+<symbol id="ic-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="ic-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+<symbol id="ic-laptop" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.3 2.6a1 1 0 0 1-.9 1.4H3.6a1 1 0 0 1-.9-1.4L4 16"/></symbol>
+<symbol id="ic-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></symbol>
+<symbol id="ic-tv" viewBox="0 0 24 24"><rect width="20" height="15" x="2" y="7" rx="2"/><path d="m17 2-5 5-5-5"/></symbol>
+<symbol id="ic-router" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6.01 18H6"/><path d="M10.01 18H10"/>
+<path d="M15 10v4"/><path d="M17.84 7.17a4 4 0 0 0-5.66 0"/><path d="M20.66 4.34a8 8 0 0 0-11.31 0"/></symbol>
+<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></symbol>
+<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+<symbol id="ic-monitor-cog" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+<symbol id="ic-telegram" viewBox="0 0 24 24"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="ic-send" viewBox="0 0 24 24"><path d="M14.5 9.5 3 21"/><path d="M20.7 3.3a1 1 0 0 0-1.1-.2L3.4 9.6a1 1 0 0 0 .1 1.9l6.4 1.9a1 1 0 0 1 .7.7l1.9 6.4a1 1 0 0 0 1.9.1l6.5-16.2a1 1 0 0 0-.2-1.1Z"/></symbol>
+<symbol id="ic-megaphone-off" viewBox="0 0 24 24"><path d="M11.636 6A13 13 0 0 0 19.4 3.2 1 1 0 0 1 21 4v11.344"/><path d="M14.378 14.357A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1"/><path d="m2 2 20 20"/><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"/><path d="M8 8v6"/></symbol>
+<symbol id="ic-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></symbol>
+<symbol id="ic-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
+<symbol id="ic-id-card" viewBox="0 0 24 24"><path d="M16 10h2"/><path d="M16 14h2"/><path d="M6.17 15a3 3 0 0 1 5.66 0"/><circle cx="9" cy="11" r="2"/><rect x="2" y="5" width="20" height="14" rx="2"/></symbol>
+<symbol id="ic-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+
+<symbol id="flag-pl" viewBox="0 0 16 12"><rect width="16" height="6" fill="#fff"/><rect y="6" width="16" height="6" fill="#DC143C"/></symbol>
+<symbol id="flag-it" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#009246"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#CE2B37"/></symbol>
+<symbol id="flag-in" viewBox="0 0 16 12"><rect width="16" height="4" fill="#FF9933"/><rect y="4" width="16" height="4" fill="#fff"/>
+<rect y="8" width="16" height="4" fill="#138808"/><circle cx="8" cy="6" r="1.5" fill="none" stroke="#000080" stroke-width=".7"/></symbol>
+<symbol id="flag-us" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/>
+<rect y="0" width="16" height="1" fill="#B22234"/><rect y="2" width="16" height="1" fill="#B22234"/>
+<rect y="4" width="16" height="1" fill="#B22234"/><rect y="6" width="16" height="1" fill="#B22234"/>
+<rect y="8" width="16" height="1" fill="#B22234"/><rect y="10" width="16" height="1" fill="#B22234"/>
+<rect width="7" height="7" fill="#3C3B6E"/></symbol>
+<symbol id="flag-fi" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/><rect x="4" width="2.5" height="12" fill="#003580"/>
+<rect y="4.75" width="16" height="2.5" fill="#003580"/></symbol>
+<symbol id="flag-ru" viewBox="0 0 16 12"><rect width="16" height="4" fill="#fff"/><rect y="4" width="16" height="4" fill="#0039A6"/>
+<rect y="8" width="16" height="4" fill="#D52B1E"/></symbol>
+<symbol id="flag-se" viewBox="0 0 16 12"><rect width="16" height="12" fill="#006AA7"/><rect x="4" width="2.5" height="12" fill="#FECC00"/>
+<rect y="4.75" width="16" height="2.5" fill="#FECC00"/></symbol>
+<symbol id="flag-fr" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#0055A4"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#EF4135"/></symbol>
+<symbol id="flag-hk" viewBox="0 0 16 12"><rect width="16" height="12" fill="#DE2910"/><circle cx="8" cy="6" r="3.4" fill="#fff"/></symbol>
+
+</defs>
+</svg><div class="aurora aurora--soft" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/" aria-current="page">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system">
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-monitor-cog"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-sun"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-moon"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-menu"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<article class="section article">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → MAX не работает за границей: что мешает на самом деле</p>
+    <h1>MAX не работает за границей: что мешает на самом деле</h1>
+    <p class="meta">
+      <span>Опубликовано: 6 октября 2026</span>
+      <span>Обновлено: 6 октября 2026</span>
+      <span>Команда VPN Просто</span>
+    </p>
+
+    <p class="lead">Короткий ответ: мессенджер MAX за границей работает. Аккаунт на
+российский номер открывается в любой стране, где есть интернет, а
+проверки по стране у самого мессенджера нет. Обычно дело в другом: код
+входа не доходит по СМС в роуминге, приложение негде скачать после
+ухода из магазинов, номер не из списка для регистрации или на телефоне
+включён VPN — с апреля 2026 он мешает отправке. Российский VPN с MAX
+не помогает, а мешает; ниже — почему, и где он действительно нужен
+в поездке.
+</p>
+
+<nav class="toc" aria-label="Содержание">
+  <p class="toc__head">В этой статье</p>
+  <ol>
+    <li><a href="#chto-eto">Что такое MAX и почему он у вас есть</a></li>
+    <li><a href="#rabotaet-li">Работает ли MAX за границей</a></li>
+    <li><a href="#chto-lomaetsya">Что ломается на самом деле</a></li>
+    <li><a href="#vpn">Почему VPN с российским сервером тут не поможет</a></li>
+    <li><a href="#gde-nuzhen">Где российский адрес в поездке действительно нужен</a></li>
+    <li><a href="#pered-poezdkoy">Что сделать перед поездкой</a></li>
+    <li><a href="#granicy">Честно о границах решения</a></li>
+  </ol>
+</nav>
+
+
+<p><em>Проверено 6 октября 2026 года. MAX меняется быстро: правила
+регистрации, магазины приложений и работа с VPN за 2026 год менялись
+несколько раз.</em></p>
+
+<h2 id="chto-eto">Что такое MAX и почему он у вас есть</h2>
+
+<p>MAX — мессенджер компании VK, его оператор — дочерняя
+«Коммуникационная платформа». Бета-версия вышла 26 марта 2025 года. Это
+не просто ещё одно приложение: 24 июня 2025 года подписан закон о
+многофункциональном сервисе обмена информацией, по нему MAX стал
+национальным мессенджером. С 1 сентября 2025 года его обязаны
+предустанавливать на все смартфоны и компьютеры, которые продаются
+в России. Внутрь встроены Госуслуги, Госключ и цифровой ID, а школьный
+«Сферум» с 2025/26 учебного года работает внутри MAX.</p>
+
+<p>Для обычного человека закон ставить MAX не обязывает, но школьные и
+родительские чаты фактически переехали туда, поэтому в поездку его
+берут не по выбору.</p>
+
+<h2 id="rabotaet-li">Работает ли MAX за границей</h2>
+
+<p>Здесь стоит развести две вещи: регистрацию и пользование.</p>
+
+<ul class="facts">
+  <li><strong>Пользование</strong><span>если аккаунт уже есть, MAX
+    работает из любой страны через любой интернет — гостиничный Wi-Fi,
+    местную сим-карту, роуминг. Сообщения и звонки идут через сеть, и
+    проверки, где вы находитесь, мессенджер не делает</span></li>
+  <li><strong>Регистрация</strong><span>завести новый аккаунт можно
+    только на номер из разрешённых стран. Сначала это были Россия и
+    Беларусь, с марта 2026 года список расширен до 40 с лишним стран:
+    СНГ, Турция, ОАЭ, Таиланд, Вьетнам, Индонезия и другие. Номеров
+    стран Евросоюза и США в списке нет</span></li>
+</ul>
+
+<p>Получается, что эмигрант или турист с аккаунтом на +7 пользуется MAX
+без российского адреса. А вот владелец номера, скажем, из Германии
+завести аккаунт не может, и VPN это не исправит: ограничение привязано
+к номеру телефона, а не к сети.</p>
+
+<h2 id="chto-lomaetsya">Что ломается на самом деле</h2>
+
+<div class="tablewrap">
+  <table>
+    <thead>
+      <tr><th>Что видите</th><th>Причина</th><th>Что делать</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Не приходит код входа</td>
+        <td>Код идёт по СМС на российский номер, в роуминге СМС доходят
+        ненадёжно</td>
+        <td>Войти до отъезда и не выходить из аккаунта. Проверить, что
+        сим-карта принимает СМС в роуминге</td>
+      </tr>
+      <tr>
+        <td>MAX нет в магазине приложений</td>
+        <td>Apple удалила MAX из App Store 3–4 июня 2026 года, Google
+        Play — 16 июля, обе компании ссылаются на санкционные правила</td>
+        <td>Android: RuStore, AppGallery, Galaxy Store, GetApps или файл
+        установки с официального сайта. iPhone: ставить уже негде,
+        остаётся веб-версия web.max.ru и программа для компьютера</td>
+      </tr>
+      <tr>
+        <td>«Номер не поддерживается»</td>
+        <td>Номер страны вне списка для регистрации</td>
+        <td>Зарегистрироваться на российский или белорусский номер. Сеть
+        тут ни при чём</td>
+      </tr>
+      <tr>
+        <td>«Отключите VPN, чтобы пользоваться MAX»</td>
+        <td>С апреля 2026 года MAX ограничивает работу при включённом
+        VPN</td>
+        <td>Отключить VPN на время работы в MAX (подробно — следующий
+        раздел)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Про iPhone отдельно. Если MAX уже был установлен, он продолжает
+работать, но обновлений больше нет. По сообщениям СМИ, после удаления
+из App Store у части владельцев iPhone пропали уведомления о
+сообщениях. Если уведомления важны, держите открытой веб-версию.</p>
+
+<h2 id="vpn">Почему VPN с российским сервером тут не поможет</h2>
+
+<p>Логика из статьи про банки — «за границей включите российский адрес,
+и сервис решит, что вы дома» — с MAX не работает. 30 марта 2026 года
+Минцифры поручило крупным российским платформам к 15 апреля ограничить
+доступ пользователям с включённым VPN.
+<a href="https://ixbt.com/news/2026/04/21/messendzher-maks-nachal-ogranichivat-rabotu-pri-vkljuchennom-vpn.html" rel="noopener">С 21 апреля</a>
+MAX при попытке отправить сообщение показывает плашку «Отключите VPN,
+чтобы пользоваться MAX». Читать переписку и каналы при этом можно,
+отправлять нельзя.</p>
+
+<p>Важно, как MAX определяет VPN. Исследователи, разобравшие приложение
+для Android,
+<a href="https://habr.com/ru/articles/1036222/" rel="noopener">описывают</a>
+три проверки: системный признак «соединение идёт через VPN», поиск
+туннельных сетевых интерфейсов в системе и запрос вашего настоящего
+адреса у нескольких внешних сервисов. Первые две проверки смотрят на сам
+факт туннеля, страна сервера им не важна. Поэтому VPN с российским
+адресом MAX замечает так же, как с любым другим. Пресс-служба MAX
+<a href="https://www.fontanka.ru/2026/03/05/76297214/" rel="noopener">слежку за VPN отрицала</a> —
+вывод выше взят из независимого разбора кода, а не из официальных
+заявлений.</p>
+
+<p>Вывод простой: для MAX за границей VPN не нужен. Мессенджер работает
+через местный интернет, а включённый туннель только мешает отправке.</p>
+
+<h2 id="gde-nuzhen">Где российский адрес в поездке действительно нужен</h2>
+
+<p>А вот у других российских сервисов логика обратная. С весны 2026
+года туристы жалуются: банки, маркетплейсы, сайты авиакомпаний и
+Госуслуги с местного зарубежного интернета не открываются или просят
+«отключить VPN», хотя VPN не включён. Сервис видит зарубежный адрес и
+принимает его за туннель. Здесь помогает именно российский адрес: для
+банка вы снова дома.</p>
+
+<p>Поэтому в поездке разумна простая схема:</p>
+
+<ul>
+  <li>MAX — без VPN, через местный интернет или роуминг;</li>
+  <li>банк, Госуслуги, маркетплейс — через VPN с российским сервером;</li>
+  <li>всё остальное — как вам удобнее.</li>
+</ul>
+
+<div class="inline-cta">
+  <p>Российский сервер у нас входит в подписку без доплаты, переключение —
+  пару касаний в клиенте. 3 дня бесплатно, карта не
+  нужна: проверьте на своём банке ещё до поездки.</p>
+  <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251">Российский сервер для банков в поездке</a>
+</div>
+
+<h2 id="pered-poezdkoy">Что сделать перед поездкой</h2>
+
+<ol class="steps">
+  <li><b>Войдите в MAX дома</b><span>Код по СМС в России приходит сразу,
+  за границей может не прийти.</span></li>
+  <li><b>Не выходите из аккаунта и не удаляйте приложение</b><span>На
+  iPhone переустановить его будет негде.</span></li>
+  <li><b>На Android скачайте файл установки или поставьте RuStore
+  заранее</b><span>Чтобы было откуда обновляться.</span></li>
+  <li><b>Откройте web.max.ru на ноутбуке и войдите</b><span>Это запасной
+  вход, если с телефоном что-то случится.</span></li>
+  <li><b>Проверьте банк и Госуслуги через российский сервер VPN до
+  отъезда</b><span>А не в момент, когда срочно нужен перевод.</span></li>
+</ol>
+
+<p>Разбор похожих случаев с другими российскими сервисами — на странице
+«<a href="/ne-rabotaet/">VPN не работает</a>».</p>
+
+<section class="unique">
+  <h2 id="granicy">Честно о границах решения</h2>
+
+  <p>Наш раздельный доступ работает по адресам сайтов: банки, Госуслуги,
+  VK и российские зоны идут мимо туннеля. Но MAX смотрит не на то, куда
+  идёт трафик, а на то, есть ли на телефоне туннель вообще. Поэтому при
+  включённом VPN — любом, включая наш, — MAX может показать плашку, даже
+  если его собственный трафик идёт напрямую. Мы не обещаем это обойти и
+  не советуем: проще выключить VPN на те минуты, когда пишете в MAX, и
+  включить обратно для остального.</p>
+
+  <p>Чего VPN не решит в принципе: регистрацию на номер из
+  неподдерживаемой страны, недоходящие СМС и отсутствие MAX в App Store.
+  Это ограничения номера и магазинов, а не сети.</p>
+
+  <p>Зато для банков, Госуслуг и маркетплейсов за границей наш российский
+  сервер работает без доплаты и без ограничения на число переключений
+  между странами — первые 3 дня можно проверить это
+  бесплатно, карта не нужна.</p>
+
+  <p>Ключ не привязан к одному устройству: два одновременных
+  подключения входят в подписку, а всего к ключу можно добавить до
+  шести. На практике это значит, что телефон в поездке и компьютер,
+  с которого дома проверяется тот же банк, работают на одном ключе
+  без переоформления. Своего приложения у нас нет намеренно: ключ
+  переносится в любой подходящий клиент за минуту, и если один из них
+  ведёт себя странно именно с конкретным банковским приложением, можно
+  быстро попробовать другой.</p>
+
+  <p>Отдельно о протоколах. Их два, и переключаются они в клиенте
+  вручную. Для доступа к банку это обычно не играет роли, а вот для
+  обхода фильтрации на отдельных зарубежных сетях — играет: если один
+  протокол вдруг стал вести себя хуже на конкретной сети отеля или
+  оператора, стоит попробовать второй, а не менять страну сервера.</p>
+
+  <p>И последнее: восемь стран без доплаты за локацию входят в одну
+  подписку, переключаться между ними можно сколько угодно раз. В
+  поездке это удобно не только для банков — одна и та же подписка
+  закрывает и доступ к российским сервисам, и обычный просмотр
+  зарубежных сайтов, если они вдруг понадобятся, без отдельной покупки
+  под каждую задачу.</p>
+</section>
+
+<p>Что ещё почитать: <a href="/blog/vpn-i-banki/">почему банк не работает
+с VPN и наоборот</a> и <a href="/blog/kakuyu-stranu-vybrat/">какую страну
+выбрать в клиенте</a>.</p>
+
+
+    <h2 id="chastye-voprosy">Частые вопросы</h2>
+    <div class="faq">
+      <div id="vopros-rabotaet-li-messendzher-max-za-granicey" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Работает ли мессенджер MAX за границей?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1" aria-hidden="true">
+          <div><p>Да. Аккаунт на российский номер работает в любой стране через любой интернет, проверки по стране у мессенджера нет. Ломаются обычно вход по СМС, установка из магазинов и отправка сообщений при включённом VPN.</p></div>
+        </div>
+      </div>
+      <div id="vopros-nuzhen-li-vpn-chtoby-polzovatsya-max-za-granicey" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>Нужен ли VPN, чтобы пользоваться MAX за границей?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2" aria-hidden="true">
+          <div><p>Нет. Наоборот: с апреля 2026 года MAX при включённом VPN не даёт отправлять сообщения. Для MAX VPN лучше выключить, а российский адрес оставить для банков и Госуслуг.</p></div>
+        </div>
+      </div>
+      <div id="vopros-pomozhet-li-vpn-s-rossiyskim-serverom" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>Поможет ли VPN с российским сервером?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3" aria-hidden="true">
+          <div><p>Для MAX — нет. По разбору приложения он определяет сам факт туннеля на телефоне, и страна сервера тут не важна. Для банков и Госуслуг российский сервер как раз помогает.</p></div>
+        </div>
+      </div>
+      <div id="vopros-pochemu-ne-prihodit-kod-ot-max-za-granicey" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>Почему не приходит код от MAX за границей?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4" aria-hidden="true">
+          <div><p>Код идёт по СМС на российский номер, а в роуминге СМС доходят ненадёжно. Лучше войти до отъезда и не выходить из аккаунта.</p></div>
+        </div>
+      </div>
+      <div id="vopros-mozhno-li-zaregistrirovatsya-v-max-na-inostrannyy-nomer" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>Можно ли зарегистрироваться в MAX на иностранный номер?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5" aria-hidden="true">
+          <div><p>Только на номер из примерно 40 разрешённых стран: СНГ, Турция, ОАЭ, часть Азии, Африки и Латинской Америки. Номера Евросоюза и США не принимаются, и VPN этого не меняет.</p></div>
+        </div>
+      </div>
+      <div id="vopros-gde-skachat-max-esli-ego-net-v-app-store-i-google-play" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q6" aria-controls="a6">
+            <span>Где скачать MAX, если его нет в App Store и Google Play?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6" aria-hidden="true">
+          <div><p>На Android — в RuStore, AppGallery, Galaxy Store, GetApps или с официального сайта. На iPhone новую установку сделать негде, остаются веб-версия web.max.ru и программа для компьютера.</p></div>
+        </div>
+      </div>
+      <div id="vopros-chto-budet-s-akkauntom-max-esli-dolgo-zhit-za-granicey" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q7" aria-controls="a7">
+            <span>Что будет с аккаунтом MAX, если долго жить за границей?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a7" role="region" aria-labelledby="q7" aria-hidden="true">
+          <div><p>Сведений о блокировке аккаунтов за пребывание за границей нет. Аккаунт привязан к номеру, поэтому держите российскую сим-карту активной: без неё не получить код при повторном входе.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p><strong>Проверить на своей сети.</strong> 3 дня
+      бесплатно, карта не нужна: если у вас не заработает — вы ничего
+      не потеряли.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Российский сервер для банков в поездке</a>
+    </div>
+
+    <aside aria-label="Другие статьи по теме">
+    <h2 id="chitat-dalshe">Читать дальше</h2>
+    <ul class="facts">
+      <li><a href="/blog/vpn-i-banki/">Сбербанк не работает с VPN: что делать</a></li>
+      <li><a href="/blog/kakuyu-stranu-vybrat/">ВПН сервер: какую страну выбрать и на что влияет</a></li>
+      <li><a href="/blog/telegram-ne-rabotaet-s-vpn/">Телеграм не работает с VPN: что проверить</a></li>
+    </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <p class="foot-head">Сервис</p>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/#price">Цена</a></li>
+          <li><a href="/o-servise/">О сервисе</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Доступ и цена</p>
+        <ul>
+          <li><a href="/skachat-besplatno/">Попробовать бесплатно</a></li>
+          <li><a href="/probnyy-period/">Пробный период</a></li>
+          <li><a href="/telegram-bot/">Ключ через Telegram-бота</a></li>
+          <li><a href="/kupit/">Купить ключ</a></li>
+          <li><a href="/platnyy-vpn/">Сколько стоит платный VPN</a></li>
+          <li><a href="/klyuch-vpn/">Что такое ключ VPN</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Устройства</p>
+        <ul>
+          <li><a href="/android/">Android</a></li>
+          <li><a href="/iphone/">iPhone и iPad</a></li>
+          <li><a href="/windows/">Компьютер с Windows</a></li>
+          <li><a href="/tv/">Телевизор</a></li>
+          <li><a href="/router/">Роутер</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Помощь</p>
+        <ul>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/ne-rabotaet/">Не работает — что делать</a></li>
+          <li><a href="/proverka/">Проверить, работает ли VPN</a></li>
+          <li><a href="/rossiyskiy-ip/">Российский IP: банки и Госуслуги</a></li>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/whatsapp-ne-rabotaet/">Ватсап не работает с VPN</a></li>
+          <li><a href="/blog/operator-blokiruet-vpn/">Оператор блокирует VPN</a></li>
+          <li><a href="/blog/vpn-dlya-igr/">VPN для игр</a></li>
+          <li><a href="/blog/brawl-stars-ne-rabotaet/">Бравл Старс не работает с VPN</a></li>
+          <li><a href="/blog/viber-ne-rabotaet/">Вайбер не работает в России</a></li>
+          <li><a href="/blog/gemini-ne-rabotaet/">Gemini не работает с VPN</a></li>
+          <li><a href="/blog/pinterest-ne-rabotaet/">Pinterest не работает</a></li>
+          <li><a href="/blog/kakoy-vpn-rabotaet/">Какой VPN работает сейчас</a></li>
+          <li><a href="/blog/vpn-dlya-yutuba/">VPN для YouTube</a></li>
+          <li><a href="/blog/rasshirenie-brauzera/">VPN-расширение для браузера</a></li>
+          <li><a href="/blog/telegram-ne-rabotaet-s-vpn/">Телеграм не работает с VPN</a></li>
+          <li><a href="/blog/yandex-ne-rabotaet-s-vpn/">Яндекс не работает с VPN</a></li>
+          <li><a href="/blog/avito-ne-rabotaet-s-vpn/">Авито не работает с VPN</a></li>
+          <li><a href="/blog/netflix-ne-rabotaet/">Netflix не работает в России</a></li>
+          <li><a href="/blog/max-ne-rabotaet-za-granicey/">MAX не работает за границей</a></li>
+          <li><a href="/blog/facebook-ne-rabotaet/">Фейсбук не работает в России</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/blog/">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Связь</p>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Канал «Цифровая свобода»</a></li>
+          <li class="foot-alt">Не открывается? <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть
+            в приложении</a> или найдите <b class="mono">@vpn_prosto_bot</b></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Документы</p>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2021—<span data-year>2026</span> VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://prostokey.com/#organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "MAX не работает за границей: что мешает на самом деле", "description": "Мессенджер MAX за границей работает и без российского адреса. Ломаются код по СМС, магазины приложений и отправка при включённом VPN — а российский сервер в этой же поездке нужен банкам и Госуслугам.", "datePublished": "2026-10-06", "dateModified": "2026-10-06", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/max-ne-rabotaet-za-granicey/", "name": "MAX не работает за границей: что мешает на самом деле"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@id": "https://prostokey.com/#organization"}, "publisher": {"@id": "https://prostokey.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "MAX не работает за границей: что мешает на самом деле", "item": "https://prostokey.com/blog/max-ne-rabotaet-za-granicey/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Работает ли мессенджер MAX за границей?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Аккаунт на российский номер работает в любой стране через любой интернет, проверки по стране у мессенджера нет. Ломаются обычно вход по СМС, установка из магазинов и отправка сообщений при включённом VPN."}}, {"@type": "Question", "name": "Нужен ли VPN, чтобы пользоваться MAX за границей?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Наоборот: с апреля 2026 года MAX при включённом VPN не даёт отправлять сообщения. Для MAX VPN лучше выключить, а российский адрес оставить для банков и Госуслуг."}}, {"@type": "Question", "name": "Поможет ли VPN с российским сервером?", "acceptedAnswer": {"@type": "Answer", "text": "Для MAX — нет. По разбору приложения он определяет сам факт туннеля на телефоне, и страна сервера тут не важна. Для банков и Госуслуг российский сервер как раз помогает."}}, {"@type": "Question", "name": "Почему не приходит код от MAX за границей?", "acceptedAnswer": {"@type": "Answer", "text": "Код идёт по СМС на российский номер, а в роуминге СМС доходят ненадёжно. Лучше войти до отъезда и не выходить из аккаунта."}}, {"@type": "Question", "name": "Можно ли зарегистрироваться в MAX на иностранный номер?", "acceptedAnswer": {"@type": "Answer", "text": "Только на номер из примерно 40 разрешённых стран: СНГ, Турция, ОАЭ, часть Азии, Африки и Латинской Америки. Номера Евросоюза и США не принимаются, и VPN этого не меняет."}}, {"@type": "Question", "name": "Где скачать MAX, если его нет в App Store и Google Play?", "acceptedAnswer": {"@type": "Answer", "text": "На Android — в RuStore, AppGallery, Galaxy Store, GetApps или с официального сайта. На iPhone новую установку сделать негде, остаются веб-версия web.max.ru и программа для компьютера."}}, {"@type": "Question", "name": "Что будет с аккаунтом MAX, если долго жить за границей?", "acceptedAnswer": {"@type": "Answer", "text": "Сведений о блокировке аккаунтов за пребывание за границей нет. Аккаунт привязан к номеру, поэтому держите российскую сим-карту активной: без неё не получить код при повторном входе."}}]}</script>
+<script src="/app.js?v=807b2b71" defer></script>
+<img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/max-ne-rabotaet-za-granicey/"
+     alt="" width="1" height="1" decoding="async"
+     class="px" aria-hidden="true"></body>
+</html>

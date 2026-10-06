@@ -45,6 +45,11 @@
 
 - [Телеграм не работает с VPN: что проверить](https://prostokey.com/blog/telegram-ne-rabotaet-s-vpn/)
 - [Shadowsocks: что это за протокол и чем отличается от нашего](https://prostokey.com/blog/shadowsocks-chto-eto-takoe/)
+- [Яндекс не работает с VPN: почему и что делать](https://prostokey.com/blog/yandex-ne-rabotaet-s-vpn/)
+- [Авито не работает с VPN: почему и что делать](https://prostokey.com/blog/avito-ne-rabotaet-s-vpn/)
+- [Netflix не работает в России: что можно сделать](https://prostokey.com/blog/netflix-ne-rabotaet/)
+- [MAX не работает за границей: что мешает на самом деле](https://prostokey.com/blog/max-ne-rabotaet-za-granicey/)
+- [Фейсбук не работает в России: почему и что проверить](https://prostokey.com/blog/facebook-ne-rabotaet/)
 - [VPN на Steam Deck: как установить и для чего нужен](https://prostokey.com/blog/kak-ustanovit-vpn-na-steam/)
 - [Бравл Старс не работает с VPN: в чём дело](https://prostokey.com/blog/brawl-stars-ne-rabotaet/)
 - [Вайбер не работает в России: что делать](https://prostokey.com/blog/viber-ne-rabotaet/)

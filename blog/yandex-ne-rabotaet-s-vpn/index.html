@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/head-init.js?v=c3c31878"></script>
+<title>Яндекс не работает с VPN — VPN Просто</title>
+<meta name="description" content="Яндекс не работает с VPN: приложения пишут «это требование регулятора», Музыка не играет, поиск просит капчу. Почему так и что реально помогает.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stat.prostokey.com; font-src 'self' data:; connect-src 'self' https://stat.prostokey.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/blog/yandex-ne-rabotaet-s-vpn/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="Яндекс не работает с VPN">
+<meta property="og:description" content="Яндекс не работает с VPN: приложения пишут «это требование регулятора», Музыка не играет, поиск просит капчу. Почему так и что реально помогает.">
+<meta property="og:url" content="https://prostokey.com/blog/yandex-ne-rabotaet-s-vpn/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Яндекс не работает с VPN — VPN Просто">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="/fonts.css?v=1260ba6b">
+<link rel="preload" href="/fonts/onest-800-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=70acbc77">
+</head>
+<body>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" focusable="false">
+<defs>
+
+<clipPath id="flag-clip"><rect width="16" height="12" rx="2"/></clipPath>
+
+<symbol id="ic-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="ic-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="ic-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="ic-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+<symbol id="ic-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="ic-unplug" viewBox="0 0 24 24"><path d="m19 5 3-3"/><path d="m2 22 3-3"/>
+<path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/>
+<path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/>
+<path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z"/></symbol>
+<symbol id="ic-credit-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+<symbol id="ic-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+<path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></symbol>
+<symbol id="ic-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+<symbol id="ic-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+<symbol id="ic-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.7 8.9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.5 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/>
+<path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="ic-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.8-1.6l7.9-10.7A1 1 0 0 1 13 2.3V10a1 1 0 0 0 1 1h6a1 1 0 0 1 .8 1.6l-7.9 10.7A1 1 0 0 1 11 21.7V14a1 1 0 0 0-1-1z"/></symbol>
+<symbol id="ic-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+<path d="M2 12h20"/></symbol>
+<symbol id="ic-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
+<circle cx="18" cy="5" r="3"/></symbol>
+<symbol id="ic-sparkles" viewBox="0 0 24 24"><path d="M9.9 2.5 12 8l5.5 2.1L12 12.2 9.9 17.7 7.8 12.2 2.3 10.1 7.8 8z"/>
+<path d="M18 5h.01"/><path d="M20 15h.01"/></symbol>
+<symbol id="ic-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="ic-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+<symbol id="ic-laptop" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.3 2.6a1 1 0 0 1-.9 1.4H3.6a1 1 0 0 1-.9-1.4L4 16"/></symbol>
+<symbol id="ic-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></symbol>
+<symbol id="ic-tv" viewBox="0 0 24 24"><rect width="20" height="15" x="2" y="7" rx="2"/><path d="m17 2-5 5-5-5"/></symbol>
+<symbol id="ic-router" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6.01 18H6"/><path d="M10.01 18H10"/>
+<path d="M15 10v4"/><path d="M17.84 7.17a4 4 0 0 0-5.66 0"/><path d="M20.66 4.34a8 8 0 0 0-11.31 0"/></symbol>
+<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></symbol>
+<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+<symbol id="ic-monitor-cog" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+<symbol id="ic-telegram" viewBox="0 0 24 24"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="ic-send" viewBox="0 0 24 24"><path d="M14.5 9.5 3 21"/><path d="M20.7 3.3a1 1 0 0 0-1.1-.2L3.4 9.6a1 1 0 0 0 .1 1.9l6.4 1.9a1 1 0 0 1 .7.7l1.9 6.4a1 1 0 0 0 1.9.1l6.5-16.2a1 1 0 0 0-.2-1.1Z"/></symbol>
+<symbol id="ic-megaphone-off" viewBox="0 0 24 24"><path d="M11.636 6A13 13 0 0 0 19.4 3.2 1 1 0 0 1 21 4v11.344"/><path d="M14.378 14.357A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1"/><path d="m2 2 20 20"/><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"/><path d="M8 8v6"/></symbol>
+<symbol id="ic-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></symbol>
+<symbol id="ic-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
+<symbol id="ic-id-card" viewBox="0 0 24 24"><path d="M16 10h2"/><path d="M16 14h2"/><path d="M6.17 15a3 3 0 0 1 5.66 0"/><circle cx="9" cy="11" r="2"/><rect x="2" y="5" width="20" height="14" rx="2"/></symbol>
+<symbol id="ic-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+
+<symbol id="flag-pl" viewBox="0 0 16 12"><rect width="16" height="6" fill="#fff"/><rect y="6" width="16" height="6" fill="#DC143C"/></symbol>
+<symbol id="flag-it" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#009246"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#CE2B37"/></symbol>
+<symbol id="flag-in" viewBox="0 0 16 12"><rect width="16" height="4" fill="#FF9933"/><rect y="4" width="16" height="4" fill="#fff"/>
+<rect y="8" width="16" height="4" fill="#138808"/><circle cx="8" cy="6" r="1.5" fill="none" stroke="#000080" stroke-width=".7"/></symbol>
+<symbol id="flag-us" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/>
+<rect y="0" width="16" height="1" fill="#B22234"/><rect y="2" width="16" height="1" fill="#B22234"/>
+<rect y="4" width="16" height="1" fill="#B22234"/><rect y="6" width="16" height="1" fill="#B22234"/>
+<rect y="8" width="16" height="1" fill="#B22234"/><rect y="10" width="16" height="1" fill="#B22234"/>
+<rect width="7" height="7" fill="#3C3B6E"/></symbol>
+<symbol id="flag-fi" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/><rect x="4" width="2.5" height="12" fill="#003580"/>
+<rect y="4.75" width="16" height="2.5" fill="#003580"/></symbol>
+<symbol id="flag-ru" viewBox="0 0 16 12"><rect width="16" height="4" fill="#fff"/><rect y="4" width="16" height="4" fill="#0039A6"/>
+<rect y="8" width="16" height="4" fill="#D52B1E"/></symbol>
+<symbol id="flag-se" viewBox="0 0 16 12"><rect width="16" height="12" fill="#006AA7"/><rect x="4" width="2.5" height="12" fill="#FECC00"/>
+<rect y="4.75" width="16" height="2.5" fill="#FECC00"/></symbol>
+<symbol id="flag-fr" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#0055A4"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#EF4135"/></symbol>
+<symbol id="flag-hk" viewBox="0 0 16 12"><rect width="16" height="12" fill="#DE2910"/><circle cx="8" cy="6" r="3.4" fill="#fff"/></symbol>
+
+</defs>
+</svg><div class="aurora aurora--soft" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/" aria-current="page">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system">
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-monitor-cog"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-sun"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-moon"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-menu"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<article class="section article">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → Яндекс не работает с VPN: почему и что делать</p>
+    <h1>Яндекс не работает с VPN: почему и что делать</h1>
+    <p class="meta">
+      <span>Опубликовано: 6 октября 2026</span>
+      <span>Обновлено: 6 октября 2026</span>
+      <span>Команда VPN Просто</span>
+    </p>
+
+    <p class="lead">Если яндекс не работает с впн, это не сбой и не блокировка: с апреля
+2026 года Яндекс сам не пускает пользователей с включённым туннелем
+и прямо пишет, что это требование регулятора. Здесь всё наоборот по
+сравнению с привычными жалобами: VPN не решает проблему, а создаёт её.
+Разбираем по сервисам: что именно ломается, почему иногда не помогает
+даже исключение Яндекса из туннеля и что на самом деле работает.
+</p>
+
+<nav class="toc" aria-label="Содержание">
+  <p class="toc__head">В этой статье</p>
+  <ol>
+    <li><a href="#otkuda">Откуда это взялось: апрель 2026</a></li>
+    <li><a href="#prilozheniya">Приложения: «Похоже, вы используете VPN»</a></li>
+    <li><a href="#poisk">Поиск и почта: капча и подтверждения</a></li>
+    <li><a href="#muzyka">Яндекс Музыка и семейная подписка</a></li>
+    <li><a href="#pochemu-isklyuchenie">Почему исключение из туннеля помогает не всегда</a></li>
+    <li><a href="#po-poryadku">Порядок действий</a></li>
+    <li><a href="#kak-u-nas">Что у нас настроено — и чего это не решает</a></li>
+    <li><a href="#ne-obeshchaem">Что остаётся вне наших обещаний</a></li>
+  </ol>
+</nav>
+
+
+<h2 id="otkuda">Откуда это взялось: апрель 2026</h2>
+
+<p>30 марта 2026 года Минцифры на совещании попросило крупные российские
+площадки — Сбербанк, Яндекс, VK, Wildberries, Ozon, Авито и другие —
+закрыть доступ пользователям с VPN
+<a href="https://www.klerk.ru/buh/news/686288/" rel="noopener">с 15 апреля</a>.</p>
+
+<p>Компаниям, по данным
+<a href="https://www.fontanka.ru/2026/04/02/76345065/" rel="noopener">РБК в пересказе «Фонтанки»</a>,
+обещали передать списки адресов VPN-сервисов и методические рекомендации,
+как находить новые. За отказ — исключение из «белых списков», лишение
+IT-льгот и аккредитации.</p>
+
+<p>Вечером 14 апреля приложения Яндекса
+<a href="https://kod.ru/servisy-cherez-vpn-block" rel="noopener">начали показывать</a>
+окно, которое нельзя закрыть: «Похоже, вы используете VPN. С ним зайти не
+получится. Это требование регулятора». Сам Яндекс
+<a href="https://www.vedomosti.ru/technology/articles/2026/04/16/1190654-rossiiskie-servisi-nachali" rel="noopener">от комментариев отказался</a>.</p>
+
+<p>Главное, что из этого следует: проблема не в вашем VPN-сервисе и не в
+конкретном сервере. Яндекс отказывает любому туннелю — потому что его об
+этом попросили.</p>
+
+<h2 id="prilozheniya">Приложения: «Похоже, вы используете VPN»</h2>
+
+<p>Это самый частый и самый жёсткий вариант. Приложение открывается,
+показывает окно во весь экран и дальше не пускает.</p>
+
+<ul class="facts">
+  <li><strong>Где замечено</strong><span>Погода, Яндекс Пэй, Кинопоиск —
+    <a href="https://kod.ru/servisy-cherez-vpn-block" rel="noopener">с первого вечера</a>;
+    Почта и Go —
+    <a href="https://lifehacker.ru/yandeks-nachal-blokirovat-svoi-prilozheniya/" rel="noopener">по</a>
+    <a href="https://t-j.ru/news/vpn-ban-apps/" rel="noopener">другим сообщениям</a>
+    того же дня</span></li>
+  <li><strong>Что предлагает сам Яндекс</strong><span>отключить VPN на
+    устройстве или выбрать другую сеть Wi-Fi — второе на случай, если
+    туннель поднят на роутере</span></li>
+  <li><strong>Чего не бывает</strong><span>кнопки «продолжить всё равно»:
+    окно не скрывается</span></li>
+</ul>
+
+<p>Список сервисов здесь неполный и может меняться: Яндекс включает
+проверку не везде сразу. Если какое-то его приложение у вас пока
+работает с VPN — это не значит, что так будет завтра.</p>
+
+<h2 id="poisk">Поиск и почта: капча и подтверждения</h2>
+
+<p>С поиском картина мягче и старше апрельских событий. Чаще всего это
+бесконечная капча «Подтвердите, что запросы отправляли вы, а не робот».</p>
+
+<p>Причина в адресе. С одного адреса VPN-сервера одновременно выходят
+сотни чужих людей и программ, и для поиска это выглядит как поток
+автоматических запросов. К тому же адрес зарубежный, а Яндекс в своей
+справке прямо называет нахождение
+<a href="https://yandex.ru/support/direct/troubleshooting/wordstat.html" rel="noopener">за пределами СНГ</a>
+одной из причин капчи.</p>
+
+<p>С почтой и общим входом в аккаунт то же самое, что
+<a href="/blog/vpn-i-banki/">с банками</a>: вход из другой страны выглядит
+подозрительно, и Яндекс просит подтверждение — код, пароль заново,
+иногда завершает сессию.</p>
+
+<p>Хорошая новость: эти симптомы зависят именно от адреса. Если до
+Яндекса трафик идёт напрямую, с вашего обычного российского адреса, они
+пропадают.</p>
+
+<h2 id="muzyka">Яндекс Музыка и семейная подписка</h2>
+
+<p>У Музыки своя, более старая история — лицензии. Права на треки
+выдаются по странам, и с зарубежным адресом каталог может обрезаться или
+приложение пишет, что не играет в вашей стране.</p>
+
+<p>Отдельно об этом говорит
+<a href="https://yandex.ru/support/music/ru/access-and-account/where-available" rel="noopener">справка Музыки</a>:
+Плюс оформляется в одной из перечисленных стран, а если подписку оформили
+с включённым VPN, нужно писать в поддержку. То есть оплачивать подписку
+с включённым туннелем — плохая идея.</p>
+
+<p>Семейная подписка — самый неочевидный случай. Ещё в 2022 году
+пользователь
+<a href="https://yandex.ru/q/question/pochemu_pri_vkliuchenii_vpn_semeinaia_u_599b398c/" rel="noopener">жаловался</a>:
+стоит ему включить VPN, как музыка перестаёт играть у членов семьи,
+хотя у них никакого VPN нет. Поддержка ответила, что дело в лицензиях:
+если VPN выводит в страну, где возможности Плюса ограничены, сервис
+начинает работать нестабильно. Если у вас то же самое — проверьте, не
+включён ли туннель у владельца семейной группы.</p>
+
+<p>С апреля к лицензиям добавилась общая проверка на VPN: по
+<a href="https://rks.global/ru/research/vpn-detection/" rel="noopener">данным исследователей</a>,
+приложение Музыки тоже отправляет на сервер сведения о том, включён ли
+туннель.</p>
+
+<h2 id="pochemu-isklyuchenie">Почему исключение из туннеля помогает не всегда</h2>
+
+<p>Обычный совет — пустить Яндекс мимо VPN: тогда он видит ваш домашний
+адрес, и всё работает. Для поиска, почты и сайтов в браузере это
+действительно так. С приложениями на телефоне — не обязательно.</p>
+
+<p>Исследователи, разобравшие 30 российских приложений, выяснили:
+<a href="https://rks.global/ru/research/vpn-detection/" rel="noopener">13 из них</a>
+ищут VPN не по адресу, а прямо на устройстве — по виртуальному сетевому
+подключению, которое создаёт любой VPN-клиент. И видят его, даже когда
+само приложение из туннеля исключено. Там же сказано, что приложения
+Яндекса сверяются с одним общим сервером проверки.</p>
+
+<p>Отсюда простое правило. Если Яндекс ругается на VPN по адресу —
+исключение помогает. Если по самому факту включённого туннеля на
+телефоне — не поможет ни исключение, ни смена сервера, ни другой
+VPN-сервис. Пока туннель поднят на этом устройстве, приложение его
+видит.</p>
+
+<p>Бывает и обратное: окно про VPN появляется, хотя VPN выключен. Это
+признало даже
+<a href="https://expert.ru/news/mintsifry-obyasnilo-ogranichenie-dostupa-k-rossiyskim-servisam-pri-vklyuchennom-vpn" rel="noopener">Минцифры</a>.
+Частая причина — туннель настроен на роутере, и тогда помогает другая
+сеть: мобильный интернет вместо домашнего Wi-Fi.</p>
+
+<h2 id="po-poryadku">Порядок действий</h2>
+
+<ol class="steps">
+  <li><b>Поймите, что именно не работает</b><span>Капча и подтверждения
+  входа — это адрес, лечится раздельным доступом. Окно «Похоже, вы
+  используете VPN» в приложении — скорее всего проверка на устройстве.</span></li>
+  <li><b>Проверьте раздельный доступ</b><span>Яндекс должен идти мимо
+  туннеля. Откройте ya.ru в браузере при включённом VPN: если нет капчи и
+  поиск показывает ваш город — маршрут настроен верно.</span></li>
+  <li><b>Попробуйте сайт вместо приложения</b><span>Сайт в обычном
+  браузере видит ваш адрес, но не видит, какие подключения есть на
+  телефоне. Почта, Музыка и Кинопоиск открываются в браузере. Это
+  обходной путь, а не гарантия: Яндекс может включить проверку и
+  там.</span></li>
+  <li><b>Выключайте туннель на время</b><span>Если приложение всё равно
+  не пускает — выключите VPN, сделайте что нужно и включите обратно.
+  Неудобно, но другого надёжного способа на этом же телефоне нет.</span></li>
+  <li><b>Если пишет про VPN, а он выключен</b><span>Переключитесь на
+  мобильный интернет: туннель может стоять на роутере. Проверьте, не
+  включён ли в системе второй VPN-клиент.</span></li>
+  <li><b>Не оформляйте Плюс через VPN</b><span>Подписку — только при
+  выключенном туннеле. Если уже оформили и что-то сломалось, справка
+  Яндекса советует написать в их чат поддержки.</span></li>
+</ol>
+
+<p>Если сломался не только Яндекс, а вообще всё подряд, дело может быть
+в самих настройках. Общий разбор — на странице
+«<a href="/ne-rabotaet/">VPN не работает</a>».</p>
+
+<section class="unique">
+  <h2 id="kak-u-nas">Что у нас настроено — и чего это не решает</h2>
+
+  <p>Начнём с главного, потому что это прямо касается выбора сервиса:
+  <strong>подписка на VPN, наша или любая другая, не заставит
+  приложения Яндекса работать с включённым туннелем.</strong> Это не
+  блокировка Роскомнадзора, которую туннель обходит. Это требование к
+  самому Яндексу, и Яндекс просит ровно одного — выключить VPN, а не
+  включить. Кто обещает обратное за деньги — обещает то, чего не
+  контролирует.</p>
+
+  <p>Что мы можем сделать и сделали — убрать ту часть проблемы, которая
+  зависит от адреса. Раздельный доступ у нас включён по умолчанию:
+  мимо туннеля напрямую идут банки и СБП, Госуслуги, сайты в зоне .ru и .рф, VK и Яндекс, Apple и iCloud. Яндекс в
+  этом списке. Поэтому поиск не мучает капчей, почта не просит
+  подтверждать вход, Музыка видит российский адрес и не урезает
+  каталог. Настраивать ничего не нужно — правила приходят вместе с
+  ключом. Как они устроены, <a href="/blog/vpn-i-banki/">разобрано
+  отдельно</a>.</p>
+
+  <p>Чего раздельный доступ не умеет — спрятать от приложения сам факт
+  туннеля на телефоне. Это ограничение не нашей настройки, а того, как
+  устроен любой VPN-клиент на телефоне: он создаёт подключение, которое
+  видят другие программы. Если приложение Яндекса смотрит именно на
+  это, мы ничего не изменим, и делать вид, что можем, не станем.</p>
+
+  <p>Отдельно о российском сервере. Он есть в подписке, но для этой
+  задачи не нужен: в России Яндексу и так достаётся ваш домашний адрес.
+  Российская локация нужна обратной стороне — тем, кто
+  <a href="/rossiyskiy-ip/">уехал за границу</a> и хочет выглядеть для
+  российских сервисов как дома. Но и ей проверка на устройстве
+  помешает так же, как любому туннелю.</p>
+
+  <p>Своего приложения у нас нет намеренно. Ключ работает в нескольких
+  клиентах и переносится из одного в другой за минуту — включать и
+  выключать туннель ради приложения Яндекса так же быстро в любом из
+  них.</p>
+
+  <p>Проверить, как это ведёт себя именно у вас, можно за первые
+  3 дня: они бесплатны, карта не нужна, автосписаний
+  нет. Откройте ya.ru и почту с включённым ключом — и отдельно
+  приложение, которое у вас ругалось. Так вы сразу увидите, какой из
+  двух случаев ваш.</p>
+</section>
+
+<h2 id="ne-obeshchaem">Что остаётся вне наших обещаний</h2>
+
+<p>Не обещаем, что приложения Яндекса заработают с включённым VPN.
+Это решает Яндекс, а не мы, и с апреля он решил не пускать.</p>
+
+<p>Не обещаем, что сегодняшняя картина сохранится. Список приложений с
+проверкой может расти, а методы — меняться: компаниям раздали
+рекомендации, как находить новые VPN. То, что сайт в браузере работает
+сейчас, не значит, что так будет всегда.</p>
+
+<p>Что обещаем: всё, что зависит от адреса, — капча, подтверждения
+входа, урезанный каталог — у нас не возникает, и выключать VPN ради
+поиска или почты не придётся.</p>
+
+
+    <h2 id="chastye-voprosy">Частые вопросы</h2>
+    <div class="faq">
+      <div id="vopros-pochemu-yandeks-ne-rabotaet-s-vpn" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Почему яндекс не работает с впн?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1" aria-hidden="true">
+          <div><p>С апреля 2026 года Яндекс выполняет требование Минцифры: ограничивает вход пользователям с включённым туннелем. В приложениях это окно «Похоже, вы используете VPN… Это требование регулятора».</p></div>
+        </div>
+      </div>
+      <div id="vopros-pomozhet-li-drugoy-vpn-servis" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>Поможет ли другой VPN-сервис?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2" aria-hidden="true">
+          <div><p>Нет. Яндекс отказывает любому туннелю, а не конкретному сервису. Смена сервиса или сервера не меняет главного — VPN по-прежнему включён.</p></div>
+        </div>
+      </div>
+      <div id="vopros-esli-isklyuchit-yandeks-iz-vpn-zarabotaet" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>Если исключить Яндекс из VPN, заработает?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3" aria-hidden="true">
+          <div><p>Поиск, почта и сайты в браузере — да, они смотрят на адрес. Часть приложений на телефоне видит сам туннель даже у исключённых программ, и тогда помогает только выключить VPN.</p></div>
+        </div>
+      </div>
+      <div id="vopros-pochemu-pishet-pro-vpn-hotya-on-vyklyuchen" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>Почему пишет про VPN, хотя он выключен?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4" aria-hidden="true">
+          <div><p>Чаще всего туннель настроен на роутере — переключитесь на мобильный интернет. Минцифры признавало, что такие ложные срабатывания бывают.</p></div>
+        </div>
+      </div>
+      <div id="vopros-pochemu-u-semi-perestala-igrat-yandeks-muzyka" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>Почему у семьи перестала играть Яндекс Музыка?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5" aria-hidden="true">
+          <div><p>Если владелец семейной подписки включает VPN со страной, где Плюс ограничен, сервис из-за лицензий может работать нестабильно у всей группы. Проверьте, не включён ли туннель у владельца.</p></div>
+        </div>
+      </div>
+      <div id="vopros-mozhno-li-oplachivat-plyus-s-vklyuchennym-vpn" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q6" aria-controls="a6">
+            <span>Можно ли оплачивать Плюс с включённым VPN?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6" aria-hidden="true">
+          <div><p>Лучше не надо: справка Музыки отдельно оговаривает подписку, оформленную с включённым VPN, и предлагает в этом случае писать в поддержку. Оформляйте при выключенном туннеле.</p></div>
+        </div>
+      </div>
+      <div id="vopros-kupit-podpisku-chtoby-yandeks-zarabotal-s-vpn" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q7" aria-controls="a7">
+            <span>Купить подписку, чтобы Яндекс заработал с VPN?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a7" role="region" aria-labelledby="q7" aria-hidden="true">
+          <div><p>Не поможет: это не блокировка, которую обходит туннель, а требование к самому Яндексу. Подписка закрывает другую задачу — зарубежные сервисы, — а Яндекс у нас и так идёт напрямую.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p><strong>Проверить на своей сети.</strong> 3 дня
+      бесплатно, карта не нужна: если у вас не заработает — вы ничего
+      не потеряли.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Проверить на своём телефоне</a>
+    </div>
+
+    <aside aria-label="Другие статьи по теме">
+    <h2 id="chitat-dalshe">Читать дальше</h2>
+    <ul class="facts">
+      <li><a href="/blog/vpn-i-banki/">Сбербанк не работает с VPN: что делать</a></li>
+      <li><a href="/blog/telegram-ne-rabotaet-s-vpn/">Телеграм не работает с VPN: что проверить</a></li>
+      <li><a href="/blog/avito-ne-rabotaet-s-vpn/">Авито не работает с VPN: почему и что делать</a></li>
+    </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <p class="foot-head">Сервис</p>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/#price">Цена</a></li>
+          <li><a href="/o-servise/">О сервисе</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Доступ и цена</p>
+        <ul>
+          <li><a href="/skachat-besplatno/">Попробовать бесплатно</a></li>
+          <li><a href="/probnyy-period/">Пробный период</a></li>
+          <li><a href="/telegram-bot/">Ключ через Telegram-бота</a></li>
+          <li><a href="/kupit/">Купить ключ</a></li>
+          <li><a href="/platnyy-vpn/">Сколько стоит платный VPN</a></li>
+          <li><a href="/klyuch-vpn/">Что такое ключ VPN</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Устройства</p>
+        <ul>
+          <li><a href="/android/">Android</a></li>
+          <li><a href="/iphone/">iPhone и iPad</a></li>
+          <li><a href="/windows/">Компьютер с Windows</a></li>
+          <li><a href="/tv/">Телевизор</a></li>
+          <li><a href="/router/">Роутер</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Помощь</p>
+        <ul>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/ne-rabotaet/">Не работает — что делать</a></li>
+          <li><a href="/proverka/">Проверить, работает ли VPN</a></li>
+          <li><a href="/rossiyskiy-ip/">Российский IP: банки и Госуслуги</a></li>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/whatsapp-ne-rabotaet/">Ватсап не работает с VPN</a></li>
+          <li><a href="/blog/operator-blokiruet-vpn/">Оператор блокирует VPN</a></li>
+          <li><a href="/blog/vpn-dlya-igr/">VPN для игр</a></li>
+          <li><a href="/blog/brawl-stars-ne-rabotaet/">Бравл Старс не работает с VPN</a></li>
+          <li><a href="/blog/viber-ne-rabotaet/">Вайбер не работает в России</a></li>
+          <li><a href="/blog/gemini-ne-rabotaet/">Gemini не работает с VPN</a></li>
+          <li><a href="/blog/pinterest-ne-rabotaet/">Pinterest не работает</a></li>
+          <li><a href="/blog/kakoy-vpn-rabotaet/">Какой VPN работает сейчас</a></li>
+          <li><a href="/blog/vpn-dlya-yutuba/">VPN для YouTube</a></li>
+          <li><a href="/blog/rasshirenie-brauzera/">VPN-расширение для браузера</a></li>
+          <li><a href="/blog/telegram-ne-rabotaet-s-vpn/">Телеграм не работает с VPN</a></li>
+          <li><a href="/blog/yandex-ne-rabotaet-s-vpn/">Яндекс не работает с VPN</a></li>
+          <li><a href="/blog/avito-ne-rabotaet-s-vpn/">Авито не работает с VPN</a></li>
+          <li><a href="/blog/netflix-ne-rabotaet/">Netflix не работает в России</a></li>
+          <li><a href="/blog/max-ne-rabotaet-za-granicey/">MAX не работает за границей</a></li>
+          <li><a href="/blog/facebook-ne-rabotaet/">Фейсбук не работает в России</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/blog/">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Связь</p>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Канал «Цифровая свобода»</a></li>
+          <li class="foot-alt">Не открывается? <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть
+            в приложении</a> или найдите <b class="mono">@vpn_prosto_bot</b></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Документы</p>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2021—<span data-year>2026</span> VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://prostokey.com/#organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Яндекс не работает с VPN: почему и что делать", "description": "Приложения Яндекса пишут «Похоже, вы используете VPN», Музыка не играет, поиск просит капчу. Здесь мешает не блокировка, а сам туннель, и подписка на другой VPN этого не исправит.", "datePublished": "2026-10-06", "dateModified": "2026-10-06", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/yandex-ne-rabotaet-s-vpn/", "name": "Яндекс не работает с VPN: почему и что делать"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@id": "https://prostokey.com/#organization"}, "publisher": {"@id": "https://prostokey.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Яндекс не работает с VPN: почему и что делать", "item": "https://prostokey.com/blog/yandex-ne-rabotaet-s-vpn/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему яндекс не работает с впн?", "acceptedAnswer": {"@type": "Answer", "text": "С апреля 2026 года Яндекс выполняет требование Минцифры: ограничивает вход пользователям с включённым туннелем. В приложениях это окно «Похоже, вы используете VPN… Это требование регулятора»."}}, {"@type": "Question", "name": "Поможет ли другой VPN-сервис?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Яндекс отказывает любому туннелю, а не конкретному сервису. Смена сервиса или сервера не меняет главного — VPN по-прежнему включён."}}, {"@type": "Question", "name": "Если исключить Яндекс из VPN, заработает?", "acceptedAnswer": {"@type": "Answer", "text": "Поиск, почта и сайты в браузере — да, они смотрят на адрес. Часть приложений на телефоне видит сам туннель даже у исключённых программ, и тогда помогает только выключить VPN."}}, {"@type": "Question", "name": "Почему пишет про VPN, хотя он выключен?", "acceptedAnswer": {"@type": "Answer", "text": "Чаще всего туннель настроен на роутере — переключитесь на мобильный интернет. Минцифры признавало, что такие ложные срабатывания бывают."}}, {"@type": "Question", "name": "Почему у семьи перестала играть Яндекс Музыка?", "acceptedAnswer": {"@type": "Answer", "text": "Если владелец семейной подписки включает VPN со страной, где Плюс ограничен, сервис из-за лицензий может работать нестабильно у всей группы. Проверьте, не включён ли туннель у владельца."}}, {"@type": "Question", "name": "Можно ли оплачивать Плюс с включённым VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Лучше не надо: справка Музыки отдельно оговаривает подписку, оформленную с включённым VPN, и предлагает в этом случае писать в поддержку. Оформляйте при выключенном туннеле."}}, {"@type": "Question", "name": "Купить подписку, чтобы Яндекс заработал с VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Не поможет: это не блокировка, которую обходит туннель, а требование к самому Яндексу. Подписка закрывает другую задачу — зарубежные сервисы, — а Яндекс у нас и так идёт напрямую."}}]}</script>
+<script src="/app.js?v=807b2b71" defer></script>
+<img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/yandex-ne-rabotaet-s-vpn/"
+     alt="" width="1" height="1" decoding="async"
+     class="px" aria-hidden="true"></body>
+</html>
