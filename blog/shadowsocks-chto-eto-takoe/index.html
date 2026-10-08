@@ -151,7 +151,7 @@
     <h1>Shadowsocks: что это за протокол и чем отличается от нашего</h1>
     <p class="meta">
       <span>Опубликовано: 6 октября 2026</span>
-      <span>Обновлено: 6 октября 2026</span>
+      <span>Обновлено: 9 октября 2026</span>
       <span>Команда VPN Просто</span>
     </p>
 
@@ -168,7 +168,7 @@
     <li><a href="#kak-rabotaet">Как он работает технически</a></li>
     <li><a href="#pochemu-raspoznayut">Почему его всё чаще распознают</a></li>
     <li><a href="#chem-otlichayutsya-nashi">Чем отличаются VLESS + Reality и Hysteria2</a></li>
-    <li><a href="#kak-u-nas">Как это устроено у нас</a></li>
+    <li><a href="#kak-u-nas">Почему Shadowsocks нет в нашем списке протоколов</a></li>
   </ol>
 </nav>
 
@@ -338,7 +338,7 @@ Shadowsocks, где такой имитации нет вовсе.</p>
 выбором именно по этой причине.</p>
 
 <section class="unique">
-  <h2 id="kak-u-nas">Как это устроено у нас</h2>
+  <h2 id="kak-u-nas">Почему Shadowsocks нет в нашем списке протоколов</h2>
 
   <p><strong>Shadowsocks в списке протоколов мы сознательно не
   используем.</strong> У нас два протокола — VLESS + Reality
@@ -346,12 +346,13 @@ Shadowsocks, где такой имитации нет вовсе.</p>
   держатся против актуальной фильтрации в российских сетях, чем более
   старые варианты вроде Shadowsocks, WireGuard или OpenVPN.</p>
 
-  <p><strong>Два протокола — не один.</strong> Если бы мы держали
-  единственный протокол, усиление фильтрации против конкретного
-  метода маскировки могло бы отключить весь сервис разом. Два
-  независимых протокола снижают этот риск: если один перестанет
-  держаться на конкретной сети, второй уже есть в списке подключений
-  того же ключа, без ожидания и доплат.</p>
+  <p><strong>VLESS + Reality и Hysteria2 моложе и устроены иначе, чем
+  Shadowsocks.</strong> У Shadowsocks характерный профиль трафика,
+  который научились узнавать за годы — именно поэтому многие
+  современные сервисы постепенно уходят от него, а не только мы.
+  Reality маскируется под обычный TLS-трафик к настоящему сайту,
+  Hysteria2 построен на QUIC — у обоих другая, более новая логика
+  маскировки.</p>
 
   <p><strong>Переключение — без переустановки и нового ключа.</strong>
   Оба протокола входят в одну и ту же подписку и доступны в одном и
@@ -598,7 +599,7 @@ Shadowsocks, где такой имитации нет вовсе.</p>
 
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://prostokey.com/#organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Shadowsocks: что это за протокол и чем отличается от нашего", "description": "Shadowsocks — один из первых массовых протоколов-прокси для обхода блокировок, изначально созданный для Great Firewall в Китае. Разбираем, как он работает и почему в 2026 году его всё чаще заменяют более новыми протоколами.", "datePublished": "2026-10-06", "dateModified": "2026-10-06", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/shadowsocks-chto-eto-takoe/", "name": "Shadowsocks: что это за протокол и чем отличается от нашего"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@id": "https://prostokey.com/#organization"}, "publisher": {"@id": "https://prostokey.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Shadowsocks: что это за протокол и чем отличается от нашего", "item": "https://prostokey.com/blog/shadowsocks-chto-eto-takoe/"}]}]</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Shadowsocks: что это за протокол и чем отличается от нашего", "description": "Shadowsocks — один из первых массовых протоколов-прокси для обхода блокировок, изначально созданный для Great Firewall в Китае. Разбираем, как он работает и почему в 2026 году его всё чаще заменяют более новыми протоколами.", "datePublished": "2026-10-06", "dateModified": "2026-10-09", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/shadowsocks-chto-eto-takoe/", "name": "Shadowsocks: что это за протокол и чем отличается от нашего"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@id": "https://prostokey.com/#organization"}, "publisher": {"@id": "https://prostokey.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Shadowsocks: что это за протокол и чем отличается от нашего", "item": "https://prostokey.com/blog/shadowsocks-chto-eto-takoe/"}]}]</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Shadowsocks — это VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Формально нет — это протокол-прокси: он шифрует и маскирует трафик между вами и сервером, но не поднимает полноценный виртуальный сетевой интерфейс, как классический VPN. Для пользователя разница на практике почти не заметна — приложение работает похожим образом."}}, {"@type": "Question", "name": "Откуда взялся Shadowsocks?", "acceptedAnswer": {"@type": "Answer", "text": "Его создали в Китае как способ обходить государственную систему фильтрации интернета, известную как Great Firewall. Долгое время он оставался одним из самых надёжных инструментов именно для этой задачи."}}, {"@type": "Question", "name": "Почему говорят, что Shadowsocks стали хуже держаться против блокировок?", "acceptedAnswer": {"@type": "Answer", "text": "Его паттерн трафика изучен уже много лет: системы глубокого анализа пакетов (DPI) научились находить характерные признаки соединения даже там, где содержимое зашифровано. Чем протокол старше и популярнее, тем больше времени было на его изучение фильтрующим оборудованием."}}, {"@type": "Question", "name": "Чем VLESS + Reality и Hysteria2 отличаются в этом смысле?", "acceptedAnswer": {"@type": "Answer", "text": "Они новее и спроектированы так, чтобы соединение выглядело как обычный HTTPS-трафик (Reality) или QUIC-трафик (Hysteria2), — то есть не просто шифруют данные, а маскируются под трафик, который массово используется повсеместно и потому не блокируется по умолчанию."}}, {"@type": "Question", "name": "Значит Shadowsocks — плохой протокол?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, рабочий, и во многих сетях до сих пор проходит без проблем. Разница не в качестве, а в устойчивости к продвинутой фильтрации: для рядового обхода блокировок он годится, но против целенаправленного анализа трафика в российских сетях держится хуже протоколов, которые мы используем."}}, {"@type": "Question", "name": "Можно ли получить Shadowsocks в вашем сервисе?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, мы сознательно используем только VLESS + Reality и Hysteria2 — оба новее и лучше держатся именно в актуальных условиях фильтрации в России. Ключ в боте @vpn_prosto_bot приходит сразу для обоих протоколов, переключение между ними — пара касаний в клиенте."}}]}</script>
 <script src="/app.js?v=807b2b71" defer></script>
 <img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/shadowsocks-chto-eto-takoe/"

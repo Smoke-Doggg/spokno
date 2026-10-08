@@ -151,7 +151,7 @@
     <h1>VLESS, Reality и JSON-конфиг: как это устроено</h1>
     <p class="meta">
       <span>Опубликовано: 1 октября 2026</span>
-      <span>Обновлено: 1 октября 2026</span>
+      <span>Обновлено: 9 октября 2026</span>
       <span>Команда VPN Просто</span>
     </p>
 
@@ -167,7 +167,7 @@
     <li><a href="#chto-vnutri">Что хранится внутри: сервер, порт, uuid и другие поля</a></li>
     <li><a href="#ssylka-vs-json">Ссылка-ключ и ручной JSON: в чём разница</a></li>
     <li><a href="#reality-v-konfige">Как в этом конфиге устроена Reality</a></li>
-    <li><a href="#kak-u-nas">Как это устроено у нас</a></li>
+    <li><a href="#kak-u-nas">Готовая ссылка вместо JSON, который нужно собирать руками</a></li>
     <li><a href="#kogda-nuzhen-json">Когда JSON всё-таки может понадобиться</a></li>
   </ol>
 </nav>
@@ -320,7 +320,7 @@ Reality длиннее, чем у простого TLS-подключения, �
 влияет на порядок подключения ключом.</p>
 
 <section class="unique">
-  <h2 id="kak-u-nas">Как это устроено у нас</h2>
+  <h2 id="kak-u-nas">Готовая ссылка вместо JSON, который нужно собирать руками</h2>
 
   <p><strong>Мы не выдаём JSON-файл — мы выдаём готовую ссылку.</strong>
   Всё, что должно быть в конфиге — сервер, порт, uuid, публичный ключ
@@ -606,7 +606,7 @@ Reality</a> она разобрана подробно, а эта статья �
 
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://prostokey.com/#organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "VLESS, Reality и JSON-конфиг: как это устроено", "description": "JSON — формат, в котором движки xray-core и v2ray-core хранят настройки подключения: адрес сервера, порт, uuid, публичный ключ Reality. Разбираем, где в этом формате остаётся ручная работа, а где всё уже сделала готовая ссылка-ключ.", "datePublished": "2026-10-01", "dateModified": "2026-10-01", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/vless-tcp-reality-json-chto/", "name": "VLESS, Reality и JSON-конфиг: как это устроено"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@id": "https://prostokey.com/#organization"}, "publisher": {"@id": "https://prostokey.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "VLESS, Reality и JSON-конфиг: как это устроено", "item": "https://prostokey.com/blog/vless-tcp-reality-json-chto/"}]}]</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "VLESS, Reality и JSON-конфиг: как это устроено", "description": "JSON — формат, в котором движки xray-core и v2ray-core хранят настройки подключения: адрес сервера, порт, uuid, публичный ключ Reality. Разбираем, где в этом формате остаётся ручная работа, а где всё уже сделала готовая ссылка-ключ.", "datePublished": "2026-10-01", "dateModified": "2026-10-09", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/vless-tcp-reality-json-chto/", "name": "VLESS, Reality и JSON-конфиг: как это устроено"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@id": "https://prostokey.com/#organization"}, "publisher": {"@id": "https://prostokey.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "VLESS, Reality и JSON-конфиг: как это устроено", "item": "https://prostokey.com/blog/vless-tcp-reality-json-chto/"}]}]</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Что вообще такое JSON-конфиг у VLESS?", "acceptedAnswer": {"@type": "Answer", "text": "JSON — обычный текстовый формат хранения настроек. Движки xray-core и v2ray-core держат в нём все параметры подключения: адрес сервера, порт, uuid клиента, публичный ключ и shortId для Reality, sni-домен для маскировки. Внутри клиента это просто файл с настройками, ничего специфичного именно для VPN в этом нет."}}, {"@type": "Question", "name": "Мне нужно самому редактировать JSON, чтобы подключиться?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Ключ приходит готовой ссылкой вида vless://..., и клиент сам разбирает её и строит из неё нужный JSON внутри себя за долю секунды. Руками редактировать JSON приходится тем, кто поднимает xray-core с нуля на своём сервере, — обычному пользователю это не требуется."}}, {"@type": "Question", "name": "Зачем тогда вообще знать, что там за JSON?", "acceptedAnswer": {"@type": "Answer", "text": "Пригодится, если разбираетесь, почему подключение не работает, или настраиваете клиент, который просит поля отдельно, а не строкой-ссылкой. Тогда полезно понимать, что сервер, порт, uuid, publicKey, shortId и sni — это те же данные, что зашиты в ссылке, просто разложенные по отдельным полям."}}, {"@type": "Question", "name": "Чем Reality в этом конфиге отличается от обычного TLS?", "acceptedAnswer": {"@type": "Answer", "text": "В обычном TLS-конфиге сертификат выдаёт ваш же сервер, и при проверке это видно. Reality вместо этого использует рукопожатие настоящего чужого сайта — фильтрующее оборудование не может отличить такое соединение от обращения к этому сайту без активного вмешательства."}}, {"@type": "Question", "name": "Где почитать подробнее про сам протокол VLESS + Reality?", "acceptedAnswer": {"@type": "Answer", "text": "На сайте есть отдельный разбор самого протокола — что это, зачем нужен, чем отличается от обычного VPN. Эта статья — про технический формат конфигурации, тот разбор — про сам механизм маскировки."}}, {"@type": "Question", "name": "JSON одинаковый для VLESS + Reality и для Hysteria2?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, у Hysteria2 свой формат настроек — он работает поверх QUIC, а не TCP с TLS, как VLESS + Reality. Общие только принципы: адрес сервера, порт и данные для аутентификации. В нашем случае разбираться в этом не нужно: клиент получает всё необходимое из одной ссылки независимо от протокола."}}]}</script>
 <script src="/app.js?v=807b2b71" defer></script>
 <img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/vless-tcp-reality-json-chto/"
