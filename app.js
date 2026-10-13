@@ -524,8 +524,7 @@
     try { ref = JSON.parse(raw); } catch (err) { return; }
     if (!ref || !ref.src || Date.now() - ref.ts > REF_MAX_AGE_MS) return;
     try {
-      fetch('https://stat.prostokey.com/watch-api/ref?src=' + encodeURIComponent(ref.src) + '&evt=convert',
-            { mode: 'no-cors', keepalive: true });
+      reliableFetch('https://stat.prostokey.com/watch-api/ref?src=' + encodeURIComponent(ref.src) + '&evt=convert');
     } catch (err) {  }
     try { sessionStorage.removeItem('vpnp_ref'); } catch (err) {} // не считать дважды с двух кнопок подряд
   }, true); // capture — сработает раньше, чем браузер уйдёт по ссылке
@@ -549,16 +548,68 @@
   var HIT = 'https://stat.prostokey.com/watch-api/hit';
   var МЕТКА_ЗАМЕРА = /(^|[?&])lh=1(&|$)/.test(location.search);
   var АВТОМАТ = navigator.webdriver === true || МЕТКА_ЗАМЕРА;
+  var RETRY_KEY = 'vpnp_retry_q';
+  var RETRY_MAX_ATTEMPTS = 5;
+  var RETRY_MAX_AGE_MS = 24 * 60 * 60 * 1000; // сутки — дальше событие не актуально
+  var retryLoad = function () {
+    try { return JSON.parse(localStorage.getItem(RETRY_KEY) || '[]'); }
+    catch (e) { return []; }
+  };
+  var retrySave = function (q) {
+    try { localStorage.setItem(RETRY_KEY, JSON.stringify(q.slice(-50))); } catch (e) {}
+  };
+  var retryPush = function (url) {
+    var q = retryLoad();
+    q.push({ u: url, a: 0, next: Date.now() + 30000, born: Date.now() });
+    retrySave(q);
+  };
+  var retryFlush = function () {
+    var q = retryLoad();
+    if (!q.length) return;
+    var now = Date.now();
+    var notDue = [];
+    var due = [];
+    q.forEach(function (item) {
+      if (now - item.born > RETRY_MAX_AGE_MS) return; // устарело, не пытаемся
+      (item.next > now ? notDue : due).push(item);
+    });
+    if (!due.length) { retrySave(notDue); return; }
+    Promise.all(due.map(function (item) {
+      return fetch(item.u, { keepalive: true }).then(function (r) {
+        if (!r.ok) throw new Error('status ' + r.status);
+        return null; // успех — не возвращаем в очередь
+      }).catch(function () {
+        item.a++;
+        if (item.a >= RETRY_MAX_ATTEMPTS) return null;
+        item.next = now + Math.min(30, Math.pow(2, item.a)) * 60000; // капа 30 мин
+        return item;
+      });
+    })).then(function (results) {
+      retrySave(notDue.concat(results.filter(Boolean)));
+    });
+  };
+  retryFlush(); // разгребаем накопленное при каждой новой загрузке страницы
+  var reliableFetch = function (url) {
+    if (АВТОМАТ) return;
+    fetch(url, { keepalive: true }).then(function (r) {
+      if (!r.ok) throw new Error('status ' + r.status);
+    }).catch(function () { retryPush(url); });
+  };
   var send = function (params) {
+    var qs = Object.keys(params)
+      .filter(function (k) { return params[k] !== undefined && params[k] !== ''; })
+      .map(function (k) { return k + '=' + encodeURIComponent(params[k]); })
+      .join('&');
+    reliableFetch(HIT + '?' + qs);
+  };
+  var sendUnload = function (params) {
     if (АВТОМАТ) return;
     var qs = Object.keys(params)
       .filter(function (k) { return params[k] !== undefined && params[k] !== ''; })
       .map(function (k) { return k + '=' + encodeURIComponent(params[k]); })
       .join('&');
     var url = HIT + '?' + qs;
-    try {
-      if (navigator.sendBeacon && navigator.sendBeacon(url)) return;
-    } catch (e) {}
+    try { if (navigator.sendBeacon && navigator.sendBeacon(url)) return; } catch (e) {}
     try { fetch(url, { mode: 'no-cors', keepalive: true }); } catch (e) {}
   };
   var source = function () {
@@ -600,11 +651,13 @@
   var page = location.pathname;
   var tz = '';
   try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+  var h1Variant = '';
+  try { h1Variant = sessionStorage.getItem('vpnp_h1_variant') || ''; } catch (e) {}
   send({
     e: 'view', p: page, r: source(), d: device(), w: widthBucket(),
     t: document.documentElement.getAttribute('data-theme') ||
        (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'),
-    tz: tz, n: firstInSession ? '1' : '0'
+    tz: tz, n: firstInSession ? '1' : '0', v: h1Variant
   });
   var marks = { 25: false, 50: false, 75: false, 100: false };
   var onScroll = function () {
@@ -629,17 +682,35 @@
       a.closest('.toc') ? 'toc' :
       a.classList.contains('faq__q') ? 'faq' :
       a.closest('.foot') ? 'foot' : null;
-    if (kind) send({ e: 'click', k: kind, p: page });
+    if (kind) send({ e: 'click', k: kind, p: page, v: kind === 'bot' ? h1Variant : '' });
   }, true);
+  var errCount = 0;
+  var errLastSent = 0;
+  var errLimited = function () {
+    errCount++;
+    if (errCount <= 10) return false;
+    var now = Date.now();
+    if (now - errLastSent < 10000) return true;
+    errLastSent = now;
+    return false;
+  };
+  var reportError = function (msg) {
+    if (errLimited()) return;
+    send({ e: 'error', m: String(msg || 'unknown').slice(0, 80) });
+  };
   window.addEventListener('error', function (ev) {
-    send({ e: 'error', m: String((ev && ev.message) || 'unknown').slice(0, 80) });
+    reportError(ev && ev.message);
+  });
+  window.addEventListener('unhandledrejection', function (ev) {
+    var reason = ev && ev.reason;
+    reportError(reason && (reason.message || String(reason)));
   });
   var started = Date.now();
   var reported = false;
   var onLeave = function () {
     if (reported) return;
     reported = true;
-    send({
+    sendUnload({
       e: 'leave', p: page,
       sec: String(Math.round((Date.now() - started) / 1000)),
       s: marks[25] ? 'read' : 'bounce'

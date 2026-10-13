@@ -6,9 +6,11 @@
     try {
       sessionStorage.setItem("vpnp_ref", JSON.stringify({src: src, ts: Date.now()}));
     } catch (e) {  }
+    var url = "https://stat.prostokey.com/watch-api/ref?src=" + encodeURIComponent(src) + "&evt=land";
     try {
-      fetch("https://stat.prostokey.com/watch-api/ref?src=" + encodeURIComponent(src) + "&evt=land",
-            {mode: "no-cors", keepalive: true});
+      if (!(navigator.sendBeacon && navigator.sendBeacon(url))) {
+        fetch(url, {mode: "no-cors", keepalive: true});
+      }
     } catch (e) {}
   }
   location.replace("/");
