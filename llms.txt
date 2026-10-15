@@ -43,6 +43,7 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [VPN перестал работать на iPhone: что проверить](https://prostokey.com/blog/vpn-perestal-rabotat-na-ayfone/)
 - [Hysteria2: самостоятельная установка на сервер и когда это оправдана](https://prostokey.com/blog/hysteria-2-ustanovka-na-server/)
 - [VPN для Roblox: когда нужен и как подключить на телефоне](https://prostokey.com/blog/vpn-dlya-roblox/)
 - [Почему VPN отключается сам по себе на Android](https://prostokey.com/blog/pochemu-vpn-otklyuchaetsya-sam-po/)
