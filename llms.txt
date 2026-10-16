@@ -43,6 +43,7 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [VPN не подключается на Android: что делать](https://prostokey.com/blog/vpn-ne-podklyuchaetsya-na-androide/)
 - [VPN перестал работать на iPhone: что проверить](https://prostokey.com/blog/vpn-perestal-rabotat-na-ayfone/)
 - [Hysteria2: самостоятельная установка на сервер и когда это оправдана](https://prostokey.com/blog/hysteria-2-ustanovka-na-server/)
 - [VPN для Roblox: когда нужен и как подключить на телефоне](https://prostokey.com/blog/vpn-dlya-roblox/)
