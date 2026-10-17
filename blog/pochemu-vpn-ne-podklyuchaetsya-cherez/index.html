@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/head-init.js?v=c3c31878"></script>
+<title>Почему VPN не подключается через Wi-Fi — VPN Просто</title>
+<meta name="description" content="VPN работает на одной сети и не работает на другой: роутер режет трафик, публичный Wi-Fi требует форму входа, а DPI ловит незамаскированный протокол.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stat.prostokey.com; font-src 'self' data:; connect-src 'self' https://stat.prostokey.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/blog/pochemu-vpn-ne-podklyuchaetsya-cherez/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="Почему VPN не подключается через Wi-Fi">
+<meta property="og:description" content="VPN работает на одной сети и не работает на другой: роутер режет трафик, публичный Wi-Fi требует форму входа, а DPI ловит незамаскированный протокол.">
+<meta property="og:url" content="https://prostokey.com/blog/pochemu-vpn-ne-podklyuchaetsya-cherez/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Почему VPN не подключается через Wi-Fi — VPN Просто">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="/fonts.css?v=1260ba6b">
+<link rel="preload" href="/fonts/onest-800-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=70acbc77">
+</head>
+<body>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" focusable="false">
+<defs>
+
+<clipPath id="flag-clip"><rect width="16" height="12" rx="2"/></clipPath>
+
+<symbol id="ic-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="ic-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="ic-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="ic-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+<symbol id="ic-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="ic-unplug" viewBox="0 0 24 24"><path d="m19 5 3-3"/><path d="m2 22 3-3"/>
+<path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/>
+<path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/>
+<path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z"/></symbol>
+<symbol id="ic-credit-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+<symbol id="ic-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+<path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></symbol>
+<symbol id="ic-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+<symbol id="ic-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+<symbol id="ic-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.7 8.9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.5 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/>
+<path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="ic-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.8-1.6l7.9-10.7A1 1 0 0 1 13 2.3V10a1 1 0 0 0 1 1h6a1 1 0 0 1 .8 1.6l-7.9 10.7A1 1 0 0 1 11 21.7V14a1 1 0 0 0-1-1z"/></symbol>
+<symbol id="ic-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+<path d="M2 12h20"/></symbol>
+<symbol id="ic-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
+<circle cx="18" cy="5" r="3"/></symbol>
+<symbol id="ic-sparkles" viewBox="0 0 24 24"><path d="M9.9 2.5 12 8l5.5 2.1L12 12.2 9.9 17.7 7.8 12.2 2.3 10.1 7.8 8z"/>
+<path d="M18 5h.01"/><path d="M20 15h.01"/></symbol>
+<symbol id="ic-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="ic-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+<symbol id="ic-laptop" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.3 2.6a1 1 0 0 1-.9 1.4H3.6a1 1 0 0 1-.9-1.4L4 16"/></symbol>
+<symbol id="ic-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></symbol>
+<symbol id="ic-tv" viewBox="0 0 24 24"><rect width="20" height="15" x="2" y="7" rx="2"/><path d="m17 2-5 5-5-5"/></symbol>
+<symbol id="ic-router" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6.01 18H6"/><path d="M10.01 18H10"/>
+<path d="M15 10v4"/><path d="M17.84 7.17a4 4 0 0 0-5.66 0"/><path d="M20.66 4.34a8 8 0 0 0-11.31 0"/></symbol>
+<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></symbol>
+<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+<symbol id="ic-monitor-cog" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+<symbol id="ic-telegram" viewBox="0 0 24 24"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="ic-send" viewBox="0 0 24 24"><path d="M14.5 9.5 3 21"/><path d="M20.7 3.3a1 1 0 0 0-1.1-.2L3.4 9.6a1 1 0 0 0 .1 1.9l6.4 1.9a1 1 0 0 1 .7.7l1.9 6.4a1 1 0 0 0 1.9.1l6.5-16.2a1 1 0 0 0-.2-1.1Z"/></symbol>
+<symbol id="ic-megaphone-off" viewBox="0 0 24 24"><path d="M11.636 6A13 13 0 0 0 19.4 3.2 1 1 0 0 1 21 4v11.344"/><path d="M14.378 14.357A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1"/><path d="m2 2 20 20"/><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"/><path d="M8 8v6"/></symbol>
+<symbol id="ic-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></symbol>
+<symbol id="ic-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
+<symbol id="ic-id-card" viewBox="0 0 24 24"><path d="M16 10h2"/><path d="M16 14h2"/><path d="M6.17 15a3 3 0 0 1 5.66 0"/><circle cx="9" cy="11" r="2"/><rect x="2" y="5" width="20" height="14" rx="2"/></symbol>
+<symbol id="ic-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+
+<symbol id="flag-pl" viewBox="0 0 16 12"><rect width="16" height="6" fill="#fff"/><rect y="6" width="16" height="6" fill="#DC143C"/></symbol>
+<symbol id="flag-it" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#009246"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#CE2B37"/></symbol>
+<symbol id="flag-in" viewBox="0 0 16 12"><rect width="16" height="4" fill="#FF9933"/><rect y="4" width="16" height="4" fill="#fff"/>
+<rect y="8" width="16" height="4" fill="#138808"/><circle cx="8" cy="6" r="1.5" fill="none" stroke="#000080" stroke-width=".7"/></symbol>
+<symbol id="flag-us" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/>
+<rect y="0" width="16" height="1" fill="#B22234"/><rect y="2" width="16" height="1" fill="#B22234"/>
+<rect y="4" width="16" height="1" fill="#B22234"/><rect y="6" width="16" height="1" fill="#B22234"/>
+<rect y="8" width="16" height="1" fill="#B22234"/><rect y="10" width="16" height="1" fill="#B22234"/>
+<rect width="7" height="7" fill="#3C3B6E"/></symbol>
+<symbol id="flag-fi" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/><rect x="4" width="2.5" height="12" fill="#003580"/>
+<rect y="4.75" width="16" height="2.5" fill="#003580"/></symbol>
+<symbol id="flag-ru" viewBox="0 0 16 12"><rect width="16" height="4" fill="#fff"/><rect y="4" width="16" height="4" fill="#0039A6"/>
+<rect y="8" width="16" height="4" fill="#D52B1E"/></symbol>
+<symbol id="flag-se" viewBox="0 0 16 12"><rect width="16" height="12" fill="#006AA7"/><rect x="4" width="2.5" height="12" fill="#FECC00"/>
+<rect y="4.75" width="16" height="2.5" fill="#FECC00"/></symbol>
+<symbol id="flag-fr" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#0055A4"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#EF4135"/></symbol>
+<symbol id="flag-hk" viewBox="0 0 16 12"><rect width="16" height="12" fill="#DE2910"/><circle cx="8" cy="6" r="3.4" fill="#fff"/></symbol>
+
+</defs>
+</svg><div class="aurora aurora--soft" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/" aria-current="page">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system">
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-monitor-cog"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-sun"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-moon"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-menu"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<article class="section article">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → Почему VPN не подключается через Wi-Fi</p>
+    <h1>Почему VPN не подключается через Wi-Fi</h1>
+    <p class="meta">
+      <span>Опубликовано: 17 октября 2026</span>
+      <span>Обновлено: 17 октября 2026</span>
+      <span>Команда VPN Просто</span>
+    </p>
+
+    <p class="lead">Бывает в обе стороны: на мобильном интернете всё поднимается, а
+на Wi-Fi — нет, либо наоборот. Причина обычно не в VPN, а в сети:
+роутер, ограничивающий трафик, публичная точка доступа с формой входа
+или разбор пакетов на уровне сети.
+</p>
+
+<nav class="toc" aria-label="Содержание">
+  <p class="toc__head">В этой статье</p>
+  <ol>
+    <li><a href="#doma-net">Дома по Wi-Fi не работает</a></li>
+    <li><a href="#mobilnyy-net">На мобильном не работает, а на Wi-Fi да</a></li>
+    <li><a href="#captive-portal">Публичный Wi-Fi и форма входа</a></li>
+    <li><a href="#dpi">При чём тут DPI</a></li>
+    <li><a href="#poryadok-proverki">Порядок проверки по шагам</a></li>
+    <li><a href="#simptomy">Симптомы и что они значат</a></li>
+    <li><a href="#kak-u-nas">Почему у нас именно эти два протокола</a></li>
+    <li><a href="#korotko">Коротко</a></li>
+  </ol>
+</nav>
+
+
+<h2 id="doma-net">Дома по Wi-Fi не работает</h2>
+
+<p>Первый и более частый вариант: соединение поднимается на мобильном
+интернете и не поднимается дома или в офисе по Wi-Fi. Дело здесь
+почти всегда не в самом VPN, а в том, как устроена конкретная
+проводная сеть, к которой подключён роутер.</p>
+
+<p>Домашний или офисный роутер, а точнее — оборудование провайдера
+или сети позади него, может ограничивать определённые типы трафика
+или отдельные сетевые порты. Это не обязательно целенаправленная
+блокировка VPN: такие ограничения часто настраивают ради экономии
+канала, борьбы со спамом или по требованиям, которые провайдер
+получает сверху, и VPN попадает под них попутно, а не в первую
+очередь.</p>
+
+<p>Отличить это от поломки самого клиента просто: если тот же ключ
+на том же устройстве спокойно поднимается на мобильном интернете,
+устройство и ключ ни при чём — дело в конкретной сети между
+устройством и интернетом.</p>
+
+<p>Такое поведение встречается и на роутерах провайдера, и на
+собственных домашних маршрутизаторах, если в их настройках когда-то
+включали фильтрацию трафика или ограничение по типу соединения —
+например, ради родительского контроля или экономии скорости для
+других устройств в сети. Если роутер настраивали не вы сами или
+настройки менялись давно и забылись, проще проверить результат на
+практике, чем вспоминать, что именно было включено когда-то.</p>
+
+<h2 id="mobilnyy-net">На мобильном не работает, а на Wi-Fi — да</h2>
+
+<p>Второй вариант — зеркальный: дома через Wi-Fi всё в порядке, а на
+мобильном интернете соединение не поднимается или постоянно рвётся.
+Здесь причина обычно другая: сотовые операторы разбирают трафик
+подробнее, чем большинство домашних провайдеров, и делают это на
+уровне оборудования всей сети, а не отдельного роутера.</p>
+
+<p>Мы используем VLESS + Reality и Hysteria2 — протоколы, которые
+спроектированы так, чтобы для стороннего наблюдателя выглядеть как
+обычное зашифрованное соединение к постороннему сайту, а не как
+классический VPN-туннель. В большинстве случаев это позволяет пройти
+фильтрацию сотовых сетей, где более старые протоколы вроде WireGuard
+или OpenVPN распознаются и блокируются увереннее. Но заранее
+гарантировать результат на конкретной сети конкретного оператора
+в конкретном городе нельзя — фильтрация настраивается и меняется
+локально.</p>
+
+<p>Если у вас именно этот случай — обрывы на сотовой сети чаще, чем
+дома, — подробный разбор именно этой темы есть в отдельной статье
+про <a href="/blog/vpn-mobilnyy-internet/">VPN на мобильном
+интернете</a>: там про различия сотовых сетей и порядок проверки
+по локациям и протоколам.</p>
+
+<h2 id="captive-portal">Публичный Wi-Fi и форма входа</h2>
+
+<p>Отдельный и довольно частый случай — публичные точки доступа:
+в кафе, отеле, аэропорту, поезде. Там нередко встречается механизм,
+который называется captive portal — служебная страница, которую сеть
+показывает браузеру раньше, чем пропустит вообще какой-либо другой
+трафик, включая VPN. Пока форма входа не пройдена — согласие с
+условиями, ввод номера комнаты, код с ресепшена, — сеть не
+пропускает ничего, кроме этой самой страницы входа.</p>
+
+<p>В такой ситуации включённый VPN не помогает подключиться к сети —
+он, наоборот, может помешать увидеть саму форму входа, потому что
+пытается завернуть весь трафик в туннель раньше, чем браузер успеет
+её загрузить. Правильный порядок обратный: сначала подключиться
+к Wi-Fi с выключенным VPN, открыть браузер и пройти форму входа,
+дождаться, что обычные сайты открываются, и только после этого
+включать VPN.</p>
+
+<div class="callout">
+  <p><strong>Признак именно этого случая.</strong> Браузер сам
+  открывает незнакомую страницу при первом заходе в сеть, или любой
+  сайт вместо привычного содержимого показывает форму с условиями
+  использования сети. Если ничего подобного не было и вы уже
+  пользовались этим Wi-Fi раньше без VPN — дело не в captive portal,
+  и стоит смотреть на ограничение по трафику или портам.</p>
+</div>
+
+<p>Полезная привычка для незнакомых сетей — не включать VPN сразу
+при подключении к новому Wi-Fi, а сначала на минуту открыть браузер
+и убедиться, что интернет вообще работает напрямую. Это не защита
+от чего-либо, а просто самый быстрый способ отличить сеть с формой
+входа от сети, которая действительно не пропускает VPN-трафик:
+в первом случае обычные сайты без VPN откроются не сразу, во втором —
+откроются сразу же, а вопрос будет именно к VPN-соединению.</p>
+
+<h2 id="dpi">При чём тут DPI</h2>
+
+<p>DPI, глубокий анализ пакетов, — это оборудование или программное
+обеспечение на уровне сети, которое пытается определить тип
+проходящего трафика не только по адресу назначения, но и по тому,
+как именно устроено само соединение: по характерным признакам в
+начале сессии, по размеру и порядку пакетов. Такое оборудование
+встречается и в домашних сетях провайдеров, и в корпоративных, и
+в сотовых.</p>
+
+<p>Более старые протоколы VPN — например, WireGuard или классический
+OpenVPN — при установке соединения оставляют характерные признаки,
+по которым DPI может опознать именно VPN-туннель и заблокировать его
+отдельно от прочего трафика, даже не понимая, что внутри. VLESS +
+Reality спроектирован иначе: он использует технику маскировки под
+реальный сайт, из-за которой соединение снаружи выглядит как обычный
+защищённый доступ к постороннему интернет-ресурсу. Hysteria2 решает
+похожую задачу другим способом, поверх другого транспорта.</p>
+
+<p>Из-за этого именно на VLESS + Reality DPI обычно не срабатывает
+там, где сработал бы на более узнаваемых протоколах. Слово «обычно»
+здесь не для красоты: настройки DPI различаются от сети к сети и
+меняются со временем, и абсолютной гарантии для любой сети на свете
+не даст ни один сервис.</p>
+
+<p>Важно понимать разницу между двумя разными вещами, которые легко
+перепутать: блокировкой конкретного сайта и блокировкой самого
+VPN-протокола. Первая работает по адресу или домену и не имеет
+отношения к тому, какой у вас VPN — если сайт заблокирован в вашей
+стране, включённый VPN как раз и решает эту задачу, меняя видимый
+адрес. Вторая работает иначе: сеть распознаёт не конечный адрес,
+а сам факт использования VPN-туннеля определённого вида и режет его
+независимо от того, куда вы пытаетесь попасть. Именно вторая ситуация
+разбирается в этой статье, и именно от неё защищает маскировка
+трафика под обычный HTTPS.</p>
+
+<h2 id="poryadok-proverki">Порядок проверки по шагам</h2>
+
+<ol class="steps">
+  <li><b>Сравните обе сети</b><span>Переключитесь между Wi-Fi и
+    мобильным интернетом на одном и том же устройстве. Это сразу
+    показывает, дело в устройстве и ключе или в конкретной
+    сети.</span></li>
+  <li><b>Проверьте, нет ли формы входа</b><span>Отключите VPN,
+    откройте браузер, убедитесь, что обычные сайты открываются без
+    дополнительных экранов. Только после этого включайте VPN
+    заново.</span></li>
+  <li><b>Смените страну сервера</b><span>Если проблема не в captive
+    portal, попробуйте другую локацию — маршрут через другую страну
+    иногда проходит там, где не прошёл прежний.</span></li>
+  <li><b>Попробуйте второй протокол</b><span>Если клиент позволяет
+    выбирать между VLESS + Reality и Hysteria2 — переключение решает
+    часть случаев быстрее, чем любые другие действия.</span></li>
+  <li><b>Перезагрузите роутер</b><span>Актуально для домашней или
+    офисной сети: часть ограничений и временных сбоев снимается
+    обычной перезагрузкой оборудования.</span></li>
+</ol>
+
+<p>Отдельный случай — офисные и корпоративные сети. Там ограничения
+по трафику и портам обычно ставят осознанно, как часть политики
+безопасности компании, и это не всегда можно обойти сменой протокола
+или локации: если сетью управляет отдел, который сознательно режет
+VPN-трафик любого вида, единственный надёжный вариант — подключаться
+через мобильный интернет, пока вы физически в этой сети.</p>
+
+<h2 id="simptomy">Симптомы и что они значат</h2>
+
+<div class="tablewrap">
+  <table>
+    <thead>
+      <tr><th>Что видите</th><th>Вероятная причина</th><th>Куда смотреть</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Дома по Wi-Fi нет, на мобильном есть</td><td>ограничение домашней сети или роутера</td><td>раздел «Дома по Wi-Fi не работает»</td></tr>
+      <tr><td>На мобильном нет, дома по Wi-Fi есть</td><td>фильтрация на уровне сотового оператора</td><td>раздел «На мобильном не работает»</td></tr>
+      <tr><td>В кафе, отеле или поезде не работает ничего</td><td>не пройдена форма входа в сеть</td><td>раздел про captive portal</td></tr>
+      <tr><td>Открывается страница с условиями сети при заходе</td><td>это и есть captive portal</td><td>отключить VPN, пройти форму, включить снова</td></tr>
+      <tr><td>Работает на одном протоколе, не на другом</td><td>DPI распознаёт менее замаскированный протокол</td><td>смена протокола в клиенте</td></tr>
+      <tr><td>Не работает нигде: ни Wi-Fi, ни мобильный</td><td>причина не в сети, а в ключе или клиенте</td><td>статья «как подключиться»</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<section class="unique">
+  <h2 id="kak-u-nas">Почему у нас именно эти два протокола</h2>
+
+  <p><strong>Мы сознательно используем VLESS + Reality (XTLS-Vision) и Hysteria2.</strong>
+  Выбор этих двух протоколов, а не более старых и узнаваемых, сделан
+  именно ради того, чтобы соединение реже распознавалось как VPN
+  на уровне сети — будь то домашний роутер, публичная точка доступа
+  или сотовый оператор.</p>
+
+  <p><strong>8 стран серверов входят в одну
+  подписку.</strong> Когда дело в конкретном маршруте, а не в самой
+  сети целиком, смена локации внутри того же клиента и того же
+  ключа — самый быстрый способ проверить это на практике, без
+  установки чего-либо нового.</p>
+
+  <p><strong>Российские сервисы идут напрямую.</strong> Раздельная
+  маршрутизация задана в самом ключе: банки, Госуслуги и сайты
+  в зоне .ru работают без туннеля даже при включённом VPN — это
+  не связано с тем, через какую сеть вы подключены, Wi-Fi или
+  мобильную.</p>
+
+  <p><strong>Мы не можем обещать результат на конкретной сети
+  заранее.</strong> Настройки фильтрации на каждом отдельном роутере,
+  в каждой отдельной сотовой сети и на каждой отдельной публичной
+  точке доступа — это решение того, кто её администрирует, а не
+  наше. Мы честно не беремся утверждать, что определённая сеть
+  пропустит соединение, пока это не проверено на практике.</p>
+
+  <p><strong>Три бесплатных дня без карты</strong> — самый быстрый
+  способ проверить именно это: подключиться со своего роутера,
+  своей публичной точки доступа или своей сим-карты и увидеть
+  результат на месте, а не полагаться на чужой опыт в другой сети.</p>
+
+  <p><strong>3 дня на проверку без
+  карты.</strong> Именно поэтому наиболее надёжный способ узнать,
+  заработает ли VPN на вашем Wi-Fi или на вашей сотовой сети, — это
+  попробовать самому. Ключ выдаётся ботом сразу и без оплаты,
+  3 дня хватает, чтобы проверить обе
+  сети по очереди и сравнить результат.</p>
+
+  <p><strong>Один ключ работает в любом подходящем клиенте.</strong>
+  Иногда за поведением, которое выглядит как «сеть не пускает»,
+  на самом деле стоит особенность конкретной программы, а не сети
+  или протокола. Если после всех проверок выше соединение по-прежнему
+  нестабильно именно в одной сети, стоит попробовать тот же ключ
+  в другом клиенте на том же движке — это исключает саму программу
+  из списка возможных причин.</p>
+</section>
+
+<h2 id="korotko">Коротко</h2>
+
+<ul class="facts">
+  <li><strong>Сравните сети</strong><span>переключение между Wi-Fi
+    и мобильным интернетом показывает, где именно причина</span></li>
+  <li><strong>Проверьте форму входа</strong><span>публичный Wi-Fi
+    может требовать её прохождения без VPN</span></li>
+  <li><strong>DPI не всегда виноват</strong><span>VLESS + Reality
+    в большинстве случаев маскируется под обычный трафик</span></li>
+  <li><strong>Смена локации и протокола</strong><span>быстрее решает
+    вопрос, чем смена роутера или тарифа</span></li>
+</ul>
+
+<p>Что почитать дальше: <a href="/blog/vpn-mobilnyy-internet/">ВПН не
+работает на мобильном интернете</a> — если проблема именно на сотовой
+сети, и <a href="/kak-podklyuchit/">как подключиться</a> — общая
+инструкция под любое устройство.</p>
+
+
+    <h2 id="chastye-voprosy">Частые вопросы</h2>
+    <div class="faq">
+      <div id="vopros-doma-po-wi-fi-ne-rabotaet-a-na-mobilnom-internete-vse-v-pory" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Дома по Wi-Fi не работает, а на мобильном интернете всё в порядке.</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1" aria-hidden="true">
+          <div><p>Домашний или офисный роутер может ограничивать определённые типы трафика или отдельные порты — настройками провайдера или самого роутера, не всегда специально против VPN. Попробуйте перезагрузить роутер и сменить сервер на другую страну — если дело в конкретном маршруте, смена страны часто решает вопрос.</p></div>
+        </div>
+      </div>
+      <div id="vopros-na-mobilnom-internete-ne-rabotaet-a-doma-po-wi-fi-normalno" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>На мобильном интернете не работает, а дома по Wi-Fi — нормально.</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2" aria-hidden="true">
+          <div><p>Здесь обычно наоборот: сотовые операторы разбирают трафик подробнее домашних провайдеров. Наш сервис использует VLESS + Reality и Hysteria2 — протоколы, которые маскируются под обычный HTTPS-трафик и в большинстве случаев проходят такую фильтрацию, но гарантии на любую сеть заранее дать нельзя.</p></div>
+        </div>
+      </div>
+      <div id="vopros-podklyuchayus-v-kafe-ili-otele-voobsche-nichego-ne-otkryvaet" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>Подключаюсь в кафе или отеле — вообще ничего не открывается, включая VPN.</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3" aria-hidden="true">
+          <div><p>Похоже на captive portal — страницу входа, которую публичный Wi-Fi показывает раньше, чем пропустит любой другой трафик. Сначала отключите VPN, откройте браузер, пройдите эту форму входа, и только потом включайте соединение — иначе VPN тоже упирается в эту же стену.</p></div>
+        </div>
+      </div>
+      <div id="vopros-znachit-router-specialno-blokiruet-vpn" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>Значит, роутер специально блокирует VPN?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4" aria-hidden="true">
+          <div><p>Не обязательно специально. Ограничение по типам трафика или портам чаще ставят ради родительского контроля, корпоративной политики или экономии канала, а не как целевую блокировку конкретного сервиса.</p></div>
+        </div>
+      </div>
+      <div id="vopros-chto-takoe-dpi-i-meshaet-li-on-vashemu-servisu" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>Что такое DPI и мешает ли он вашему сервису?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5" aria-hidden="true">
+          <div><p>DPI — это разбор трафика на уровне сети, которым оборудование пытается опознать протокол по его поведению, а не только по адресу. VLESS + Reality спроектирован так, чтобы для такого разбора выглядеть как обычное HTTPS-соединение к постороннему сайту, поэтому обычные домашние и публичные DPI-фильтры чаще всего его пропускают.</p></div>
+        </div>
+      </div>
+      <div id="vopros-chto-poprobovat-v-pervuyu-ochered" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q6" aria-controls="a6">
+            <span>Что попробовать в первую очередь?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6" aria-hidden="true">
+          <div><p>По порядку: перезагрузить роутер, сменить сервер на страну из другого региона, проверить, не просит ли сеть форму входа в браузере. Если ни один из шагов не помог именно на этой сети — три бесплатных дня без карты позволяют проверить это на своей точке доступа без лишних действий.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p><strong>Проверить на своей сети.</strong> 3 дня
+      бесплатно, карта не нужна: если у вас не заработает — вы ничего
+      не потеряли.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Проверить на своём Wi-Fi</a>
+    </div>
+
+    <aside aria-label="Другие статьи по теме">
+    <h2 id="chitat-dalshe">Читать дальше</h2>
+    <ul class="facts">
+      <li><a href="/blog/vpn-mobilnyy-internet/">ВПН не работает на мобильном интернете: что перебрать</a></li>
+      <li><a href="/blog/vpn-ne-podklyuchaetsya-na-androide/">VPN не подключается на Android: что делать</a></li>
+      <li><a href="/blog/vpn-perestal-rabotat-na-ayfone/">VPN перестал работать на iPhone: что проверить</a></li>
+    </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <p class="foot-head">Сервис</p>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/#price">Цена</a></li>
+          <li><a href="/o-servise/">О сервисе</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Доступ и цена</p>
+        <ul>
+          <li><a href="/skachat-besplatno/">Попробовать бесплатно</a></li>
+          <li><a href="/probnyy-period/">Пробный период</a></li>
+          <li><a href="/telegram-bot/">Ключ через Telegram-бота</a></li>
+          <li><a href="/kupit/">Купить ключ</a></li>
+          <li><a href="/platnyy-vpn/">Сколько стоит платный VPN</a></li>
+          <li><a href="/klyuch-vpn/">Что такое ключ VPN</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Устройства</p>
+        <ul>
+          <li><a href="/android/">Android</a></li>
+          <li><a href="/iphone/">iPhone и iPad</a></li>
+          <li><a href="/windows/">Компьютер с Windows</a></li>
+          <li><a href="/tv/">Телевизор</a></li>
+          <li><a href="/router/">Роутер</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Помощь</p>
+        <ul>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/ne-rabotaet/">Не работает — что делать</a></li>
+          <li><a href="/proverka/">Проверить, работает ли VPN</a></li>
+          <li><a href="/rossiyskiy-ip/">Российский IP: банки и Госуслуги</a></li>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/whatsapp-ne-rabotaet/">Ватсап не работает с VPN</a></li>
+          <li><a href="/blog/operator-blokiruet-vpn/">Оператор блокирует VPN</a></li>
+          <li><a href="/blog/vpn-dlya-igr/">VPN для игр</a></li>
+          <li><a href="/blog/brawl-stars-ne-rabotaet/">Бравл Старс не работает с VPN</a></li>
+          <li><a href="/blog/viber-ne-rabotaet/">Вайбер не работает в России</a></li>
+          <li><a href="/blog/gemini-ne-rabotaet/">Gemini не работает с VPN</a></li>
+          <li><a href="/blog/pinterest-ne-rabotaet/">Pinterest не работает</a></li>
+          <li><a href="/blog/kakoy-vpn-rabotaet/">Какой VPN работает сейчас</a></li>
+          <li><a href="/blog/vpn-dlya-yutuba/">VPN для YouTube</a></li>
+          <li><a href="/blog/rasshirenie-brauzera/">VPN-расширение для браузера</a></li>
+          <li><a href="/blog/telegram-ne-rabotaet-s-vpn/">Телеграм не работает с VPN</a></li>
+          <li><a href="/blog/yandex-ne-rabotaet-s-vpn/">Яндекс не работает с VPN</a></li>
+          <li><a href="/blog/avito-ne-rabotaet-s-vpn/">Авито не работает с VPN</a></li>
+          <li><a href="/blog/netflix-ne-rabotaet/">Netflix не работает в России</a></li>
+          <li><a href="/blog/max-ne-rabotaet-za-granicey/">MAX не работает за границей</a></li>
+          <li><a href="/blog/facebook-ne-rabotaet/">Фейсбук не работает в России</a></li>
+          <li><a href="/blog/vpn-dlya-instagram/">Инстаграм не работает с VPN</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/blog/">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Связь</p>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Канал «Цифровая свобода»</a></li>
+          <li class="foot-alt">Не открывается? <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть
+            в приложении</a> или найдите <b class="mono">@vpn_prosto_bot</b></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Документы</p>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2021—<span data-year>2026</span> VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://prostokey.com/#organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Почему VPN не подключается через Wi-Fi", "description": "Бывает в обе стороны: на мобильном интернете всё поднимается, а на Wi-Fi — нет, либо наоборот. Причина обычно не в VPN, а в самой сети: роутер, публичная точка доступа с формой входа или разбор трафика на уровне сети.", "datePublished": "2026-10-17", "dateModified": "2026-10-17", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/pochemu-vpn-ne-podklyuchaetsya-cherez/", "name": "Почему VPN не подключается через Wi-Fi"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@id": "https://prostokey.com/#organization"}, "publisher": {"@id": "https://prostokey.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Почему VPN не подключается через Wi-Fi", "item": "https://prostokey.com/blog/pochemu-vpn-ne-podklyuchaetsya-cherez/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Дома по Wi-Fi не работает, а на мобильном интернете всё в порядке.", "acceptedAnswer": {"@type": "Answer", "text": "Домашний или офисный роутер может ограничивать определённые типы трафика или отдельные порты — настройками провайдера или самого роутера, не всегда специально против VPN. Попробуйте перезагрузить роутер и сменить сервер на другую страну — если дело в конкретном маршруте, смена страны часто решает вопрос."}}, {"@type": "Question", "name": "На мобильном интернете не работает, а дома по Wi-Fi — нормально.", "acceptedAnswer": {"@type": "Answer", "text": "Здесь обычно наоборот: сотовые операторы разбирают трафик подробнее домашних провайдеров. Наш сервис использует VLESS + Reality и Hysteria2 — протоколы, которые маскируются под обычный HTTPS-трафик и в большинстве случаев проходят такую фильтрацию, но гарантии на любую сеть заранее дать нельзя."}}, {"@type": "Question", "name": "Подключаюсь в кафе или отеле — вообще ничего не открывается, включая VPN.", "acceptedAnswer": {"@type": "Answer", "text": "Похоже на captive portal — страницу входа, которую публичный Wi-Fi показывает раньше, чем пропустит любой другой трафик. Сначала отключите VPN, откройте браузер, пройдите эту форму входа, и только потом включайте соединение — иначе VPN тоже упирается в эту же стену."}}, {"@type": "Question", "name": "Значит, роутер специально блокирует VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Не обязательно специально. Ограничение по типам трафика или портам чаще ставят ради родительского контроля, корпоративной политики или экономии канала, а не как целевую блокировку конкретного сервиса."}}, {"@type": "Question", "name": "Что такое DPI и мешает ли он вашему сервису?", "acceptedAnswer": {"@type": "Answer", "text": "DPI — это разбор трафика на уровне сети, которым оборудование пытается опознать протокол по его поведению, а не только по адресу. VLESS + Reality спроектирован так, чтобы для такого разбора выглядеть как обычное HTTPS-соединение к постороннему сайту, поэтому обычные домашние и публичные DPI-фильтры чаще всего его пропускают."}}, {"@type": "Question", "name": "Что попробовать в первую очередь?", "acceptedAnswer": {"@type": "Answer", "text": "По порядку: перезагрузить роутер, сменить сервер на страну из другого региона, проверить, не просит ли сеть форму входа в браузере. Если ни один из шагов не помог именно на этой сети — три бесплатных дня без карты позволяют проверить это на своей точке доступа без лишних действий."}}]}</script>
+<script src="/app.js?v=c7e1b9f2" defer></script>
+<img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/pochemu-vpn-ne-podklyuchaetsya-cherez/"
+     alt="" width="1" height="1" decoding="async"
+     class="px" aria-hidden="true"></body>
+</html>
