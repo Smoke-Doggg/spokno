@@ -43,6 +43,7 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [WireGuard на роутере Keenetic: настройка и когда VPN на компьютере проще](https://prostokey.com/blog/wireguard-vpn-dlya-routera-keenetic/)
 - [AdGuard VPN на Mac: скачать и альтернативы](https://prostokey.com/blog/adguard-vpn-skachat-na-mac/)
 - [AdGuard VPN не работает на МТС: причина не в операторе](https://prostokey.com/blog/adguard-vpn-ne-rabotaet-na/)
 - [Почему VPN не подключается через Wi-Fi](https://prostokey.com/blog/pochemu-vpn-ne-podklyuchaetsya-cherez/)
