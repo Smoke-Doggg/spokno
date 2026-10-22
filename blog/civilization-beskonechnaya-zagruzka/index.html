@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/head-init.js?v=c3c31878"></script>
+<title>Civilization: бесконечная загрузка в России — VPN Просто</title>
+<meta name="description" content="Civilization VI зависает на загрузке меню в России — это блокировка 2K по IP, не баг. VPN решает именно это.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stat.prostokey.com; font-src 'self' data:; connect-src 'self' https://stat.prostokey.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/blog/civilization-beskonechnaya-zagruzka/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="Civilization: бесконечная загрузка в России">
+<meta property="og:description" content="Civilization VI зависает на загрузке меню в России — это блокировка 2K по IP, не баг. VPN решает именно это.">
+<meta property="og:url" content="https://prostokey.com/blog/civilization-beskonechnaya-zagruzka/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Civilization: бесконечная загрузка в России — VPN Просто">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="/fonts.css?v=1260ba6b">
+<link rel="preload" href="/fonts/onest-800-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=70acbc77">
+</head>
+<body>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" focusable="false">
+<defs>
+
+<clipPath id="flag-clip"><rect width="16" height="12" rx="2"/></clipPath>
+
+<symbol id="ic-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="ic-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="ic-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="ic-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+<symbol id="ic-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="ic-unplug" viewBox="0 0 24 24"><path d="m19 5 3-3"/><path d="m2 22 3-3"/>
+<path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/>
+<path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/>
+<path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z"/></symbol>
+<symbol id="ic-credit-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+<symbol id="ic-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+<path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></symbol>
+<symbol id="ic-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+<symbol id="ic-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+<symbol id="ic-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.7 8.9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.5 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/>
+<path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="ic-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.8-1.6l7.9-10.7A1 1 0 0 1 13 2.3V10a1 1 0 0 0 1 1h6a1 1 0 0 1 .8 1.6l-7.9 10.7A1 1 0 0 1 11 21.7V14a1 1 0 0 0-1-1z"/></symbol>
+<symbol id="ic-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+<path d="M2 12h20"/></symbol>
+<symbol id="ic-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
+<circle cx="18" cy="5" r="3"/></symbol>
+<symbol id="ic-sparkles" viewBox="0 0 24 24"><path d="M9.9 2.5 12 8l5.5 2.1L12 12.2 9.9 17.7 7.8 12.2 2.3 10.1 7.8 8z"/>
+<path d="M18 5h.01"/><path d="M20 15h.01"/></symbol>
+<symbol id="ic-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="ic-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+<symbol id="ic-laptop" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.3 2.6a1 1 0 0 1-.9 1.4H3.6a1 1 0 0 1-.9-1.4L4 16"/></symbol>
+<symbol id="ic-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></symbol>
+<symbol id="ic-tv" viewBox="0 0 24 24"><rect width="20" height="15" x="2" y="7" rx="2"/><path d="m17 2-5 5-5-5"/></symbol>
+<symbol id="ic-router" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6.01 18H6"/><path d="M10.01 18H10"/>
+<path d="M15 10v4"/><path d="M17.84 7.17a4 4 0 0 0-5.66 0"/><path d="M20.66 4.34a8 8 0 0 0-11.31 0"/></symbol>
+<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></symbol>
+<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+<symbol id="ic-monitor-cog" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+<symbol id="ic-telegram" viewBox="0 0 24 24"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="ic-send" viewBox="0 0 24 24"><path d="M14.5 9.5 3 21"/><path d="M20.7 3.3a1 1 0 0 0-1.1-.2L3.4 9.6a1 1 0 0 0 .1 1.9l6.4 1.9a1 1 0 0 1 .7.7l1.9 6.4a1 1 0 0 0 1.9.1l6.5-16.2a1 1 0 0 0-.2-1.1Z"/></symbol>
+<symbol id="ic-megaphone-off" viewBox="0 0 24 24"><path d="M11.636 6A13 13 0 0 0 19.4 3.2 1 1 0 0 1 21 4v11.344"/><path d="M14.378 14.357A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1"/><path d="m2 2 20 20"/><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"/><path d="M8 8v6"/></symbol>
+<symbol id="ic-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></symbol>
+<symbol id="ic-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
+<symbol id="ic-id-card" viewBox="0 0 24 24"><path d="M16 10h2"/><path d="M16 14h2"/><path d="M6.17 15a3 3 0 0 1 5.66 0"/><circle cx="9" cy="11" r="2"/><rect x="2" y="5" width="20" height="14" rx="2"/></symbol>
+<symbol id="ic-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+
+<symbol id="flag-pl" viewBox="0 0 16 12"><rect width="16" height="6" fill="#fff"/><rect y="6" width="16" height="6" fill="#DC143C"/></symbol>
+<symbol id="flag-it" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#009246"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#CE2B37"/></symbol>
+<symbol id="flag-in" viewBox="0 0 16 12"><rect width="16" height="4" fill="#FF9933"/><rect y="4" width="16" height="4" fill="#fff"/>
+<rect y="8" width="16" height="4" fill="#138808"/><circle cx="8" cy="6" r="1.5" fill="none" stroke="#000080" stroke-width=".7"/></symbol>
+<symbol id="flag-us" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/>
+<rect y="0" width="16" height="1" fill="#B22234"/><rect y="2" width="16" height="1" fill="#B22234"/>
+<rect y="4" width="16" height="1" fill="#B22234"/><rect y="6" width="16" height="1" fill="#B22234"/>
+<rect y="8" width="16" height="1" fill="#B22234"/><rect y="10" width="16" height="1" fill="#B22234"/>
+<rect width="7" height="7" fill="#3C3B6E"/></symbol>
+<symbol id="flag-fi" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/><rect x="4" width="2.5" height="12" fill="#003580"/>
+<rect y="4.75" width="16" height="2.5" fill="#003580"/></symbol>
+<symbol id="flag-ru" viewBox="0 0 16 12"><rect width="16" height="4" fill="#fff"/><rect y="4" width="16" height="4" fill="#0039A6"/>
+<rect y="8" width="16" height="4" fill="#D52B1E"/></symbol>
+<symbol id="flag-se" viewBox="0 0 16 12"><rect width="16" height="12" fill="#006AA7"/><rect x="4" width="2.5" height="12" fill="#FECC00"/>
+<rect y="4.75" width="16" height="2.5" fill="#FECC00"/></symbol>
+<symbol id="flag-fr" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#0055A4"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#EF4135"/></symbol>
+<symbol id="flag-hk" viewBox="0 0 16 12"><rect width="16" height="12" fill="#DE2910"/><circle cx="8" cy="6" r="3.4" fill="#fff"/></symbol>
+
+</defs>
+</svg><div class="aurora aurora--soft" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/" aria-current="page">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system">
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-monitor-cog"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-sun"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-moon"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-menu"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<article class="section article">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → Civilization VI: бесконечная загрузка в России — причина и решение</p>
+    <h1>Civilization VI: бесконечная загрузка в России — причина и решение</h1>
+    <p class="meta">
+      <span>Опубликовано: 23 октября 2026</span>
+      <span>Обновлено: 23 октября 2026</span>
+      <span>Команда VPN Просто</span>
+    </p>
+
+    <p class="lead">Короткий ответ: если Civilization VI зависает на экране загрузки главного
+меню и дальше не идёт — это блокировка компании 2K по российскому
+IP-адресу, действует с марта 2026 года. VPN с зарубежным сервером решает
+её напрямую. Но не всякая «бесконечная загрузка» — про блокировку: если
+зависает не меню, а загрузка сохранения внутри уже начатой игры, причина
+другая, и ниже она разобрана отдельно. Civilization VII в России вообще
+не продаётся — это третий, отдельный случай.
+</p>
+
+<nav class="toc" aria-label="Содержание">
+  <p class="toc__head">В этой статье</p>
+  <ol>
+    <li><a href="#chto-proiskhodit">Что происходит на самом деле</a></li>
+    <li><a href="#fon">Фон: это не только Civilization и не только PC</a></li>
+    <li><a href="#dve-prichiny">Две разные «бесконечные загрузки» — не путать</a></li>
+    <li><a href="#civ-7">Отдельно про Civilization VII</a></li>
+    <li><a href="#kak-podklyuchitsya">Как подключиться через VPN</a></li>
+    <li><a href="#esli-ne-pomoglo">Если VPN не помог</a></li>
+    <li><a href="#granicy">Честно о границах решения</a></li>
+  </ol>
+</nav>
+
+
+<p><em>Проверено в октябре 2026 года.</em></p>
+
+<h2 id="chto-proiskhodit">Что происходит на самом деле</h2>
+
+<p>С марта 2026 года российские пользователи столкнулись с блокировкой
+игр издателя 2K Games — среди них Civilization VI и баскетбольный
+симулятор NBA 2K25. На PlayStation при попытке запуска появляется
+сообщение об ошибке соединения; на PC игра просто не идёт дальше
+начального экрана или главного меню — экран загрузки крутится
+бесконечно, хотя файлы игры на диске целы и не повреждены.</p>
+
+<p>Причина технически подтверждена: 2K добавила проверку сетевого адреса
+при каждом запуске игры, и для российских IP эта проверка не проходит —
+отсюда зависание именно на этапе, где игра должна связаться с серверами
+компании. Публично 2K формулирует это мягче: компания заявляет, что
+не вводила «намеренную блокировку», а её продукты просто «более
+недоступны на территории России» из-за «региональных ограничений и
+особенностей». По сути это два описания одного и того же результата —
+расходится только формулировка причины, а не сам факт, что игра
+не запускается без смены видимого адреса.</p>
+
+<p>Важная деталь: проверка привязана к сетевому адресу, не к учётной
+записи и не к файлам игры. Это значит, что уже купленная и установленная
+копия Civilization VI никуда не исчезла и не повреждена — ей просто
+не дают связаться с серверами 2K с российского адреса.</p>
+
+<h2 id="fon">Фон: это не только Civilization и не только PC</h2>
+
+<p>Блокировка не точечная — под неё попали сразу несколько продуктов
+2K Games. На PlayStation от того же издателя пострадал баскетбольный
+симулятор NBA 2K25: с марта 2026 года запуск заканчивается сообщением
+об ошибке соединения, и игра не идёт дальше этого экрана. По тому же
+списку изданий начала марта 2026 года в число затронутых PlayStation-
+игр попали также Mafia: The Old Country и игры серий Borderlands и
+BioShock — все они относятся к брендам, связанным с 2K и Take-Two.
+На PC картина другая технически (нет явного сообщения об ошибке,
+просто зависание на загрузке), но причина та же — проверка сетевого
+адреса издателем.</p>
+
+<p>Отдельное наблюдение из тех же источников: NBA 2K25 открывается при
+входе с PlayStation-аккаунта, зарегистрированного на Турцию, даже если
+сама консоль физически находится в России и подключена к российской
+сети. Это подтверждает, что проверка смотрит именно на регион учётной
+записи и сетевой адрес, а не на физическое местоположение устройства
+как таковое — тот же принцип, на котором строится и решение через VPN:
+меняется не место, а то, каким адресом и каким регионом аккаунт
+представляется серверу издателя.</p>
+
+<p>Шот (издание Shot) в марте 2026 первым сообщил о проблеме, после чего
+последовали материалы Lenta.ru и hi-tech.mail.ru с одинаковым описанием:
+стоимость Civilization VI со всеми дополнениями — около 9 тысяч рублей,
+то есть речь о уже купленной игре, которая внезапно стала недоступна,
+а не о новой покупке, которую отказались продавать.</p>
+
+<p>Есть и альтернативный путь без VPN, которым пользуются некоторые
+игроки — Steam-аккаунт, привязанный к другому региону (например,
+Турции). С таким аккаунтом игра запускается даже с российского IP,
+если регион аккаунта и региональная версия игры совпадают. Этот путь
+сложнее на практике: он требует либо изначальной покупки через
+аккаунт другого региона, либо смены региона существующего аккаунта,
+что у Steam ограничено по частоте и требует локального способа оплаты.
+VPN проще именно потому, что не трогает сам аккаунт — меняется только
+видимый адрес на момент запуска, учётная запись и её региональные
+настройки остаются как есть.</p>
+
+<p>Не путайте эту блокировку с более широкой историей июля 2026 года,
+когда у множества онлайн-игр сразу перестали открываться серверы без
+VPN — там причина была в сетевой фильтрации на стороне России, а не
+в решении зарубежного издателя. С Civilization VI направление
+противоположное: блокировку по факту ставит сама 2K для своих
+серверов, Россия как сторона тут технически пассивна. Разница важна
+практически: для июльской волны помогает только VPN, а для 2K-блокировки
+теоретически сработал бы и аккаунт другого региона без VPN, хотя VPN
+остаётся проще и быстрее, как описано выше.</p>
+
+<h2 id="dve-prichiny">Две разные «бесконечные загрузки» — не путать</h2>
+
+<p>Поисковые запросы про «бесконечную загрузку Civilization» приводят
+к двум совершенно разным проблемам, и у них разные решения:</p>
+
+<div class="tablewrap">
+  <table>
+    <thead>
+      <tr><th>Что зависает</th><th>Причина</th><th>Что делать</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Главное меню или начальный экран при запуске игры</td>
+        <td>Блокировка 2K по российскому IP-адресу</td>
+        <td>VPN с зарубежным сервером — решает полностью</td>
+      </tr>
+      <tr>
+        <td>Загрузка сохранённой игры (save) внутри уже запущенной
+        Civilization VII — после меню, не до него</td>
+        <td>Известная проблема движка: антивирус Windows Defender
+        проверяет файлы сохранения в реальном времени и замедляет
+        чтение с минут до секунд после исключения папки из проверки</td>
+        <td>VPN тут ни при чём. Добавить папку игры в исключения
+        Windows Defender (Защитник Windows → Параметры → Исключения)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Если неясно, какой у вас случай — смотрите, на каком именно экране
+зависает игра. До главного меню, при самом запуске — это блокировка
+по сети. Внутри игры, при открытии конкретного сохранения — это
+антивирус, и VPN здесь не поможет, сколько его ни включай.</p>
+
+<h2 id="civ-7">Отдельно про Civilization VII</h2>
+
+<p>Civilization VII — не тот же случай, что VI. Эта часть серии
+официально не продаётся в России вовсе: её нет в региональном Steam-
+магазине для российских аккаунтов, и это не блокировка уже купленной
+игры, а изначальное отсутствие продажи. VPN открывает доступ к витрине
+зарубежного магазина для покупки, но после покупки игра работает
+так же, как любая игра на Steam — никакой дополнительной сетевой
+проверки по IP при запуске у неё, в отличие от VI, не описано.</p>
+
+<h2 id="kak-podklyuchitsya">Как подключиться через VPN</h2>
+
+<ol class="steps">
+  <li><b>Включите VPN и выберите зарубежный сервер</b><span>Конкретная
+  страна не принципиальна — проверка 2K смотрит на сам факт
+  не-российского адреса, не на определённый регион.</span></li>
+  <li><b>Полностью закройте игру и сам игровой клиент (Steam, Epic Games
+  Store) перед повторным запуском</b><span>Проверка адреса происходит
+  при старте — если включить VPN, когда игра уже запущена, она может
+  не увидеть изменение сети. Это касается обеих платформ, на которых
+  продаётся Civilization VI на PC — у Epic Games Store своя сессия,
+  отдельная от Steam, и её тоже нужно перезапустить.</span></li>
+  <li><b>Запустите Civilization заново</b><span>Главное меню должно
+  загрузиться за обычное время, не бесконечно.</span></li>
+  <li><b>Для PlayStation — то же самое на уровне консоли</b><span>Включите
+  VPN на роутере или через приложение на телефоне с раздачей интернета
+  на консоль, если у PlayStation нет встроенной поддержки VPN-клиента.
+  Проверка 2K на консоли происходит так же при запуске, поэтому
+  последовательность та же: сначала сеть, потом запуск игры.</span></li>
+</ol>
+
+<div class="inline-cta">
+  <p>Серверов в клиенте несколько, переключение — пару касаний.
+  3 дня бесплатно, карта не нужна: проверьте, что игра
+  запускается, прежде чем платить за что-либо ещё.</p>
+  <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251">Открыть Civilization через VPN</a>
+</div>
+
+<h2 id="esli-ne-pomoglo">Если VPN не помог</h2>
+
+<div class="tablewrap">
+  <table>
+    <thead>
+      <tr><th>Что видите</th><th>Что проверить</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Меню всё равно крутится бесконечно даже с VPN</td>
+        <td>Проверьте, что VPN реально подключён именно в момент запуска
+        игры — часть лаунчеров (Steam, Epic) кэшируют статус сети до
+        перезапуска самого лаунчера, не только игры. Убедиться, что
+        адрес действительно сменился, просто: откройте в браузере
+        любой сайт проверки IP (например, 2ip.ru) при включённом VPN —
+        он должен показать страну сервера, а не Россию. Если показывает
+        Россию — проблема не в блокировке 2K, а в самом подключении VPN,
+        и разбираться нужно с ним, прежде чем снова пробовать игру</td>
+      </tr>
+      <tr>
+        <td>Ошибка соединения именно на PlayStation</td>
+        <td>Консоль может продолжать использовать старый DNS или
+        кэшированный IP — помогает полный перезапуск консоли (не режим
+        сна), не только переподключение к сети</td>
+      </tr>
+      <tr>
+        <td>Игра запускается, но очень медленно работает сеть внутри
+        матча (мультиплеер)</td>
+        <td>Попробуйте другой протокол в клиенте — для мультиплеерных
+        сессий разница между протоколами на нестабильной сети заметнее,
+        чем для однопользовательской игры</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Отдельно: если у вас именно загрузка сохранения внутри игры (раздел
+выше), а не меню — проверьте исключение антивируса ещё раз, VPN эту
+проблему не решит независимо от сервера и протокола.</p>
+
+<div class="tablewrap">
+  <table>
+    <thead>
+      <tr><th>Что видите</th><th>Что проверить</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>В магазине (Steam/Epic) игра показана как недоступная
+        в вашем регионе, хотя раньше была куплена</td>
+        <td>Это отдельная витрина магазина, не сама блокировка 2K —
+        уже купленная игра в библиотеке доступна для установки и
+        запуска независимо от того, что показывает страница магазина
+        сейчас</td>
+      </tr>
+      <tr>
+        <td>Беспокоитесь, что смена адреса удалит прогресс в кампании</td>
+        <td>Не удалит — сохранения хранятся локально на диске (и в
+        облаке Steam, если облачные сохранения включены), VPN их не
+        касается вообще, меняется только видимый сетевой адрес на
+        момент проверки</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Общий принцип таких проверок у игровых издателей: лаунчер при
+старте обращается к серверу авторизации, тот смотрит на IP-адрес
+запроса и возвращает ответ «можно» или «нельзя» — сама игра дальше
+либо продолжает загрузку обычным образом, либо виснет в ожидании
+ответа, который так и не придёт. Отсюда и внешний вид проблемы:
+не сообщение об ошибке, а именно бесконечное «зависание», потому что
+технически клиент честно ждёт ответа сервера, которого не получит.</p>
+
+<section class="unique">
+  <h2 id="granicy">Честно о границах решения</h2>
+
+  <p>Наш сервис открывает доступ к серверам 2K так же, как к любому
+  другому зарубежному сервису — через смену видимого адреса. Мы не
+  обещаем ускорить загрузку сохранений, если причина зависания — не
+  блокировка, а антивирус: это разные механизмы, и путать их в совете
+  означало бы дать совет, который не сработает.</p>
+
+  <p>Civilization — игра без строгого PvP-античита, который банит за
+  сам факт VPN (в отличие от игр с системами типа EAC или BattlEye
+  в рейтинговых режимах). Рейтинговых блокировок за смену сетевого
+  адреса для нее не описано, однократная смена IP при запуске не похожа
+  на паттерн читерства, который отслеживают такие системы.</p>
+
+  <p>Протоколов два, переключаются в клиенте вручную. Для однопользовательской
+  игры и прохождения кампании разница почти не заметна, а вот в
+  мультиплеерных матчах при нестабильной сети одной стороны стоит
+  попробовать второй протокол, если первый начал вести себя хуже —
+  не меняя сервер.</p>
+
+  <p>Ключ не привязан к одному устройству: два одновременных подключения
+  входят в подписку, до шести — при добавлении. PlayStation и компьютер
+  на одном ключе подключаются одновременно без переоформления. Пробный
+  период даёт 3 дня, чтобы проверить именно на своей
+  сети и своей консоли — возможности провайдеров и операторов в России
+  отличаются, и то, что сразу сработало у одного человека, у другого
+  может потребовать смены сервера.</p>
+
+  <p>Почему мы не советуем путь со сменой региона Steam-аккаунта как
+  основной: он решает ровно ту же задачу (запуск игры), но попутно
+  меняет то, что менять не нужно — валюту магазина, доступные способы
+  оплаты, а в отдельных случаях видимость уже купленных игр из другого
+  региона. VPN точнее решает именно эту проблему: меняется только
+  сетевой адрес в момент проверки, а не вся учётная запись целиком.
+  Это тот случай, где более простое с виду решение на самом деле
+  переносит больше риска, чем кажется на первый взгляд.</p>
+
+  <p>Своего клиента у нас нет намеренно: ключ подключается в любом
+  подходящем стороннем приложении, и если на конкретном устройстве
+  (например, на телевизоре с подключённой консолью) один клиент ведёт
+  себя нестабильно, можно быстро попробовать другой без потери
+  настроек подписки. Для консолей без встроенной поддержки VPN та же
+  логика работает через роутер или раздачу интернета с телефона —
+  это не обходной путь, а штатный способ подключения устройств без
+  собственного VPN-клиента.</p>
+</section>
+
+<p>Что ещё почитать: <a href="/blog/vpn-dlya-igr/">VPN для игр — общий
+разбор</a> и <a href="/blog/kakuyu-stranu-vybrat/">какую страну выбрать
+в клиенте</a>.</p>
+
+
+    <h2 id="chastye-voprosy">Частые вопросы</h2>
+    <div class="faq">
+      <div id="vopros-pochemu-civilization-vi-beskonechno-zagruzhaetsya-v-rossii" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Почему Civilization VI бесконечно загружается в России?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1" aria-hidden="true">
+          <div><p>С марта 2026 года 2K проверяет сетевой адрес при каждом запуске, и для российских IP эта проверка не проходит — игра зависает на главном меню. Файлы игры не повреждены, дело в самой проверке.</p></div>
+        </div>
+      </div>
+      <div id="vopros-2k-oficialno-podtverdila-blokirovku" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>2K официально подтвердила блокировку?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2" aria-hidden="true">
+          <div><p>Технически эффект подтверждён независимыми источниками, но публично компания говорит мягче — что продукты «более недоступны на территории России» из-за «региональных особенностей», без слова «блокировка».</p></div>
+        </div>
+      </div>
+      <div id="vopros-vpn-tochno-pomozhet" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>VPN точно поможет?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3" aria-hidden="true">
+          <div><p>Да, для зависания на главном меню — проверка смотрит на сам факт не-российского адреса, конкретная страна сервера не важна. Не поможет, если зависает загрузка сохранения внутри уже начатой игры — там другая причина.</p></div>
+        </div>
+      </div>
+      <div id="vopros-pochemu-zavisaet-zagruzka-sohraneniya-a-ne-menyu" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>Почему зависает загрузка сохранения, а не меню?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4" aria-hidden="true">
+          <div><p>Это известная проблема антивируса Windows Defender: он проверяет файлы сохранения в реальном времени. Добавление папки игры в исключения ускоряет загрузку с минут до секунд. VPN эту проблему не решает.</p></div>
+        </div>
+      </div>
+      <div id="vopros-a-chto-s-civilization-vii" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>А что с Civilization VII?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5" aria-hidden="true">
+          <div><p>Другой случай: игра просто не продаётся в российском Steam-магазине изначально, это не блокировка уже купленной копии. VPN открывает витрину зарубежного магазина для покупки; после покупки доступ работает как обычно.</p></div>
+        </div>
+      </div>
+      <div id="vopros-banyat-li-za-vpn-v-civilization" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q6" aria-controls="a6">
+            <span>Банят ли за VPN в Civilization?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a6" role="region" aria-labelledby="q6" aria-hidden="true">
+          <div><p>Рейтинговых блокировок за смену сетевого адреса не описано — в игре нет строгого PvP-античита вроде EAC или BattlEye, который следит за этим в других играх.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p><strong>Проверить на своей сети.</strong> 3 дня
+      бесплатно, карта не нужна: если у вас не заработает — вы ничего
+      не потеряли.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Открыть Civilization через VPN</a>
+    </div>
+
+    <aside aria-label="Другие статьи по теме">
+    <h2 id="chitat-dalshe">Читать дальше</h2>
+    <ul class="facts">
+      <li><a href="/blog/vpn-dlya-igr/">VPN для игр: когда помогает, а когда мешает</a></li>
+      <li><a href="/blog/kakuyu-stranu-vybrat/">ВПН сервер: какую страну выбрать и на что влияет</a></li>
+      <li><a href="/blog/kinopoisk-za-granicey/">Кинопоиск за границей: почему не идёт видео и при чём тут VPN-ловушка</a></li>
+    </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <p class="foot-head">Сервис</p>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/#price">Цена</a></li>
+          <li><a href="/o-servise/">О сервисе</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Доступ и цена</p>
+        <ul>
+          <li><a href="/skachat-besplatno/">Попробовать бесплатно</a></li>
+          <li><a href="/probnyy-period/">Пробный период</a></li>
+          <li><a href="/telegram-bot/">Ключ через Telegram-бота</a></li>
+          <li><a href="/kupit/">Купить ключ</a></li>
+          <li><a href="/platnyy-vpn/">Сколько стоит платный VPN</a></li>
+          <li><a href="/klyuch-vpn/">Что такое ключ VPN</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Устройства</p>
+        <ul>
+          <li><a href="/android/">Android</a></li>
+          <li><a href="/iphone/">iPhone и iPad</a></li>
+          <li><a href="/windows/">Компьютер с Windows</a></li>
+          <li><a href="/tv/">Телевизор</a></li>
+          <li><a href="/router/">Роутер</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Помощь</p>
+        <ul>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/ne-rabotaet/">Не работает — что делать</a></li>
+          <li><a href="/proverka/">Проверить, работает ли VPN</a></li>
+          <li><a href="/rossiyskiy-ip/">Российский IP: банки и Госуслуги</a></li>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/whatsapp-ne-rabotaet/">Ватсап не работает с VPN</a></li>
+          <li><a href="/blog/operator-blokiruet-vpn/">Оператор блокирует VPN</a></li>
+          <li><a href="/blog/vpn-dlya-igr/">VPN для игр</a></li>
+          <li><a href="/blog/brawl-stars-ne-rabotaet/">Бравл Старс не работает с VPN</a></li>
+          <li><a href="/blog/viber-ne-rabotaet/">Вайбер не работает в России</a></li>
+          <li><a href="/blog/gemini-ne-rabotaet/">Gemini не работает с VPN</a></li>
+          <li><a href="/blog/pinterest-ne-rabotaet/">Pinterest не работает</a></li>
+          <li><a href="/blog/kakoy-vpn-rabotaet/">Какой VPN работает сейчас</a></li>
+          <li><a href="/blog/vpn-dlya-yutuba/">VPN для YouTube</a></li>
+          <li><a href="/blog/rasshirenie-brauzera/">VPN-расширение для браузера</a></li>
+          <li><a href="/blog/telegram-ne-rabotaet-s-vpn/">Телеграм не работает с VPN</a></li>
+          <li><a href="/blog/yandex-ne-rabotaet-s-vpn/">Яндекс не работает с VPN</a></li>
+          <li><a href="/blog/avito-ne-rabotaet-s-vpn/">Авито не работает с VPN</a></li>
+          <li><a href="/blog/netflix-ne-rabotaet/">Netflix не работает в России</a></li>
+          <li><a href="/blog/max-ne-rabotaet-za-granicey/">MAX не работает за границей</a></li>
+          <li><a href="/blog/facebook-ne-rabotaet/">Фейсбук не работает в России</a></li>
+          <li><a href="/blog/vpn-dlya-instagram/">Инстаграм не работает с VPN</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/blog/">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Связь</p>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Канал «Цифровая свобода»</a></li>
+          <li class="foot-alt">Не открывается? <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть
+            в приложении</a> или найдите <b class="mono">@vpn_prosto_bot</b></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Документы</p>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2021—<span data-year>2026</span> VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://prostokey.com/#organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Civilization VI: бесконечная загрузка в России — причина и решение", "description": "С марта 2026 года 2K блокирует Civilization VI для российских IP — отсюда зависание на главном меню. VPN решает именно это; другая «бесконечная загрузка» (внутри сохранения) вызвана антивирусом, не сетью.", "datePublished": "2026-10-23", "dateModified": "2026-10-23", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/civilization-beskonechnaya-zagruzka/", "name": "Civilization VI: бесконечная загрузка в России — причина и решение"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@id": "https://prostokey.com/#organization"}, "publisher": {"@id": "https://prostokey.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Civilization VI: бесконечная загрузка в России — причина и решение", "item": "https://prostokey.com/blog/civilization-beskonechnaya-zagruzka/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему Civilization VI бесконечно загружается в России?", "acceptedAnswer": {"@type": "Answer", "text": "С марта 2026 года 2K проверяет сетевой адрес при каждом запуске, и для российских IP эта проверка не проходит — игра зависает на главном меню. Файлы игры не повреждены, дело в самой проверке."}}, {"@type": "Question", "name": "2K официально подтвердила блокировку?", "acceptedAnswer": {"@type": "Answer", "text": "Технически эффект подтверждён независимыми источниками, но публично компания говорит мягче — что продукты «более недоступны на территории России» из-за «региональных особенностей», без слова «блокировка»."}}, {"@type": "Question", "name": "VPN точно поможет?", "acceptedAnswer": {"@type": "Answer", "text": "Да, для зависания на главном меню — проверка смотрит на сам факт не-российского адреса, конкретная страна сервера не важна. Не поможет, если зависает загрузка сохранения внутри уже начатой игры — там другая причина."}}, {"@type": "Question", "name": "Почему зависает загрузка сохранения, а не меню?", "acceptedAnswer": {"@type": "Answer", "text": "Это известная проблема антивируса Windows Defender: он проверяет файлы сохранения в реальном времени. Добавление папки игры в исключения ускоряет загрузку с минут до секунд. VPN эту проблему не решает."}}, {"@type": "Question", "name": "А что с Civilization VII?", "acceptedAnswer": {"@type": "Answer", "text": "Другой случай: игра просто не продаётся в российском Steam-магазине изначально, это не блокировка уже купленной копии. VPN открывает витрину зарубежного магазина для покупки; после покупки доступ работает как обычно."}}, {"@type": "Question", "name": "Банят ли за VPN в Civilization?", "acceptedAnswer": {"@type": "Answer", "text": "Рейтинговых блокировок за смену сетевого адреса не описано — в игре нет строгого PvP-античита вроде EAC или BattlEye, который следит за этим в других играх."}}]}</script>
+<script src="/app.js?v=c7e1b9f2" defer></script>
+<img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/civilization-beskonechnaya-zagruzka/"
+     alt="" width="1" height="1" decoding="async"
+     class="px" aria-hidden="true"></body>
+</html>

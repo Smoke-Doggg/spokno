@@ -3,4 +3,7 @@ Allow: /
 Disallow: /go/
 Clean-param: src&utm_source&utm_medium&utm_campaign
 
+User-agent: YandexAdditional
+Allow: /
+
 Sitemap: https://prostokey.com/sitemap.xml
