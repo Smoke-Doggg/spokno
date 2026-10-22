@@ -43,6 +43,8 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [Существует ли бесплатный VPN без рекламы и подписки](https://prostokey.com/blog/vpn-besplatno-bez-reklamy-i/)
+- [Canva не работает в России: как открыть и что не решит VPN](https://prostokey.com/blog/canva-ne-rabotaet/)
 - [NekoRay: что это за программа и кому она нужна](https://prostokey.com/blog/nekoray-chto-eto/)
 - [«Попытка установить соединение была безуспешной»: что за ошибка](https://prostokey.com/blog/popytka-ustanovit-soedinenie-byla-bezuspeshnoy/)
 - [VPN или прокси: чем отличаются и когда что выбрать](https://prostokey.com/blog/vpn-ili-proksi-chto-luchshe/)
