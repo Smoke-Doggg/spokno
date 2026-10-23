@@ -43,6 +43,8 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [Fallout 76 не подключается к серверу в России — причина и VPN без лишнего пинга](https://prostokey.com/blog/fallout-76-ne-podklyuchaetsya/)
+- [GeForce NOW в России: как подключиться и на что обратить внимание](https://prostokey.com/blog/geforce-now-v-rossii/)
 - [Civilization VI: бесконечная загрузка в России — причина и решение](https://prostokey.com/blog/civilization-beskonechnaya-zagruzka/)
 - [Кинопоиск за границей: почему не идёт видео и при чём тут VPN-ловушка](https://prostokey.com/blog/kinopoisk-za-granicey/)
 - [Существует ли бесплатный VPN без рекламы и подписки](https://prostokey.com/blog/vpn-besplatno-bez-reklamy-i/)
