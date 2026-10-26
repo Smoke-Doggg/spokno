@@ -43,6 +43,8 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [Battle.net и игры Blizzard в России: что работает, а что нет](https://prostokey.com/blog/battle-net-i-igry-blizzard/)
+- [Jira в России: доступ, лицензии и что решает VPN](https://prostokey.com/blog/jira-v-rossii/)
 - [Hypixel не заходит в России — блокировка Cloudflare и риск бана за VPN](https://prostokey.com/blog/hypixel-ne-zahodit/)
 - [Discord в России: почему заблокирован и как подключиться](https://prostokey.com/blog/discord-kak-zapustit-v-rossii/)
 - [Fallout 76 не подключается к серверу в России — причина и VPN без лишнего пинга](https://prostokey.com/blog/fallout-76-ne-podklyuchaetsya/)
