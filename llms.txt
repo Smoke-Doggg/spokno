@@ -43,6 +43,8 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [Кинопоиск просит отключить VPN: что делать, не теряя доступ к остальному](https://prostokey.com/blog/kinopoisk-prosit-otklyuchit-vpn/)
+- [Crunchyroll в России: как открыть доступ и что с оплатой](https://prostokey.com/blog/crunchyroll-v-rossii/)
 - [Battle.net и игры Blizzard в России: что работает, а что нет](https://prostokey.com/blog/battle-net-i-igry-blizzard/)
 - [Jira в России: доступ, лицензии и что решает VPN](https://prostokey.com/blog/jira-v-rossii/)
 - [Hypixel не заходит в России — блокировка Cloudflare и риск бана за VPN](https://prostokey.com/blog/hypixel-ne-zahodit/)
