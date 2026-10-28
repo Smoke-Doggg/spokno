@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/head-init.js?v=c3c31878"></script>
+<title>Wildberries просит отключить VPN — VPN Просто</title>
+<meta name="description" content="Wildberries с апреля 2026 ограничивает доступ при включённом VPN по требованию Минцифры. Решение — исключить Wildberries из туннеля раздельным доступом.">
+<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stat.prostokey.com; font-src 'self' data:; connect-src 'self' https://stat.prostokey.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://prostokey.com/blog/wildberries-prosit-otklyuchit-vpn/">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VPN Просто">
+<meta property="og:title" content="Wildberries просит отключить VPN">
+<meta property="og:description" content="Wildberries с апреля 2026 ограничивает доступ при включённом VPN по требованию Минцифры. Решение — исключить Wildberries из туннеля раздельным доступом.">
+<meta property="og:url" content="https://prostokey.com/blog/wildberries-prosit-otklyuchit-vpn/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://prostokey.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Wildberries просит отключить VPN — VPN Просто">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://prostokey.com/og-image.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="/fonts.css?v=1260ba6b">
+<link rel="preload" href="/fonts/onest-800-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
+      type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=70acbc77">
+</head>
+<body>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" focusable="false">
+<defs>
+
+<clipPath id="flag-clip"><rect width="16" height="12" rx="2"/></clipPath>
+
+<symbol id="ic-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="ic-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="ic-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="ic-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+<symbol id="ic-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="ic-unplug" viewBox="0 0 24 24"><path d="m19 5 3-3"/><path d="m2 22 3-3"/>
+<path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/>
+<path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/>
+<path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z"/></symbol>
+<symbol id="ic-credit-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+<symbol id="ic-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+<path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></symbol>
+<symbol id="ic-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+<symbol id="ic-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+<symbol id="ic-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.7 8.9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.5 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/>
+<path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="ic-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.8-1.6l7.9-10.7A1 1 0 0 1 13 2.3V10a1 1 0 0 0 1 1h6a1 1 0 0 1 .8 1.6l-7.9 10.7A1 1 0 0 1 11 21.7V14a1 1 0 0 0-1-1z"/></symbol>
+<symbol id="ic-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+<path d="M2 12h20"/></symbol>
+<symbol id="ic-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
+<circle cx="18" cy="5" r="3"/></symbol>
+<symbol id="ic-sparkles" viewBox="0 0 24 24"><path d="M9.9 2.5 12 8l5.5 2.1L12 12.2 9.9 17.7 7.8 12.2 2.3 10.1 7.8 8z"/>
+<path d="M18 5h.01"/><path d="M20 15h.01"/></symbol>
+<symbol id="ic-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="ic-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+<symbol id="ic-laptop" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.3 2.6a1 1 0 0 1-.9 1.4H3.6a1 1 0 0 1-.9-1.4L4 16"/></symbol>
+<symbol id="ic-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></symbol>
+<symbol id="ic-tv" viewBox="0 0 24 24"><rect width="20" height="15" x="2" y="7" rx="2"/><path d="m17 2-5 5-5-5"/></symbol>
+<symbol id="ic-router" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6.01 18H6"/><path d="M10.01 18H10"/>
+<path d="M15 10v4"/><path d="M17.84 7.17a4 4 0 0 0-5.66 0"/><path d="M20.66 4.34a8 8 0 0 0-11.31 0"/></symbol>
+<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
+<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></symbol>
+<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+<symbol id="ic-monitor-cog" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+<symbol id="ic-telegram" viewBox="0 0 24 24"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="ic-send" viewBox="0 0 24 24"><path d="M14.5 9.5 3 21"/><path d="M20.7 3.3a1 1 0 0 0-1.1-.2L3.4 9.6a1 1 0 0 0 .1 1.9l6.4 1.9a1 1 0 0 1 .7.7l1.9 6.4a1 1 0 0 0 1.9.1l6.5-16.2a1 1 0 0 0-.2-1.1Z"/></symbol>
+<symbol id="ic-megaphone-off" viewBox="0 0 24 24"><path d="M11.636 6A13 13 0 0 0 19.4 3.2 1 1 0 0 1 21 4v11.344"/><path d="M14.378 14.357A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1"/><path d="m2 2 20 20"/><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"/><path d="M8 8v6"/></symbol>
+<symbol id="ic-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></symbol>
+<symbol id="ic-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
+<symbol id="ic-id-card" viewBox="0 0 24 24"><path d="M16 10h2"/><path d="M16 14h2"/><path d="M6.17 15a3 3 0 0 1 5.66 0"/><circle cx="9" cy="11" r="2"/><rect x="2" y="5" width="20" height="14" rx="2"/></symbol>
+<symbol id="ic-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+
+<symbol id="flag-pl" viewBox="0 0 16 12"><rect width="16" height="6" fill="#fff"/><rect y="6" width="16" height="6" fill="#DC143C"/></symbol>
+<symbol id="flag-it" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#009246"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#CE2B37"/></symbol>
+<symbol id="flag-in" viewBox="0 0 16 12"><rect width="16" height="4" fill="#FF9933"/><rect y="4" width="16" height="4" fill="#fff"/>
+<rect y="8" width="16" height="4" fill="#138808"/><circle cx="8" cy="6" r="1.5" fill="none" stroke="#000080" stroke-width=".7"/></symbol>
+<symbol id="flag-us" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/>
+<rect y="0" width="16" height="1" fill="#B22234"/><rect y="2" width="16" height="1" fill="#B22234"/>
+<rect y="4" width="16" height="1" fill="#B22234"/><rect y="6" width="16" height="1" fill="#B22234"/>
+<rect y="8" width="16" height="1" fill="#B22234"/><rect y="10" width="16" height="1" fill="#B22234"/>
+<rect width="7" height="7" fill="#3C3B6E"/></symbol>
+<symbol id="flag-fi" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/><rect x="4" width="2.5" height="12" fill="#003580"/>
+<rect y="4.75" width="16" height="2.5" fill="#003580"/></symbol>
+<symbol id="flag-ru" viewBox="0 0 16 12"><rect width="16" height="4" fill="#fff"/><rect y="4" width="16" height="4" fill="#0039A6"/>
+<rect y="8" width="16" height="4" fill="#D52B1E"/></symbol>
+<symbol id="flag-se" viewBox="0 0 16 12"><rect width="16" height="12" fill="#006AA7"/><rect x="4" width="2.5" height="12" fill="#FECC00"/>
+<rect y="4.75" width="16" height="2.5" fill="#FECC00"/></symbol>
+<symbol id="flag-fr" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#0055A4"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
+<rect x="10.67" width="5.33" height="12" fill="#EF4135"/></symbol>
+<symbol id="flag-hk" viewBox="0 0 16 12"><rect width="16" height="12" fill="#DE2910"/><circle cx="8" cy="6" r="3.4" fill="#fff"/></symbol>
+
+</defs>
+</svg><div class="aurora aurora--soft" aria-hidden="true">
+  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
+</div>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="/">
+      <span class="dot dot--live" aria-hidden="true"></span>
+      VPN Просто
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="/telegram/">Telegram не работает</a>
+      <a href="/kak-podklyuchit/">Как подключить</a>
+      <a href="/blog/" aria-current="page">Блог</a>
+      <a href="/partnerskaya/">Партнёрам</a>
+      <button class="theme-sw" type="button" data-theme-switch data-mode="system">
+        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-monitor-cog"/></svg></span>
+        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-sun"/></svg></span>
+        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-moon"/></svg></span>
+        <span class="theme-sw__t" data-theme-label>Как в системе</span>
+      </button>
+      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+    </nav>
+    <button class="burger" id="burger" type="button"
+            aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-menu"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<article class="section article">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Главная</a> → <a href="/blog/">Блог</a> → Wildberries просит отключить VPN: что делать, не теряя доступ к остальному</p>
+    <h1>Wildberries просит отключить VPN: что делать, не теряя доступ к остальному</h1>
+    <p class="meta">
+      <span>Опубликовано: 28 октября 2026</span>
+      <span>Обновлено: 28 октября 2026</span>
+      <span>Команда VPN Просто</span>
+    </p>
+
+    <p class="lead">Короткий ответ: с 15 апреля 2026 года Wildberries по требованию
+Минцифры ограничивает доступ пользователям с включённым VPN —
+приложение показывает предупреждение, не грузит каталог, корзину
+или оплату, либо явно предлагает выключить VPN. Это не сбой
+и не наша недоработка — решение самого маркетплейса, необходимое
+ему для сохранения в правительственном «белом списке» сервисов.
+Рабочий вариант: не выключать VPN целиком, а исключить конкретно
+Wildberries из туннеля раздельным доступом, оставив остальной
+трафик защищённым.
+</p>
+
+<nav class="toc" aria-label="Содержание">
+  <p class="toc__head">В этой статье</p>
+  <ol>
+    <li><a href="#chto-sluchilos">Почему Wildberries просит отключить VPN</a></li>
+    <li><a href="#chto-vidno">Что именно перестаёт работать</a></li>
+    <li><a href="#reshenie">Решение: раздельный доступ</a></li>
+    <li><a href="#esli-ne-pomoglo">Если исключение не помогло</a></li>
+    <li><a href="#granicy">Честно о границах решения</a></li>
+  </ol>
+</nav>
+
+
+<p><em>Проверено в октябре 2026 года.</em></p>
+
+<h2 id="chto-sluchilos">Почему Wildberries просит отключить VPN</h2>
+
+<p>С 15 апреля 2026 года Минцифры потребовало от крупных российских
+сервисов — маркетплейсов, банков, агрегаторов — ограничивать доступ
+пользователям, у которых на устройстве включён VPN или другое
+средство обхода блокировок. В список попали Wildberries, Ozon,
+Сбербанк, Яндекс, VK, Авито, X5 и HeadHunter. Условие связано с
+«белыми списками» — перечнями сервисов, которые должны оставаться
+доступными при ограничениях мобильного интернета: чтобы оставаться
+в таком списке, сервис обязан сам ограничивать пользователей с
+VPN, а не полагаться только на операторов связи.</p>
+
+<p>Технически это выглядит так: приложение Wildberries само
+проверяет, есть ли на устройстве активное VPN-соединение, и при
+обнаружении показывает предупреждение вида «У вас включён VPN?
+Лучше его отключить, чтобы приложение работало стабильно», а
+часть функций — загрузка каталога, корзины, оформление заказа,
+личный кабинет — замедляется или не отвечает вовсе. Это не
+случайный сбой сервера и не совпадение по времени — независимые
+источники (СМИ, технические разборы, обсуждения на Хабре)
+согласованно описывают именно этот механизм и именно эту дату.</p>
+
+<p>Это не единичный случай именно Wildberries — тот же механизм
+в то же время заработал у Ozon и у ряда других крупных сервисов
+из списка Минцифры. Для пользователя это полезный ориентир: если
+один маркетплейс начал предупреждать про VPN, вероятно, похожая
+логика скоро появится или уже появилась у его прямых конкурентов,
+а не является особенностью конкретно одной платформы. Это также
+означает, что проблема не решится сама, если просто переключиться
+на другой маркетплейс, — рано или поздно та же логика ограничений
+может затронуть и его.</p>
+
+<p>Отдельная техническая особенность именно крупных маркетплейсов —
+многодоменная архитектура. В отличие от простого сайта, у
+Wildberries трафик разделён между основным доменом, доменами для
+изображений товаров, доменом для API мобильного приложения и
+доменом для платёжного шлюза. Проверка на VPN может выполняться
+на уровне каждого из них отдельно, и это значит, что решение,
+которое помогло для одного запроса (например, открытие главной
+страницы), не обязательно сработает для всех остальных действий
+на платформе — это важно держать в уме при настройке исключений
+ниже.</p>
+
+<h2 id="chto-vidno">Что именно перестаёт работать</h2>
+
+<div class="tablewrap">
+  <table>
+    <thead>
+      <tr><th>Что вы видите</th><th>Это VPN?</th><th>Почему</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Приложение показывает предупреждение про VPN прямо на
+        экране</td>
+        <td>Да</td>
+        <td>Это прямое сообщение от самого Wildberries — платформа
+        обнаружила активный туннель на устройстве</td>
+      </tr>
+      <tr>
+        <td>Каталог, корзина или оплата не загружаются, хотя
+        остальной интернет работает нормально</td>
+        <td>Да</td>
+        <td>Типичное поведение при обнаруженном VPN — ограничение
+        избирательное, не весь интернет, а именно это приложение</td>
+      </tr>
+      <tr>
+        <td>Сайт wildberries.ru в браузере не открывается вовсе,
+        без явного сообщения</td>
+        <td>Возможно нет</td>
+        <td>Проверьте, не упал ли сам сайт — Wildberries переживает
+        обычные технические сбои, как и любой крупный сервис,
+        независимо от VPN; если вокруг вас одновременно пишут о
+        сбое без упоминания VPN, вероятно, дело не в VPN</td>
+      </tr>
+      <tr>
+        <td>Заказ не доходит до оплаты картой</td>
+        <td>Нет</td>
+        <td>Проблемы с конкретным платёжным методом (банк, карта,
+        3-D Secure) не связаны с VPN-ограничением — это отдельная
+        категория сбоев на стороне платёжной системы</td>
+      </tr>
+      <tr>
+        <td>Доставка или статус заказа не обновляется</td>
+        <td>Нет</td>
+        <td>Это логистический процесс на стороне продавца и службы
+        доставки, он не зависит от того, включён у вас VPN в момент
+        проверки статуса или нет</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Разграничивать эти случаи важно по одной причине: если проблема
+на самом деле в оплате или доставке, выключение VPN ничего не
+изменит, и вы потеряете время на диагностику не там. Прежде чем
+настраивать раздельный доступ, стоит на минуту выключить VPN
+полностью и проверить, воспроизводится ли симптом без него —
+если да, дело не в VPN вовсе.</p>
+
+<h2 id="reshenie">Решение: раздельный доступ</h2>
+
+<p>Самый рабочий вариант — не выключать VPN целиком, а исключить
+конкретно Wildberries из туннеля. Эта функция называется по-разному
+в разных клиентах: split tunneling, раздельный доступ, исключения
+по приложениям или по доменам.</p>
+
+<ol class="steps">
+  <li><b>Откройте настройки раздельного доступа в клиенте VPN</b><span>Обычно
+  находится в разделе «Дополнительно» или «Подключение».</span></li>
+  <li><b>Добавьте домен wildberries.ru и связанные поддомены в список
+  исключений</b><span>Трафик к этому домену пойдёт напрямую через
+  ваш обычный российский адрес, минуя туннель — для Wildberries вы
+  будете выглядеть обычным покупателем из России.</span></li>
+  <li><b>Для мобильного приложения проверьте исключение именно по
+  приложению, если оно доступно</b><span>Исключение по домену не
+  всегда работает одинаково с мобильными приложениями, которые
+  могут обращаться к нескольким доменам и API одновременно —
+  исключение по приложению целиком надёжнее там, где эта опция
+  есть.</span></li>
+  <li><b>Перезапустите приложение после настройки исключения</b><span>Изменения
+  в списке исключений иногда требуют повторного запуска приложения
+  или перезапуска самого VPN-соединения, а не просто обновления
+  открытого экрана.</span></li>
+</ol>
+
+<div class="inline-cta">
+  <p>Раздельный доступ по доменам и приложениям настраивается в
+  пару касаний. 3 дня бесплатно, карта не нужна:
+  проверьте, что Wildberries открывается с исключением, прежде
+  чем доверять ему постоянную настройку.</p>
+  <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251">Настроить раздельный доступ</a>
+</div>
+
+<h2 id="esli-ne-pomoglo">Если исключение не помогло</h2>
+
+<div class="tablewrap">
+  <table>
+    <thead>
+      <tr><th>Что видите</th><th>Что проверить</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Исключение настроено, но предупреждение про VPN всё
+        равно появляется</td>
+        <td>Проверьте, что в исключения добавлен не только основной
+        домен, но и домены CDN и API, которые использует приложение —
+        у крупных маркетплейсов обычно несколько доменов для разных
+        частей сервиса (картинки, оплата, API), и исключение одного
+        не затрагивает остальные</td>
+      </tr>
+      <tr>
+        <td>На телефоне исключение не работает, хотя в браузере на
+        компьютере с тем же исключением всё открывается</td>
+        <td>Мобильное приложение Wildberries может проверять не
+        только трафик к себе, а факт наличия активного VPN-профиля
+        на устройстве в целом — это отдельный механизм, который
+        исключение по домену не всегда снимает (раздел ниже)</td>
+      </tr>
+      <tr>
+        <td>Проблема то пропадает, то возвращается без видимой
+        системы</td>
+        <td>Логика проверки на стороне Wildberries может меняться
+        без предупреждения — то, что сработало вчера, не гарантированно
+        сработает сегодня тем же способом</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Если раздельный доступ всё же не снял проблему — самый надёжный
+способ — выключать VPN на те минуты, когда пользуетесь Wildberries,
+и включать обратно для остального. Это менее удобно, чем
+автоматическое исключение, но работает гарантированно, в отличие
+от попытки обойти саму логику детектирования, которую мы не
+контролируем.</p>
+
+<section class="unique">
+  <h2 id="granicy">Честно о границах решения</h2>
+
+  <p>Раздельный доступ у нас работает по адресам сайтов: мы определяем,
+  какой трафик пропустить напрямую, а какой — через туннель, по
+  домену назначения. Но по сообщениям пользователей в технических
+  обсуждениях (комментарии на Хабре к разбору этого механизма),
+  Wildberries в части случаев определяет VPN не только по трафику
+  к себе, а по факту наличия активного туннеля на устройстве вообще
+  — независимо от того, идёт ли конкретно его собственное соединение
+  через этот туннель. Если это так, даже правильно настроенное
+  исключение иногда не снимает предупреждение — это не наш промах
+  в настройке, а особенность того, как сама платформа проверяет
+  факт туннелирования. Мы не нашли официального технического
+  описания этого механизма от самого Wildberries или Минцифры, и
+  не стали выдавать обсуждение в комментариях за подтверждённый
+  факт — поэтому формулируем это как вероятную причину, а не
+  гарантированное объяснение.</p>
+
+  <p>Протоколов два, переключаются в клиенте вручную — но, в отличие
+  от многих других блокировок, смена протокола здесь не ключевой
+  фактор: если причина в проверке самого факта наличия VPN, а не в
+  характеристиках конкретного протокола, другой протокол проблему
+  не решит. Правильный инструмент для этой проблемы — раздельный
+  доступ или ручное временное выключение, не смена протокола.</p>
+
+  <p>Почему мы не считаем это нашей недоработкой, которую нужно
+  срочно исправить техническим трюком. Логика проверки принадлежит
+  самому Wildberries и может меняться в любую сторону без нашего
+  участия и без предупреждения — попытка построить обход именно
+  этой проверки была бы бесконечной гонкой, в которой мы обновляем
+  решение каждый раз, когда платформа меняет метод детектирования,
+  а пользователь в промежутке остаётся без доступа. Честнее дать
+  работающий, предсказуемый инструмент (раздельный доступ) и
+  признать его границы, чем обещать стопроцентный обход.</p>
+
+  <p>Ключ не привязан к одному устройству: два одновременных
+  подключения входят в подписку без доплаты, до шести при добавлении.
+  Настройки раздельного доступа задаются в клиенте на каждом
+  устройстве отдельно — если Wildberries открываете и на телефоне,
+  и на планшете, исключение нужно настроить в обоих местах.</p>
+</section>
+
+<p>Коротко об ответственности: мы отвечаем за раздельный доступ —
+техническую возможность пустить трафик к нужному домену мимо
+туннеля. За то, как именно Wildberries определяет VPN и как часто
+меняет методику, отвечает сам сервис по требованию регулятора, и
+у нас нет доступа к этой логике и нет гарантии, что она останется
+прежней завтра.</p>
+
+<p>Что ещё почитать: <a href="/blog/vpn-i-banki/">VPN и банковские
+приложения</a> и <a href="/blog/vpn-ne-rabotaet-v-rossii/">VPN не
+работает в России — общая диагностика</a>.</p>
+
+
+    <h2 id="chastye-voprosy">Частые вопросы</h2>
+    <div class="faq">
+      <div id="vopros-pochemu-wildberries-prosit-otklyuchit-vpn" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q1" aria-controls="a1">
+            <span>Почему Wildberries просит отключить VPN?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a1" role="region" aria-labelledby="q1" aria-hidden="true">
+          <div><p>С 15 апреля 2026 года маркетплейс ограничивает доступ при включённом VPN по требованию Минцифры — условие сохранения в правительственном «белом списке» сервисов.</p></div>
+        </div>
+      </div>
+      <div id="vopros-chto-imenno-perestaet-rabotat" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q2" aria-controls="a2">
+            <span>Что именно перестаёт работать?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a2" role="region" aria-labelledby="q2" aria-hidden="true">
+          <div><p>Каталог, корзина, оплата или личный кабинет могут не загружаться, либо приложение прямо показывает предупреждение про включённый VPN.</p></div>
+        </div>
+      </div>
+      <div id="vopros-kak-reshit-problemu-ne-vyklyuchaya-vpn-celikom" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q3" aria-controls="a3">
+            <span>Как решить проблему, не выключая VPN целиком?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a3" role="region" aria-labelledby="q3" aria-hidden="true">
+          <div><p>Настройте раздельный доступ (split tunneling) и исключите домен wildberries.ru из туннеля — трафик к маркетплейсу пойдёт напрямую через ваш обычный российский адрес.</p></div>
+        </div>
+      </div>
+      <div id="vopros-pomozhet-li-smena-protokola-vpn" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q4" aria-controls="a4">
+            <span>Поможет ли смена протокола VPN?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a4" role="region" aria-labelledby="q4" aria-hidden="true">
+          <div><p>Не всегда — если причина в проверке самого факта наличия VPN на устройстве, а не в характеристиках протокола, смена протокола проблему не решит.</p></div>
+        </div>
+      </div>
+      <div id="vopros-chto-delat-esli-isklyuchenie-ne-pomogaet" class="faq__item" data-open="false">
+        <h3>
+          <button class="faq__q" type="button" aria-expanded="false"
+                  id="q5" aria-controls="a5">
+            <span>Что делать, если исключение не помогает?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
+          </button>
+        </h3>
+        <div class="faq__a" id="a5" role="region" aria-labelledby="q5" aria-hidden="true">
+          <div><p>Проверьте, что в исключения добавлены все домены сервиса (включая CDN и API), не только основной. Если не помогло — временно выключайте VPN на минуты использования Wildberries.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p><strong>Проверить на своей сети.</strong> 3 дня
+      бесплатно, карта не нужна: если у вас не заработает — вы ничего
+      не потеряли.</p>
+      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Настроить раздельный доступ</a>
+    </div>
+
+    <aside aria-label="Другие статьи по теме">
+    <h2 id="chitat-dalshe">Читать дальше</h2>
+    <ul class="facts">
+      <li><a href="/blog/vpn-i-banki/">Сбербанк не работает с VPN: что делать</a></li>
+      <li><a href="/blog/vpn-ne-rabotaet-v-rossii/">VPN не работает в России: это временно или системно</a></li>
+      <li><a href="/blog/mega-nz-v-rossii/">MEGA.nz в России: почему не открывается и что с этим делать</a></li>
+    </ul>
+    </aside>
+  </div>
+</article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <p class="foot-head">Сервис</p>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/#price">Цена</a></li>
+          <li><a href="/o-servise/">О сервисе</a></li>
+          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Доступ и цена</p>
+        <ul>
+          <li><a href="/skachat-besplatno/">Попробовать бесплатно</a></li>
+          <li><a href="/probnyy-period/">Пробный период</a></li>
+          <li><a href="/telegram-bot/">Ключ через Telegram-бота</a></li>
+          <li><a href="/kupit/">Купить ключ</a></li>
+          <li><a href="/platnyy-vpn/">Сколько стоит платный VPN</a></li>
+          <li><a href="/klyuch-vpn/">Что такое ключ VPN</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Устройства</p>
+        <ul>
+          <li><a href="/android/">Android</a></li>
+          <li><a href="/iphone/">iPhone и iPad</a></li>
+          <li><a href="/windows/">Компьютер с Windows</a></li>
+          <li><a href="/tv/">Телевизор</a></li>
+          <li><a href="/router/">Роутер</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Помощь</p>
+        <ul>
+          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
+          <li><a href="/ne-rabotaet/">Не работает — что делать</a></li>
+          <li><a href="/proverka/">Проверить, работает ли VPN</a></li>
+          <li><a href="/rossiyskiy-ip/">Российский IP: банки и Госуслуги</a></li>
+          <li><a href="/telegram/">Вернуть Telegram</a></li>
+          <li><a href="/blog/whatsapp-ne-rabotaet/">Ватсап не работает с VPN</a></li>
+          <li><a href="/blog/operator-blokiruet-vpn/">Оператор блокирует VPN</a></li>
+          <li><a href="/blog/vpn-dlya-igr/">VPN для игр</a></li>
+          <li><a href="/blog/brawl-stars-ne-rabotaet/">Бравл Старс не работает с VPN</a></li>
+          <li><a href="/blog/viber-ne-rabotaet/">Вайбер не работает в России</a></li>
+          <li><a href="/blog/gemini-ne-rabotaet/">Gemini не работает с VPN</a></li>
+          <li><a href="/blog/pinterest-ne-rabotaet/">Pinterest не работает</a></li>
+          <li><a href="/blog/kakoy-vpn-rabotaet/">Какой VPN работает сейчас</a></li>
+          <li><a href="/blog/vpn-dlya-yutuba/">VPN для YouTube</a></li>
+          <li><a href="/blog/rasshirenie-brauzera/">VPN-расширение для браузера</a></li>
+          <li><a href="/blog/telegram-ne-rabotaet-s-vpn/">Телеграм не работает с VPN</a></li>
+          <li><a href="/blog/yandex-ne-rabotaet-s-vpn/">Яндекс не работает с VPN</a></li>
+          <li><a href="/blog/avito-ne-rabotaet-s-vpn/">Авито не работает с VPN</a></li>
+          <li><a href="/blog/netflix-ne-rabotaet/">Netflix не работает в России</a></li>
+          <li><a href="/blog/max-ne-rabotaet-za-granicey/">MAX не работает за границей</a></li>
+          <li><a href="/blog/facebook-ne-rabotaet/">Фейсбук не работает в России</a></li>
+          <li><a href="/blog/vpn-dlya-instagram/">Инстаграм не работает с VPN</a></li>
+          <li><a href="/faq/">Вопросы и ответы</a></li>
+          <li><a href="/blog/">Блог</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Связь</p>
+        <ul>
+          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Бот в Telegram</a></li>
+          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2" stroke-linecap="round"
+     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Канал «Цифровая свобода»</a></li>
+          <li class="foot-alt">Не открывается? <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть
+            в приложении</a> или найдите <b class="mono">@vpn_prosto_bot</b></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-head">Документы</p>
+        <ul>
+          <li><a href="/usloviya/">Условия использования</a></li>
+          <li><a href="/privacy/">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>Сервис предоставляет защищённое соединение для личного использования.
+      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
+      <p>© 2021—<span data-year>2026</span> VPN Просто</p>
+    </div>
+  </div>
+</footer>
+
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://prostokey.com/#organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Wildberries просит отключить VPN: что делать, не теряя доступ к остальному", "description": "С апреля 2026 Wildberries ограничивает доступ при включённом VPN по требованию Минцифры. Решение — не выключать VPN целиком, а исключить Wildberries из туннеля раздельным доступом.", "datePublished": "2026-10-28", "dateModified": "2026-10-28", "inLanguage": "ru-RU", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://prostokey.com/blog/wildberries-prosit-otklyuchit-vpn/", "name": "Wildberries просит отключить VPN: что делать, не теряя доступ к остальному"}, "image": ["https://prostokey.com/og-image.png"], "author": {"@id": "https://prostokey.com/#organization"}, "publisher": {"@id": "https://prostokey.com/#organization"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://prostokey.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Wildberries просит отключить VPN: что делать, не теряя доступ к остальному", "item": "https://prostokey.com/blog/wildberries-prosit-otklyuchit-vpn/"}]}]</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему Wildberries просит отключить VPN?", "acceptedAnswer": {"@type": "Answer", "text": "С 15 апреля 2026 года маркетплейс ограничивает доступ при включённом VPN по требованию Минцифры — условие сохранения в правительственном «белом списке» сервисов."}}, {"@type": "Question", "name": "Что именно перестаёт работать?", "acceptedAnswer": {"@type": "Answer", "text": "Каталог, корзина, оплата или личный кабинет могут не загружаться, либо приложение прямо показывает предупреждение про включённый VPN."}}, {"@type": "Question", "name": "Как решить проблему, не выключая VPN целиком?", "acceptedAnswer": {"@type": "Answer", "text": "Настройте раздельный доступ (split tunneling) и исключите домен wildberries.ru из туннеля — трафик к маркетплейсу пойдёт напрямую через ваш обычный российский адрес."}}, {"@type": "Question", "name": "Поможет ли смена протокола VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Не всегда — если причина в проверке самого факта наличия VPN на устройстве, а не в характеристиках протокола, смена протокола проблему не решит."}}, {"@type": "Question", "name": "Что делать, если исключение не помогает?", "acceptedAnswer": {"@type": "Answer", "text": "Проверьте, что в исключения добавлены все домены сервиса (включая CDN и API), не только основной. Если не помогло — временно выключайте VPN на минуты использования Wildberries."}}]}</script>
+<script src="/app.js?v=c7e1b9f2" defer></script>
+<img src="https://stat.prostokey.com/watch-api/px.gif?p=/blog/wildberries-prosit-otklyuchit-vpn/"
+     alt="" width="1" height="1" decoding="async"
+     class="px" aria-hidden="true"></body>
+</html>
