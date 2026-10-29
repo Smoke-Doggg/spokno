@@ -43,6 +43,8 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [Patreon в России: почему заблокирован и что с оплатой](https://prostokey.com/blog/patreon-v-rossii/)
+- [LinkedIn в России: почему заблокирован и что с Premium](https://prostokey.com/blog/linkedin-v-rossii/)
 - [MEGA.nz в России: почему не открывается и что с этим делать](https://prostokey.com/blog/mega-nz-v-rossii/)
 - [Wildberries просит отключить VPN: что делать, не теряя доступ к остальному](https://prostokey.com/blog/wildberries-prosit-otklyuchit-vpn/)
 - [Кинопоиск просит отключить VPN: что делать, не теряя доступ к остальному](https://prostokey.com/blog/kinopoisk-prosit-otklyuchit-vpn/)
