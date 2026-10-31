@@ -43,6 +43,8 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [Threads не работает в России: почему и как подключиться](https://prostokey.com/blog/threads-ne-rabotaet-v-rossii/)
+- [Marvel Rivals не подключается в России: что делать](https://prostokey.com/blog/marvel-rivals-ne-podklyuchaetsya/)
 - [Okko, Иви и Wink не работают с VPN: что делать](https://prostokey.com/blog/okko-ivi-wink-ne-rabotayut-s-vpn/)
 - [Framer не работает в России: редактор, сайты и оплата](https://prostokey.com/blog/framer-ne-rabotaet-v-rossii/)
 - [Patreon в России: почему заблокирован и что с оплатой](https://prostokey.com/blog/patreon-v-rossii/)
