@@ -43,6 +43,8 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [Figma не работает в России: редактор и оплата](https://prostokey.com/blog/figma-ne-rabotaet-v-rossii/)
+- [Apex Legends не подключается в России: что делать](https://prostokey.com/blog/apex-legends-ne-podklyuchaetsya/)
 - [Threads не работает в России: почему и как подключиться](https://prostokey.com/blog/threads-ne-rabotaet-v-rossii/)
 - [Marvel Rivals не подключается в России: что делать](https://prostokey.com/blog/marvel-rivals-ne-podklyuchaetsya/)
 - [Okko, Иви и Wink не работают с VPN: что делать](https://prostokey.com/blog/okko-ivi-wink-ne-rabotayut-s-vpn/)
