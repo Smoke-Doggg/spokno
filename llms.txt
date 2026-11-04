@@ -43,6 +43,8 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [МТС, Мегафон и Билайн не работают с VPN: что делать](https://prostokey.com/blog/mts-megafon-bilayn-ne-rabotayut-s-vpn/)
+- [VPN на LG webOS: что реально работает на телевизоре](https://prostokey.com/blog/vpn-na-lg-webos/)
 - [Xbox Cloud Gaming в России: доступ и задержка](https://prostokey.com/blog/xbox-cloud-gaming-v-rossii/)
 - [R.E.P.O. не подключается в России: что делать](https://prostokey.com/blog/repo-ne-podklyuchaetsya/)
 - [Сайты на Vercel и Netlify не открываются в России](https://prostokey.com/blog/vercel-netlify-ne-otkryvayutsya-v-rossii/)
