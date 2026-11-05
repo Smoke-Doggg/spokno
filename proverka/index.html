@@ -8,8 +8,8 @@
 <meta name="description" content="Разбор без проверки: что такое IP-адрес, что он показывает сайтам, чего не показывает и почему страна по адресу бывает чужой, если включён VPN или прокси.">
 <link rel="canonical" href="https://spokno.fyi/proverka/">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#151c21" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#E8E1FF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#19122E" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Спокойно">
 <meta property="og:title" content="IP-адрес и страна: что видят сайты">
@@ -19,56 +19,43 @@
 <meta property="og:locale" content="ru_RU">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="stylesheet" href="/assets/spokno.css?v=b4297191bd">
+<link rel="preload" href="/assets/fonts/nunito-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/spokno.css?v=ac21371fa5">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"IP-адрес и страна: что видят сайты","description":"Разбор без проверки: что такое IP-адрес, что он показывает сайтам, чего не показывает и почему страна по адресу бывает чужой, если включён VPN или прокси.","url":"https://spokno.fyi/proverka/","dateModified":"2026-11-05","inLanguage":"ru","isPartOf":{"@id":"https://spokno.fyi/#site"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Почему страна в проверке не совпадает с реальной?","acceptedAnswer":{"@type":"Answer","text":"Адрес принадлежит провайдеру или сервису, а не вам лично. Если включён VPN или прокси, вы видите страну их сервера."}},{"@type":"Question","name":"Почему город по адресу указан неверно?","acceptedAnswer":{"@type":"Answer","text":"Определение города по IP приблизительное, часто ошибается на десятки километров. Страна определяется заметно надёжнее."}},{"@type":"Question","name":"Можно ли по IP найти мой дом?","acceptedAnswer":{"@type":"Answer","text":"Нет. Обычный человек по адресу узнает лишь страну, примерный регион и провайдера. Сопоставить его с вами может только сам провайдер."}}]}</script>
 </head>
 <body class="sec-tool">
+<svg aria-hidden="true" focusable="false" class="pb pb-defs"><symbol id="pb-face-mini" class="pb" viewBox="20 34 160 150"><g><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-face-mini-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-face-mini-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g class="blink"><ellipse class="c-eye" cx="80" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="108.4" r="2.2"/><ellipse class="c-eye" cx="122" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="108.4" r="2.2"/></g><path class="c-line w3" d="M92 132 Q102 140 112 131"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/></g></symbol></svg>
 <a class="skip" href="#main">Перейти к тексту</a>
-<header class="bar">
-  <a class="mark" href="/" aria-label="Спокойно — на главную">
-    <svg class="mark__wave" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 19c4-6 8-6 13 0s9 6 13 0" /><path d="M3 12c4-6 8-6 13 0s9 6 13 0" opacity=".45" /></svg>
-    <span class="mark__name">Спокойно</span>
-  </a>
-  <span class="bar__slogan">Сеть без загадок</span>
-  <details class="menu">
-    <summary>Разделы</summary>
-    <nav data-nav aria-label="Разделы сайта">
-<p class="menu__group">Сайт</p>
-      <ul><li><a href="/">Главная</a></li></ul>
-<p class="menu__group">Разборы</p>
-      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
-<p class="menu__group">Проверка</p>
-      <ul><li><a href="/proverka/" aria-current="page">Про IP-адрес</a></li></ul>
-    </nav>
-  </details>
-</header>
-<div class="frame">
-  <aside class="rail">
-    <nav data-nav aria-label="Разделы сайта">
-<p class="rail__group">Сайт</p>
-      <ul><li><a href="/">Главная</a></li></ul>
-<p class="rail__group">Разборы</p>
-      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
-<p class="rail__group">Проверка</p>
-      <ul><li><a href="/proverka/" aria-current="page">Про IP-адрес</a></li></ul>
-    </nav>
-    <a class="btn btn--ghost to-bot" href="https://t.me/vpn_prosto_bot?start=6035076947" rel="noopener">Бот в Telegram</a>
-  </aside>
-  <main id="main" class="sheet">
-<article class="text">
-<header class="lede">
-  <h1>IP-адрес и страна: что видят сайты</h1>
-  <p class="lede__meta"><time datetime="2026-11-05">Сверено 5 ноября 2026</time></p>
-</header>
+<header class="top"><div class="wrap top-in">
+  <a class="logo" href="/" aria-label="Спокойно — на главную"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><span>Спокойно<small>Сеть без загадок</small></span></a>
+  <nav class="nav" data-nav aria-label="Основное"><a href="/#razdely">Разборы</a><a href="/proverka/" aria-current="page">Про IP</a><a href="/privacy/">Данные</a></nav>
+</div></header>
+<main id="main">
+<div class="wrap">
+<nav class="crumbs" aria-label="Хлебные крошки"><ol>
+<li><a href="/">Главная</a></li><li><span aria-current="page">Про IP-адрес</span></li></ol></nav>
 
-<nav class="toc" aria-label="На этой странице">
-  <p class="toc__head">На этой странице</p>
-  <ol><li><a href="#chto-takoe-ip-adres">Что такое IP-адрес</a></li><li><a href="#chto-adres-pokazyvaet">Что адрес показывает</a></li><li><a href="#chego-adres-ne-pokazyvaet">Чего адрес не показывает</a></li><li><a href="#kak-chitat-rezultat">Как читать результат</a></li><li><a href="#privatnost">Приватность</a></li><li><a href="#kogda-rezultat-udivil">Когда результат удивил</a></li></ol>
-</nav>
+<section class="cover">
+  <div>
+    <div class="chips"><span class="chip ok"><svg viewBox="0 0 22 22" aria-hidden="true" focusable="false"><path d="M5 11.5 l4 4 l8 -9"/></svg><time datetime="2026-11-05">Сверено 5 ноября 2026</time></span>
+<span class="chip">3 минуты</span></div>
 
-<div class="prose">
-<p>Здесь нет самой проверки, только разбор того, как читать адрес и страну, которые видят сайты, когда вы их открываете. Начнём с главного недоразумения: IP-адрес не паспорт устройства. Его выдал провайдер или сервис, через который вы вышли в сеть, и нужен он лишь затем, чтобы ответы находили дорогу обратно к вам.</p>
+    <h1>IP-адрес и страна: что видят сайты</h1>
+    <p class="lead">Здесь нет самой проверки, только разбор того, как читать адрес и страну, которые видят сайты, когда вы их открываете. Начнём с главного недоразумения: IP-адрес не паспорт устройства. Его выдал провайдер или сервис, через который вы вышли в сеть, и нужен он лишь затем, чтобы ответы находили дорогу обратно к вам.</p>
+  </div>
+  <div class="cover-art"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -20 250 232"><circle class="c-blob-c" cx="100" cy="108" r="96"/><circle class="c-blob-b" cx="196" cy="28" r="14"/><path class="p-peachl s1" d="M0 30 l5 -12 l5 12 l12 5 l-12 5 l-5 12 l-5 -12 l-12 -5 Z"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-proverka-1-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-proverka-1-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M73 97 Q80 94 87 96"/><path class="c-line" d="M115 96 Q122 94 129 97"/><g class="blink"><ellipse class="c-eye" cx="80" cy="106" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="101.5" r="2.2"/><ellipse class="c-eye" cx="122" cy="106" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="101.5" r="2.2"/></g><path class="c-line w3" d="M92 132 Q102 140 112 131"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><rect class="p-milk s" x="38" y="142" width="124" height="58" rx="12"/><text class="p-violet-t" x="54" y="182" font-size="30" font-weight="800">IP</text><circle class="p-sky" cx="96" cy="171" r="3.5"/><circle class="p-sky" cx="107" cy="171" r="3.5"/><rect class="p-peachl stamp" x="120" y="149" width="30" height="38" rx="2"/><rect class="c-line s1n" x="125" y="154" width="20" height="28" rx="1.5"/><circle class="c-line s1n" cx="135" cy="168" r="6"/><path class="c-line s1n" d="M129 168 H141 M135 162 Q131 168 135 174 Q139 168 135 162"/><path class="c-arm-o" d="M34 130 Q28 156 44 172"/><path class="c-arm" d="M34 130 Q28 156 44 172"/><path class="c-arm-o" d="M166 130 Q172 156 156 172"/><path class="c-arm" d="M166 130 Q172 156 156 172"/></g></svg><p class="whisper">адрес показывает меньше, чем кажется</p></div>
+</section>
+</div>
+
+<div class="sheetr"><div class="wrap">
+  <div class="read">
+    <details class="toc" open><summary>На этой странице</summary>
+<nav aria-label="На этой странице"><ol><li><a href="#chto-takoe-ip-adres">Что такое IP-адрес</a></li><li><a href="#chto-adres-pokazyvaet">Что адрес показывает</a></li><li><a href="#chego-adres-ne-pokazyvaet">Чего адрес не показывает</a></li><li><a href="#kak-chitat-rezultat">Как читать результат</a></li><li><a href="#privatnost">Приватность</a></li><li><a href="#kogda-rezultat-udivil">Когда результат удивил</a></li><li><a href="#qa-head">Вопросы и ответы</a></li></ol></nav>
+</details>
+
+    <article>
+      <div class="prose">
 <h2 id="chto-takoe-ip-adres">Что такое IP-адрес</h2>
 <p>IP-адрес — набор цифр вида <code>203.0.113.7</code> или длинная запись с двоеточиями. Сайт получает его при каждом обращении, иначе не знал бы, куда отправить страницу. Домашний роутер обычно получает один адрес от провайдера на все устройства дома. В мобильной сети один адрес часто делят сразу многие абоненты.</p>
 <p>Адрес бывает постоянным или меняется со временем: у многих провайдеров он «плавает» при перезапуске роутера.</p>
@@ -84,36 +71,47 @@
 <p>Эта страница ничего не проверяет и не отправляет: она только объясняет. Что сайт знает о посетителе, описано на странице <a href="/privacy/">Данные</a>.</p>
 <h2 id="kogda-rezultat-udivil">Когда результат удивил</h2>
 <p>Посмотрите адрес в другой сети, например по мобильному интернету вместо Wi-Fi. Затем сравните. Если страна остаётся чужой при выключенном VPN, причина может быть в провайдере или в настройках сети. Для вопросов по услугам связи обращайтесь к своему оператору: показания этой страницы пригодятся для разговора.</p>
-</div>
-<section class="qa" aria-labelledby="qa-head">
-  <h2 id="qa-head">Вопросы и ответы</h2>
-<details class="qa__item">
+      </div>
+      <section class="faq" aria-labelledby="qa-head">
+  <div class="h2art"><h2 id="qa-head">Вопросы и ответы</h2><svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -10 250 210"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-proverka-2-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-proverka-2-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M73 97 Q80 94 87 96"/><path class="c-line" d="M115 96 Q122 94 129 97"/><g class="blink"><ellipse class="c-eye" cx="80" cy="106" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="101.5" r="2.2"/><ellipse class="c-eye" cx="122" cy="106" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="101.5" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="c-arm-o" d="M34 132 Q22 148 34 160"/><path class="c-arm" d="M34 132 Q22 148 34 160"/><path class="c-arm-o" d="M166 136 Q152 158 124 148"/><path class="c-arm" d="M166 136 Q152 158 124 148"/></g><circle class="p-milk s" cx="176" cy="66" r="4"/><circle class="p-milk s" cx="188" cy="48" r="6"/><rect class="p-milk s" x="170" y="2" width="56" height="32" rx="16"/><circle class="c-eye" cx="185" cy="18" r="3.6"/><circle class="c-eye" cx="198" cy="18" r="3.6"/><circle class="c-eye" cx="211" cy="18" r="3.6"/></svg></div>
+<details>
     <summary>Почему страна в проверке не совпадает с реальной?</summary>
-    <p>Адрес принадлежит провайдеру или сервису, а не вам лично. Если включён VPN или прокси, вы видите страну их сервера.</p>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Адрес принадлежит провайдеру или сервису, а не вам лично. Если включён VPN или прокси, вы видите страну их сервера.</p></div>
   </details>
-<details class="qa__item">
+<details>
     <summary>Почему город по адресу указан неверно?</summary>
-    <p>Определение города по IP приблизительное, часто ошибается на десятки километров. Страна определяется заметно надёжнее.</p>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Определение города по IP приблизительное, часто ошибается на десятки километров. Страна определяется заметно надёжнее.</p></div>
   </details>
-<details class="qa__item">
+<details>
     <summary>Можно ли по IP найти мой дом?</summary>
-    <p>Нет. Обычный человек по адресу узнает лишь страну, примерный регион и провайдера. Сопоставить его с вами может только сам провайдер.</p>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Нет. Обычный человек по адресу узнает лишь страну, примерный регион и провайдера. Сопоставить его с вами может только сам провайдер.</p></div>
   </details>
 </section>
 
-</article>
-  </main>
-</div>
-<footer class="foot" data-foot>
-  <div class="foot__cols">
+    </article>
+  </div>
+</div></div>
+</main>
+<footer class="foot" data-foot><div class="wrap foot-in">
+  <div class="foot-brand"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-10 -10 230 210"><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-proverka-3-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-proverka-3-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line w3" d="M73 111 Q80 118 87 111"/><path class="c-line w3" d="M115 111 Q122 118 129 111"/><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="c-arm-o" d="M34 132 Q22 148 34 160"/><path class="c-arm" d="M34 132 Q22 148 34 160"/><path class="c-arm-o" d="M166 132 Q178 148 166 160"/><path class="c-arm" d="M166 132 Q178 148 166 160"/></g><text class="p-ink2-t" x="168" y="52" font-size="22" font-weight="800">z</text><text class="p-ink2-t" x="186" y="28" font-size="16" font-weight="800">z</text></svg><div><b>Спокойно</b><p>Сеть без загадок. Разборы простым языком.</p></div></div>
+  <nav class="foot-cols" aria-label="Подвал">
 <div>
-      <p class="foot__head">Разборы</p>
-      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
+      <p class="foot-h">Мессенджеры</p>
+      <ul><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li></ul>
     </div><div>
-      <p class="foot__head">Сайт</p>
-      <ul><li><a href="/">Главная</a></li><li><a href="/proverka/">Про IP-адрес</a></li><li><a href="/privacy/">Данные</a></li></ul>
-    </div>  </div>
-  <p class="foot__line">© 2026 Спокойно · Сеть без загадок · без cookie и без журнала посещений</p>
-</footer>
+      <p class="foot-h">Сервисы и банки</p>
+      <ul><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/banki-i-vpn/">Банки и VPN</a></li></ul>
+    </div><div>
+      <p class="foot-h">Игры и ИИ</p>
+      <ul><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li></ul>
+    </div><div>
+      <p class="foot-h">Основы</p>
+      <ul><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li></ul>
+    </div><div>
+      <p class="foot-h">Сайт</p>
+      <ul><li><a href="/">Главная</a></li><li><a href="/proverka/">Про IP-адрес</a></li><li><a href="/privacy/">Данные</a></li><li><a href="https://t.me/vpn_prosto_bot?start=6035076947" rel="noopener">Бот в Telegram</a></li></ul>
+    </div>  </nav>
+  <p class="meta">© 2026 Спокойно · без cookie и без журнала посещений</p>
+</div></footer>
 </body>
 </html>

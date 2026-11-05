@@ -8,8 +8,8 @@
 <meta name="description" content="Почему Gemini выдаёт ошибку региона из России, чем отличаются веб-версия, приложение и API, и что проверить в аккаунте, прежде чем что-то менять.">
 <link rel="canonical" href="https://spokno.fyi/gemini-v-rossii/">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#151c21" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#E8E1FF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#19122E" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Спокойно">
 <meta property="og:title" content="Gemini в России: доступность, причины ограничений">
@@ -19,56 +19,43 @@
 <meta property="og:locale" content="ru_RU">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="stylesheet" href="/assets/spokno.css?v=b4297191bd">
+<link rel="preload" href="/assets/fonts/nunito-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/spokno.css?v=ac21371fa5">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Gemini в России: доступность, причины ограничений","description":"Почему Gemini выдаёт ошибку региона из России, чем отличаются веб-версия, приложение и API, и что проверить в аккаунте, прежде чем что-то менять.","url":"https://spokno.fyi/gemini-v-rossii/","dateModified":"2026-11-05","inLanguage":"ru","isPartOf":{"@id":"https://spokno.fyi/#site"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Это блокировка Роскомнадзора?","acceptedAnswer":{"@type":"Answer","text":"Не обязательно. Обычно сообщение о недоступности в регионе связано с решением самой Google о списке стран, а не с блокировкой на стороне российского регулятора."}},{"@type":"Question","name":"Почему ошибка разная на телефоне и в браузере?","acceptedAnswer":{"@type":"Answer","text":"Google ведёт отдельные списки стран для веб-версии, мобильного приложения и API. Страна может быть в одном списке и отсутствовать в другом."}},{"@type":"Question","name":"Влияет ли аккаунт на доступ?","acceptedAnswer":{"@type":"Answer","text":"Да. Учитывается страна аккаунта и его тип, а мобильное приложение требует личной учётной записи Google. У корпоративных и учебных аккаунтов свои правила."}},{"@type":"Question","name":"Можно ли доверять статьям, где сказано, что Gemini уже работает?","acceptedAnswer":{"@type":"Answer","text":"С осторожностью. Доступ меняется, а даты в новостях часто путаются. Проверяйте официальные страницы Google."}}]}</script>
 </head>
 <body class="sec-guide">
+<svg aria-hidden="true" focusable="false" class="pb pb-defs"><symbol id="pb-face-mini" class="pb" viewBox="20 34 160 150"><g><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-face-mini-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-face-mini-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g class="blink"><ellipse class="c-eye" cx="80" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="108.4" r="2.2"/><ellipse class="c-eye" cx="122" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="108.4" r="2.2"/></g><path class="c-line w3" d="M92 132 Q102 140 112 131"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/></g></symbol></svg>
 <a class="skip" href="#main">Перейти к тексту</a>
-<header class="bar">
-  <a class="mark" href="/" aria-label="Спокойно — на главную">
-    <svg class="mark__wave" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 19c4-6 8-6 13 0s9 6 13 0" /><path d="M3 12c4-6 8-6 13 0s9 6 13 0" opacity=".45" /></svg>
-    <span class="mark__name">Спокойно</span>
-  </a>
-  <span class="bar__slogan">Сеть без загадок</span>
-  <details class="menu">
-    <summary>Разделы</summary>
-    <nav data-nav aria-label="Разделы сайта">
-<p class="menu__group">Сайт</p>
-      <ul><li><a href="/">Главная</a></li></ul>
-<p class="menu__group">Разборы</p>
-      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/" aria-current="page">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
-<p class="menu__group">Проверка</p>
-      <ul><li><a href="/proverka/">Про IP-адрес</a></li></ul>
-    </nav>
-  </details>
-</header>
-<div class="frame">
-  <aside class="rail">
-    <nav data-nav aria-label="Разделы сайта">
-<p class="rail__group">Сайт</p>
-      <ul><li><a href="/">Главная</a></li></ul>
-<p class="rail__group">Разборы</p>
-      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/" aria-current="page">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
-<p class="rail__group">Проверка</p>
-      <ul><li><a href="/proverka/">Про IP-адрес</a></li></ul>
-    </nav>
-    <a class="btn btn--ghost to-bot" href="https://t.me/vpn_prosto_bot?start=6035076947" rel="noopener">Бот в Telegram</a>
-  </aside>
-  <main id="main" class="sheet">
-<article class="text">
-<header class="lede">
-  <h1>Gemini в России: доступность, причины ограничений</h1>
-  <p class="lede__meta"><time datetime="2026-11-05">Сверено 5 ноября 2026</time></p>
-</header>
+<header class="top"><div class="wrap top-in">
+  <a class="logo" href="/" aria-label="Спокойно — на главную"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><span>Спокойно<small>Сеть без загадок</small></span></a>
+  <nav class="nav" data-nav aria-label="Основное"><a href="/#razdely" aria-current="true">Разборы</a><a href="/proverka/">Про IP</a><a href="/privacy/">Данные</a></nav>
+</div></header>
+<main id="main">
+<div class="wrap">
+<nav class="crumbs" aria-label="Хлебные крошки"><ol>
+<li><a href="/">Главная</a></li><li><a href="/#g-games-ai">Игры и ИИ</a></li><li><span aria-current="page">Gemini в России</span></li></ol></nav>
 
-<nav class="toc" aria-label="На этой странице">
-  <p class="toc__head">На этой странице</p>
-  <ol><li><a href="#tri-produkta-tri-spiska">Три продукта, три списка</a></li><li><a href="#pochemu-voznikaet-oshibka">Почему возникает ошибка</a></li><li><a href="#chto-proverit-samomu">Что проверить самому</a></li><li><a href="#chem-oshibka-regiona-otlichaetsya-ot-sboya">Чем ошибка региона отличается от сбоя</a></li><li><a href="#kak-otnositsya-k-soobscheniyam-zarabotalo">Как относиться к сообщениям «заработало»</a></li><li><a href="#esli-otvet-nuzhen-pryamo-seychas">Если ответ нужен прямо сейчас</a></li></ol>
-</nav>
+<section class="cover">
+  <div>
+    <div class="chips"><span class="chip ok"><svg viewBox="0 0 22 22" aria-hidden="true" focusable="false"><path d="M5 11.5 l4 4 l8 -9"/></svg><time datetime="2026-11-05">Сверено 5 ноября 2026</time></span>
+<span class="chip">Игры и ИИ</span><span class="chip">3 минуты</span></div>
 
-<div class="prose">
-<p>Прежде чем искать поломку, уточните, о каком именно Gemini речь: веб-версии, мобильном приложении или программном интерфейсе для разработчиков. У каждого свой список стран. Сообщение «недоступно в вашем регионе» чаще означает решение самой Google, а не техническую неисправность и не блокировку у вас дома.</p>
+    <h1>Gemini в России: доступность, причины ограничений</h1>
+    <p class="lead">Прежде чем искать поломку, уточните, о каком именно Gemini речь: веб-версии, мобильном приложении или программном интерфейсе для разработчиков. У каждого свой список стран. Сообщение «недоступно в вашем регионе» чаще означает решение самой Google, а не техническую неисправность и не блокировку у вас дома.</p>
+  </div>
+  <div class="cover-art"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -10 250 210"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-gemini-v-rossii-1-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-gemini-v-rossii-1-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M73 97 Q80 94 87 96"/><path class="c-line" d="M115 96 Q122 94 129 97"/><g class="blink"><ellipse class="c-eye" cx="80" cy="106" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="101.5" r="2.2"/><ellipse class="c-eye" cx="122" cy="106" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="101.5" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="c-arm-o" d="M34 132 Q22 148 34 160"/><path class="c-arm" d="M34 132 Q22 148 34 160"/><path class="c-arm-o" d="M166 136 Q152 158 124 148"/><path class="c-arm" d="M166 136 Q152 158 124 148"/></g><circle class="p-milk s" cx="176" cy="66" r="4"/><circle class="p-milk s" cx="188" cy="48" r="6"/><rect class="p-milk s" x="170" y="2" width="56" height="32" rx="16"/><circle class="c-eye" cx="185" cy="18" r="3.6"/><circle class="c-eye" cx="198" cy="18" r="3.6"/><circle class="c-eye" cx="211" cy="18" r="3.6"/></svg><p class="whisper">тут важно, о какой версии речь</p></div>
+</section>
+</div>
+
+<div class="sheetr"><div class="wrap">
+  <div class="read">
+    <details class="toc" open><summary>На этой странице</summary>
+<nav aria-label="На этой странице"><ol><li><a href="#tri-produkta-tri-spiska">Три продукта, три списка</a></li><li><a href="#pochemu-voznikaet-oshibka">Почему возникает ошибка</a></li><li><a href="#chto-proverit-samomu">Что проверить самому</a></li><li><a href="#chem-oshibka-regiona-otlichaetsya-ot-sboya">Чем ошибка региона отличается от сбоя</a></li><li><a href="#kak-otnositsya-k-soobscheniyam-zarabotalo">Как относиться к сообщениям «заработало»</a></li><li><a href="#esli-otvet-nuzhen-pryamo-seychas">Если ответ нужен прямо сейчас</a></li><li><a href="#qa-head">Вопросы и ответы</a></li></ol></nav>
+</details>
+
+    <article>
+      <div class="prose">
 <h2 id="tri-produkta-tri-spiska">Три продукта, три списка</h2>
 <p>Нельзя говорить «Gemini доступен» или «не доступен» вообще. По <a href="https://support.google.com/gemini/answer/13575153" rel="nofollow noopener noreferrer">справке Google</a> веб-приложение предлагается в большом числе стран и территорий и расширяется «в соответствии с местными нормами». Для мобильного приложения Google указывает отдельный список, и он короче. Для разработчиков есть ещё <a href="https://ai.google.dev/available_regions" rel="nofollow noopener noreferrer">страница регионов API и AI Studio</a>.</p>
 <div class="table"><table><thead><tr><th>Продукт</th><th>Где смотреть список стран</th></tr></thead><tbody><tr><td>Веб-приложение Gemini</td><td>справка Google «Где можно использовать Gemini»</td></tr><tr><td>Мобильное приложение</td><td>справка «Доступность мобильного приложения»</td></tr><tr><td>Gemini API и AI Studio</td><td>страница regions на ai.google.dev</td></tr></tbody></table></div>
@@ -77,47 +64,67 @@
 <ul><li><strong>Страна не входит в список продукта.</strong> Самая частая причина.</li><li><strong>Страна аккаунта.</strong> Приложение в магазине показывается или скрывается в зависимости от страны учётной записи магазина.</li><li><strong>Тип аккаунта.</strong> Мобильное приложение требует личного аккаунта Google. Аккаунт с корпоративными или образовательными надстройками получает другие условия.</li><li><strong>Платные тарифы.</strong> Оформление подписок зависит от доступности платёжных сервисов Google в стране, и ограничения здесь отдельные.</li><li><strong>Временный сбой.</strong> Бывают обычные недоступности сервиса у любого пользователя, независимо от страны.</li></ul>
 <h2 id="chto-proverit-samomu">Что проверить самому</h2>
 <ol><li>Откройте справку Google и найдите свою страну в списке именно того продукта, которым пользуетесь.</li><li>Посмотрите, какой аккаунт активен в браузере: личный или рабочий.</li><li>Откройте другие сервисы Google. Если и они не загружаются, проблема в соединении, а не в Gemini.</li><li>Обновите приложение и браузер, очистите кэш сайта.</li><li>Прочитайте текст ошибки целиком: он различает «регион» и «временный сбой».</li></ol>
-<aside class="note"><p>Способы подмены региона мы не описываем. Они могут нарушать условия использования Google и не гарантируют результата, а аккаунт, который заподозрят в этом, рискует ограничениями.</p></aside>
+<aside class="say note"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><div class="say-b"><p>Способы подмены региона мы не описываем. Они могут нарушать условия использования Google и не гарантируют результата, а аккаунт, который заподозрят в этом, рискует ограничениями.</p></div></aside>
 <h2 id="chem-oshibka-regiona-otlichaetsya-ot-sboya">Чем ошибка региона отличается от сбоя</h2>
 <p>Сообщение о регионе появляется сразу и одинаково при каждой попытке: оно не исчезает через несколько минут и не зависит от нагрузки. Временный сбой, наоборот, бывает плавающим: страница то грузится, то нет, ответ обрывается на полуслове или просит повторить запрос позже. Запишите точный текст и время: если вы будете обращаться в поддержку Google, это сэкономит несколько писем. Отдельно проверьте, что у вас не включены расширения браузера, которые меняют заголовки или блокируют скрипты: иногда именно они ломают вход.</p>
 <h2 id="kak-otnositsya-k-soobscheniyam-zarabotalo">Как относиться к сообщениям «заработало»</h2>
 <p>Доступ Gemini зависит от решений Google и меняется, а в пересказах часто путаются даты. Поэтому заметку о том, что сервис «внезапно заработал», считайте поводом проверить, а не фактом: сверяйтесь со справкой Google и с текстом ошибки на своём экране.</p>
 <h2 id="esli-otvet-nuzhen-pryamo-seychas">Если ответ нужен прямо сейчас</h2>
 <p>У большинства задач (текст, перевод, код) есть сервисы-аналоги, и доступны они тоже не везде. Сверяйте условия каждого и не передавайте в них пароли и личные данные.</p>
-</div>
-<section class="qa" aria-labelledby="qa-head">
-  <h2 id="qa-head">Вопросы и ответы</h2>
-<details class="qa__item">
+      </div>
+      <section class="faq" aria-labelledby="qa-head">
+  <div class="h2art"><h2 id="qa-head">Вопросы и ответы</h2><svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -10 250 210"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-gemini-v-rossii-2-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-gemini-v-rossii-2-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M73 97 Q80 94 87 96"/><path class="c-line" d="M115 96 Q122 94 129 97"/><g class="blink"><ellipse class="c-eye" cx="80" cy="106" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="101.5" r="2.2"/><ellipse class="c-eye" cx="122" cy="106" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="101.5" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="c-arm-o" d="M34 132 Q22 148 34 160"/><path class="c-arm" d="M34 132 Q22 148 34 160"/><path class="c-arm-o" d="M166 136 Q152 158 124 148"/><path class="c-arm" d="M166 136 Q152 158 124 148"/></g><circle class="p-milk s" cx="176" cy="66" r="4"/><circle class="p-milk s" cx="188" cy="48" r="6"/><rect class="p-milk s" x="170" y="2" width="56" height="32" rx="16"/><circle class="c-eye" cx="185" cy="18" r="3.6"/><circle class="c-eye" cx="198" cy="18" r="3.6"/><circle class="c-eye" cx="211" cy="18" r="3.6"/></svg></div>
+<details>
     <summary>Это блокировка Роскомнадзора?</summary>
-    <p>Не обязательно. Обычно сообщение о недоступности в регионе связано с решением самой Google о списке стран, а не с блокировкой на стороне российского регулятора.</p>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Не обязательно. Обычно сообщение о недоступности в регионе связано с решением самой Google о списке стран, а не с блокировкой на стороне российского регулятора.</p></div>
   </details>
-<details class="qa__item">
+<details>
     <summary>Почему ошибка разная на телефоне и в браузере?</summary>
-    <p>Google ведёт отдельные списки стран для веб-версии, мобильного приложения и API. Страна может быть в одном списке и отсутствовать в другом.</p>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Google ведёт отдельные списки стран для веб-версии, мобильного приложения и API. Страна может быть в одном списке и отсутствовать в другом.</p></div>
   </details>
-<details class="qa__item">
+<details>
     <summary>Влияет ли аккаунт на доступ?</summary>
-    <p>Да. Учитывается страна аккаунта и его тип, а мобильное приложение требует личной учётной записи Google. У корпоративных и учебных аккаунтов свои правила.</p>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Да. Учитывается страна аккаунта и его тип, а мобильное приложение требует личной учётной записи Google. У корпоративных и учебных аккаунтов свои правила.</p></div>
   </details>
-<details class="qa__item">
+<details>
     <summary>Можно ли доверять статьям, где сказано, что Gemini уже работает?</summary>
-    <p>С осторожностью. Доступ меняется, а даты в новостях часто путаются. Проверяйте официальные страницы Google.</p>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>С осторожностью. Доступ меняется, а даты в новостях часто путаются. Проверяйте официальные страницы Google.</p></div>
   </details>
 </section>
 
-</article>
-  </main>
+    </article>
+  </div>
+  <div class="after">
+  <h2>Похожие разборы</h2>
+  <div class="rel">
+<a class="relc t-lav" href="/brawl-stars-lagi/"><span class="art"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -10 250 215"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-gemini-v-rossii-3-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-gemini-v-rossii-3-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M73 97 Q80 94 87 96"/><path class="c-line" d="M115 96 Q122 94 129 97"/><g class="blink"><ellipse class="c-eye" cx="80" cy="117" rx="6.5" ry="7"/><circle class="c-glint" cx="82.3" cy="113.4" r="2.2"/><ellipse class="c-eye" cx="122" cy="117" rx="6.5" ry="7"/><circle class="c-glint" cx="124.3" cy="113.4" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="p-violet s" d="M62 150 Q60 136 76 136 H124 Q140 136 138 150 L142 176 Q144 192 128 186 L116 176 H84 L72 186 Q56 192 58 176 Z"/><path class="p-milkline" d="M78 152 V166 M71 159 H85"/><circle class="p-peachl" cx="117" cy="154" r="4.5"/><circle class="p-sky" cx="127" cy="162" r="4.5"/><path class="c-arm-o" d="M34 128 Q44 154 74 158"/><path class="c-arm" d="M34 128 Q44 154 74 158"/><path class="c-arm-o" d="M166 128 Q156 154 126 158"/><path class="c-arm" d="M166 128 Q156 154 126 158"/></g><path class="p-skyline" d="M134 28 q9 -12 18 0 t18 0 t18 0"/><circle class="p-violet" cx="198" cy="28" r="5"/></svg></span><b>Brawl Stars лагает</b><span>Как понять, почему Brawl Stars лагает или не заходит: проблема в вашем интернете, в устройстве или на стороне серверов игры. Проверки по шагам.</span></a>
+<a class="relc t-peach" href="/banki-i-vpn/"><span class="art"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -10 250 215"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-gemini-v-rossii-4-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-gemini-v-rossii-4-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M73 97 Q80 94 87 96"/><path class="c-line" d="M115 96 Q122 94 129 97"/><g class="blink"><ellipse class="c-eye" cx="85" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="87.3" cy="108.4" r="2.2"/><ellipse class="c-eye" cx="127" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="129.3" cy="108.4" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><rect class="p-sky s" x="58" y="138" width="84" height="52" rx="8"/><rect class="p-ink" x="59.3" y="148" width="81.4" height="9"/><rect class="p-peachl s1" x="68" y="165" width="17" height="13" rx="3"/><path class="c-line" d="M100 176 H130"/><path class="c-arm-o" d="M34 128 Q44 154 74 158"/><path class="c-arm" d="M34 128 Q44 154 74 158"/><path class="c-arm-o" d="M166 128 Q156 154 126 158"/><path class="c-arm" d="M166 128 Q156 154 126 158"/></g><circle class="p-milk s" cx="186" cy="40" r="17"/><text class="p-violet-t" x="179" y="49" font-size="24" font-weight="800">?</text></svg></span><b>Банки и VPN</b><span>Почему банковское приложение жалуется на VPN, не пускает или просит подтвердить вход, и какие спокойные шаги помогают: от отключения до звонка в банк.</span></a>
+<a class="relc t-peach" href="/canva-ne-otkryvaetsya/"><span class="art"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -10 240 210"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-gemini-v-rossii-5-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-gemini-v-rossii-5-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M72 95 Q79 89 87 94"/><path class="c-line" d="M115 94 Q123 89 130 95"/><g class="blink"><ellipse class="c-eye" cx="80" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="108.4" r="2.2"/><ellipse class="c-eye" cx="122" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="108.4" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="c-arm-o" d="M34 126 Q12 126 8 104"/><path class="c-arm" d="M34 126 Q12 126 8 104"/><path class="c-arm-o" d="M166 126 Q188 126 192 104"/><path class="c-arm" d="M166 126 Q188 126 192 104"/></g><text class="p-ink2-t" x="176" y="54" font-size="26" font-weight="800">?</text></svg></span><b>Canva не открывается</b><span>Почему Canva недоступна из России, что известно из публикаций о решении компании и какие причины сбоев можно проверить самостоятельно.</span></a>
+  </div>
 </div>
-<footer class="foot" data-foot>
-  <div class="foot__cols">
+
+</div></div>
+</main>
+<footer class="foot" data-foot><div class="wrap foot-in">
+  <div class="foot-brand"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-10 -10 230 210"><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-gemini-v-rossii-6-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-gemini-v-rossii-6-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line w3" d="M73 111 Q80 118 87 111"/><path class="c-line w3" d="M115 111 Q122 118 129 111"/><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="c-arm-o" d="M34 132 Q22 148 34 160"/><path class="c-arm" d="M34 132 Q22 148 34 160"/><path class="c-arm-o" d="M166 132 Q178 148 166 160"/><path class="c-arm" d="M166 132 Q178 148 166 160"/></g><text class="p-ink2-t" x="168" y="52" font-size="22" font-weight="800">z</text><text class="p-ink2-t" x="186" y="28" font-size="16" font-weight="800">z</text></svg><div><b>Спокойно</b><p>Сеть без загадок. Разборы простым языком.</p></div></div>
+  <nav class="foot-cols" aria-label="Подвал">
 <div>
-      <p class="foot__head">Разборы</p>
-      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
+      <p class="foot-h">Мессенджеры</p>
+      <ul><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li></ul>
     </div><div>
-      <p class="foot__head">Сайт</p>
-      <ul><li><a href="/">Главная</a></li><li><a href="/proverka/">Про IP-адрес</a></li><li><a href="/privacy/">Данные</a></li></ul>
-    </div>  </div>
-  <p class="foot__line">© 2026 Спокойно · Сеть без загадок · без cookie и без журнала посещений</p>
-</footer>
+      <p class="foot-h">Сервисы и банки</p>
+      <ul><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/banki-i-vpn/">Банки и VPN</a></li></ul>
+    </div><div>
+      <p class="foot-h">Игры и ИИ</p>
+      <ul><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li></ul>
+    </div><div>
+      <p class="foot-h">Основы</p>
+      <ul><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li></ul>
+    </div><div>
+      <p class="foot-h">Сайт</p>
+      <ul><li><a href="/">Главная</a></li><li><a href="/proverka/">Про IP-адрес</a></li><li><a href="/privacy/">Данные</a></li><li><a href="https://t.me/vpn_prosto_bot?start=6035076947" rel="noopener">Бот в Telegram</a></li></ul>
+    </div>  </nav>
+  <p class="meta">© 2026 Спокойно · без cookie и без журнала посещений</p>
+</div></footer>
 </body>
 </html>

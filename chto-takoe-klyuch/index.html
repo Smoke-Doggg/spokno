@@ -8,8 +8,8 @@
 <meta name="description" content="Что такое ключ доступа, чем он отличается от логина и пароля, почему его нельзя показывать другим и как поступить, если он попал в чужие руки.">
 <link rel="canonical" href="https://spokno.fyi/chto-takoe-klyuch/">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#151c21" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#E8E1FF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#19122E" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Спокойно">
 <meta property="og:title" content="Ключ доступа: чем он отличается от пароля">
@@ -19,56 +19,43 @@
 <meta property="og:locale" content="ru_RU">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="stylesheet" href="/assets/spokno.css?v=b4297191bd">
+<link rel="preload" href="/assets/fonts/nunito-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/spokno.css?v=ac21371fa5">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Ключ доступа: чем он отличается от пароля","description":"Что такое ключ доступа, чем он отличается от логина и пароля, почему его нельзя показывать другим и как поступить, если он попал в чужие руки.","url":"https://spokno.fyi/chto-takoe-klyuch/","dateModified":"2026-11-05","inLanguage":"ru","isPartOf":{"@id":"https://spokno.fyi/#site"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Чем ключ отличается от логина и пароля?","acceptedAnswer":{"@type":"Answer","text":"Ключ — одна строка, в которой уже записаны все данные доступа. Вводить отдельно имя и пароль не нужно: сервис читает всё из ключа."}},{"@type":"Question","name":"Можно ли показывать ключ другим?","acceptedAnswer":{"@type":"Answer","text":"Нет. Ключ работает как пароль: у кого он есть, тот может пользоваться вашим доступом. Отправлять его в общие чаты или выкладывать на сайты не стоит."}},{"@type":"Question","name":"Что делать, если ключ попал не в те руки?","acceptedAnswer":{"@type":"Answer","text":"Запросите у выдавшей его стороны новый и откажитесь от старого. Конкретный порядок зависит от сервиса, смотрите его справку."}},{"@type":"Question","name":"Ключ и подписка — это одно и то же?","acceptedAnswer":{"@type":"Answer","text":"Не обязательно. Ключ описывает одно подключение, а подписка может означать право получать такие ключи и обновлять их. Точные условия у каждого поставщика свои."}}]}</script>
 </head>
 <body class="sec-guide">
+<svg aria-hidden="true" focusable="false" class="pb pb-defs"><symbol id="pb-face-mini" class="pb" viewBox="20 34 160 150"><g><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-face-mini-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-face-mini-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g class="blink"><ellipse class="c-eye" cx="80" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="108.4" r="2.2"/><ellipse class="c-eye" cx="122" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="108.4" r="2.2"/></g><path class="c-line w3" d="M92 132 Q102 140 112 131"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/></g></symbol></svg>
 <a class="skip" href="#main">Перейти к тексту</a>
-<header class="bar">
-  <a class="mark" href="/" aria-label="Спокойно — на главную">
-    <svg class="mark__wave" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 19c4-6 8-6 13 0s9 6 13 0" /><path d="M3 12c4-6 8-6 13 0s9 6 13 0" opacity=".45" /></svg>
-    <span class="mark__name">Спокойно</span>
-  </a>
-  <span class="bar__slogan">Сеть без загадок</span>
-  <details class="menu">
-    <summary>Разделы</summary>
-    <nav data-nav aria-label="Разделы сайта">
-<p class="menu__group">Сайт</p>
-      <ul><li><a href="/">Главная</a></li></ul>
-<p class="menu__group">Разборы</p>
-      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/" aria-current="page">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
-<p class="menu__group">Проверка</p>
-      <ul><li><a href="/proverka/">Про IP-адрес</a></li></ul>
-    </nav>
-  </details>
-</header>
-<div class="frame">
-  <aside class="rail">
-    <nav data-nav aria-label="Разделы сайта">
-<p class="rail__group">Сайт</p>
-      <ul><li><a href="/">Главная</a></li></ul>
-<p class="rail__group">Разборы</p>
-      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/" aria-current="page">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
-<p class="rail__group">Проверка</p>
-      <ul><li><a href="/proverka/">Про IP-адрес</a></li></ul>
-    </nav>
-    <a class="btn btn--ghost to-bot" href="https://t.me/vpn_prosto_bot?start=6035076947" rel="noopener">Бот в Telegram</a>
-  </aside>
-  <main id="main" class="sheet">
-<article class="text">
-<header class="lede">
-  <h1>Ключ доступа: чем он отличается от пароля</h1>
-  <p class="lede__meta"><time datetime="2026-11-05">Сверено 5 ноября 2026</time></p>
-</header>
+<header class="top"><div class="wrap top-in">
+  <a class="logo" href="/" aria-label="Спокойно — на главную"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><span>Спокойно<small>Сеть без загадок</small></span></a>
+  <nav class="nav" data-nav aria-label="Основное"><a href="/#razdely" aria-current="true">Разборы</a><a href="/proverka/">Про IP</a><a href="/privacy/">Данные</a></nav>
+</div></header>
+<main id="main">
+<div class="wrap">
+<nav class="crumbs" aria-label="Хлебные крошки"><ol>
+<li><a href="/">Главная</a></li><li><a href="/#g-basics">Основы</a></li><li><span aria-current="page">Что такое ключ</span></li></ol></nav>
 
-<nav class="toc" aria-label="На этой странице">
-  <p class="toc__head">На этой странице</p>
-  <ol><li><a href="#odin-sekret-vmesto-neskolkih">Один секрет вместо нескольких</a></li><li><a href="#otkuda-beretsya-klyuch">Откуда берётся ключ</a></li><li><a href="#kak-obraschatsya-s-klyuchom">Как обращаться с ключом</a></li><li><a href="#esli-s-klyuchom-chto-to-ne-tak">Если с ключом что-то не так</a></li><li><a href="#chto-zapomnit">Что запомнить</a></li></ol>
-</nav>
+<section class="cover">
+  <div>
+    <div class="chips"><span class="chip ok"><svg viewBox="0 0 22 22" aria-hidden="true" focusable="false"><path d="M5 11.5 l4 4 l8 -9"/></svg><time datetime="2026-11-05">Сверено 5 ноября 2026</time></span>
+<span class="chip">Основы</span><span class="chip">2 минуты</span></div>
 
-<div class="prose">
-<p>Когда сервис выдаёт ключ, это значит, что часть секретов он упаковал в одну длинную строку. Для вас она выглядит как набор непонятных символов, а для программы — полный комплект сведений о доступе. Поэтому ключ нужно беречь так же, как пароль от почты или банка.</p>
+    <h1>Ключ доступа: чем он отличается от пароля</h1>
+    <p class="lead">Когда сервис выдаёт ключ, это значит, что часть секретов он упаковал в одну длинную строку. Для вас она выглядит как набор непонятных символов, а для программы — полный комплект сведений о доступе. Поэтому ключ нужно беречь так же, как пароль от почты или банка.</p>
+  </div>
+  <div class="cover-art"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -10 262 215"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><g transform="translate(222 122) rotate(18)"><rect class="p-sky s" x="-50" y="-5" width="40" height="10" rx="3"/><rect class="p-sky s" x="-44" y="4" width="6" height="9" rx="1.5"/><circle class="p-sky s" cx="0" cy="0" r="14"/><circle class="p-bg s1" cx="2" cy="0" r="4.5"/></g><clipPath id="pb-chto-takoe-klyuch-1-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-chto-takoe-klyuch-1-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M73 97 Q80 94 87 96"/><path class="c-line" d="M115 96 Q122 94 129 97"/><g class="blink"><ellipse class="c-eye" cx="75" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="77.3" cy="108.4" r="2.2"/><ellipse class="c-eye" cx="117" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="119.3" cy="108.4" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/></g></svg><p class="whisper">это просто длинная строка с секретом</p></div>
+</section>
+</div>
+
+<div class="sheetr"><div class="wrap">
+  <div class="read">
+    <details class="toc" open><summary>На этой странице</summary>
+<nav aria-label="На этой странице"><ol><li><a href="#odin-sekret-vmesto-neskolkih">Один секрет вместо нескольких</a></li><li><a href="#otkuda-beretsya-klyuch">Откуда берётся ключ</a></li><li><a href="#kak-obraschatsya-s-klyuchom">Как обращаться с ключом</a></li><li><a href="#esli-s-klyuchom-chto-to-ne-tak">Если с ключом что-то не так</a></li><li><a href="#chto-zapomnit">Что запомнить</a></li><li><a href="#qa-head">Вопросы и ответы</a></li></ol></nav>
+</details>
+
+    <article>
+      <div class="prose">
 <h2 id="odin-sekret-vmesto-neskolkih">Один секрет вместо нескольких</h2>
 <p>При обычном входе есть два отдельных значения: имя и пароль. Сервис сравнивает их с тем, что хранит у себя. Ключ собирает всё в одно значение, которое вы один раз сообщаете программе, и дальше вводить ничего не нужно.</p>
 <p>У такой простоты есть обратная сторона. Раз ключ один, то и утекает он целиком: достаточно скопировать строку, чтобы получить тот же доступ, что у вас. Пароль можно сменить, не меняя логин, а ключ приходится заменять полностью.</p>
@@ -80,40 +67,60 @@
 <p>Сначала сверьте, что он скопирован целиком: у обрезанной строки нет шансов сработать. Затем посмотрите срок действия и лимит устройств у поставщика. Если ничего из этого не помогло, проблема может быть вовсе не в ключе, а в самом соединении: проверьте, открываются ли обычные сайты.</p>
 <h2 id="chto-zapomnit">Что запомнить</h2>
 <p>Ключ — это не настройка, а доступ. Обращайтесь с ним как с паролем, и чужая беспечность не станет вашей проблемой.</p>
-</div>
-<section class="qa" aria-labelledby="qa-head">
-  <h2 id="qa-head">Вопросы и ответы</h2>
-<details class="qa__item">
+      </div>
+      <section class="faq" aria-labelledby="qa-head">
+  <div class="h2art"><h2 id="qa-head">Вопросы и ответы</h2><svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -10 250 210"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-chto-takoe-klyuch-2-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-chto-takoe-klyuch-2-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M73 97 Q80 94 87 96"/><path class="c-line" d="M115 96 Q122 94 129 97"/><g class="blink"><ellipse class="c-eye" cx="80" cy="106" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="101.5" r="2.2"/><ellipse class="c-eye" cx="122" cy="106" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="101.5" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="c-arm-o" d="M34 132 Q22 148 34 160"/><path class="c-arm" d="M34 132 Q22 148 34 160"/><path class="c-arm-o" d="M166 136 Q152 158 124 148"/><path class="c-arm" d="M166 136 Q152 158 124 148"/></g><circle class="p-milk s" cx="176" cy="66" r="4"/><circle class="p-milk s" cx="188" cy="48" r="6"/><rect class="p-milk s" x="170" y="2" width="56" height="32" rx="16"/><circle class="c-eye" cx="185" cy="18" r="3.6"/><circle class="c-eye" cx="198" cy="18" r="3.6"/><circle class="c-eye" cx="211" cy="18" r="3.6"/></svg></div>
+<details>
     <summary>Чем ключ отличается от логина и пароля?</summary>
-    <p>Ключ — одна строка, в которой уже записаны все данные доступа. Вводить отдельно имя и пароль не нужно: сервис читает всё из ключа.</p>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Ключ — одна строка, в которой уже записаны все данные доступа. Вводить отдельно имя и пароль не нужно: сервис читает всё из ключа.</p></div>
   </details>
-<details class="qa__item">
+<details>
     <summary>Можно ли показывать ключ другим?</summary>
-    <p>Нет. Ключ работает как пароль: у кого он есть, тот может пользоваться вашим доступом. Отправлять его в общие чаты или выкладывать на сайты не стоит.</p>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Нет. Ключ работает как пароль: у кого он есть, тот может пользоваться вашим доступом. Отправлять его в общие чаты или выкладывать на сайты не стоит.</p></div>
   </details>
-<details class="qa__item">
+<details>
     <summary>Что делать, если ключ попал не в те руки?</summary>
-    <p>Запросите у выдавшей его стороны новый и откажитесь от старого. Конкретный порядок зависит от сервиса, смотрите его справку.</p>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Запросите у выдавшей его стороны новый и откажитесь от старого. Конкретный порядок зависит от сервиса, смотрите его справку.</p></div>
   </details>
-<details class="qa__item">
+<details>
     <summary>Ключ и подписка — это одно и то же?</summary>
-    <p>Не обязательно. Ключ описывает одно подключение, а подписка может означать право получать такие ключи и обновлять их. Точные условия у каждого поставщика свои.</p>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Не обязательно. Ключ описывает одно подключение, а подписка может означать право получать такие ключи и обновлять их. Точные условия у каждого поставщика свои.</p></div>
   </details>
 </section>
 
-</article>
-  </main>
+    </article>
+  </div>
+  <div class="after">
+  <h2>Похожие разборы</h2>
+  <div class="rel">
+<a class="relc t-rose" href="/svyaz-operatora-i-vpn/"><span class="art"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -10 280 210"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-chto-takoe-klyuch-3-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-chto-takoe-klyuch-3-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M73 97 Q80 94 87 96"/><path class="c-line" d="M115 96 Q122 94 129 97"/><g class="blink"><ellipse class="c-eye" cx="85" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="87.3" cy="108.4" r="2.2"/><ellipse class="c-eye" cx="127" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="129.3" cy="108.4" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="c-arm-o" d="M34 132 Q22 148 34 160"/><path class="c-arm" d="M34 132 Q22 148 34 160"/><path class="c-arm-o" d="M166 132 Q178 148 166 160"/><path class="c-arm" d="M166 132 Q178 148 166 160"/></g><path class="c-line far" d="M214 196 L226 112 L238 196 M218 168 H234 M221 146 H231 M216 182 L236 160"/><circle class="p-violet s" cx="226" cy="108" r="7"/><path class="c-line w3 far" d="M210 92 Q226 78 242 92"/><path class="c-line w3 dash far" d="M200 80 Q226 58 252 80"/></svg></span><b>VPN и сеть оператора</b><span>Почему VPN-приложение может не подключаться в мобильной сети, но работает по Wi-Fi: возможные причины, признаки и порядок проверки до звонка оператору.</span></a>
+<a class="relc t-lav" href="/brawl-stars-lagi/"><span class="art"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -10 250 215"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-chto-takoe-klyuch-4-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-chto-takoe-klyuch-4-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M73 97 Q80 94 87 96"/><path class="c-line" d="M115 96 Q122 94 129 97"/><g class="blink"><ellipse class="c-eye" cx="80" cy="117" rx="6.5" ry="7"/><circle class="c-glint" cx="82.3" cy="113.4" r="2.2"/><ellipse class="c-eye" cx="122" cy="117" rx="6.5" ry="7"/><circle class="c-glint" cx="124.3" cy="113.4" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="p-violet s" d="M62 150 Q60 136 76 136 H124 Q140 136 138 150 L142 176 Q144 192 128 186 L116 176 H84 L72 186 Q56 192 58 176 Z"/><path class="p-milkline" d="M78 152 V166 M71 159 H85"/><circle class="p-peachl" cx="117" cy="154" r="4.5"/><circle class="p-sky" cx="127" cy="162" r="4.5"/><path class="c-arm-o" d="M34 128 Q44 154 74 158"/><path class="c-arm" d="M34 128 Q44 154 74 158"/><path class="c-arm-o" d="M166 128 Q156 154 126 158"/><path class="c-arm" d="M166 128 Q156 154 126 158"/></g><path class="p-skyline" d="M134 28 q9 -12 18 0 t18 0 t18 0"/><circle class="p-violet" cx="198" cy="28" r="5"/></svg></span><b>Brawl Stars лагает</b><span>Как понять, почему Brawl Stars лагает или не заходит: проблема в вашем интернете, в устройстве или на стороне серверов игры. Проверки по шагам.</span></a>
+<a class="relc t-lav" href="/gemini-v-rossii/"><span class="art"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -10 250 210"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-chto-takoe-klyuch-5-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-chto-takoe-klyuch-5-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M73 97 Q80 94 87 96"/><path class="c-line" d="M115 96 Q122 94 129 97"/><g class="blink"><ellipse class="c-eye" cx="80" cy="106" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="101.5" r="2.2"/><ellipse class="c-eye" cx="122" cy="106" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="101.5" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="c-arm-o" d="M34 132 Q22 148 34 160"/><path class="c-arm" d="M34 132 Q22 148 34 160"/><path class="c-arm-o" d="M166 136 Q152 158 124 148"/><path class="c-arm" d="M166 136 Q152 158 124 148"/></g><circle class="p-milk s" cx="176" cy="66" r="4"/><circle class="p-milk s" cx="188" cy="48" r="6"/><rect class="p-milk s" x="170" y="2" width="56" height="32" rx="16"/><circle class="c-eye" cx="185" cy="18" r="3.6"/><circle class="c-eye" cx="198" cy="18" r="3.6"/><circle class="c-eye" cx="211" cy="18" r="3.6"/></svg></span><b>Gemini в России</b><span>Почему Gemini выдаёт ошибку региона из России, чем отличаются веб-версия, приложение и API, и что проверить в аккаунте, прежде чем что-то менять.</span></a>
+  </div>
 </div>
-<footer class="foot" data-foot>
-  <div class="foot__cols">
+
+</div></div>
+</main>
+<footer class="foot" data-foot><div class="wrap foot-in">
+  <div class="foot-brand"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-10 -10 230 210"><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-chto-takoe-klyuch-6-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-chto-takoe-klyuch-6-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line w3" d="M73 111 Q80 118 87 111"/><path class="c-line w3" d="M115 111 Q122 118 129 111"/><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="c-arm-o" d="M34 132 Q22 148 34 160"/><path class="c-arm" d="M34 132 Q22 148 34 160"/><path class="c-arm-o" d="M166 132 Q178 148 166 160"/><path class="c-arm" d="M166 132 Q178 148 166 160"/></g><text class="p-ink2-t" x="168" y="52" font-size="22" font-weight="800">z</text><text class="p-ink2-t" x="186" y="28" font-size="16" font-weight="800">z</text></svg><div><b>Спокойно</b><p>Сеть без загадок. Разборы простым языком.</p></div></div>
+  <nav class="foot-cols" aria-label="Подвал">
 <div>
-      <p class="foot__head">Разборы</p>
-      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
+      <p class="foot-h">Мессенджеры</p>
+      <ul><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li></ul>
     </div><div>
-      <p class="foot__head">Сайт</p>
-      <ul><li><a href="/">Главная</a></li><li><a href="/proverka/">Про IP-адрес</a></li><li><a href="/privacy/">Данные</a></li></ul>
-    </div>  </div>
-  <p class="foot__line">© 2026 Спокойно · Сеть без загадок · без cookie и без журнала посещений</p>
-</footer>
+      <p class="foot-h">Сервисы и банки</p>
+      <ul><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/banki-i-vpn/">Банки и VPN</a></li></ul>
+    </div><div>
+      <p class="foot-h">Игры и ИИ</p>
+      <ul><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li></ul>
+    </div><div>
+      <p class="foot-h">Основы</p>
+      <ul><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li></ul>
+    </div><div>
+      <p class="foot-h">Сайт</p>
+      <ul><li><a href="/">Главная</a></li><li><a href="/proverka/">Про IP-адрес</a></li><li><a href="/privacy/">Данные</a></li><li><a href="https://t.me/vpn_prosto_bot?start=6035076947" rel="noopener">Бот в Telegram</a></li></ul>
+    </div>  </nav>
+  <p class="meta">© 2026 Спокойно · без cookie и без журнала посещений</p>
+</div></footer>
 </body>
 </html>

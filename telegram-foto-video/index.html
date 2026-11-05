@@ -8,8 +8,8 @@
 <meta name="description" content="Что делать, если в Telegram не грузятся фото и видео: проверка сети, кэша, свободного места и автозагрузки по шагам, плюс ответы на частые вопросы.">
 <link rel="canonical" href="https://spokno.fyi/telegram-foto-video/">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#151c21" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#E8E1FF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#19122E" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Спокойно">
 <meta property="og:title" content="Почему в Telegram не грузятся фото и видео">
@@ -19,56 +19,43 @@
 <meta property="og:locale" content="ru_RU">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="stylesheet" href="/assets/spokno.css?v=b4297191bd">
+<link rel="preload" href="/assets/fonts/nunito-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/spokno.css?v=ac21371fa5">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Почему в Telegram не грузятся фото и видео","description":"Что делать, если в Telegram не грузятся фото и видео: проверка сети, кэша, свободного места и автозагрузки по шагам, плюс ответы на частые вопросы.","url":"https://spokno.fyi/telegram-foto-video/","dateModified":"2026-11-05","inLanguage":"ru","isPartOf":{"@id":"https://spokno.fyi/#site"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Очистка кэша удалит мои переписки?","acceptedAnswer":{"@type":"Answer","text":"Нет. По справке Telegram, облачные медиа остаются в облаке, а локальные копии при необходимости скачаются заново. Сами сообщения не пропадают."}},{"@type":"Question","name":"Почему текст приходит, а фото висит с кружком?","acceptedAnswer":{"@type":"Answer","text":"Для текста нужен небольшой объём данных, для фото и видео — гораздо больше. На слабой или нестабильной связи сообщения проходят, а файлы нет."}},{"@type":"Question","name":"Видео крутит загрузку бесконечно. Что это значит?","acceptedAnswer":{"@type":"Answer","text":"Чаще всего сеть обрывается на скачивании или файл повреждён. Остановите загрузку, перезапустите приложение и скачайте файл заново."}},{"@type":"Question","name":"Если ничего не помогло, куда обращаться?","acceptedAnswer":{"@type":"Answer","text":"В поддержку через раздел «Задать вопрос» в настройках Telegram. Опишите устройство, версию приложения и что именно не грузится."}}]}</script>
 </head>
 <body class="sec-guide">
+<svg aria-hidden="true" focusable="false" class="pb pb-defs"><symbol id="pb-face-mini" class="pb" viewBox="20 34 160 150"><g><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-face-mini-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-face-mini-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g class="blink"><ellipse class="c-eye" cx="80" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="108.4" r="2.2"/><ellipse class="c-eye" cx="122" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="108.4" r="2.2"/></g><path class="c-line w3" d="M92 132 Q102 140 112 131"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/></g></symbol></svg>
 <a class="skip" href="#main">Перейти к тексту</a>
-<header class="bar">
-  <a class="mark" href="/" aria-label="Спокойно — на главную">
-    <svg class="mark__wave" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 19c4-6 8-6 13 0s9 6 13 0" /><path d="M3 12c4-6 8-6 13 0s9 6 13 0" opacity=".45" /></svg>
-    <span class="mark__name">Спокойно</span>
-  </a>
-  <span class="bar__slogan">Сеть без загадок</span>
-  <details class="menu">
-    <summary>Разделы</summary>
-    <nav data-nav aria-label="Разделы сайта">
-<p class="menu__group">Сайт</p>
-      <ul><li><a href="/">Главная</a></li></ul>
-<p class="menu__group">Разборы</p>
-      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/" aria-current="page">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
-<p class="menu__group">Проверка</p>
-      <ul><li><a href="/proverka/">Про IP-адрес</a></li></ul>
-    </nav>
-  </details>
-</header>
-<div class="frame">
-  <aside class="rail">
-    <nav data-nav aria-label="Разделы сайта">
-<p class="rail__group">Сайт</p>
-      <ul><li><a href="/">Главная</a></li></ul>
-<p class="rail__group">Разборы</p>
-      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/" aria-current="page">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
-<p class="rail__group">Проверка</p>
-      <ul><li><a href="/proverka/">Про IP-адрес</a></li></ul>
-    </nav>
-    <a class="btn btn--ghost to-bot" href="https://t.me/vpn_prosto_bot?start=6035076947" rel="noopener">Бот в Telegram</a>
-  </aside>
-  <main id="main" class="sheet">
-<article class="text">
-<header class="lede">
-  <h1>Почему в Telegram не грузятся фото и видео</h1>
-  <p class="lede__meta"><time datetime="2026-11-05">Сверено 5 ноября 2026</time></p>
-</header>
+<header class="top"><div class="wrap top-in">
+  <a class="logo" href="/" aria-label="Спокойно — на главную"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><span>Спокойно<small>Сеть без загадок</small></span></a>
+  <nav class="nav" data-nav aria-label="Основное"><a href="/#razdely" aria-current="true">Разборы</a><a href="/proverka/">Про IP</a><a href="/privacy/">Данные</a></nav>
+</div></header>
+<main id="main">
+<div class="wrap">
+<nav class="crumbs" aria-label="Хлебные крошки"><ol>
+<li><a href="/">Главная</a></li><li><a href="/#g-messengers">Мессенджеры</a></li><li><span aria-current="page">Фото и видео в Telegram</span></li></ol></nav>
 
-<nav class="toc" aria-label="На этой странице">
-  <p class="toc__head">На этой странице</p>
-  <ol><li><a href="#1-set">1. Сеть</a></li><li><a href="#2-nastroyki-avtozagruzki">2. Настройки автозагрузки</a></li><li><a href="#3-svobodnoe-mesto">3. Свободное место</a></li><li><a href="#4-kesh">4. Кэш</a></li><li><a href="#5-prilozhenie-i-ustroystvo">5. Приложение и устройство</a></li><li><a href="#esli-s-proksi-ili-vpn-stalo-huzhe">Если с прокси или VPN стало хуже</a></li><li><a href="#kak-ponyat-gde-imenno-zatyk">Как понять, где именно затык</a></li><li><a href="#kogda-pisat-v-podderzhku">Когда писать в поддержку</a></li></ol>
-</nav>
+<section class="cover">
+  <div>
+    <div class="chips"><span class="chip ok"><svg viewBox="0 0 22 22" aria-hidden="true" focusable="false"><path d="M5 11.5 l4 4 l8 -9"/></svg><time datetime="2026-11-05">Сверено 5 ноября 2026</time></span>
+<span class="chip">Мессенджеры</span><span class="chip">3 минуты</span></div>
 
-<div class="prose">
-<p>Если сообщения приходят, а фото и видео остаются размытыми или показывают вращающийся круг, причина чаще всего простая: нестабильная связь, переполненный кэш, нехватка места или настройки автозагрузки. Проверяйте по порядку — от самого дешёвого шага к более сложным.</p>
+    <h1>Почему в Telegram не грузятся фото и видео</h1>
+    <p class="lead">Если сообщения приходят, а фото и видео остаются размытыми или показывают вращающийся круг, причина чаще всего простая: нестабильная связь, переполненный кэш, нехватка места или настройки автозагрузки. Проверяйте по порядку — от самого дешёвого шага к более сложным.</p>
+  </div>
+  <div class="cover-art"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -10 240 215"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-telegram-foto-video-1-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-telegram-foto-video-1-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M72 95 Q79 89 87 94"/><path class="c-line" d="M115 94 Q123 89 130 95"/><g class="blink"><ellipse class="c-eye" cx="80" cy="117" rx="6.5" ry="7"/><circle class="c-glint" cx="82.3" cy="113.4" r="2.2"/><ellipse class="c-eye" cx="122" cy="117" rx="6.5" ry="7"/><circle class="c-glint" cx="124.3" cy="113.4" r="2.2"/></g><ellipse class="c-eye" cx="102" cy="135" rx="3.6" ry="4.2"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><rect class="p-milk s" x="56" y="132" width="88" height="62" rx="7"/><circle class="p-peachl" cx="124" cy="148" r="7"/><rect class="p-sky" x="66" y="170" width="12" height="12" rx="2"/><rect class="p-sky" x="80" y="160" width="12" height="12" rx="2"/><rect class="p-violet o80" x="94" y="152" width="12" height="12" rx="2"/><rect class="p-sky" x="94" y="170" width="12" height="12" rx="2"/><rect class="p-sky o50" x="110" y="170" width="12" height="12" rx="2"/><rect class="p-violet o35" x="118" y="160" width="9" height="9" rx="2"/><path class="c-arm-o" d="M34 128 Q44 154 74 158"/><path class="c-arm" d="M34 128 Q44 154 74 158"/><path class="c-arm-o" d="M166 128 Q156 154 126 158"/><path class="c-arm" d="M166 128 Q156 154 126 158"/></g></svg><p class="whisper">чаще всего причина простая</p></div>
+</section>
+</div>
+
+<div class="sheetr"><div class="wrap">
+  <div class="read">
+    <details class="toc" open><summary>На этой странице</summary>
+<nav aria-label="На этой странице"><ol><li><a href="#1-set">1. Сеть</a></li><li><a href="#2-nastroyki-avtozagruzki">2. Настройки автозагрузки</a></li><li><a href="#3-svobodnoe-mesto">3. Свободное место</a></li><li><a href="#4-kesh">4. Кэш</a></li><li><a href="#5-prilozhenie-i-ustroystvo">5. Приложение и устройство</a></li><li><a href="#esli-s-proksi-ili-vpn-stalo-huzhe">Если с прокси или VPN стало хуже</a></li><li><a href="#kak-ponyat-gde-imenno-zatyk">Как понять, где именно затык</a></li><li><a href="#kogda-pisat-v-podderzhku">Когда писать в поддержку</a></li><li><a href="#qa-head">Вопросы и ответы</a></li></ol></nav>
+</details>
+
+    <article>
+      <div class="prose">
 <h2 id="1-set">1. Сеть</h2>
 <p>Файлы требуют заметно больше трафика, чем текст. Откройте в браузере обычную страницу и оцените скорость. Затем попробуйте оба вида подключения по очереди: если фото грузятся только в одном, виновата связь, а не Telegram. Режим экономии трафика на телефоне тоже может ограничивать фоновую загрузку.</p>
 <h2 id="2-nastroyki-avtozagruzki">2. Настройки автозагрузки</h2>
@@ -87,40 +74,60 @@
 <h2 id="kogda-pisat-v-podderzhku">Когда писать в поддержку</h2>
 <p>Если проблема держится на разных сетях, после очистки кэша и обновления, соберите данные: модель устройства, версию Telegram, что именно не грузится (фото, видео, файлы, все чаты или один). Пользователи Android иногда описывают зависшие загрузки на <a href="https://bugs.telegram.org/c/13523" rel="nofollow noopener noreferrer">трекере ошибок Telegram</a>, но официального решения мы там не нашли.</p>
 <p>О том, как сайт обращается с данными: <a href="/privacy/">Данные</a>.</p>
-</div>
-<section class="qa" aria-labelledby="qa-head">
-  <h2 id="qa-head">Вопросы и ответы</h2>
-<details class="qa__item">
+      </div>
+      <section class="faq" aria-labelledby="qa-head">
+  <div class="h2art"><h2 id="qa-head">Вопросы и ответы</h2><svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -10 250 210"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-telegram-foto-video-2-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-telegram-foto-video-2-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M73 97 Q80 94 87 96"/><path class="c-line" d="M115 96 Q122 94 129 97"/><g class="blink"><ellipse class="c-eye" cx="80" cy="106" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="101.5" r="2.2"/><ellipse class="c-eye" cx="122" cy="106" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="101.5" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="c-arm-o" d="M34 132 Q22 148 34 160"/><path class="c-arm" d="M34 132 Q22 148 34 160"/><path class="c-arm-o" d="M166 136 Q152 158 124 148"/><path class="c-arm" d="M166 136 Q152 158 124 148"/></g><circle class="p-milk s" cx="176" cy="66" r="4"/><circle class="p-milk s" cx="188" cy="48" r="6"/><rect class="p-milk s" x="170" y="2" width="56" height="32" rx="16"/><circle class="c-eye" cx="185" cy="18" r="3.6"/><circle class="c-eye" cx="198" cy="18" r="3.6"/><circle class="c-eye" cx="211" cy="18" r="3.6"/></svg></div>
+<details>
     <summary>Очистка кэша удалит мои переписки?</summary>
-    <p>Нет. По справке Telegram, облачные медиа остаются в облаке, а локальные копии при необходимости скачаются заново. Сами сообщения не пропадают.</p>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Нет. По справке Telegram, облачные медиа остаются в облаке, а локальные копии при необходимости скачаются заново. Сами сообщения не пропадают.</p></div>
   </details>
-<details class="qa__item">
+<details>
     <summary>Почему текст приходит, а фото висит с кружком?</summary>
-    <p>Для текста нужен небольшой объём данных, для фото и видео — гораздо больше. На слабой или нестабильной связи сообщения проходят, а файлы нет.</p>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Для текста нужен небольшой объём данных, для фото и видео — гораздо больше. На слабой или нестабильной связи сообщения проходят, а файлы нет.</p></div>
   </details>
-<details class="qa__item">
+<details>
     <summary>Видео крутит загрузку бесконечно. Что это значит?</summary>
-    <p>Чаще всего сеть обрывается на скачивании или файл повреждён. Остановите загрузку, перезапустите приложение и скачайте файл заново.</p>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Чаще всего сеть обрывается на скачивании или файл повреждён. Остановите загрузку, перезапустите приложение и скачайте файл заново.</p></div>
   </details>
-<details class="qa__item">
+<details>
     <summary>Если ничего не помогло, куда обращаться?</summary>
-    <p>В поддержку через раздел «Задать вопрос» в настройках Telegram. Опишите устройство, версию приложения и что именно не грузится.</p>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>В поддержку через раздел «Задать вопрос» в настройках Telegram. Опишите устройство, версию приложения и что именно не грузится.</p></div>
   </details>
 </section>
 
-</article>
-  </main>
+    </article>
+  </div>
+  <div class="after">
+  <h2>Похожие разборы</h2>
+  <div class="rel">
+<a class="relc t-sky" href="/whatsapp-ne-otkryvaetsya/"><span class="art"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-50 -40 300 245"><circle class="c-blob-a" cx="100" cy="112" r="100"/><circle class="c-blob-b" cx="-22" cy="150" r="14"/><ellipse class="c-shadow" cx="100" cy="190" rx="70" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-telegram-foto-video-3-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-telegram-foto-video-3-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M73 97 Q80 94 87 96"/><path class="c-line" d="M115 96 Q122 94 129 97"/><g class="blink"><ellipse class="c-eye" cx="80" cy="117" rx="6.5" ry="7"/><circle class="c-glint" cx="82.3" cy="113.4" r="2.2"/><ellipse class="c-eye" cx="122" cy="117" rx="6.5" ry="7"/><circle class="c-glint" cx="124.3" cy="113.4" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><rect class="p-ink s" x="79" y="138" width="42" height="60" rx="9"/><rect class="p-sky" x="84" y="146" width="32" height="40" rx="4"/><rect class="p-milk" x="88" y="151" width="18" height="7" rx="3.5"/><rect class="p-violet" x="94" y="162" width="18" height="7" rx="3.5"/><rect class="p-milk" x="88" y="173" width="13" height="7" rx="3.5"/><path class="c-arm-o" d="M34 128 Q44 154 74 158"/><path class="c-arm" d="M34 128 Q44 154 74 158"/><path class="c-arm-o" d="M166 128 Q156 154 126 158"/><path class="c-arm" d="M166 128 Q156 154 126 158"/></g><g class="o55"><rect class="p-milk s" x="-40" y="-24" width="78" height="42" rx="21"/><circle class="p-milk s" cx="26" cy="26" r="5"/><circle class="p-milk s" cx="36" cy="37" r="3"/><path class="c-line w3 tk" d="M-15 -3 l6 6 l11 -12"/><path class="c-line w3 tk" d="M-3 -2 l5 5 l11 -12"/></g><g><rect class="p-milk s" x="132" y="-30" width="80" height="46" rx="23"/><circle class="p-milk s" cx="144" cy="24" r="5"/><circle class="p-milk s" cx="134" cy="35" r="3"/><circle class="c-line w3" cx="172" cy="-7" r="13"/><path class="c-line w3" d="M172 -14.8 V-7 L177.85 -3.1"/></g></svg></span><b>WhatsApp не открывается</b><span>Что происходит с WhatsApp в России, как за пять минут понять, где поломка: у вас, у оператора или у сервиса, и что безопасно проверить самому.</span></a>
+<a class="relc t-sky" href="/telegram-vpn-ne-pomogaet/"><span class="art"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-10 -10 220 240"><circle class="c-blob-a" cx="100" cy="112" r="94"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-telegram-foto-video-4-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-telegram-foto-video-4-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M72 95 Q79 89 87 94"/><path class="c-line" d="M115 94 Q123 89 130 95"/><g class="blink"><ellipse class="c-eye" cx="80" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="108.4" r="2.2"/><ellipse class="c-eye" cx="122" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="108.4" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="c-line far" d="M24 172 Q14 196 40 204 Q80 212 70 226"/><rect class="p-violet s" x="16" y="160" width="24" height="18" rx="4"/><path class="c-line w3 far" d="M40 164 H50 M40 174 H50"/><path class="c-line far" d="M176 172 Q186 196 160 204 Q124 212 134 226"/><rect class="p-sky s" x="160" y="160" width="24" height="18" rx="4"/><circle class="c-eye" cx="166" cy="165" r="2"/><circle class="c-eye" cx="166" cy="173" r="2"/><path class="p-peachl s1" d="M104 204 l4 -9 l4 9 l9 4 l-9 4 l-4 9 l-4 -9 l-9 -4 Z"/><path class="c-arm-o" d="M34 130 Q18 150 26 168"/><path class="c-arm" d="M34 130 Q18 150 26 168"/><path class="c-arm-o" d="M166 130 Q182 150 174 168"/><path class="c-arm" d="M166 130 Q182 150 174 168"/></g></svg></span><b>Telegram и VPN</b><span>Почему Telegram может не подключаться даже при включённом VPN: от сетевых сбоев до настроек самого приложения, и порядок диагностики по шагам.</span></a>
+<a class="relc t-sky" href="/instagram-v-rossii/"><span class="art"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-24 -14 258 223"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-telegram-foto-video-5-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-telegram-foto-video-5-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M73 97 Q80 94 87 96"/><path class="c-line" d="M115 96 Q122 94 129 97"/><g class="blink"><ellipse class="c-eye" cx="80" cy="117" rx="6.5" ry="7"/><circle class="c-glint" cx="82.3" cy="113.4" r="2.2"/><ellipse class="c-eye" cx="122" cy="117" rx="6.5" ry="7"/><circle class="c-glint" cx="124.3" cy="113.4" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><rect class="p-ink s" x="79" y="138" width="42" height="60" rx="9"/><rect class="p-sky" x="84" y="146" width="32" height="40" rx="4"/><rect class="p-milk" x="88" y="151" width="18" height="7" rx="3.5"/><rect class="p-violet" x="94" y="162" width="18" height="7" rx="3.5"/><rect class="p-milk" x="88" y="173" width="13" height="7" rx="3.5"/><path class="c-arm-o" d="M34 128 Q44 154 74 158"/><path class="c-arm" d="M34 128 Q44 154 74 158"/><path class="c-arm-o" d="M166 128 Q156 154 126 158"/><path class="c-arm" d="M166 128 Q156 154 126 158"/></g><circle class="p-milk s" cx="186" cy="40" r="17"/><text class="p-violet-t" x="179" y="49" font-size="24" font-weight="800">?</text></svg></span><b>Instagram в России</b><span>Что известно о доступности Instagram в России, почему приложение или сайт не грузятся и какие проверки показывают, что причина не в вашем телефоне.</span></a>
+  </div>
 </div>
-<footer class="foot" data-foot>
-  <div class="foot__cols">
+
+</div></div>
+</main>
+<footer class="foot" data-foot><div class="wrap foot-in">
+  <div class="foot-brand"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-10 -10 230 210"><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-telegram-foto-video-6-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-telegram-foto-video-6-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line w3" d="M73 111 Q80 118 87 111"/><path class="c-line w3" d="M115 111 Q122 118 129 111"/><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="c-arm-o" d="M34 132 Q22 148 34 160"/><path class="c-arm" d="M34 132 Q22 148 34 160"/><path class="c-arm-o" d="M166 132 Q178 148 166 160"/><path class="c-arm" d="M166 132 Q178 148 166 160"/></g><text class="p-ink2-t" x="168" y="52" font-size="22" font-weight="800">z</text><text class="p-ink2-t" x="186" y="28" font-size="16" font-weight="800">z</text></svg><div><b>Спокойно</b><p>Сеть без загадок. Разборы простым языком.</p></div></div>
+  <nav class="foot-cols" aria-label="Подвал">
 <div>
-      <p class="foot__head">Разборы</p>
-      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
+      <p class="foot-h">Мессенджеры</p>
+      <ul><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li></ul>
     </div><div>
-      <p class="foot__head">Сайт</p>
-      <ul><li><a href="/">Главная</a></li><li><a href="/proverka/">Про IP-адрес</a></li><li><a href="/privacy/">Данные</a></li></ul>
-    </div>  </div>
-  <p class="foot__line">© 2026 Спокойно · Сеть без загадок · без cookie и без журнала посещений</p>
-</footer>
+      <p class="foot-h">Сервисы и банки</p>
+      <ul><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/banki-i-vpn/">Банки и VPN</a></li></ul>
+    </div><div>
+      <p class="foot-h">Игры и ИИ</p>
+      <ul><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li></ul>
+    </div><div>
+      <p class="foot-h">Основы</p>
+      <ul><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li></ul>
+    </div><div>
+      <p class="foot-h">Сайт</p>
+      <ul><li><a href="/">Главная</a></li><li><a href="/proverka/">Про IP-адрес</a></li><li><a href="/privacy/">Данные</a></li><li><a href="https://t.me/vpn_prosto_bot?start=6035076947" rel="noopener">Бот в Telegram</a></li></ul>
+    </div>  </nav>
+  <p class="meta">© 2026 Спокойно · без cookie и без журнала посещений</p>
+</div></footer>
 </body>
 </html>
