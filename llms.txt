@@ -1,144 +1,25 @@
-# VPN Просто
+# Спокойно
 
-> VPN-сервис для России: ключ выдаёт бот в Telegram, своего приложения нет. Банки, Госуслуги и российские сайты идут мимо туннеля — выключать VPN ради них не нужно.
+> Сеть без загадок. Справочник простым языком: что делать, если приложение или сайт не открывается, что такое IP-адрес, почему не работают банки, Telegram и прочие сервисы.
 
-Работает на протоколах VLESS + Reality и Hysteria2: трафик неотличим от обычного HTTPS. 8 стран, включая российский сервер, одна цена 349 ₽ в месяц без градаций тарифов, первые 3 дня бесплатно без привязки карты.
+## Разборы
 
-## Основные страницы
+- [Почему банковское приложение не любит VPN и что делать](https://spokno.fyi/banki-i-vpn/): Почему банковское приложение жалуется на VPN, не пускает или просит подтвердить вход, и какие спокойные шаги помогают: от отключения до звонка в банк.
+- [Brawl Stars лагает или не заходит: как найти причину](https://spokno.fyi/brawl-stars-lagi/): Как понять, почему Brawl Stars лагает или не заходит: проблема в вашем интернете, в устройстве или на стороне серверов игры. Проверки по шагам.
+- [Canva не открывается: причины и что можно проверить](https://spokno.fyi/canva-ne-otkryvaetsya/): Почему Canva недоступна из России, что известно из публикаций о решении компании и какие причины сбоев можно проверить самостоятельно.
+- [Ключ доступа: чем он отличается от пароля](https://spokno.fyi/chto-takoe-klyuch/): Что такое ключ доступа, чем он отличается от логина и пароля, почему его нельзя показывать другим и как поступить, если он попал в чужие руки.
+- [Gemini в России: доступность, причины ограничений](https://spokno.fyi/gemini-v-rossii/): Почему Gemini выдаёт ошибку региона из России, чем отличаются веб-версия, приложение и API, и что проверить в аккаунте, прежде чем что-то менять.
+- [Почему Instagram не открывается в России](https://spokno.fyi/instagram-v-rossii/): Что известно о доступности Instagram в России, почему приложение или сайт не грузятся и какие проверки показывают, что причина не в вашем телефоне.
+- [Почему VPN сбоит в мобильной сети оператора](https://spokno.fyi/svyaz-operatora-i-vpn/): Почему VPN-приложение может не подключаться в мобильной сети, но работает по Wi-Fi: возможные причины, признаки и порядок проверки до звонка оператору.
+- [Почему в Telegram не грузятся фото и видео](https://spokno.fyi/telegram-foto-video/): Что делать, если в Telegram не грузятся фото и видео: проверка сети, кэша, свободного места и автозагрузки по шагам, плюс ответы на частые вопросы.
+- [Telegram не работает даже при включённом VPN: диагностика](https://spokno.fyi/telegram-vpn-ne-pomogaet/): Почему Telegram может не подключаться даже при включённом VPN: от сетевых сбоев до настроек самого приложения, и порядок диагностики по шагам.
+- [Почему WhatsApp не открывается и как найти причину](https://spokno.fyi/whatsapp-ne-otkryvaetsya/): Что происходит с WhatsApp в России, как за пять минут понять, где поломка: у вас, у оператора или у сервиса, и что безопасно проверить самому.
+- [Сервисы Яндекса при включённом VPN: что происходит и как проверить](https://spokno.fyi/yandex-i-vpn/): Почему Поиск, Почта, Музыка и Карты Яндекса просят капчу или открываются иначе при включённом VPN, и как понять, в чём именно причина.
 
-- [Главная](https://prostokey.com/): что за сервис, цена, что входит в подписку
-- [Купить ключ VPN](https://prostokey.com/kupit/): что именно покупается, цены на месяц и длинные периоды, оплата российской картой без регистрации
-- [Telegram не работает](https://prostokey.com/telegram/): почему перестал открываться мессенджер и что помогает вместо публичных прокси
-- [Как подключиться](https://prostokey.com/kak-podklyuchit/): три шага — ключ в боте, бесплатный клиент, вставить ключ
-- [Вопросы и ответы](https://prostokey.com/faq/): оплата, возврат, устройства, законность использования
-- [О сервисе](https://prostokey.com/o-servise/): сколько лет работаем, как устроено внутри, почему не показываем владельца
-- [Партнёрская программа](https://prostokey.com/partnerskaya/): пять уровней начислений с каждой оплаты
+## Проверка
 
-## Куда подключить
+- [IP-адрес и страна: что видят сайты](https://spokno.fyi/proverka/): Разбор без проверки: что такое IP-адрес, что он показывает сайтам, чего не показывает и почему страна по адресу бывает чужой, если включён VPN или прокси.
 
-- [VPN для айфона](https://prostokey.com/iphone/): приложений VPN нет в российском App Store, нужна вторая учётная запись Apple — разбираем порядок
-- [VPN для Андроид](https://prostokey.com/android/): клиент из Google Play, а на телефонах без сервисов Google — установка APK-файлом
-- [VPN для компьютера](https://prostokey.com/windows/): Windows и macOS: установщик с сайта проекта, магазин приложений не участвует
-- [VPN для телевизора](https://prostokey.com/tv/): Android TV и Apple TV ставят клиент сами, Samsung и LG — только через приставку или роутер
-- [VPN для роутера](https://prostokey.com/router/): закрывает все устройства дома разом, но подходит не каждой прошивке — Keenetic и OpenWrt да, заводские обычно нет
+## Служебное
 
-## Частые задачи
-
-- [VPN через Телеграм-бота](https://prostokey.com/telegram-bot/): как устроена выдача ключа без регистрации и почты
-- [VPN с пробным периодом](https://prostokey.com/probnyy-period/): три дня бесплатно без карты и без автосписаний
-- [VPN с российским IP](https://prostokey.com/rossiyskiy-ip/): российский адрес для банков и Госуслуг из-за границы
-- [VLESS и Reality](https://prostokey.com/vless-reality/): чем протоколы отличаются и какой выбрать
-- [Проверить, работает ли VPN](https://prostokey.com/proverka/): показывает видимый адрес и страну, адрес не сохраняется
-- [Скачать ВПН бесплатно](https://prostokey.com/skachat-besplatno/): что именно скачивается, почему клиент без ключа пустой и чем кончаются полностью бесплатные сервисы
-- [Платный ВПН](https://prostokey.com/platnyy-vpn/): из чего складывается цена подписки и почему сотня рублей в месяц обычно означает перепродажу
-- [Ключ для ВПН](https://prostokey.com/klyuch-vpn/): что за строка настроек, куда вставляется в Happ и Hiddify и почему бесплатные раздачи живут недолго
-- [ВПН не работает](https://prostokey.com/ne-rabotaet/): разбор по симптомам: не подключается, подключается но сайты не идут, рвётся через раз
-
-## Документы
-
-- [Условия использования](https://prostokey.com/usloviya/)
-- [Политика конфиденциальности](https://prostokey.com/privacy/): что храним и чего не храним
-
-## Статьи
-
-- [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
-
-- [Zenless Zone Zero не подключается в России: что делать](https://prostokey.com/blog/zenless-zone-zero-ne-podklyuchaetsya/)
-- [Strava в России: почему не работает и что с оплатой](https://prostokey.com/blog/strava-v-rossii/)
-- [МТС, Мегафон и Билайн не работают с VPN: что делать](https://prostokey.com/blog/mts-megafon-bilayn-ne-rabotayut-s-vpn/)
-- [VPN на LG webOS: что реально работает на телевизоре](https://prostokey.com/blog/vpn-na-lg-webos/)
-- [Xbox Cloud Gaming в России: доступ и задержка](https://prostokey.com/blog/xbox-cloud-gaming-v-rossii/)
-- [R.E.P.O. не подключается в России: что делать](https://prostokey.com/blog/repo-ne-podklyuchaetsya/)
-- [Сайты на Vercel и Netlify не открываются в России](https://prostokey.com/blog/vercel-netlify-ne-otkryvayutsya-v-rossii/)
-- [Rainbow Six Siege не подключается в России: что делать](https://prostokey.com/blog/rainbow-six-siege-ne-podklyuchaetsya/)
-- [Figma не работает в России: редактор и оплата](https://prostokey.com/blog/figma-ne-rabotaet-v-rossii/)
-- [Apex Legends не подключается в России: что делать](https://prostokey.com/blog/apex-legends-ne-podklyuchaetsya/)
-- [Threads не работает в России: почему и как подключиться](https://prostokey.com/blog/threads-ne-rabotaet-v-rossii/)
-- [Marvel Rivals не подключается в России: что делать](https://prostokey.com/blog/marvel-rivals-ne-podklyuchaetsya/)
-- [Okko, Иви и Wink не работают с VPN: что делать](https://prostokey.com/blog/okko-ivi-wink-ne-rabotayut-s-vpn/)
-- [Framer не работает в России: редактор, сайты и оплата](https://prostokey.com/blog/framer-ne-rabotaet-v-rossii/)
-- [Patreon в России: почему заблокирован и что с оплатой](https://prostokey.com/blog/patreon-v-rossii/)
-- [LinkedIn в России: почему заблокирован и что с Premium](https://prostokey.com/blog/linkedin-v-rossii/)
-- [MEGA.nz в России: почему не открывается и что с этим делать](https://prostokey.com/blog/mega-nz-v-rossii/)
-- [Wildberries просит отключить VPN: что делать, не теряя доступ к остальному](https://prostokey.com/blog/wildberries-prosit-otklyuchit-vpn/)
-- [Кинопоиск просит отключить VPN: что делать, не теряя доступ к остальному](https://prostokey.com/blog/kinopoisk-prosit-otklyuchit-vpn/)
-- [Crunchyroll в России: как открыть доступ и что с оплатой](https://prostokey.com/blog/crunchyroll-v-rossii/)
-- [Battle.net и игры Blizzard в России: что работает, а что нет](https://prostokey.com/blog/battle-net-i-igry-blizzard/)
-- [Jira в России: доступ, лицензии и что решает VPN](https://prostokey.com/blog/jira-v-rossii/)
-- [Hypixel не заходит в России — блокировка Cloudflare и риск бана за VPN](https://prostokey.com/blog/hypixel-ne-zahodit/)
-- [Discord в России: почему заблокирован и как подключиться](https://prostokey.com/blog/discord-kak-zapustit-v-rossii/)
-- [Fallout 76 не подключается к серверу в России — причина и VPN без лишнего пинга](https://prostokey.com/blog/fallout-76-ne-podklyuchaetsya/)
-- [GeForce NOW в России: как подключиться и на что обратить внимание](https://prostokey.com/blog/geforce-now-v-rossii/)
-- [Civilization VI: бесконечная загрузка в России — причина и решение](https://prostokey.com/blog/civilization-beskonechnaya-zagruzka/)
-- [Кинопоиск за границей: почему не идёт видео и при чём тут VPN-ловушка](https://prostokey.com/blog/kinopoisk-za-granicey/)
-- [Существует ли бесплатный VPN без рекламы и подписки](https://prostokey.com/blog/vpn-besplatno-bez-reklamy-i/)
-- [Canva не работает в России: как открыть и что не решит VPN](https://prostokey.com/blog/canva-ne-rabotaet/)
-- [NekoRay: что это за программа и кому она нужна](https://prostokey.com/blog/nekoray-chto-eto/)
-- [«Попытка установить соединение была безуспешной»: что за ошибка](https://prostokey.com/blog/popytka-ustanovit-soedinenie-byla-bezuspeshnoy/)
-- [VPN или прокси: чем отличаются и когда что выбрать](https://prostokey.com/blog/vpn-ili-proksi-chto-luchshe/)
-- [WireGuard на роутере Keenetic: настройка и когда VPN на компьютере проще](https://prostokey.com/blog/wireguard-vpn-dlya-routera-keenetic/)
-- [AdGuard VPN на Mac: скачать и альтернативы](https://prostokey.com/blog/adguard-vpn-skachat-na-mac/)
-- [AdGuard VPN не работает на МТС: причина не в операторе](https://prostokey.com/blog/adguard-vpn-ne-rabotaet-na/)
-- [Почему VPN не подключается через Wi-Fi](https://prostokey.com/blog/pochemu-vpn-ne-podklyuchaetsya-cherez/)
-- [VPN не подключается на Android: что делать](https://prostokey.com/blog/vpn-ne-podklyuchaetsya-na-androide/)
-- [VPN перестал работать на iPhone: что проверить](https://prostokey.com/blog/vpn-perestal-rabotat-na-ayfone/)
-- [Hysteria2: самостоятельная установка на сервер и когда это оправдана](https://prostokey.com/blog/hysteria-2-ustanovka-na-server/)
-- [VPN для Roblox: когда нужен и как подключить на телефоне](https://prostokey.com/blog/vpn-dlya-roblox/)
-- [Почему VPN отключается сам по себе на Android](https://prostokey.com/blog/pochemu-vpn-otklyuchaetsya-sam-po/)
-- [VPN-расширение Chrome для YouTube: когда работает, а когда нет](https://prostokey.com/blog/youtube-vpn-chrome/)
-- [V2RayTun: подробный разбор приложения и подключения](https://prostokey.com/blog/v2raytun-chto-eto-za-prilozhenie/)
-- [AmneziaVPN и WARP: генератор конфигов — что это и зачем](https://prostokey.com/blog/amnezia-vpn-warp-config-generator/)
-- [VPN-расширение для браузера и Discord: почему не поможет](https://prostokey.com/blog/discord-vpn-rasshirenie-dlya-brauzera/)
-- [Телеграм не работает с VPN: что проверить](https://prostokey.com/blog/telegram-ne-rabotaet-s-vpn/)
-- [Shadowsocks: что это за протокол и чем отличается от нашего](https://prostokey.com/blog/shadowsocks-chto-eto-takoe/)
-- [Инстаграм не работает с VPN: что проверить](https://prostokey.com/blog/vpn-dlya-instagram/)
-- [Яндекс не работает с VPN: почему и что делать](https://prostokey.com/blog/yandex-ne-rabotaet-s-vpn/)
-- [Авито не работает с VPN: почему и что делать](https://prostokey.com/blog/avito-ne-rabotaet-s-vpn/)
-- [Netflix не работает в России: что можно сделать](https://prostokey.com/blog/netflix-ne-rabotaet/)
-- [MAX не работает за границей: что мешает на самом деле](https://prostokey.com/blog/max-ne-rabotaet-za-granicey/)
-- [Фейсбук не работает в России: почему и что проверить](https://prostokey.com/blog/facebook-ne-rabotaet/)
-- [VPN на Steam Deck: как установить и для чего нужен](https://prostokey.com/blog/kak-ustanovit-vpn-na-steam/)
-- [Бравл Старс не работает с VPN: в чём дело](https://prostokey.com/blog/brawl-stars-ne-rabotaet/)
-- [Вайбер не работает в России: что делать](https://prostokey.com/blog/viber-ne-rabotaet/)
-- [Gemini не работает с VPN: в чём причина](https://prostokey.com/blog/gemini-ne-rabotaet/)
-- [Pinterest не работает в России: что делать](https://prostokey.com/blog/pinterest-ne-rabotaet/)
-- [VPN не работает в России: это временно или системно](https://prostokey.com/blog/vpn-ne-rabotaet-v-rossii/)
-- [Бесплатный VPN для TikTok на iPhone: что реально доступно](https://prostokey.com/blog/luchshiy-besplatnyy-vpn-dlya-tiktok/)
-- [Outline VPN: бесплатные ключи — риски](https://prostokey.com/blog/outline-vpn-keys-free/)
-- [VLESS, Reality и JSON-конфиг: как это устроено](https://prostokey.com/blog/vless-tcp-reality-json-chto/)
-- [Streisand VPN: что это и почему бесплатных ключей нет](https://prostokey.com/blog/streisand-vpn-klyuchi-besplatno/)
-- [Можно ли заставить YouTube работать без VPN](https://prostokey.com/blog/kak-zastavit-yutub-rabotat-bez/)
-- [МТС и Билайн блокируют VPN: что делать](https://prostokey.com/blog/operator-blokiruet-vpn/)
-- [VPN на MacBook: настройка без App Store](https://prostokey.com/blog/vpn-macbook/)
-- [VPN для игр: когда помогает, а когда мешает](https://prostokey.com/blog/vpn-dlya-igr/)
-- [Запрещён ли VPN в России?](https://prostokey.com/blog/zakonno-li/)
-- [Безопасный ВПН: чем платят за бесплатный](https://prostokey.com/blog/besplatnyy-vpn/)
-- [ВПН не работает на мобильном интернете: что перебрать](https://prostokey.com/blog/vpn-mobilnyy-internet/)
-- [ВПН приложение на айфон: чем заменить Happ](https://prostokey.com/blog/analog-happ-iphone/)
-- [ВПН сервер: какую страну выбрать и на что влияет](https://prostokey.com/blog/kakuyu-stranu-vybrat/)
-- [Бесплатное VPN-расширение для браузера: чем оно не VPN](https://prostokey.com/blog/rasshirenie-brauzera/)
-- [Happ VPN не работает: что проверить](https://prostokey.com/blog/happ-ne-podklyuchaetsya/)
-- [ВПН для ютуба бесплатно: что скачать и почему тормозит](https://prostokey.com/blog/vpn-dlya-yutuba/)
-- [ВПН для телеграмма: не грузятся фото](https://prostokey.com/blog/telegram-media/)
-- [ВПН для ютуба: почему тормозит](https://prostokey.com/blog/youtube-tormozit/)
-- [Ватсап не работает с VPN: почему и что делать](https://prostokey.com/blog/whatsapp-ne-rabotaet/)
-- [Один ключ на несколько устройств](https://prostokey.com/blog/odin-klyuch-neskolko/)
-- [Тикток не работает с VPN: почему и что делать](https://prostokey.com/blog/tiktok-ne-rabotaet/)
-- [Твич не работает: где ломается и что делать](https://prostokey.com/blog/twitch-ne-rabotaet/)
-- [VPN на роутере: интернет для всего дома](https://prostokey.com/blog/vpn-router/)
-- [Гугл плей не работает: три разные беды и что делать](https://prostokey.com/blog/google-play-ne-rabotaet/)
-- [VPN на Windows: установка и настройка](https://prostokey.com/blog/vpn-windows/)
-- [Как устроен список серверов в подписке](https://prostokey.com/blog/spisok-serverov/)
-- [Дискорд не работает с VPN: что делать](https://prostokey.com/blog/discord-ne-rabotaet/)
-- [Hiddify: как подключить и стоит ли выбирать](https://prostokey.com/blog/hiddify/)
-- [Happ на андроид: как установить](https://prostokey.com/blog/happ-android/)
-- [VPN на 3 дня бесплатно: что входит и как получить ключ](https://prostokey.com/blog/klyuch-na-3-dnya/)
-- [Happ на айфон: как установить](https://prostokey.com/blog/happ-iphone/)
-- [Что видит провайдер, а что — VPN-сервис](https://prostokey.com/blog/chto-vidit-provayder/)
-- [Happ или V2RayTun: какой клиент выбрать](https://prostokey.com/blog/vybor-klienta/)
-- [Бесплатный рабочий VPN: выбор в России](https://prostokey.com/blog/kakoy-vpn-rabotaet/)
-- [Сбербанк не работает с VPN: что делать](https://prostokey.com/blog/vpn-i-banki/)
-- [Прокси для Телеграмм: безопасно ли это](https://prostokey.com/blog/proxy-dlya-telegram/)
-- [Белые списки интернета: что работает и что делать](https://prostokey.com/blog/belye-spiski/)
-- [VPN на iPhone без приложений из App Store](https://prostokey.com/blog/vpn-iphone/)
-- [Как оплатить VPN из России в 2026 году](https://prostokey.com/blog/kak-oplatit-vpn/)
+- [Что сайт знает о посетителе](https://spokno.fyi/privacy/): Коротко о данных на сайте: он ничего не отправляет о посетителе, не ставит cookie и не ведёт журнал, а ссылка на бота несёт только метку перехода.

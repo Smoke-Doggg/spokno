@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; script-src &#39;self&#39;; style-src &#39;self&#39;; img-src &#39;self&#39; data:; connect-src &#39;self&#39;; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;none&#39;">
+<title>Gemini в России: работает ли и почему нет — Спокойно</title>
+<meta name="description" content="Почему Gemini выдаёт ошибку региона из России, чем отличаются веб-версия, приложение и API, и что проверить в аккаунте, прежде чем что-то менять.">
+<link rel="canonical" href="https://spokno.fyi/gemini-v-rossii/">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151c21" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Спокойно">
+<meta property="og:title" content="Gemini в России: доступность, причины ограничений">
+<meta property="og:description" content="Почему Gemini выдаёт ошибку региона из России, чем отличаются веб-версия, приложение и API, и что проверить в аккаунте, прежде чем что-то менять.">
+<meta property="og:url" content="https://spokno.fyi/gemini-v-rossii/">
+<meta property="og:image" content="https://spokno.fyi/assets/og.png">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/spokno.css?v=b4297191bd">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Gemini в России: доступность, причины ограничений","description":"Почему Gemini выдаёт ошибку региона из России, чем отличаются веб-версия, приложение и API, и что проверить в аккаунте, прежде чем что-то менять.","url":"https://spokno.fyi/gemini-v-rossii/","dateModified":"2026-11-05","inLanguage":"ru","isPartOf":{"@id":"https://spokno.fyi/#site"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Это блокировка Роскомнадзора?","acceptedAnswer":{"@type":"Answer","text":"Не обязательно. Обычно сообщение о недоступности в регионе связано с решением самой Google о списке стран, а не с блокировкой на стороне российского регулятора."}},{"@type":"Question","name":"Почему ошибка разная на телефоне и в браузере?","acceptedAnswer":{"@type":"Answer","text":"Google ведёт отдельные списки стран для веб-версии, мобильного приложения и API. Страна может быть в одном списке и отсутствовать в другом."}},{"@type":"Question","name":"Влияет ли аккаунт на доступ?","acceptedAnswer":{"@type":"Answer","text":"Да. Учитывается страна аккаунта и его тип, а мобильное приложение требует личной учётной записи Google. У корпоративных и учебных аккаунтов свои правила."}},{"@type":"Question","name":"Можно ли доверять статьям, где сказано, что Gemini уже работает?","acceptedAnswer":{"@type":"Answer","text":"С осторожностью. Доступ меняется, а даты в новостях часто путаются. Проверяйте официальные страницы Google."}}]}</script>
+</head>
+<body class="sec-guide">
+<a class="skip" href="#main">Перейти к тексту</a>
+<header class="bar">
+  <a class="mark" href="/" aria-label="Спокойно — на главную">
+    <svg class="mark__wave" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 19c4-6 8-6 13 0s9 6 13 0" /><path d="M3 12c4-6 8-6 13 0s9 6 13 0" opacity=".45" /></svg>
+    <span class="mark__name">Спокойно</span>
+  </a>
+  <span class="bar__slogan">Сеть без загадок</span>
+  <details class="menu">
+    <summary>Разделы</summary>
+    <nav data-nav aria-label="Разделы сайта">
+<p class="menu__group">Сайт</p>
+      <ul><li><a href="/">Главная</a></li></ul>
+<p class="menu__group">Разборы</p>
+      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/" aria-current="page">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
+<p class="menu__group">Проверка</p>
+      <ul><li><a href="/proverka/">Про IP-адрес</a></li></ul>
+    </nav>
+  </details>
+</header>
+<div class="frame">
+  <aside class="rail">
+    <nav data-nav aria-label="Разделы сайта">
+<p class="rail__group">Сайт</p>
+      <ul><li><a href="/">Главная</a></li></ul>
+<p class="rail__group">Разборы</p>
+      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/" aria-current="page">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
+<p class="rail__group">Проверка</p>
+      <ul><li><a href="/proverka/">Про IP-адрес</a></li></ul>
+    </nav>
+    <a class="btn btn--ghost to-bot" href="https://t.me/vpn_prosto_bot?start=6035076947" rel="noopener">Бот в Telegram</a>
+  </aside>
+  <main id="main" class="sheet">
+<article class="text">
+<header class="lede">
+  <h1>Gemini в России: доступность, причины ограничений</h1>
+  <p class="lede__meta"><time datetime="2026-11-05">Сверено 5 ноября 2026</time></p>
+</header>
+
+<nav class="toc" aria-label="На этой странице">
+  <p class="toc__head">На этой странице</p>
+  <ol><li><a href="#tri-produkta-tri-spiska">Три продукта, три списка</a></li><li><a href="#pochemu-voznikaet-oshibka">Почему возникает ошибка</a></li><li><a href="#chto-proverit-samomu">Что проверить самому</a></li><li><a href="#chem-oshibka-regiona-otlichaetsya-ot-sboya">Чем ошибка региона отличается от сбоя</a></li><li><a href="#kak-otnositsya-k-soobscheniyam-zarabotalo">Как относиться к сообщениям «заработало»</a></li><li><a href="#esli-otvet-nuzhen-pryamo-seychas">Если ответ нужен прямо сейчас</a></li></ol>
+</nav>
+
+<div class="prose">
+<p>Прежде чем искать поломку, уточните, о каком именно Gemini речь: веб-версии, мобильном приложении или программном интерфейсе для разработчиков. У каждого свой список стран. Сообщение «недоступно в вашем регионе» чаще означает решение самой Google, а не техническую неисправность и не блокировку у вас дома.</p>
+<h2 id="tri-produkta-tri-spiska">Три продукта, три списка</h2>
+<p>Нельзя говорить «Gemini доступен» или «не доступен» вообще. По <a href="https://support.google.com/gemini/answer/13575153" rel="nofollow noopener noreferrer">справке Google</a> веб-приложение предлагается в большом числе стран и территорий и расширяется «в соответствии с местными нормами». Для мобильного приложения Google указывает отдельный список, и он короче. Для разработчиков есть ещё <a href="https://ai.google.dev/available_regions" rel="nofollow noopener noreferrer">страница регионов API и AI Studio</a>.</p>
+<div class="table"><table><thead><tr><th>Продукт</th><th>Где смотреть список стран</th></tr></thead><tbody><tr><td>Веб-приложение Gemini</td><td>справка Google «Где можно использовать Gemini»</td></tr><tr><td>Мобильное приложение</td><td>справка «Доступность мобильного приложения»</td></tr><tr><td>Gemini API и AI Studio</td><td>страница regions на ai.google.dev</td></tr></tbody></table></div>
+<p>Если один продукт открылся, а другой нет, это не противоречие. Это разные правила.</p>
+<h2 id="pochemu-voznikaet-oshibka">Почему возникает ошибка</h2>
+<ul><li><strong>Страна не входит в список продукта.</strong> Самая частая причина.</li><li><strong>Страна аккаунта.</strong> Приложение в магазине показывается или скрывается в зависимости от страны учётной записи магазина.</li><li><strong>Тип аккаунта.</strong> Мобильное приложение требует личного аккаунта Google. Аккаунт с корпоративными или образовательными надстройками получает другие условия.</li><li><strong>Платные тарифы.</strong> Оформление подписок зависит от доступности платёжных сервисов Google в стране, и ограничения здесь отдельные.</li><li><strong>Временный сбой.</strong> Бывают обычные недоступности сервиса у любого пользователя, независимо от страны.</li></ul>
+<h2 id="chto-proverit-samomu">Что проверить самому</h2>
+<ol><li>Откройте справку Google и найдите свою страну в списке именно того продукта, которым пользуетесь.</li><li>Посмотрите, какой аккаунт активен в браузере: личный или рабочий.</li><li>Откройте другие сервисы Google. Если и они не загружаются, проблема в соединении, а не в Gemini.</li><li>Обновите приложение и браузер, очистите кэш сайта.</li><li>Прочитайте текст ошибки целиком: он различает «регион» и «временный сбой».</li></ol>
+<aside class="note"><p>Способы подмены региона мы не описываем. Они могут нарушать условия использования Google и не гарантируют результата, а аккаунт, который заподозрят в этом, рискует ограничениями.</p></aside>
+<h2 id="chem-oshibka-regiona-otlichaetsya-ot-sboya">Чем ошибка региона отличается от сбоя</h2>
+<p>Сообщение о регионе появляется сразу и одинаково при каждой попытке: оно не исчезает через несколько минут и не зависит от нагрузки. Временный сбой, наоборот, бывает плавающим: страница то грузится, то нет, ответ обрывается на полуслове или просит повторить запрос позже. Запишите точный текст и время: если вы будете обращаться в поддержку Google, это сэкономит несколько писем. Отдельно проверьте, что у вас не включены расширения браузера, которые меняют заголовки или блокируют скрипты: иногда именно они ломают вход.</p>
+<h2 id="kak-otnositsya-k-soobscheniyam-zarabotalo">Как относиться к сообщениям «заработало»</h2>
+<p>Доступ Gemini зависит от решений Google и меняется, а в пересказах часто путаются даты. Поэтому заметку о том, что сервис «внезапно заработал», считайте поводом проверить, а не фактом: сверяйтесь со справкой Google и с текстом ошибки на своём экране.</p>
+<h2 id="esli-otvet-nuzhen-pryamo-seychas">Если ответ нужен прямо сейчас</h2>
+<p>У большинства задач (текст, перевод, код) есть сервисы-аналоги, и доступны они тоже не везде. Сверяйте условия каждого и не передавайте в них пароли и личные данные.</p>
+</div>
+<section class="qa" aria-labelledby="qa-head">
+  <h2 id="qa-head">Вопросы и ответы</h2>
+<details class="qa__item">
+    <summary>Это блокировка Роскомнадзора?</summary>
+    <p>Не обязательно. Обычно сообщение о недоступности в регионе связано с решением самой Google о списке стран, а не с блокировкой на стороне российского регулятора.</p>
+  </details>
+<details class="qa__item">
+    <summary>Почему ошибка разная на телефоне и в браузере?</summary>
+    <p>Google ведёт отдельные списки стран для веб-версии, мобильного приложения и API. Страна может быть в одном списке и отсутствовать в другом.</p>
+  </details>
+<details class="qa__item">
+    <summary>Влияет ли аккаунт на доступ?</summary>
+    <p>Да. Учитывается страна аккаунта и его тип, а мобильное приложение требует личной учётной записи Google. У корпоративных и учебных аккаунтов свои правила.</p>
+  </details>
+<details class="qa__item">
+    <summary>Можно ли доверять статьям, где сказано, что Gemini уже работает?</summary>
+    <p>С осторожностью. Доступ меняется, а даты в новостях часто путаются. Проверяйте официальные страницы Google.</p>
+  </details>
+</section>
+
+</article>
+  </main>
+</div>
+<footer class="foot" data-foot>
+  <div class="foot__cols">
+<div>
+      <p class="foot__head">Разборы</p>
+      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
+    </div><div>
+      <p class="foot__head">Сайт</p>
+      <ul><li><a href="/">Главная</a></li><li><a href="/proverka/">Про IP-адрес</a></li><li><a href="/privacy/">Данные</a></li></ul>
+    </div>  </div>
+  <p class="foot__line">© 2026 Спокойно · Сеть без загадок · без cookie и без журнала посещений</p>
+</footer>
+</body>
+</html>

@@ -3,460 +3,117 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="/head-init.js?v=c3c31878"></script>
-<title>Проверить, работает ли VPN: IP и страна — VPN Просто</title>
-<meta name="description" content="Бесплатная проверка VPN-соединения: ваш видимый IP-адрес, страна и тест утечки WebRTC. Работает на телефоне и компьютере, адреса не сохраняются.">
-<meta name="google-site-verification" content="aa5uwD1b6-auOpxQz6HBcGmdCFjCz-96xlNumKYXJhE">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://stat.prostokey.com; font-src 'self' data:; connect-src 'self' https://stat.prostokey.com; object-src 'none'; base-uri 'self'; form-action 'self'">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-<link rel="canonical" href="https://prostokey.com/proverka/">
-<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#070B15" media="(prefers-color-scheme: dark)">
-
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="VPN Просто">
-<meta property="og:title" content="Проверить, работает ли VPN: IP и страна">
-<meta property="og:description" content="Бесплатная проверка VPN-соединения: ваш видимый IP-адрес, страна и тест утечки WebRTC. Работает на телефоне и компьютере, адреса не сохраняются.">
-<meta property="og:url" content="https://prostokey.com/proverka/">
+<meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; script-src &#39;self&#39;; style-src &#39;self&#39;; img-src &#39;self&#39; data:; connect-src &#39;self&#39;; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;none&#39;">
+<title>Что такое IP-адрес и как читать страну — Спокойно</title>
+<meta name="description" content="Разбор без проверки: что такое IP-адрес, что он показывает сайтам, чего не показывает и почему страна по адресу бывает чужой, если включён VPN или прокси.">
+<link rel="canonical" href="https://spokno.fyi/proverka/">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151c21" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Спокойно">
+<meta property="og:title" content="IP-адрес и страна: что видят сайты">
+<meta property="og:description" content="Разбор без проверки: что такое IP-адрес, что он показывает сайтам, чего не показывает и почему страна по адресу бывает чужой, если включён VPN или прокси.">
+<meta property="og:url" content="https://spokno.fyi/proverka/">
+<meta property="og:image" content="https://spokno.fyi/assets/og.png">
 <meta property="og:locale" content="ru_RU">
-<meta property="og:image" content="https://prostokey.com/og/proverka.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Проверить, работает ли VPN: IP и страна — VPN Просто">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://prostokey.com/og/proverka.png">
-
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="stylesheet" href="/fonts.css?v=1260ba6b">
-<link rel="preload" href="/fonts/onest-800-cyrillic.woff2" as="font"
-      type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/onest-500-cyrillic.woff2" as="font"
-      type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=70acbc77">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/spokno.css?v=b4297191bd">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"IP-адрес и страна: что видят сайты","description":"Разбор без проверки: что такое IP-адрес, что он показывает сайтам, чего не показывает и почему страна по адресу бывает чужой, если включён VPN или прокси.","url":"https://spokno.fyi/proverka/","dateModified":"2026-11-05","inLanguage":"ru","isPartOf":{"@id":"https://spokno.fyi/#site"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Почему страна в проверке не совпадает с реальной?","acceptedAnswer":{"@type":"Answer","text":"Адрес принадлежит провайдеру или сервису, а не вам лично. Если включён VPN или прокси, вы видите страну их сервера."}},{"@type":"Question","name":"Почему город по адресу указан неверно?","acceptedAnswer":{"@type":"Answer","text":"Определение города по IP приблизительное, часто ошибается на десятки километров. Страна определяется заметно надёжнее."}},{"@type":"Question","name":"Можно ли по IP найти мой дом?","acceptedAnswer":{"@type":"Answer","text":"Нет. Обычный человек по адресу узнает лишь страну, примерный регион и провайдера. Сопоставить его с вами может только сам провайдер."}}]}</script>
 </head>
-<body>
-<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" focusable="false">
-<defs>
-
-<clipPath id="flag-clip"><rect width="16" height="12" rx="2"/></clipPath>
-
-<symbol id="ic-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
-<symbol id="ic-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
-<symbol id="ic-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
-<symbol id="ic-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
-<symbol id="ic-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
-<symbol id="ic-unplug" viewBox="0 0 24 24"><path d="m19 5 3-3"/><path d="m2 22 3-3"/>
-<path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/>
-<path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/>
-<path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z"/></symbol>
-<symbol id="ic-credit-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
-<symbol id="ic-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
-<path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></symbol>
-<symbol id="ic-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
-<symbol id="ic-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
-<symbol id="ic-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.7 8.9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.5 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/>
-<path d="m9 12 2 2 4-4"/></symbol>
-<symbol id="ic-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.8-1.6l7.9-10.7A1 1 0 0 1 13 2.3V10a1 1 0 0 0 1 1h6a1 1 0 0 1 .8 1.6l-7.9 10.7A1 1 0 0 1 11 21.7V14a1 1 0 0 0-1-1z"/></symbol>
-<symbol id="ic-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
-<path d="M2 12h20"/></symbol>
-<symbol id="ic-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/>
-<circle cx="18" cy="5" r="3"/></symbol>
-<symbol id="ic-sparkles" viewBox="0 0 24 24"><path d="M9.9 2.5 12 8l5.5 2.1L12 12.2 9.9 17.7 7.8 12.2 2.3 10.1 7.8 8z"/>
-<path d="M18 5h.01"/><path d="M20 15h.01"/></symbol>
-<symbol id="ic-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
-<symbol id="ic-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
-<symbol id="ic-laptop" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.3 2.6a1 1 0 0 1-.9 1.4H3.6a1 1 0 0 1-.9-1.4L4 16"/></symbol>
-<symbol id="ic-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></symbol>
-<symbol id="ic-tv" viewBox="0 0 24 24"><rect width="20" height="15" x="2" y="7" rx="2"/><path d="m17 2-5 5-5-5"/></symbol>
-<symbol id="ic-router" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6.01 18H6"/><path d="M10.01 18H10"/>
-<path d="M15 10v4"/><path d="M17.84 7.17a4 4 0 0 0-5.66 0"/><path d="M20.66 4.34a8 8 0 0 0-11.31 0"/></symbol>
-<symbol id="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/>
-<path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></symbol>
-<symbol id="ic-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
-<symbol id="ic-monitor-cog" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
-<symbol id="ic-telegram" viewBox="0 0 24 24"><path d="M21.7 3.2 2.9 10.5c-1 .4-.9 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.9 1.4 1.1 2 .4l2.4-2.5 4.7 3.5c.8.6 1.9.2 2.1-.8l3-15.4c.2-1.1-.8-1.9-1.9-1.5ZM9.4 13.9l8.7-6.6c.3-.2.6.2.4.4l-7 7-.3 3-1.8-3.8Z" fill="currentColor" stroke="none"/></symbol>
-<symbol id="ic-send" viewBox="0 0 24 24"><path d="M14.5 9.5 3 21"/><path d="M20.7 3.3a1 1 0 0 0-1.1-.2L3.4 9.6a1 1 0 0 0 .1 1.9l6.4 1.9a1 1 0 0 1 .7.7l1.9 6.4a1 1 0 0 0 1.9.1l6.5-16.2a1 1 0 0 0-.2-1.1Z"/></symbol>
-<symbol id="ic-megaphone-off" viewBox="0 0 24 24"><path d="M11.636 6A13 13 0 0 0 19.4 3.2 1 1 0 0 1 21 4v11.344"/><path d="M14.378 14.357A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1"/><path d="m2 2 20 20"/><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"/><path d="M8 8v6"/></symbol>
-<symbol id="ic-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></symbol>
-<symbol id="ic-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
-<symbol id="ic-id-card" viewBox="0 0 24 24"><path d="M16 10h2"/><path d="M16 14h2"/><path d="M6.17 15a3 3 0 0 1 5.66 0"/><circle cx="9" cy="11" r="2"/><rect x="2" y="5" width="20" height="14" rx="2"/></symbol>
-<symbol id="ic-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
-
-<symbol id="flag-pl" viewBox="0 0 16 12"><rect width="16" height="6" fill="#fff"/><rect y="6" width="16" height="6" fill="#DC143C"/></symbol>
-<symbol id="flag-it" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#009246"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
-<rect x="10.67" width="5.33" height="12" fill="#CE2B37"/></symbol>
-<symbol id="flag-in" viewBox="0 0 16 12"><rect width="16" height="4" fill="#FF9933"/><rect y="4" width="16" height="4" fill="#fff"/>
-<rect y="8" width="16" height="4" fill="#138808"/><circle cx="8" cy="6" r="1.5" fill="none" stroke="#000080" stroke-width=".7"/></symbol>
-<symbol id="flag-us" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/>
-<rect y="0" width="16" height="1" fill="#B22234"/><rect y="2" width="16" height="1" fill="#B22234"/>
-<rect y="4" width="16" height="1" fill="#B22234"/><rect y="6" width="16" height="1" fill="#B22234"/>
-<rect y="8" width="16" height="1" fill="#B22234"/><rect y="10" width="16" height="1" fill="#B22234"/>
-<rect width="7" height="7" fill="#3C3B6E"/></symbol>
-<symbol id="flag-fi" viewBox="0 0 16 12"><rect width="16" height="12" fill="#fff"/><rect x="4" width="2.5" height="12" fill="#003580"/>
-<rect y="4.75" width="16" height="2.5" fill="#003580"/></symbol>
-<symbol id="flag-ru" viewBox="0 0 16 12"><rect width="16" height="4" fill="#fff"/><rect y="4" width="16" height="4" fill="#0039A6"/>
-<rect y="8" width="16" height="4" fill="#D52B1E"/></symbol>
-<symbol id="flag-se" viewBox="0 0 16 12"><rect width="16" height="12" fill="#006AA7"/><rect x="4" width="2.5" height="12" fill="#FECC00"/>
-<rect y="4.75" width="16" height="2.5" fill="#FECC00"/></symbol>
-<symbol id="flag-fr" viewBox="0 0 16 12"><rect width="5.33" height="12" fill="#0055A4"/><rect x="5.33" width="5.34" height="12" fill="#fff"/>
-<rect x="10.67" width="5.33" height="12" fill="#EF4135"/></symbol>
-<symbol id="flag-hk" viewBox="0 0 16 12"><rect width="16" height="12" fill="#DE2910"/><circle cx="8" cy="6" r="3.4" fill="#fff"/></symbol>
-
-</defs>
-</svg><div class="aurora aurora--soft" aria-hidden="true">
-  <i class="aur aur--1"></i><i class="aur aur--2"></i><i class="aur aur--3"></i>
-</div>
-<a class="skip" href="#main">К содержанию</a>
-
-<header class="head" id="head">
-  <div class="wrap">
-    <a class="logo" href="/">
-      <span class="dot dot--live" aria-hidden="true"></span>
-      VPN Просто
-    </a>
-    <nav class="nav" id="nav" aria-label="Основная навигация">
-      <a href="/telegram/">Telegram не работает</a>
-      <a href="/kak-podklyuchit/">Как подключить</a>
-      <a href="/blog/">Блог</a>
-      <a href="/partnerskaya/">Партнёрам</a>
-      <button class="theme-sw" type="button" data-theme-switch data-mode="system">
-        <span class="theme-sw__i" data-i="system" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-monitor-cog"/></svg></span>
-        <span class="theme-sw__i" data-i="light" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-sun"/></svg></span>
-        <span class="theme-sw__i" data-i="dark" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-moon"/></svg></span>
-        <span class="theme-sw__t" data-theme-label>Как в системе</span>
-      </button>
-      <a class="btn btn--primary btn--sm" href="https://t.me/vpn_prosto_bot?start=5817865251">3 дня бесплатно</a>
+<body class="sec-tool">
+<a class="skip" href="#main">Перейти к тексту</a>
+<header class="bar">
+  <a class="mark" href="/" aria-label="Спокойно — на главную">
+    <svg class="mark__wave" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 19c4-6 8-6 13 0s9 6 13 0" /><path d="M3 12c4-6 8-6 13 0s9 6 13 0" opacity=".45" /></svg>
+    <span class="mark__name">Спокойно</span>
+  </a>
+  <span class="bar__slogan">Сеть без загадок</span>
+  <details class="menu">
+    <summary>Разделы</summary>
+    <nav data-nav aria-label="Разделы сайта">
+<p class="menu__group">Сайт</p>
+      <ul><li><a href="/">Главная</a></li></ul>
+<p class="menu__group">Разборы</p>
+      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
+<p class="menu__group">Проверка</p>
+      <ul><li><a href="/proverka/" aria-current="page">Про IP-адрес</a></li></ul>
     </nav>
-    <button class="burger" id="burger" type="button"
-            aria-label="Меню" aria-expanded="false" aria-controls="nav">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-menu"/></svg>
-    </button>
-  </div>
+  </details>
+</header>
+<div class="frame">
+  <aside class="rail">
+    <nav data-nav aria-label="Разделы сайта">
+<p class="rail__group">Сайт</p>
+      <ul><li><a href="/">Главная</a></li></ul>
+<p class="rail__group">Разборы</p>
+      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
+<p class="rail__group">Проверка</p>
+      <ul><li><a href="/proverka/" aria-current="page">Про IP-адрес</a></li></ul>
+    </nav>
+    <a class="btn btn--ghost to-bot" href="https://t.me/vpn_prosto_bot?start=6035076947" rel="noopener">Бот в Telegram</a>
+  </aside>
+  <main id="main" class="sheet">
+<article class="text">
+<header class="lede">
+  <h1>IP-адрес и страна: что видят сайты</h1>
+  <p class="lede__meta"><time datetime="2026-11-05">Сверено 5 ноября 2026</time></p>
 </header>
 
-<main id="main">
-<section class="section article">
-  <div class="wrap">
-    <p class="crumbs"><a href="/">Главная</a> → Проверка VPN</p>
-    <h1>Работает ли ваш VPN — проверка</h1>
-    <p class="meta">
-      <span>Опубликовано: 25 августа 2026</span>
-      <span>Обновлено: 29 сентября 2026</span>
-      <span>Команда VPN Просто</span>
-    </p>
+<nav class="toc" aria-label="На этой странице">
+  <p class="toc__head">На этой странице</p>
+  <ol><li><a href="#chto-takoe-ip-adres">Что такое IP-адрес</a></li><li><a href="#chto-adres-pokazyvaet">Что адрес показывает</a></li><li><a href="#chego-adres-ne-pokazyvaet">Чего адрес не показывает</a></li><li><a href="#kak-chitat-rezultat">Как читать результат</a></li><li><a href="#privatnost">Приватность</a></li><li><a href="#kogda-rezultat-udivil">Когда результат удивил</a></li></ol>
+</nav>
 
-    <p class="lead">Как проверить, работает ли VPN: посмотреть, какой
-    адрес видят сайты. Эта страница показывает ваш видимый IP и страну —
-    прямо сейчас, для того устройства, с которого вы её открыли.
-    Адреса мы не сохраняем: сервер отдаёт значение вам и не ведёт
-    журналов.</p>
-
-    <div class="callout" data-ip-check>
-      <p><strong>Ваш видимый адрес:</strong>
-      <span class="mono" data-ip-value>определяем…</span></p>
-      <p><strong>Страна:</strong> <span data-ip-country>—</span></p>
-      <p data-ip-verdict></p>
-    </div>
-
-    <nav class="toc" aria-label="Содержание страницы"><p class="toc__head">На этой странице</p><ul><li><a href="#kak-polzovatsya-proverkoy">Как пользоваться проверкой</a></li><li><a href="#chto-oznachaet-rezultat">Что означает результат</a></li><li><a href="#proverka-utechki-webrtc">Проверка утечки WebRTC</a></li><li><a href="#pochemu-strana-inogda-opredelyaetsya-neverno">Почему «страна» иногда определяется неверно</a></li><li><a href="#chto-esche-stoit-proverit">Что ещё стоит проверить</a></li><li><a href="#chastye-voprosy">Частые вопросы</a></li></ul></nav>
-
-    <h2 id="kak-polzovatsya-proverkoy">Как пользоваться проверкой</h2>
-
-    <ol class="steps">
-      <li><b>Посмотрите адрес без VPN</b><span>Откройте страницу при
-      выключенном соединении и запомните адрес и страну — это то, что
-      сайты видят о вас без туннеля.</span></li>
-      <li><b>Включите VPN и обновите страницу</b><span>Адрес и страна
-      должны смениться на серверные. Не сменились — трафик идёт мимо
-      туннеля: переключите сервер или протокол в клиенте.</span></li>
-      <li><b>Проверьте каждое устройство отдельно</b><span>Страница
-      показывает адрес того устройства, с которого открыта: телефон
-      и компьютер проверяются по очереди.</span></li>
-    </ol>
-
-    <h2 id="chto-oznachaet-rezultat">Что означает результат</h2>
-
-    <ul class="facts">
-      <li><strong>Страна сменилась на выбранную</strong><span>соединение
-        работает — сайты видят адрес сервера, а не ваш</span></li>
-      <li><strong>Адрес и страна не изменились</strong><span>соединение
-        не поднялось или трафик идёт мимо туннеля: переключите сервер
-        или протокол и проверьте снова</span></li>
-      <li><strong>Показывает Россию, хотя вы за границей</strong><span>так
-        и должно быть, если вы выбрали российский сервер — например,
-        ради <a href="/rossiyskiy-ip/">банков и Госуслуг</a></span></li>
-      <li><strong>Адрес меняется, но сайт «видит» вас</strong><span>дело
-        не в адресе: вы вошли в учётную запись, и сайт узнаёт вас по
-        ней, а не по сети</span></li>
-    </ul>
-
-    <h2 id="proverka-utechki-webrtc">Проверка утечки WebRTC</h2>
-
-    <p>WebRTC — встроенный в браузер механизм для звонков и видеосвязи.
-    Он умеет устанавливать соединения в обход обычного пути запросов
-    и в некоторых конфигурациях выдаёт сайтам реальный адрес даже при
-    включённом VPN. Уязвимы прежде всего VPN-расширения браузера — они
-    работают только внутри вкладок и этот путь не контролируют;
-    полноценный клиент, поднимающий соединение для всего устройства,
-    закрывает и его.</p>
-
-    <div class="callout">
-      <p><strong>Проверка по кнопке.</strong> Тест отправит один
-      служебный запрос на публичный STUN-сервер — ровно так утечка
-      и происходит, без этого запроса её невозможно проверить честно.
-      Автоматически страница ничего внешнего не запрашивает.</p>
-      <p><button class="btn btn--ghost" type="button" data-webrtc-btn>Проверить утечку WebRTC</button></p>
-      <p data-webrtc-result></p>
-    </div>
-
-    <h2 id="pochemu-strana-inogda-opredelyaetsya-neverno">Почему «страна» иногда определяется неверно</h2>
-
-    <p>Соответствие адресов и стран — это базы, которые ведут сторонние
-    компании, и они не идеальны: диапазоны переходят от оператора
-    к оператору, а сервер может числиться не там, где физически стоит.
-    Разные сайты пользуются разными базами, поэтому и показывать могут
-    разное. Для проверки VPN это не мешает: важен сам факт смены адреса
-    и страны, а не точность до города.</p>
-
-    <p>Если после включения VPN страна определяется как соседняя
-    с выбранной — это особенность базы, а не поломка соединения.
-    Поломка — это когда адрес вообще не меняется.</p>
-
-    <h2 id="chto-esche-stoit-proverit">Что ещё стоит проверить</h2>
-
-    <ul class="facts">
-      <li><strong>Банк и Госуслуги</strong><span>с нашим соединением они
-        должны открываться, не выключая VPN: российские сервисы идут
-        напрямую</span></li>
-      <li><strong>Скорость вечером</strong><span>нагрузка на сети выше
-        всего в вечерние часы — именно тогда видно, держится ли
-        соединение</span></li>
-      <li><strong>Оба протокола</strong><span>если соединение
-        нестабильно, переключите протокол в клиенте — на разных сетях
-        лучше держатся <a href="/vless-reality/">разные</a></span></li>
-    </ul>
-
-    <h2 id="chastye-voprosy">Частые вопросы</h2>
-    <div class="faq">
-      <div id="vopros-kak-proverit-rabotaet-li-vpn" class="faq__item" data-open="false">
-        <h3>
-          <button class="faq__q" type="button" aria-expanded="false"
-                  id="q1" aria-controls="a1">
-            <span>Как проверить, работает ли VPN?</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
-          </button>
-        </h3>
-        <div class="faq__a" id="a1" role="region" aria-labelledby="q1" aria-hidden="true">
-          <div><p>Сравнить адрес до и после включения. Откройте эту страницу без VPN и запомните страну, включите соединение и обновите страницу: адрес и страна должны смениться. Если ничего не изменилось — трафик идёт мимо туннеля.</p></div>
-        </div>
-      </div>
-      <div id="vopros-kak-proverit-vpn-na-telefone" class="faq__item" data-open="false">
-        <h3>
-          <button class="faq__q" type="button" aria-expanded="false"
-                  id="q2" aria-controls="a2">
-            <span>Как проверить VPN на телефоне?</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
-          </button>
-        </h3>
-        <div class="faq__a" id="a2" role="region" aria-labelledby="q2" aria-hidden="true">
-          <div><p>Точно так же: эта страница работает на телефоне, компьютере и планшете одинаково. Откройте её в браузере устройства, на котором включён VPN, — проверяется именно то устройство, с которого открыта страница.</p></div>
-        </div>
-      </div>
-      <div id="vopros-pochemu-strana-opredelyaetsya-netochno" class="faq__item" data-open="false">
-        <h3>
-          <button class="faq__q" type="button" aria-expanded="false"
-                  id="q3" aria-controls="a3">
-            <span>Почему страна определяется неточно?</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
-          </button>
-        </h3>
-        <div class="faq__a" id="a3" role="region" aria-labelledby="q3" aria-hidden="true">
-          <div><p>База соответствия адресов и стран не идеальна: границы диапазонов меняются, и сервер может числиться не там, где стоит физически. Для проверки VPN важна не точность города, а сам факт смены адреса.</p></div>
-        </div>
-      </div>
-      <div id="vopros-chto-takoe-utechka-webrtc" class="faq__item" data-open="false">
-        <h3>
-          <button class="faq__q" type="button" aria-expanded="false"
-                  id="q4" aria-controls="a4">
-            <span>Что такое утечка WebRTC?</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
-          </button>
-        </h3>
-        <div class="faq__a" id="a4" role="region" aria-labelledby="q4" aria-hidden="true">
-          <div><p>WebRTC — механизм браузера для звонков и видеосвязи. Он умеет устанавливать соединения в обход обычного пути запросов и может выдать сайту ваш реальный адрес даже при включённом VPN. Уязвимы в первую очередь VPN-расширения браузера; полноценные клиенты, которые поднимают соединение для всего устройства, этой проблеме не подвержены.</p></div>
-        </div>
-      </div>
-      <div id="vopros-pokazyvaet-rossiyskiy-adres-pri-vklyuchennom-vpn-eto-polomka" class="faq__item" data-open="false">
-        <h3>
-          <button class="faq__q" type="button" aria-expanded="false"
-                  id="q5" aria-controls="a5">
-            <span>Показывает российский адрес при включённом VPN — это поломка?</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
-          </button>
-        </h3>
-        <div class="faq__a" id="a5" role="region" aria-labelledby="q5" aria-hidden="true">
-          <div><p>Не всегда. Если вы намеренно выбрали российский сервер — так и должно быть. Если выбран зарубежный, а адрес российский — соединение не работает: переключите сервер или протокол и проверьте снова.</p></div>
-        </div>
-      </div>
-      <div id="vopros-vy-sohranyaete-adresa-kotorye-proveryayutsya-na-etoy-stranic" class="faq__item" data-open="false">
-        <h3>
-          <button class="faq__q" type="button" aria-expanded="false"
-                  id="q6" aria-controls="a6">
-            <span>Вы сохраняете адреса, которые проверяются на этой странице?</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-chevron-down"/></svg>
-          </button>
-        </h3>
-        <div class="faq__a" id="a6" role="region" aria-labelledby="q6" aria-hidden="true">
-          <div><p>Нет. Сервер отдаёт вам ваш же адрес и не записывает его: журналов посещений у нас нет — это обещание из политики конфиденциальности, и страница проверки не исключение.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="inline-cta">
-      <p><strong>VPN не прошёл проверку?</strong> Возьмите ключ
-      на 3 дня бесплатно и сравните на своей сети —
-      карта не нужна, автосписаний нет.</p>
-      <a class="btn btn--primary" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Взять ключ на 3 дня</a>
-    </div>
-
-    <nav class="related" aria-label="Другие материалы"><p class="toc__head">Читайте также</p><ul><li><a href="/blog/vpn-i-banki/">Сбербанк не работает с VPN: что делать</a></li><li><a href="/blog/proxy-dlya-telegram/">Прокси для Телеграмм: безопасно ли это</a></li><li><a href="/blog/belye-spiski/">Белые списки интернета: что работает и что делать</a></li><li><a href="/blog/vpn-iphone/">VPN на iPhone без приложений из App Store</a></li></ul></nav>
-
-    <p class="cta-note">Остались вопросы — напишите
-    <a href="https://t.me/vpn_prosto_bot?start=5817865251">боту</a>, отвечает живой человек.
-    А в канале «<a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener">Цифровая свобода</a>»
-    пишем, когда что-то массово перестаёт работать и что с этим делать.</p>
-  </div>
+<div class="prose">
+<p>Здесь нет самой проверки, только разбор того, как читать адрес и страну, которые видят сайты, когда вы их открываете. Начнём с главного недоразумения: IP-адрес не паспорт устройства. Его выдал провайдер или сервис, через который вы вышли в сеть, и нужен он лишь затем, чтобы ответы находили дорогу обратно к вам.</p>
+<h2 id="chto-takoe-ip-adres">Что такое IP-адрес</h2>
+<p>IP-адрес — набор цифр вида <code>203.0.113.7</code> или длинная запись с двоеточиями. Сайт получает его при каждом обращении, иначе не знал бы, куда отправить страницу. Домашний роутер обычно получает один адрес от провайдера на все устройства дома. В мобильной сети один адрес часто делят сразу многие абоненты.</p>
+<p>Адрес бывает постоянным или меняется со временем: у многих провайдеров он «плавает» при перезапуске роутера.</p>
+<h2 id="chto-adres-pokazyvaet">Что адрес показывает</h2>
+<ul><li><strong>Страну.</strong> Базы привязывают блоки адресов к странам, поэтому страна определяется надёжнее всего.</li><li><strong>Примерный регион или город.</strong> Как правило, это место, где зарегистрирован провайдер или его узел, а не ваша квартира.</li><li><strong>Провайдера или сервис.</strong> По адресу видно, кому принадлежит блок: оператору связи, хостингу или VPN-сервису.</li></ul>
+<h2 id="chego-adres-ne-pokazyvaet">Чего адрес не показывает</h2>
+<ul><li>ваше имя, телефон и точный адрес;</li><li>историю сайтов, на которые вы заходили;</li><li>модель устройства и содержимое переписки.</li></ul>
+<p>Исследователи баз геолокации отмечают, что города по IP определяются с заметными ошибками: об этом говорит <a href="https://arxiv.org/pdf/1005.5674" rel="nofollow noopener noreferrer">академическое сравнение баз</a>, а <a href="https://whatismyipaddress.com/geolocation-accuracy" rel="nofollow noopener noreferrer">обзор whatismyipaddress.com</a> напоминает, что результат указывает район, но не здание.</p>
+<h2 id="kak-chitat-rezultat">Как читать результат</h2>
+<p>Если страна ваша и адрес принадлежит провайдеру, вы вышли в сеть напрямую. Другая страна означает, что включён VPN или прокси либо ваш провайдер использует узел за границей. Верная страна при чужом городе — норма: город определяется приблизительно. А если при повторной проверке адрес сменился, он динамический или трафик идёт через разные узлы.</p>
+<p>Чтобы сравнить, посмотрите свой адрес в любом сервисе проверки до и после включения VPN. Если адрес не изменился, возможно, программа не перехватывает трафик этого браузера. Про соседние ситуации читайте в разборе <a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a>.</p>
+<h2 id="privatnost">Приватность</h2>
+<p>Эта страница ничего не проверяет и не отправляет: она только объясняет. Что сайт знает о посетителе, описано на странице <a href="/privacy/">Данные</a>.</p>
+<h2 id="kogda-rezultat-udivil">Когда результат удивил</h2>
+<p>Посмотрите адрес в другой сети, например по мобильному интернету вместо Wi-Fi. Затем сравните. Если страна остаётся чужой при выключенном VPN, причина может быть в провайдере или в настройках сети. Для вопросов по услугам связи обращайтесь к своему оператору: показания этой страницы пригодятся для разговора.</p>
+</div>
+<section class="qa" aria-labelledby="qa-head">
+  <h2 id="qa-head">Вопросы и ответы</h2>
+<details class="qa__item">
+    <summary>Почему страна в проверке не совпадает с реальной?</summary>
+    <p>Адрес принадлежит провайдеру или сервису, а не вам лично. Если включён VPN или прокси, вы видите страну их сервера.</p>
+  </details>
+<details class="qa__item">
+    <summary>Почему город по адресу указан неверно?</summary>
+    <p>Определение города по IP приблизительное, часто ошибается на десятки километров. Страна определяется заметно надёжнее.</p>
+  </details>
+<details class="qa__item">
+    <summary>Можно ли по IP найти мой дом?</summary>
+    <p>Нет. Обычный человек по адресу узнает лишь страну, примерный регион и провайдера. Сопоставить его с вами может только сам провайдер.</p>
+  </details>
 </section>
-</main>
 
-<footer class="foot">
-  <div class="wrap">
-    <div class="foot-cols">
-      <div>
-        <p class="foot-head">Сервис</p>
-        <ul>
-          <li><a href="/">Главная</a></li>
-          <li><a href="/#price">Цена</a></li>
-          <li><a href="/o-servise/">О сервисе</a></li>
-          <li><a href="/partnerskaya/">Партнёрская программа</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="foot-head">Доступ и цена</p>
-        <ul>
-          <li><a href="/skachat-besplatno/">Попробовать бесплатно</a></li>
-          <li><a href="/probnyy-period/">Пробный период</a></li>
-          <li><a href="/telegram-bot/">Ключ через Telegram-бота</a></li>
-          <li><a href="/kupit/">Купить ключ</a></li>
-          <li><a href="/platnyy-vpn/">Сколько стоит платный VPN</a></li>
-          <li><a href="/klyuch-vpn/">Что такое ключ VPN</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="foot-head">Устройства</p>
-        <ul>
-          <li><a href="/android/">Android</a></li>
-          <li><a href="/iphone/">iPhone и iPad</a></li>
-          <li><a href="/windows/">Компьютер с Windows</a></li>
-          <li><a href="/tv/">Телевизор</a></li>
-          <li><a href="/router/">Роутер</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="foot-head">Помощь</p>
-        <ul>
-          <li><a href="/kak-podklyuchit/">Как подключить</a></li>
-          <li><a href="/ne-rabotaet/">Не работает — что делать</a></li>
-          <li><a href="/proverka/">Проверить, работает ли VPN</a></li>
-          <li><a href="/rossiyskiy-ip/">Российский IP: банки и Госуслуги</a></li>
-          <li><a href="/telegram/">Вернуть Telegram</a></li>
-          <li><a href="/blog/whatsapp-ne-rabotaet/">Ватсап не работает с VPN</a></li>
-          <li><a href="/blog/operator-blokiruet-vpn/">Оператор блокирует VPN</a></li>
-          <li><a href="/blog/vpn-dlya-igr/">VPN для игр</a></li>
-          <li><a href="/blog/brawl-stars-ne-rabotaet/">Бравл Старс не работает с VPN</a></li>
-          <li><a href="/blog/viber-ne-rabotaet/">Вайбер не работает в России</a></li>
-          <li><a href="/blog/gemini-ne-rabotaet/">Gemini не работает с VPN</a></li>
-          <li><a href="/blog/pinterest-ne-rabotaet/">Pinterest не работает</a></li>
-          <li><a href="/blog/kakoy-vpn-rabotaet/">Какой VPN работает сейчас</a></li>
-          <li><a href="/blog/vpn-dlya-yutuba/">VPN для YouTube</a></li>
-          <li><a href="/blog/rasshirenie-brauzera/">VPN-расширение для браузера</a></li>
-          <li><a href="/blog/telegram-ne-rabotaet-s-vpn/">Телеграм не работает с VPN</a></li>
-          <li><a href="/blog/yandex-ne-rabotaet-s-vpn/">Яндекс не работает с VPN</a></li>
-          <li><a href="/blog/avito-ne-rabotaet-s-vpn/">Авито не работает с VPN</a></li>
-          <li><a href="/blog/netflix-ne-rabotaet/">Netflix не работает в России</a></li>
-          <li><a href="/blog/max-ne-rabotaet-za-granicey/">MAX не работает за границей</a></li>
-          <li><a href="/blog/facebook-ne-rabotaet/">Фейсбук не работает в России</a></li>
-          <li><a href="/blog/vpn-dlya-instagram/">Инстаграм не работает с VPN</a></li>
-          <li><a href="/faq/">Вопросы и ответы</a></li>
-          <li><a href="/blog/">Блог</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="foot-head">Связь</p>
-        <ul>
-          <li><a class="tg-link" href="https://t.me/vpn_prosto_bot?start=5817865251"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Бот в Telegram</a></li>
-          <li><a class="tg-link" href="https://t.me/digitalfreedomru" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-     stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#ic-telegram"/></svg>Канал «Цифровая свобода»</a></li>
-          <li class="foot-alt">Не открывается? <a href="tg://resolve?domain=vpn_prosto_bot&amp;start=5817865251">Открыть
-            в приложении</a> или найдите <b class="mono">@vpn_prosto_bot</b></li>
-        </ul>
-      </div>
-      <div>
-        <p class="foot-head">Документы</p>
-        <ul>
-          <li><a href="/usloviya/">Условия использования</a></li>
-          <li><a href="/privacy/">Политика конфиденциальности</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-legal">
-      <p>Сервис предоставляет защищённое соединение для личного использования.
-      Мы не храним историю посещений и не отвечаем за содержимое сторонних сайтов.</p>
-      <p>© 2021—<span data-year>2026</span> VPN Просто</p>
-    </div>
-  </div>
+</article>
+  </main>
+</div>
+<footer class="foot" data-foot>
+  <div class="foot__cols">
+<div>
+      <p class="foot__head">Разборы</p>
+      <ul><li><a href="/banki-i-vpn/">Банки и VPN</a></li><li><a href="/brawl-stars-lagi/">Brawl Stars лагает</a></li><li><a href="/canva-ne-otkryvaetsya/">Canva не открывается</a></li><li><a href="/gemini-v-rossii/">Gemini в России</a></li><li><a href="/instagram-v-rossii/">Instagram в России</a></li><li><a href="/telegram-vpn-ne-pomogaet/">Telegram и VPN</a></li><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/whatsapp-ne-otkryvaetsya/">WhatsApp не открывается</a></li><li><a href="/telegram-foto-video/">Фото и видео в Telegram</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li><li><a href="/yandex-i-vpn/">Яндекс и VPN</a></li></ul>
+    </div><div>
+      <p class="foot__head">Сайт</p>
+      <ul><li><a href="/">Главная</a></li><li><a href="/proverka/">Про IP-адрес</a></li><li><a href="/privacy/">Данные</a></li></ul>
+    </div>  </div>
+  <p class="foot__line">© 2026 Спокойно · Сеть без загадок · без cookie и без журнала посещений</p>
 </footer>
-
-
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://prostokey.com/#organization", "name": "VPN Просто", "url": "https://prostokey.com/", "description": "Спокойный интернет без лишней драмы", "logo": {"@type": "ImageObject", "url": "https://prostokey.com/og-image.png", "contentUrl": "https://prostokey.com/og-image.png"}, "sameAs": ["https://t.me/digitalfreedomru", "https://t.me/vpn_prosto_bot"], "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://t.me/vpn_prosto_bot", "availableLanguage": "Russian"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage",
-"name":"\u041f\u0440\u043e\u0432\u0435\u0440\u0438\u0442\u044c, \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u043b\u0438 VPN: IP \u0438 \u0441\u0442\u0440\u0430\u043d\u0430 \u2014 VPN \u041f\u0440\u043e\u0441\u0442\u043e","url":"https://prostokey.com/proverka/",
-"description":"\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u0430\u044f \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 VPN-\u0441\u043e\u0435\u0434\u0438\u043d\u0435\u043d\u0438\u044f: \u0432\u0430\u0448 \u0432\u0438\u0434\u0438\u043c\u044b\u0439 IP-\u0430\u0434\u0440\u0435\u0441, \u0441\u0442\u0440\u0430\u043d\u0430 \u0438 \u0442\u0435\u0441\u0442 \u0443\u0442\u0435\u0447\u043a\u0438 WebRTC. \u0420\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u043d\u0430 \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0435 \u0438 \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440\u0435, \u0430\u0434\u0440\u0435\u0441\u0430 \u043d\u0435 \u0441\u043e\u0445\u0440\u0430\u043d\u044f\u044e\u0442\u0441\u044f.",
-"inLanguage":"ru-RU","datePublished":"2026-08-25","dateModified":"2026-09-29",
-"isPartOf":{"@id":"https://prostokey.com/#website"},
-"author":{"@id":"https://prostokey.com/#organization"},
-"publisher":{"@id":"https://prostokey.com/#organization"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Как проверить, работает ли VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Сравнить адрес до и после включения. Откройте эту страницу без VPN и запомните страну, включите соединение и обновите страницу: адрес и страна должны смениться. Если ничего не изменилось — трафик идёт мимо туннеля."}}, {"@type": "Question", "name": "Как проверить VPN на телефоне?", "acceptedAnswer": {"@type": "Answer", "text": "Точно так же: эта страница работает на телефоне, компьютере и планшете одинаково. Откройте её в браузере устройства, на котором включён VPN, — проверяется именно то устройство, с которого открыта страница."}}, {"@type": "Question", "name": "Почему страна определяется неточно?", "acceptedAnswer": {"@type": "Answer", "text": "База соответствия адресов и стран не идеальна: границы диапазонов меняются, и сервер может числиться не там, где стоит физически. Для проверки VPN важна не точность города, а сам факт смены адреса."}}, {"@type": "Question", "name": "Что такое утечка WebRTC?", "acceptedAnswer": {"@type": "Answer", "text": "WebRTC — механизм браузера для звонков и видеосвязи. Он умеет устанавливать соединения в обход обычного пути запросов и может выдать сайту ваш реальный адрес даже при включённом VPN. Уязвимы в первую очередь VPN-расширения браузера; полноценные клиенты, которые поднимают соединение для всего устройства, этой проблеме не подвержены."}}, {"@type": "Question", "name": "Показывает российский адрес при включённом VPN — это поломка?", "acceptedAnswer": {"@type": "Answer", "text": "Не всегда. Если вы намеренно выбрали российский сервер — так и должно быть. Если выбран зарубежный, а адрес российский — соединение не работает: переключите сервер или протокол и проверьте снова."}}, {"@type": "Question", "name": "Вы сохраняете адреса, которые проверяются на этой странице?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Сервер отдаёт вам ваш же адрес и не записывает его: журналов посещений у нас нет — это обещание из политики конфиденциальности, и страница проверки не исключение."}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://prostokey.com/"}, {"@type": "ListItem", "position": 2, "name": "Проверка VPN", "item": "https://prostokey.com/proverka/"}]}</script>
-<script src="/app.js?v=c7e1b9f2" defer></script>
-<img src="https://stat.prostokey.com/watch-api/px.gif?p=/proverka/"
-     alt="" width="1" height="1" decoding="async"
-     class="px" aria-hidden="true"></body>
+</body>
 </html>
