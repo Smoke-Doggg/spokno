@@ -43,6 +43,8 @@
 
 - [Блог целиком](https://prostokey.com/blog/): разборы по устройствам, клиентам и типовым поломкам
 
+- [Zenless Zone Zero не подключается в России: что делать](https://prostokey.com/blog/zenless-zone-zero-ne-podklyuchaetsya/)
+- [Strava в России: почему не работает и что с оплатой](https://prostokey.com/blog/strava-v-rossii/)
 - [МТС, Мегафон и Билайн не работают с VPN: что делать](https://prostokey.com/blog/mts-megafon-bilayn-ne-rabotayut-s-vpn/)
 - [VPN на LG webOS: что реально работает на телевизоре](https://prostokey.com/blog/vpn-na-lg-webos/)
 - [Xbox Cloud Gaming в России: доступ и задержка](https://prostokey.com/blog/xbox-cloud-gaming-v-rossii/)
