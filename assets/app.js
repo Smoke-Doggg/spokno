@@ -189,6 +189,6 @@
       es.forEach(function (e) { if (e.isIntersecting) seen.add(e.target); else seen.delete(e.target); });
       st.hidden = seen.size > 0;
     });
-    Array.prototype.forEach.call(document.querySelectorAll('.cta, .foot'), function (el) { io.observe(el); });
+    Array.prototype.forEach.call(document.querySelectorAll('.cta, .foot, .h-cta, .plans'), function (el) { io.observe(el); });
   }
 })();

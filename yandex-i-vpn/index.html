@@ -21,7 +21,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/nunito-cyr.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/spokno.css?v=c64fb262cd">
+<link rel="stylesheet" href="/assets/spokno.css?v=eab3c2b19c">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Сервисы Яндекса при включённом VPN: что происходит и как проверить","description":"Почему Поиск, Почта, Музыка и Карты Яндекса просят капчу или открываются иначе при включённом VPN, и как понять, в чём именно причина.","url":"https://spokno.fyi/yandex-i-vpn/","dateModified":"2026-11-05","inLanguage":"ru","isPartOf":{"@id":"https://spokno.fyi/#site"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Нужно ли отключать VPN для Яндекса?","acceptedAnswer":{"@type":"Answer","text":"Для проверки полезно. Справка Яндекса называет включённый VPN одной из причин частой капчи, хотя отдельной рекомендации по нему не даёт. Чтобы понять, он ли виноват, отключите его и повторите действие."}},{"@type":"Question","name":"Почему капча появляется снова и снова?","acceptedAnswer":{"@type":"Answer","text":"По справке Яндекса, если браузер запрещает сохранять cookie, успешный ввод капчи не фиксируется. В режиме инкогнито cookie удаляются при закрытии браузера, и проверка возвращается."}},{"@type":"Question","name":"Значит ли капча, что аккаунт взломан?","acceptedAnswer":{"@type":"Answer","text":"Сама капча об этом не говорит. Если опасаетесь за аккаунт, откройте журнал посещений в настройках Почты: он показывает время, регион и IP-адрес последних входов."}},{"@type":"Question","name":"Почему на Картах или в Музыке другое содержимое, чем обычно?","acceptedAnswer":{"@type":"Answer","text":"Часть данных сервисы подбирают по месту, которое определяют по сетевому адресу. При VPN этот адрес другой, поэтому и подборка может отличаться."}}]}</script>
 </head>
@@ -52,7 +52,7 @@
 <div class="sheetr"><div class="wrap">
   <div class="read">
     <details class="toc" open><summary>На этой странице</summary>
-<nav aria-label="На этой странице"><ol><li><a href="#pochemu-servis-reagiruet">Почему сервис реагирует</a></li><li><a href="#na-chto-eto-pohozhe">На что это похоже</a></li><li><a href="#chto-govorit-oficialnaya-spravka">Что говорит официальная справка</a></li><li><a href="#poryadok-proverki">Порядок проверки</a></li><li><a href="#kak-otlichit-sboy-yandeksa-ot-vashey-seti">Как отличить сбой Яндекса от вашей сети</a></li><li><a href="#itog">Итог</a></li><li><a href="#qa-head">Вопросы и ответы</a></li></ol></nav>
+<nav aria-label="На этой странице"><ol><li><a href="#pochemu-servis-reagiruet">Почему сервис реагирует</a></li><li><a href="#na-chto-eto-pohozhe">На что это похоже</a></li><li><a href="#chto-govorit-oficialnaya-spravka">Что говорит официальная справка</a></li><li><a href="#poryadok-proverki">Порядок проверки</a></li><li><a href="#kak-otlichit-sboy-yandeksa-ot-vashey-seti">Как отличить сбой Яндекса от вашей сети</a></li><li><a href="#itog">Итог</a></li><li><a href="#yandeks-bez-kapchi">Яндекс без капчи</a></li><li><a href="#qa-head">Вопросы и ответы</a></li></ol></nav>
 </details>
 
     <article>
@@ -71,6 +71,8 @@
 <ul><li>Проверьте, открывается ли другой сайт. Если нет, дело в соединении.</li><li>Спросите знакомого или посмотрите, пишут ли о проблеме другие пользователи. Массовые жалобы указывают на сбой сервиса.</li><li>Сравните: в мобильном приложении Яндекса и в браузере картина одинаковая? Различие подсказывает, что виновата не сеть, а настройки браузера.</li></ul>
 <h2 id="itog">Итог</h2>
 <p>Отключение VPN на время проверки — самый быстрый способ понять, в чём дело. Если вы пользуетесь аккаунтом для важного, например рабочей почты, иногда заглядывайте в журнал посещений: там видны входы, которых вы не совершали.</p>
+<h2 id="yandeks-bez-kapchi">Яндекс без капчи</h2>
+<p>Для Поиска, Почты и Карт проще всего выключать VPN: капча и чужой город уйдут вместе с ним. Включайте его снова, когда понадобится сервис, который без VPN у вас не открывается, — переключение занимает секунды.</p>
       </div>
       <aside class="cta" aria-label="Переход в Telegram-бота">
   <svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -10 250 215"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-yandex-i-vpn-2-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-yandex-i-vpn-2-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g class="blink"><ellipse class="c-eye" cx="80" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="108.4" r="2.2"/><ellipse class="c-eye" cx="122" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="108.4" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><rect class="p-milk s" x="64" y="140" width="72" height="48" rx="7"/><path class="c-line" d="M66 145 L100 168 L134 145"/><circle class="p-violet" cx="128" cy="146" r="7"/><path class="c-arm-o" d="M34 128 Q44 154 74 158"/><path class="c-arm" d="M34 128 Q44 154 74 158"/><path class="c-arm-o" d="M166 128 Q156 154 126 158"/><path class="c-arm" d="M166 128 Q156 154 126 158"/></g></svg>
@@ -139,6 +141,6 @@
   <p class="meta">© 2026 Спокойно · без cookie и без журнала посещений</p>
 </div></footer>
 <a class="sticky to-bot" data-pl="sticky" href="https://t.me/vpn_prosto_bot?start=6035076947" rel="noopener">Ключ на 3 дня бесплатно</a>
-<script src="/assets/app.js?v=32bac90b9e" defer></script>
+<script src="/assets/app.js?v=fb55fa0e9b" defer></script>
 </body>
 </html>
