@@ -157,7 +157,11 @@
       a.closest('.toc') ? 'toc' :
       a.closest('[data-foot]') ? 'foot' :
       /^\/[a-z0-9-]+\/$/.test(href) ? 'article' : null;
-    if (kind) send({ e: 'click', k: kind, p: page });
+    if (kind) {
+      var ev2 = { e: 'click', k: kind, p: page };
+      if (kind === 'bot') ev2.pl = a.getAttribute('data-pl') || '';
+      send(ev2);
+    }
   }, true);
 
   /* Уход: сколько была видна и дочитана ли до четверти. */
@@ -176,4 +180,15 @@
     }
   });
   window.addEventListener('pagehide', leave);
+
+  /* Липкая кнопка бота на телефоне прячется, когда на экране блок бота или подвал. */
+  var st = document.querySelector('.sticky');
+  if (st && 'IntersectionObserver' in window) {
+    var seen = new Set();
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) seen.add(e.target); else seen.delete(e.target); });
+      st.hidden = seen.size > 0;
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.cta, .foot'), function (el) { io.observe(el); });
+  }
 })();
