@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; script-src &#39;self&#39;; style-src &#39;self&#39;; img-src &#39;self&#39; data:; connect-src &#39;self&#39;; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;none&#39;">
-<title>Что сайт знает о посетителе — Спокойно</title>
-<meta name="description" content="Коротко о данных на сайте: он ничего не отправляет о посетителе, не ставит cookie и не ведёт журнал, а ссылка на бота несёт только метку перехода.">
+<meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; script-src &#39;self&#39;; style-src &#39;self&#39;; img-src &#39;self&#39; data:; connect-src &#39;self&#39; https://api.spokno.fyi; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;none&#39;">
+<title>Что сайт узнаёт о посетителе — Спокойно</title>
+<meta name="description" content="Какие сведения уходят на счётчик сайта, что из них остаётся на сервере и чего здесь нет: cookie, журнала посещений, адресов и сторонней аналитики.">
 <link rel="canonical" href="https://spokno.fyi/privacy/">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#E8E1FF" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#19122E" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Спокойно">
-<meta property="og:title" content="Что сайт знает о посетителе">
-<meta property="og:description" content="Коротко о данных на сайте: он ничего не отправляет о посетителе, не ставит cookie и не ведёт журнал, а ссылка на бота несёт только метку перехода.">
+<meta property="og:title" content="Что сайт узнаёт о посетителе и что хранит">
+<meta property="og:description" content="Какие сведения уходят на счётчик сайта, что из них остаётся на сервере и чего здесь нет: cookie, журнала посещений, адресов и сторонней аналитики.">
 <meta property="og:url" content="https://spokno.fyi/privacy/">
 <meta property="og:image" content="https://spokno.fyi/assets/og.png">
 <meta property="og:locale" content="ru_RU">
@@ -21,8 +21,8 @@
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/nunito-cyr.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/spokno.css?v=ac21371fa5">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Что сайт знает о посетителе","description":"Коротко о данных на сайте: он ничего не отправляет о посетителе, не ставит cookie и не ведёт журнал, а ссылка на бота несёт только метку перехода.","url":"https://spokno.fyi/privacy/","dateModified":"2026-11-05","inLanguage":"ru","isPartOf":{"@id":"https://spokno.fyi/#site"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Собирает ли сайт мой IP-адрес?","acceptedAnswer":{"@type":"Answer","text":"Нет. Страницы не отправляют о вас никаких сведений, а сервер, который их раздаёт, как любой посредник, технически видит адрес запроса."}},{"@type":"Question","name":"Нужно ли отключать JavaScript или ставить блокировщик?","acceptedAnswer":{"@type":"Answer","text":"Нет. Скриптов, которые что-то отправляют, на страницах нет."}},{"@type":"Question","name":"Что сайт передаёт боту в Telegram?","acceptedAnswer":{"@type":"Answer","text":"Ничего о вас. В ссылке на бота есть только метка, что переход был с этого сайта."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Что сайт узнаёт о посетителе и что хранит","description":"Какие сведения уходят на счётчик сайта, что из них остаётся на сервере и чего здесь нет: cookie, журнала посещений, адресов и сторонней аналитики.","url":"https://spokno.fyi/privacy/","dateModified":"2026-11-07","inLanguage":"ru","isPartOf":{"@id":"https://spokno.fyi/#site"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Сохраняется ли мой IP-адрес?","acceptedAnswer":{"@type":"Answer","text":"Нет. Счётчик адрес не записывает, а страница проверки только показывает его вам и ничего не сохраняет."}},{"@type":"Question","name":"Можно ли запретить счёт?","acceptedAnswer":{"@type":"Answer","text":"Да. Блокировщик рекламы или отключённый JavaScript убирают счётчик полностью, сайт при этом работает как обычно."}},{"@type":"Question","name":"Что сайт передаёт боту в Telegram?","acceptedAnswer":{"@type":"Answer","text":"Ничего о вас. В ссылке на бота есть только метка, что переход был с этого сайта."}}]}</script>
 </head>
 <body class="sec-legal">
 <svg aria-hidden="true" focusable="false" class="pb pb-defs"><symbol id="pb-face-mini" class="pb" viewBox="20 34 160 150"><g><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-face-mini-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-face-mini-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g class="blink"><ellipse class="c-eye" cx="80" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="108.4" r="2.2"/><ellipse class="c-eye" cx="122" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="108.4" r="2.2"/></g><path class="c-line w3" d="M92 132 Q102 140 112 131"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/></g></symbol></svg>
@@ -34,15 +34,15 @@
 <main id="main">
 <div class="wrap">
 <nav class="crumbs" aria-label="Хлебные крошки"><ol>
-<li><a href="/">Главная</a></li><li><span aria-current="page">Данные</span></li></ol></nav>
+<li><a href="/">Главная</a></li><li><span aria-current="page">Данные и счётчик</span></li></ol></nav>
 
 <section class="cover">
   <div>
-    <div class="chips"><span class="chip ok"><svg viewBox="0 0 22 22" aria-hidden="true" focusable="false"><path d="M5 11.5 l4 4 l8 -9"/></svg><time datetime="2026-11-05">Сверено 5 ноября 2026</time></span>
+    <div class="chips"><span class="chip ok"><svg viewBox="0 0 22 22" aria-hidden="true" focusable="false"><path d="M5 11.5 l4 4 l8 -9"/></svg><time datetime="2026-11-07">Сверено 7 ноября 2026</time></span>
 <span class="chip">2 минуты</span></div>
 
-    <h1>Что сайт знает о посетителе</h1>
-    <p class="lead">На сайте нет счётчиков посещений и скриптов, которые отправляют данные. Страницы открываются как обычные тексты, а о вас сайт не узнаёт ничего.</p>
+    <h1>Что сайт узнаёт о посетителе и что хранит</h1>
+    <p class="lead">Сайт считает посещения сам: без сторонней аналитики, без cookie и без журнала. На сервере событие превращается в прибавку к общему числу за день, после чего исчезает. Кто именно заходил, узнать из этих чисел нельзя.</p>
   </div>
   <div class="cover-art"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -10 250 215"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-privacy-1-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-privacy-1-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g class="blink"><ellipse class="c-eye" cx="80" cy="117" rx="6.5" ry="7"/><circle class="c-glint" cx="82.3" cy="113.4" r="2.2"/><ellipse class="c-eye" cx="122" cy="117" rx="6.5" ry="7"/><circle class="c-glint" cx="124.3" cy="113.4" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><rect class="p-milk s" x="66" y="134" width="62" height="56" rx="7"/><path class="c-line" d="M75 148 H118 M75 160 H112 M75 172 H104"/><g transform="rotate(38 136 150)"><rect class="p-peachl s" x="128" y="124" width="12" height="44" rx="3"/><path class="p-ink s" d="M128 168 L134 180 L140 168 Z"/></g><path class="c-arm-o" d="M34 128 Q44 154 74 158"/><path class="c-arm" d="M34 128 Q44 154 74 158"/><path class="c-arm-o" d="M166 128 Q156 154 126 158"/><path class="c-arm" d="M166 128 Q156 154 126 158"/></g></svg><p class="whisper">почти ничего, подробности ниже</p></div>
 </section>
@@ -51,29 +51,35 @@
 <div class="sheetr"><div class="wrap">
   <div class="read">
     <details class="toc" open><summary>На этой странице</summary>
-<nav aria-label="На этой странице"><ol><li><a href="#chego-zdes-net">Чего здесь нет</a></li><li><a href="#chto-ostaetsya-za-predelami-sayta">Что остаётся за пределами сайта</a></li><li><a href="#ssylka-na-bota">Ссылка на бота</a></li><li><a href="#stranica-proverki-adresa">Страница проверки адреса</a></li><li><a href="#qa-head">Вопросы и ответы</a></li></ol></nav>
+<nav aria-label="На этой странице"><ol><li><a href="#chto-uhodit-na-schetchik">Что уходит на счётчик</a></li><li><a href="#chto-znachit-zhivoy-vizit">Что значит «живой» визит</a></li><li><a href="#chego-zdes-net">Чего здесь нет</a></li><li><a href="#kto-esche-vidit-zapros">Кто ещё видит запрос</a></li><li><a href="#stranica-proverki-adresa">Страница проверки адреса</a></li><li><a href="#kak-otklyuchit">Как отключить</a></li><li><a href="#qa-head">Вопросы и ответы</a></li></ol></nav>
 </details>
 
     <article>
       <div class="prose">
+<h2 id="chto-uhodit-na-schetchik">Что уходит на счётчик</h2>
+<p>Когда страница открывается, браузер отправляет на отдельный сервер счётчика короткое сообщение. В нём:</p>
+<ul><li>адрес страницы на этом сайте, без параметров;</li><li>откуда пришли, одним словом: поиск, прямой заход, переход внутри сайта, Telegram или «иное». Полный адрес предыдущей страницы не передаётся;</li><li>тип экрана (телефон, планшет, компьютер) и его ширина с точностью до одной из пяти групп;</li><li>тёмная или светлая тема;</li><li>часовой пояс устройства, по нему считается примерный регион;</li><li>имя сайта, на котором открыта страница;</li><li>открывалась ли эта вкладка раньше.</li></ul>
+<p>Потом, пока вы читаете, уходят ещё несколько событий: до какой четверти страницы дошла прокрутка, нажата ли кнопка бота или пункт меню, сколько секунд страница была на экране перед уходом.</p>
+<h2 id="chto-znachit-zhivoy-vizit">Что значит «живой» визит</h2>
+<p>Счётчик отделяет людей от программ, которые открывают страницы автоматически. Просмотр считается живым, если было действие человека (касание, клик, колёсико мыши или клавиша) и страница пробыла на экране не меньше десяти секунд или её прочитали хотя бы на четверть. Такое событие уходит один раз за просмотр. Автоматические браузеры, которые сами себя так называют, не считаются вовсе.</p>
 <h2 id="chego-zdes-net">Чего здесь нет</h2>
-<div class="table"><table><thead><tr><th>Чего нет</th><th>Что это значит для вас</th></tr></thead><tbody><tr><td>Cookie</td><td>сайт ничего не оставляет в браузере между визитами</td></tr><tr><td>Локальное хранилище</td><td>в памяти браузера сайт ничего не хранит</td></tr><tr><td>Журнал посещений</td><td>у сайта нет списка заходов и подсчёта визитов</td></tr><tr><td>Скрипты, отправляющие данные</td><td>страницы не обращаются к чужим серверам</td></tr><tr><td>Сторонняя аналитика и реклама</td><td>на страницах нет чужих скриптов, шрифтов и картинок</td></tr></tbody></table></div>
-<h2 id="chto-ostaetsya-za-predelami-sayta">Что остаётся за пределами сайта</h2>
-<p>Честно о посредниках. Страницы раздаёт хостинг GitHub Pages. Он, как любой посредник в интернете, технически видит адрес, с которого пришёл запрос. Его журналы нам недоступны; что он хранит, описано в его собственных правилах.</p>
-<h2 id="ssylka-na-bota">Ссылка на бота</h2>
-<p>Ссылка на бота в боковой панели ведёт в Telegram. В её адресе есть метка, по которой бот понимает, что переход был с этого сайта. Больше ничего о вас в ссылке нет, а переход происходит только после вашего нажатия.</p>
+<div class="table"><table><thead><tr><th>Чего нет</th><th>Что это значит для вас</th></tr></thead><tbody><tr><td>Cookie</td><td>сайт ничего не оставляет в браузере между визитами</td></tr><tr><td>Локальное хранилище</td><td>в памяти вкладки один флажок, он стирается при её закрытии</td></tr><tr><td>Журнал посещений</td><td>на сервере нет списка заходов, только суммы за день</td></tr><tr><td>Адреса посетителей</td><td>счётчик IP не записывает</td></tr><tr><td>Сторонние счётчики и реклама</td><td>на страницах нет чужих скриптов, шрифтов и картинок</td></tr></tbody></table></div>
+<h2 id="kto-esche-vidit-zapros">Кто ещё видит запрос</h2>
+<p>Честно о посредниках. Страницы раздаёт хостинг GitHub Pages, а сервер счётчика стоит за сетью Cloudflare. Оба, как любой посредник в интернете, технически видят адрес, с которого пришёл запрос. Их журналы нам недоступны; что они хранят, описано в их собственных правилах.</p>
 <h2 id="stranica-proverki-adresa">Страница проверки адреса</h2>
-<p>На странице <a href="/proverka/">Про IP-адрес</a> собран короткий разбор того, что такое IP-адрес и что он показывает. Самой проверки на сайте нет: адрес можно посмотреть в настройках провайдера или на любом сервисе, которому вы доверяете.</p>
+<p>На странице <a href="/proverka/">Проверить IP</a> сервер счётчика отвечает вашему браузеру, какой адрес и какую страну он видит. Ответ приходит только вам, на сервере он не сохраняется.</p>
+<h2 id="kak-otklyuchit">Как отключить</h2>
+<p>Достаточно блокировщика рекламы или отключённого JavaScript: счётчик не загрузится, а тексты и меню продолжат работать. Проверка адреса без JavaScript работать не будет.</p>
       </div>
       <section class="faq" aria-labelledby="qa-head">
   <div class="h2art"><h2 id="qa-head">Вопросы и ответы</h2><svg aria-hidden="true" focusable="false" class="pb" viewBox="-20 -10 250 210"><circle class="c-blob-a" cx="100" cy="112" r="94"/><ellipse class="c-shadow" cx="100" cy="190" rx="64" ry="8"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-privacy-2-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-privacy-2-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M73 97 Q80 94 87 96"/><path class="c-line" d="M115 96 Q122 94 129 97"/><g class="blink"><ellipse class="c-eye" cx="80" cy="106" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="101.5" r="2.2"/><ellipse class="c-eye" cx="122" cy="106" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="101.5" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="c-arm-o" d="M34 132 Q22 148 34 160"/><path class="c-arm" d="M34 132 Q22 148 34 160"/><path class="c-arm-o" d="M166 136 Q152 158 124 148"/><path class="c-arm" d="M166 136 Q152 158 124 148"/></g><circle class="p-milk s" cx="176" cy="66" r="4"/><circle class="p-milk s" cx="188" cy="48" r="6"/><rect class="p-milk s" x="170" y="2" width="56" height="32" rx="16"/><circle class="c-eye" cx="185" cy="18" r="3.6"/><circle class="c-eye" cx="198" cy="18" r="3.6"/><circle class="c-eye" cx="211" cy="18" r="3.6"/></svg></div>
 <details>
-    <summary>Собирает ли сайт мой IP-адрес?</summary>
-    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Нет. Страницы не отправляют о вас никаких сведений, а сервер, который их раздаёт, как любой посредник, технически видит адрес запроса.</p></div>
+    <summary>Сохраняется ли мой IP-адрес?</summary>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Нет. Счётчик адрес не записывает, а страница проверки только показывает его вам и ничего не сохраняет.</p></div>
   </details>
 <details>
-    <summary>Нужно ли отключать JavaScript или ставить блокировщик?</summary>
-    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Нет. Скриптов, которые что-то отправляют, на страницах нет.</p></div>
+    <summary>Можно ли запретить счёт?</summary>
+    <div class="a"><svg aria-hidden="true" focusable="false" class="pb pb-mini" viewBox="20 34 160 150"><use href="#pb-face-mini"/></svg><p>Да. Блокировщик рекламы или отключённый JavaScript убирают счётчик полностью, сайт при этом работает как обычно.</p></div>
   </details>
 <details>
     <summary>Что сайт передаёт боту в Telegram?</summary>
@@ -103,9 +109,10 @@
       <ul><li><a href="/svyaz-operatora-i-vpn/">VPN и сеть оператора</a></li><li><a href="/chto-takoe-klyuch/">Что такое ключ</a></li></ul>
     </div><div>
       <p class="foot-h">Сайт</p>
-      <ul><li><a href="/">Главная</a></li><li><a href="/proverka/">Про IP-адрес</a></li><li><a href="/privacy/">Данные</a></li><li><a href="https://t.me/vpn_prosto_bot?start=6035076947" rel="noopener">Бот в Telegram</a></li></ul>
+      <ul><li><a href="/">Главная</a></li><li><a href="/proverka/">Проверить IP</a></li><li><a href="/privacy/">Данные и счётчик</a></li><li><a href="https://t.me/vpn_prosto_bot?start=6035076947" rel="noopener">Бот в Telegram</a></li></ul>
     </div>  </nav>
   <p class="meta">© 2026 Спокойно · без cookie и без журнала посещений</p>
 </div></footer>
+<script src="/assets/app.js?v=f65df01146" defer></script>
 </body>
 </html>
