@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; script-src &#39;self&#39;; style-src &#39;self&#39;; img-src &#39;self&#39; data:; connect-src &#39;self&#39; https://api.spokno.fyi; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;none&#39;">
-<title>Telegram не работает при включённом VPN — Спокойно</title>
+<title>Telegram не работает с VPN: диагностика — Спокойно</title>
 <meta name="description" content="Почему Telegram может не подключаться даже при включённом VPN: от сетевых сбоев до настроек самого приложения, и порядок диагностики по шагам.">
 <link rel="canonical" href="https://spokno.fyi/telegram-vpn-ne-pomogaet/">
 <meta name="google-site-verification" content="Q1iOWxNV3yuWujOBDSVFHf3NYjzdEEwzGnF0J5g6kxg">
@@ -14,7 +14,7 @@
 <meta name="theme-color" content="#19122E" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Спокойно">
-<meta property="og:title" content="Telegram не работает даже при включённом VPN: диагностика">
+<meta property="og:title" content="Telegram не работает с VPN: диагностика по шагам">
 <meta property="og:description" content="Почему Telegram может не подключаться даже при включённом VPN: от сетевых сбоев до настроек самого приложения, и порядок диагностики по шагам.">
 <meta property="og:url" content="https://spokno.fyi/telegram-vpn-ne-pomogaet/">
 <meta property="og:image" content="https://spokno.fyi/assets/og.png">
@@ -23,7 +23,7 @@
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/nunito-cyr.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/spokno.css?v=eac43c30c7">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Telegram не работает даже при включённом VPN: диагностика","description":"Почему Telegram может не подключаться даже при включённом VPN: от сетевых сбоев до настроек самого приложения, и порядок диагностики по шагам.","url":"https://spokno.fyi/telegram-vpn-ne-pomogaet/","dateModified":"2026-11-07","inLanguage":"ru","isPartOf":{"@id":"https://spokno.fyi/#site"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Telegram не работает с VPN: диагностика по шагам","description":"Почему Telegram может не подключаться даже при включённом VPN: от сетевых сбоев до настроек самого приложения, и порядок диагностики по шагам.","url":"https://spokno.fyi/telegram-vpn-ne-pomogaet/","dateModified":"2026-11-18","inLanguage":"ru","isPartOf":{"@id":"https://spokno.fyi/#site"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Почему VPN включён, а Telegram всё равно пишет «Подключение»?","acceptedAnswer":{"@type":"Answer","text":"Соединение может прерываться на любом участке: у VPN-сервера, у оператора, в настройках телефона или в самом Telegram. Нужно проверять участки по очереди."}},{"@type":"Question","name":"Что сначала проверить на iPhone?","acceptedAnswer":{"@type":"Answer","text":"Включён ли VPN-профиль в настройках, есть ли у Telegram доступ к мобильным данным и не включён ли прокси внутри приложения."}},{"@type":"Question","name":"Это сбой Telegram или ограничение?","acceptedAnswer":{"@type":"Answer","text":"Различить помогает проверка на другой сети и другом устройстве. Если Telegram нестабилен везде, причина общая."}},{"@type":"Question","name":"Нужно ли использовать прокси вместе с VPN?","acceptedAnswer":{"@type":"Answer","text":"Не обязательно. Два посредника сразу часто мешают друг другу, поэтому при диагностике оставляйте включённым что-то одно."}}]}</script>
 </head>
 <body class="sec-guide has-sticky">
@@ -40,10 +40,10 @@
 
 <section class="cover">
   <div>
-    <div class="chips"><span class="chip ok"><svg viewBox="0 0 22 22" aria-hidden="true" focusable="false"><path d="M5 11.5 l4 4 l8 -9"/></svg><time datetime="2026-11-07">Сверено 7 ноября 2026</time></span>
+    <div class="chips"><span class="chip ok"><svg viewBox="0 0 22 22" aria-hidden="true" focusable="false"><path d="M5 11.5 l4 4 l8 -9"/></svg><time datetime="2026-11-18">Сверено 18 ноября 2026</time></span>
 <span class="chip">Мессенджеры</span><span class="chip">3 минуты</span></div>
 
-    <h1>Telegram не работает даже при включённом VPN: диагностика</h1>
+    <h1>Telegram не работает с VPN: диагностика по шагам</h1>
     <p class="lead">«Подключение…» в Telegram при включённом VPN не означает, что сломан именно VPN или именно мессенджер. Между телефоном и серверами несколько звеньев, и поломка в любом из них выглядит одинаково. Ниже способ найти нужное звено.</p>
   </div>
   <div class="cover-art"><svg aria-hidden="true" focusable="false" class="pb" viewBox="-10 -10 220 240"><circle class="c-blob-a" cx="100" cy="112" r="94"/><g class="sway"><ellipse class="c-body s" cx="80" cy="179" rx="13" ry="7"/><ellipse class="c-body s" cx="120" cy="179" rx="13" ry="7"/><clipPath id="pb-telegram-vpn-ne-pomogaet-1-cp"><path d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/></clipPath><path class="c-shade" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><g clip-path="url(#pb-telegram-vpn-ne-pomogaet-1-cp)"><path class="c-body" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z" transform="translate(-7 -9)"/><ellipse class="c-hi" cx="66" cy="74" rx="20" ry="10" transform="rotate(-32 66 74)"/><circle class="c-speck" cx="58" cy="146" r="2.6"/><circle class="c-speck" cx="146" cy="88" r="2"/><circle class="c-speck" cx="138" cy="154" r="2.3"/><circle class="c-speck" cx="48" cy="104" r="1.7"/></g><path class="c-line" d="M100 42 C146 40 176 74 176 116 C176 156 146 180 100 180 C54 180 24 158 24 116 C24 76 54 44 100 42 Z"/><path class="c-line" d="M72 95 Q79 89 87 94"/><path class="c-line" d="M115 94 Q123 89 130 95"/><g class="blink"><ellipse class="c-eye" cx="80" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="82.3" cy="108.4" r="2.2"/><ellipse class="c-eye" cx="122" cy="112" rx="6.5" ry="8.5"/><circle class="c-glint" cx="124.3" cy="108.4" r="2.2"/></g><path class="c-line w3" d="M95 133 Q102 137 109 133"/><ellipse class="c-cheek" cx="65" cy="128" rx="9" ry="5.5"/><ellipse class="c-cheek" cx="139" cy="128" rx="9" ry="5.5"/><path class="c-line far" d="M24 172 Q14 196 40 204 Q80 212 70 226"/><rect class="p-violet s" x="16" y="160" width="24" height="18" rx="4"/><path class="c-line w3 far" d="M40 164 H50 M40 174 H50"/><path class="c-line far" d="M176 172 Q186 196 160 204 Q124 212 134 226"/><rect class="p-sky s" x="160" y="160" width="24" height="18" rx="4"/><circle class="c-eye" cx="166" cy="165" r="2"/><circle class="c-eye" cx="166" cy="173" r="2"/><path class="p-peachl s1" d="M104 204 l4 -9 l4 9 l9 4 l-9 4 l-4 9 l-4 -9 l-9 -4 Z"/><path class="c-arm-o" d="M34 130 Q18 150 26 168"/><path class="c-arm" d="M34 130 Q18 150 26 168"/><path class="c-arm-o" d="M166 130 Q182 150 174 168"/><path class="c-arm" d="M166 130 Q182 150 174 168"/></g></svg><p class="whisper">звеньев несколько, найдём нужное</p></div>
